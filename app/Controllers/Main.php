@@ -2,6 +2,7 @@
 
 
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -11,7 +12,7 @@ use App\Models\FamilyModel;
 use App\Models\WalletModel;
 use App\Models\CompanyProfitModel;
 
-class Users extends BaseController
+class Main extends BaseController
 {
     public function __construct()
     {
@@ -22,15 +23,8 @@ class Users extends BaseController
 
 
         $this->UsersModel = new UsersModel();
-        if (
-            session()->get('login_data') == null &&
-            uri_string() != 'access/login'
-        ) {
-            //  redirect()->to(base_url('access/login/'));
-            echo "<script>location.href='" .
-                base_url() .
-                "/access/login';</script>";
-        }
+
+
     }
 
 
@@ -66,6 +60,7 @@ class Users extends BaseController
             'banner'
             );
 
+
     
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
@@ -73,7 +68,7 @@ class Users extends BaseController
         echo view('admin/footer');
     }
 
-    public function add()
+    public function add($family_id)
     {
         if ($_POST) {
             $input = $_POST;
@@ -97,7 +92,7 @@ class Users extends BaseController
                     'password' => $hash['password'],
                     'nric_name' => $input['nric_name'],
                     'nric' => $input['nric'],
-                    'family_id' => $input['family_id'],
+                    'family_id' => $family_id,
                     // 'ssm_name' => $input['ssm_name'],
                     // 'ssm_number' => $input['ssm_number'],
                     'salt' => $hash['salt'],
@@ -107,21 +102,18 @@ class Users extends BaseController
                 $data = $this->upload_image_with_data($data, 'nric_back');
               
                 $users_id = $this->UsersModel->insertNew($data);
-                
-
-                // $this->FamilyModel->insert_new_member($users_id,$_POST['family_id']);
-                
 
                 return redirect()->to($_SERVER['HTTP_REFERER']);
             } else {
                 $this->page_data['error'] = 'Failed to add user data';
             }
         }
-
         $this->pageData['users'] = $this->UsersModel->get_family_user();
 
-        echo view('admin/header', $this->pageData);
-        echo view('admin/users/add');
+        $this->pageData['family_id'] = $family_id;
+
+        echo view('admin/main/add', $this->pageData);
+
         echo view('admin/footer');
     }
 
@@ -166,7 +158,6 @@ class Users extends BaseController
     
         }else{
             $is_verified = 0;
-            
         }
         $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
 

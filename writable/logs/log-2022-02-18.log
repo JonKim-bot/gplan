@@ -1228,3 +1228,24 @@ CRITICAL - 2022-02-18 15:49:47 --> Unknown column 'remarks' in 'field list'
 #9 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #11 {main}
+CRITICAL - 2022-02-18 15:57:05 --> syntax error, unexpected end of file
+#0 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/main/add', Array, true)
+#1 D:\www\gplan\app\Controllers\Main.php(114): view('admin/main/add')
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Main->add('12')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-18 15:58:26 --> Undefined index: family_id
+#0 D:\www\gplan\app\Controllers\Users.php(100): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 100, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->add()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 15:59:24 --> Too few arguments to function App\Controllers\Main::add(), 0 passed in D:\www\gplan\system\CodeIgniter.php on line 914 and exactly 1 expected
+#0 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Main->add()
+#1 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#2 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
