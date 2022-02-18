@@ -14,7 +14,16 @@ class Withdraw extends BaseController
 
     public function index()
     {
-        $wallet_withdraw = $this->WalletWithdrawModel->getAll();
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $users_id = session()->get('login_id');
+            $wallet_withdraw = $this->WalletWithdrawModel->getWhere(['wallet_withdraw.users_id' => $users_id]);
+
+        }else{
+            $wallet_withdraw = $this->WalletWithdrawModel->getAll();
+
+        }
+
         $field = $this->WalletWithdrawModel->get_field([
             'created_by',
             'modified_by',
@@ -199,6 +208,12 @@ class Withdraw extends BaseController
             $error = false;
 
             if (!$error) {
+
+                if (session()->get('login_data')['type_id'] == '1') { 
+                    $users_id = session()->get('login_id');
+                    $_POST['users_id'] = $users_id;
+                }
+
                 $data = $this->get_insert_data($_POST);
 
                 $data = $this->upload_image_with_data($data, 'receipt');
@@ -209,19 +224,39 @@ class Withdraw extends BaseController
             }
         }
 
-        $this->pageData[
-            'final_form'
-        ] = $this->WalletWithdrawModel->get_final_form_add([
-            'created_by',
-            'modified_by',
-            'deleted',
-            'modified_date',
-            'is_approved',
-            'is_rejected',
-            'receipt',
-            'is_paid',
-            'created_date',
-        ]);
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $this->pageData[
+                'final_form'
+            ] = $this->WalletWithdrawModel->get_final_form_add([
+                'created_by',
+                'modified_by',
+                'deleted',
+                'users_id',
+                'modified_date',
+                'is_approved',
+                'is_rejected',
+                'receipt',
+                'is_paid',
+                'created_date',
+            ]);
+        }else{
+            $this->pageData[
+                'final_form'
+            ] = $this->WalletWithdrawModel->get_final_form_add([
+                'created_by',
+                'modified_by',
+                'deleted',
+                'modified_date',
+                'is_approved',
+                'is_rejected',
+                'receipt',
+                'is_paid',
+                'created_date',
+            ]);
+        }
+
+
+ 
         // die(var_dump($this->pageData['form']));
         echo view('admin/header', $this->pageData);
         echo view('admin/wallet_withdraw/add');

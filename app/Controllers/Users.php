@@ -177,9 +177,15 @@ class Users extends BaseController
 
     public function detail($users_id)
     {
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $users_id = session()->get('login_id');
+        }
+        // dd($users_id);
         $where = [
             'users.users_id' => $users_id,
         ];
+
         $users = $this->UsersModel->getWhere($where)[0];
         $this->pageData['users'] = $users;
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
@@ -307,6 +313,7 @@ class Users extends BaseController
 
         $user = $this->FamilyModel->getTree($user_id);
 
+        
         // dd($users_1);
         // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
 
@@ -318,6 +325,7 @@ class Users extends BaseController
         // dd($tree);
 
         $users_1[0]['children'] = $tree;
+
         $tree = $users_1;
 
         

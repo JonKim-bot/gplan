@@ -35,10 +35,13 @@
                                     <div class="col-lg-12">
                                         <div class="general-info">
                                             <div class="row">
-                                                <div class="col-lg-12 col-xl-12">
-                                                    <a href="<?= base_url() ?>/Users/verify_user/<?= $users['users_id'] ?>" class="btn btn-<?= $users['is_verified'] == 1 ? "success" : "danger" ?>"><?= $users['is_verified'] == 1 ? "Verified" : "Not verified" ?></a>
-                                                    <!-- <img src="" width="200" class="img-fluid d-block m-auto" alt=""> -->
-                                                </div>
+                                                <?php if (session()->get('login_data')['type_id'] == '0') {  ?>
+
+                                                    <div class="col-lg-12 col-xl-12">
+                                                        <a href="<?= base_url() ?>/Users/verify_user/<?= $users['users_id'] ?>" class="btn btn-<?= $users['is_verified'] == 1 ? "success" : "danger" ?>"><?= $users['is_verified'] == 1 ? "Verified" : "Not verified" ?></a>
+                                                        <!-- <img src="" width="200" class="img-fluid d-block m-auto" alt=""> -->
+                                                    </div>
+                                                <?php } ?>
                                             </div>
                                         </div>
                                     </div>
@@ -55,9 +58,13 @@
                                 <a class="card-header-action">
                                     <i class="cil-arrow-circle-top c-icon minimize-card"></i>
                                 </a>
-                                <a class="card-header-action" href="<?php echo site_url('users/edit') . '/' . $users['users_id'] ?>">
-                                    <i class="cil-pencil c-icon"></i>
-                                </a>
+
+                                <?php if (session()->get('login_data')['type_id'] == '0') {  ?>
+
+<a class="card-header-action" href="<?php echo site_url('users/edit') . '/' . $users['users_id'] ?>">
+    <i class="cil-pencil c-icon"></i>
+</a>
+<?php } ?>
                             </div>
                         </div>
                         <div class="c-card-body">
@@ -78,7 +85,7 @@
 
                                                             <tr>
                                                         <th>Tree</th>
-                                                        <th><a class="btn btn-primary" target="_blank" href="<?= base_url() ?>/user/tree/<?= $users['users_id'] ?>">View Tree</a></th>
+                                                        <th><a class="btn btn-primary" target="_blank" href="<?= base_url() ?>/users/tree/<?= $users['users_id'] ?>">View Tree</a></th>
                                                         </tr>
 
 

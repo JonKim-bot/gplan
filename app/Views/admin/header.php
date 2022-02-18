@@ -71,6 +71,7 @@ Withdrawal
 </li>
                  
                
+
                  
                   
 
@@ -170,8 +171,8 @@ Withdrawal
                   
 
                     <li class="c-sidebar-nav-divider"></li>
-                    <li class="c-sidebar-nav-title">Components</li>
-                   
+                    <!-- <li class="c-sidebar-nav-title">Components</li> -->
+<!--                    
                     <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
                     'Wallet'
@@ -182,16 +183,16 @@ Withdrawal
 
                     </a>
                     </li>
-                   
+                    -->
 
                     <li class="c-sidebar-nav-title">User</li>
 
 <li class="c-sidebar-nav-item ">
-<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users'
+<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/detail/1'
     ? 'c-active'
-    : null ?>" href="<?= base_url('Users') ?>">
+    : null ?>" href="<?= base_url('Users/detail/1') ?>">
 <i class="cil-people c-sidebar-nav-icon"></i>
-Users
+Personal Detail
 <span class="badge badge-pill badge-warning"></span>
 
 </a>

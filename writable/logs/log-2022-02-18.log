@@ -2357,3 +2357,33 @@ CRITICAL - 2022-02-18 19:17:13 --> Table 'gplan.role' doesn't exist
 #8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #10 {main}
+CRITICAL - 2022-02-18 19:33:26 --> Undefined variable: final_form
+#0 D:\www\gplan\app\Views\admin\wallet_withdraw\add.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 46, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet_wi...', Array, true)
+#3 D:\www\gplan\app\Controllers\Withdraw.php(250): view('admin/wallet_wi...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->add()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 19:33:26 --> Undefined variable: final_form
+#0 D:\www\gplan\app\Views\admin\wallet_withdraw\add.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 46, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet_wi...', Array, true)
+#3 D:\www\gplan\app\Controllers\Withdraw.php(250): view('admin/wallet_wi...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->add()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 19:33:26 --> Undefined variable: final_form
+#0 D:\www\gplan\app\Views\admin\wallet_withdraw\add.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 46, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet_wi...', Array, true)
+#3 D:\www\gplan\app\Controllers\Withdraw.php(250): view('admin/wallet_wi...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->add()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

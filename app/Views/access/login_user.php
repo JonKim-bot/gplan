@@ -1,6 +1,6 @@
     
 <div class="col-md-6">
-    <img src="https://carlink.my/static/media/Logo%203D%20Png.8b5ebdda.png" style="margin-bottom:20px" width="100%" alt="">
+    <!-- <img src="https://carlink.my/static/media/Logo%203D%20Png.8b5ebdda.png" style="margin-bottom:20px" width="100%" alt=""> -->
 <div class="card-group">
         
         <div class="card p-4">
