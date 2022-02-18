@@ -98,7 +98,7 @@ class Users extends BaseController
                 ];
                 $data = $this->upload_image_with_data($data, 'nric_front');
                 $data = $this->upload_image_with_data($data, 'nric_back');
-                $data = $this->upload_image_with_data($data, 'ssm_cert');
+                // $data = $this->upload_image_with_data($data, 'ssm_cert');
 
                 // $where_role = array(
                 //     'role.role_id' => $_POST['role_id']
@@ -313,5 +313,5 @@ class Users extends BaseController
         $this->load->view("admin/footer");
     }
 
-    
+
 }
