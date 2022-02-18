@@ -24,6 +24,9 @@
                         <a class="card-header-action">
                             <i class="cil-arrow-circle-top c-icon minimize-card"></i>
                         </a>
+                        <a class="card-header-action" href="<?= base_url() ?>/Withdraw/add">
+                        <i class="cil-plus c-icon"></i>
+                    </a>
 
                     </div>
                 </div>
