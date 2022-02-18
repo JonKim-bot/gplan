@@ -309,7 +309,8 @@ class Users extends BaseController
 
         // dd($users_1);
         // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
-        // dd($user);
+
+        // dd($user);  
 
         $users = array_merge($users_1,$user);
         // dd($users);
@@ -319,24 +320,14 @@ class Users extends BaseController
         $users_1[0]['children'] = $tree;
         $tree = $users_1;
 
- 
-
-        $ulli = $this->createListLi($tree);
-        // dd($users_1);
-        // dd($ulli);
-
-
-        // $this->show_404_if_empty($user); q
-
-        $this->pageData["ulli"] = $ulli;
-
-
-
-        // $this->load->view("admin/header", $this->page_data);
-        // $this->load->view("admin/user/ul_of_tree");
-        // $this->load->view("admin/footer");
-
         
+        
+        // dd($tree);
+        $ulli = $this->createListLi($tree);
+        
+        $this->pageData["ulli"] = $ulli;
+        
+
         echo view('admin/header', $this->pageData);
         echo view('admin/users/ul_of_tree');
         echo view('admin/footer');
@@ -412,6 +403,7 @@ class Users extends BaseController
     public function buildTree(array $elements, $parentId = 0) {
         $branch = array();
         // dd($elements);
+        
         foreach ($elements as $element) {
             // dd($element);   
             // $element['downline_count']=  $this->CustomerModel->recursive_get_downline_count($element['customer_id']);;

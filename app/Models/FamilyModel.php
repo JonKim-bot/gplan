@@ -31,6 +31,7 @@ class FamilyModel extends BaseModel
         if ($limit != '') {
             $count = $this->getCount($filter);
             // die($this->builder->getCompiledSelect(false));
+
             $offset = ($page - 1) * $limit;
             $pages = $count / $limit;
             $pages = ceil($pages);
@@ -165,6 +166,8 @@ class FamilyModel extends BaseModel
             
             $this->builder->select("*");
             $this->builder->where("link_family_id", $row['user_id']);
+            $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
+
             $this->builder->where("family.deleted", 0);
 
             $child = $this->builder->get()->getResultArray();
@@ -202,12 +205,12 @@ class FamilyModel extends BaseModel
 
                     }
             
-                    $gchild[$gkey]['child'] = $ggchild;
+                    $gchild[$gkey]['children'] = $ggchild;
 
                 }
-                $child[$ckey]['child'] = $gchild;
+                $child[$ckey]['children'] = $gchild;
             }
-            $users[$key]['child'] = $child;
+            $users[$key]['children'] = $child;
         }
 
         return $users;

@@ -2185,3 +2185,163 @@ CRITICAL - 2022-02-18 16:39:01 --> Undefined variable: ulli
 #6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-02-18 17:26:34 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(325): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:26:34 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(325): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:26:34 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(325): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:26:35 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(325): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:26:48 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(325): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:26:49 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(325): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:26:49 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(325): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:27:04 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(324): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:27:05 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(324): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:27:05 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(324): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:27:06 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(324): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:27:10 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(388): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 388, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(388): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(324): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:37:43 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(390): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 390, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(390): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(390): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(326): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:37:43 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(390): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 390, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(390): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(390): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(326): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:37:43 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(390): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 390, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(390): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(390): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(326): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 17:37:52 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(390): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 390, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(390): App\Controllers\Users->createListLi(Array, 0)
+#2 D:\www\gplan\app\Controllers\Users.php(390): App\Controllers\Users->createListLi(Array, 1)
+#3 D:\www\gplan\app\Controllers\Users.php(325): App\Controllers\Users->createListLi(Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
