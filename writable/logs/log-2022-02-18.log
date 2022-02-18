@@ -1249,3 +1249,10 @@ CRITICAL - 2022-02-18 15:59:24 --> Too few arguments to function App\Controllers
 #2 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #3 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #4 {main}
+CRITICAL - 2022-02-18 16:05:25 --> Argument 2 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type int or null, string given, called in D:\www\gplan\app\Controllers\Main.php on line 106
+#0 D:\www\gplan\app\Controllers\Main.php(106): CodeIgniter\HTTP\RedirectResponse->to('main/success', 'refresh')
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Main->add('12')
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

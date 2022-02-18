@@ -101,9 +101,11 @@ class Main extends BaseController
                 $data = $this->upload_image_with_data($data, 'nric_front');
                 $data = $this->upload_image_with_data($data, 'nric_back');
               
-                $users_id = $this->UsersModel->insertNew($data);
 
-                return redirect()->to($_SERVER['HTTP_REFERER']);
+                $users_id = $this->UsersModel->insertNew($data);
+                return redirect()->to(base_url('main/success', "refresh"));
+
+                // return redirect()->to('main/success','refresh');
             } else {
                 $this->page_data['error'] = 'Failed to add user data';
             }
@@ -116,6 +118,7 @@ class Main extends BaseController
 
         echo view('admin/footer');
     }
+
 
     //     if ($_POST) {
 
@@ -131,6 +134,7 @@ class Main extends BaseController
     //             return redirect()->to($_SERVER['HTTP_REFERER']);
 
     //         }
+    
     //     }
 
     //     $this->pageData['final_form'] = $this->UsersModel->get_final_form_add(['created_by','modified_by','deleted','modified_date','created_date']);
@@ -165,36 +169,11 @@ class Main extends BaseController
 
     }
 
-    public function detail($users_id)
+    public function success()
     {
-        $where = [
-            'users.users_id' => $users_id,
-        ];
-        $users = $this->UsersModel->getWhere($where)[0];
-        $this->pageData['users'] = $users;
-        $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
-        $field = $this->UsersModel->get_field([
-            'created_by',
-
-            'modified_by',
-            'deleted',
-        ]);
-        $this->pageData['detail'] = $this->generate_detail(
-            $field,
-            $users,
-            'banner'
-        );
-        $users_wallet = $this->WalletModel->get_transaction_by_users([
-            'users.users_id' => $users_id,
-        ]);
-
-        $this->pageData['wallet'] = $users_wallet;
-        $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
-
-
-        echo view('admin/header', $this->pageData);
-        echo view('admin/users/detail');
-        echo view('admin/footer');
+        // echo view('admin/header', $this->pageData);
+        echo view('admin/main/success');
+        // echo view('admin/footer');
     }
 
 
