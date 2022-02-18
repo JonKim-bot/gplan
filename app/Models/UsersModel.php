@@ -83,6 +83,7 @@ class UsersModel extends BaseModel{
         //sample_to_replace
         $this->builder->where($where);
         $this->builder->where($this->tableName . '.deleted',0);
+
         $this->builder->orderBy($this->tableName . '.users_id','DESC');
 
         if ($limit != '') {
@@ -97,6 +98,7 @@ class UsersModel extends BaseModel{
         }
         $query = $this->builder->get();
         return $query->getResultArray();
+
     }
 
 
@@ -111,11 +113,11 @@ class UsersModel extends BaseModel{
         $next = array();
         $stop = true;
         foreach($families[$key] as $row){
-            $family = $this->db->query("SELECT * FROM family WHERE link_family_id = $row")->result_array();
+            $family = $this->db->query("SELECT * FROM family WHERE link_family_id = $row")->getResultArray();
             foreach($family as $fmy){
                 array_push($next, $fmy['user_id']);
                 $family_id = $fmy['family_id'];
-                $more = $this->db->query("SELECT * FROM family WHERE link_family_id = $family_id")->result_array();
+                $more = $this->db->query("SELECT * FROM family WHERE link_family_id = $family_id")->getResultArray();
                 if(!empty($more)){
                     $stop = false;
                 }
@@ -129,14 +131,17 @@ class UsersModel extends BaseModel{
         if(!$stop){
             return $this->recursive_users($families);
         }
+
         return $families;
     }
+
 
     public function insert_new_member($new_member, $family_id){
 
         $existed = $this->db->query("SELECT * FROM family WHERE user_id = $new_member")->getResultArray();
         if(empty($existed)){
             $slot_family_id = $this->find_empty_slot($family_id);
+
             $this->db->insert('family', ['link_family_id' => $slot_family_id, 'user_id' => $new_member]);
             $new_family_id = $this->db->insert_id();
             $this->insert_commission($new_family_id);

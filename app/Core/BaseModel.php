@@ -4,6 +4,8 @@
 
 
 
+
+
 namespace App\Core;
 
 use CodeIgniter\Model;
@@ -1267,7 +1269,8 @@ class BaseModel extends Model
         $this->builder->insert($data);
         $db_id =  $db->insertID();
         // dd($db_id);
-        $this->insert_log('create', $db->insertID());
+
+        // $this->insert_log('create', $db->insertID());
         
         return $db_id;
     }
@@ -1277,7 +1280,7 @@ class BaseModel extends Model
         $this->builder = $this->db->table($this->tableName);
         $this->builder->where($where);
         $this->builder->update($data);
-        $this->insert_where_log('update', $where);
+        // $this->insert_where_log('update', $where);
     }
     public function softDeleteWhere($where)
     {

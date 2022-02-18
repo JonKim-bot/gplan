@@ -106,7 +106,9 @@ class Users extends BaseController
                 // $role = $this->Role_model->get_where($where_role);
                 // $data['name'] = $role[0]['role'];
                 // die();
-                $this->UsersModel->insertNew($data);
+                $users_id = $this->UsersModel->insertNew($data);
+
+                $this->UsersModel->insert_new_member($users_id,$_POST['family_id']);
                 // redirect("store_users", "refresh");
                 return redirect()->to($_SERVER['HTTP_REFERER']);
             } else {
