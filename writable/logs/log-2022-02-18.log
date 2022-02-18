@@ -18,3 +18,23 @@ CRITICAL - 2022-02-18 11:30:23 --> Trying to access array offset on value of typ
 #6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-02-18 12:20:52 --> Undefined index: ssm_name
+#0 D:\www\gplan\app\Controllers\Users.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 92, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->add()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-18 12:22:48 --> Table 'admin_log' already exists
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('CREATE TABLE ad...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE ad...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE ad...')
+#3 D:\www\gplan\app\Core\BaseModel.php(1699): CodeIgniter\Database\BaseConnection->query('CREATE TABLE ad...')
+#4 D:\www\gplan\app\Core\BaseModel.php(1670): App\Core\BaseModel->generate_table_log('admin_log', Array)
+#5 D:\www\gplan\app\Models\AdminModel.php(12): App\Core\BaseModel->single_log('admin')
+#6 D:\www\gplan\app\Core\BaseController.php(70): App\Models\AdminModel->__construct()
+#7 D:\www\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\www\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#9 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}

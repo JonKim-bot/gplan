@@ -1,6 +1,7 @@
 <?php
 
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -89,8 +90,8 @@ class Users extends BaseController
                     'password' => $hash['password'],
                     'nric_name' => $input['nric_name'],
                     'nric' => $input['nric'],
-                    'ssm_name' => $input['ssm_name'],
-                    'ssm_number' => $input['ssm_number'],
+                    // 'ssm_name' => $input['ssm_name'],
+                    // 'ssm_number' => $input['ssm_number'],
                     'salt' => $hash['salt'],
                     // 'created_by'    => $this->session->userdata('login_id')
                 ];
