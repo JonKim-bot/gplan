@@ -90,11 +90,11 @@ class UsersModel extends BaseModel{
         $next = array();
         $stop = true;
         foreach($families[$key] as $row){
-            $family = $this->db->query("SELECT * FROM family WHERE link_family_id = $row")->result_array();
+            $family = $this->db->query("SELECT * FROM family WHERE link_family_id = $row")->getResultArray();
             foreach($family as $fmy){
                 array_push($next, $fmy['user_id']);
                 $family_id = $fmy['family_id'];
-                $more = $this->db->query("SELECT * FROM family WHERE link_family_id = $family_id")->result_array();
+                $more = $this->db->query("SELECT * FROM family WHERE link_family_id = $family_id")->getResultArray();
                 if(!empty($more)){
                     $stop = false;
                 }
@@ -112,7 +112,8 @@ class UsersModel extends BaseModel{
     }
 
     public function insert_new_member($new_member, $family_id){
-        $existed = $this->db->query("SELECT * FROM family WHERE user_id = $new_member")->result_array();
+
+        $existed = $this->db->query("SELECT * FROM family WHERE user_id = $new_member")->getResultArray();
         if(empty($existed)){
             $slot_family_id = $this->find_empty_slot($family_id);
             $this->db->insert('family', ['link_family_id' => $slot_family_id, 'user_id' => $new_member]);
@@ -129,7 +130,7 @@ class UsersModel extends BaseModel{
         foreach($result as $index => $row){ // result index = level;
             if($index != 0 && count($row) < $index * 2){  // count($result[$index]) < $index * 2 then mean level no full 
                 foreach($result[$index - 1] as $link){
-                    $find_slot = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $link HAVING total < 2")->result_array();
+                    $find_slot = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $link HAVING total < 2")->getResultArray();
                     if(!empty($find_slot)){
                         $slot_family_id = $link;
                         break;
@@ -148,9 +149,9 @@ class UsersModel extends BaseModel{
             if(isset($result[11]) && count($result[11]) < 22){ // check if level 11 is full
                 $commission = 30;
             }
-            $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->result_array()[0];
+            $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];
             $user_id = $user['user_id'];
-            $existed = $this->db->query("SELECT * FROM family_commission WHERE user_id = $user_id AND family_id = $family_id")->result_array();
+            $existed = $this->db->query("SELECT * FROM family_commission WHERE user_id = $user_id AND family_id = $family_id")->getResultArray();
             if(empty($existed)){
                 $this->db->insert('family_commission', ['user_id' => $user_id, 'commission' => $commission, 'family_id' => $family_id]);
             }
@@ -158,11 +159,11 @@ class UsersModel extends BaseModel{
     }
 
     public function recursive_upline($family_id, $upline = array()){
-        $family = $this->db->query("SELECT * FROM family WHERE family_id = $family_id")->result_array()[0];
+        $family = $this->db->query("SELECT * FROM family WHERE family_id = $family_id")->getResultArray()[0];
         if($family['link_family_id'] != 0){
             $link_family_id = $family['link_family_id'];
             array_push($upline, $link_family_id);
-            $up_family = $this->db->query("SELECT * FROM family WHERE family_id = $link_family_id")->result_array()[0];
+            $up_family = $this->db->query("SELECT * FROM family WHERE family_id = $link_family_id")->getResultArray()[0];
             if($up_family['link_family_id'] != 0){
                 return $this->recursive_upline($link_family_id, $upline);
             }
