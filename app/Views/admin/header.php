@@ -25,6 +25,15 @@
             'assets/plugins/select2/select2.css'
         ) ?>">
 
+            <link href="<?= base_url() ?>/assets/plugins/chartjs/css/chartjs.css" rel="stylesheet">
+
+
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> -->
+
+
     </head>
     <body class="c-app">
         <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
@@ -139,6 +148,16 @@ Users
 Admin 
 </a>
 </li>
+
+<li class="c-sidebar-nav-item ">
+<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/tree'
+    ? 'c-active'
+    : null ?>" href="<?= base_url('Users/tree') ?>">
+<i class="cil-people c-sidebar-nav-icon"></i>
+Referal
+</a>
+</li>
+
                   
                         </ul>
                     </li>

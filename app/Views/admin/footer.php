@@ -4,32 +4,59 @@
                 </main>
             </div>
             <footer class="c-footer">
-                <div><a href="#">Gplan.</a> &copy; 2020 Creative Labs.</div>
+                <div><a href="#">CarLink.</a> &copy; 2020 Creative Labs.</div>
                 <!-- <div class="ml-auto">Powered by&nbsp;<a href="#">wynndarrien</a></div> -->
             </footer>
-        </div>
+
+
+        
+            
+                    </div>
+                    
+            <script src="<?=base_url()?>/assets/js/core/bundle.js"></script>
+           
+           <script src="<?=base_url()?>/assets/js/core/icons.js"></script>
+           
+           <!-- <script src="<?=base_url()?>assets/plugins/chartjs/js/chartjs.js"></script> -->
+           <script src="<?=base_url()?>/assets/js/core/utils.js"></script>
+           
+           
+   
+           <!-- <script src="<?=base_url()?>/assets/js/core/main.js"></script> -->
+   
+           <script src="<?=base_url()?>/assets/js/core/permission.js"></script>
+   
+   
+           <script src="<?=base_url()?>/assets/js/core/custom.js"></script>
+           <script src="<?= base_url() ?>/assets/js/core/customTable.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js"></script>
+   
+           <!-- Flatpickr -->
+           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+           <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <!-- </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js"></script>
 
-        <script src="<?= base_url('assets/js/core/bundle.js') ?>"></script>
+        <script src="<?=base_url('assets/js/core/bundle.js')?>"></script>
        
         
-        <script src="<?= base_url('assets/js/core/icons.js') ?>"></script>
+        <script src="<?=base_url('assets/js/core/icons.js')?>"></script>
         
-        <!-- <script src="<?= base_url() ?>assets/plugins/chartjs/js/chartjs.js"></script> -->
-        <script src="<?= base_url('assets/js/core/utils.js') ?>"></script>
+        <!-- <script src="<?=base_url()?>assets/plugins/chartjs/js/chartjs.js"></script> -->
+        <!-- <script src="<?=base_url('assets/js/core/utils.js')?>"></script> -->
         
-        <!-- <script src="<?= base_url() ?>/assets/js/core/main.js"></script> -->
+        <!-- <script src="<?=base_url()?>/assets/js/core/main.js"></script> -->
+<!-- 
+        <script src="<?=base_url('assets/js/core/permission.js')?>"></script>
 
-        <script src="<?= base_url('assets/js/core/permission.js') ?>"></script>
-
-        <script src="<?= base_url('assets/js/core/custom.js') ?>"></script>
+        <script src="<?=base_url('assets/js/core/custom.js')?>"></script>
         <script src="<?= base_url('assets/js/core/customTable.js') ?>"></script>
-                <script src="<?= base_url() ?>/assets/plugins/datatable/js/jquery.dataTables.js"></script> 
-        <script src="<?= base_url() ?>/assets/plugins/datatable/js/dataTables.bootstrap4.min.js"></script>
+                <script src="<?=base_url()?>/assets/plugins/datatable/js/jquery.dataTables.js"></script> 
+        <script src="<?=base_url()?>/assets/plugins/datatable/js/dataTables.bootstrap4.min.js"></script>  -->
 
     </body>
 </html>

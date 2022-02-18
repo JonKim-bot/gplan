@@ -166,7 +166,8 @@ class Users extends BaseController
     
         }else{
             $is_verified = 0;
-            
+
+
         }
         $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
 
@@ -302,27 +303,127 @@ class Users extends BaseController
     function tree($user_id = 1)
     {
 
-        $users_1 = $this->User_model->get_where(['user_id' => $user_id]);
+        $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
 
-        $user = $this->User_model->get_tree($user_id);
+        $user = $this->FamilyModel->getTree($user_id);
+
+        // dd($users_1);
+        // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
+        // dd($user);
+
         $users = array_merge($users_1,$user);
         // dd($users);
         $tree =  $this->buildTree($users,$user_id);
+        // dd($tree);
+
         $users_1[0]['children'] = $tree;
         $tree = $users_1;
         $ulli = $this->createListLi($tree);
         // dd($users_1);
         // dd($ulli);
 
-        // $this->show_404_if_empty($user);
 
-        $this->page_data["ulli"] = $ulli;
+        // $this->show_404_if_empty($user); q
+
+        $this->pageData["ulli"] = $ulli;
 
 
-        $this->load->view("admin/header", $this->page_data);
-        $this->load->view("admin/user/ul_of_tree");
-        $this->load->view("admin/footer");
+
+        // $this->load->view("admin/header", $this->page_data);
+        // $this->load->view("admin/user/ul_of_tree");
+        // $this->load->view("admin/footer");
+
+        
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/ul_of_tree', $this->pageData);
+        echo view('admin/footer');
     }
 
 
-}
+    
+    function createListAccordion($main_topics,$count = 0 )
+    {
+        if($main_topics == null || sizeof($main_topics) <= 0)
+        {
+            return '';
+        }
+
+        $list = '<div class="card-body">
+                    <div id="accordion_'.$count.'">
+                    <div class="card">
+                        <div class="card-header" id="heading_'.$count.'">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse'.$count.'" aria-expanded="true">
+                                asdasdasd@asd  : Referrals (2)
+                                <br>
+                                Total Received Point : 8.50                                        <br>
+                                Total Group Sales : RM 30.99                                        <br>
+                                Total Self Sales : RM 0
+                                </button>
+                            </h5>
+                        </div>
+                        
+                       
+                        ';
+        foreach($main_topics as $k_main_topics => $v_main_topics )
+        {   
+            // dd($v_main_topics);
+            $list .= ' <div id="collapse'.$count.'" class="collapse" data-parent="#accordion_'.$count.'" style="">
+            <div class="card-body">
+            
+          '.  $this->createListAccordion(isset($v_main_topics["children"]) ? $v_main_topics["children"] : null,$count++) . '</div></div>' ;
+
+        }
+
+        $list .= '</div></div></div></div>';
+
+        return $list;
+
+    }
+       
+
+    function createListLi($main_topics,$count = 0 )
+    {
+        if($main_topics == null || sizeof($main_topics) <= 0)
+        {
+            return '';
+        }
+
+        $list = '<ul>';
+        foreach($main_topics as $k_main_topics => $v_main_topics )
+        {
+            // dd($v_main_topics);
+            $list .= '<li>'.$v_main_topics['username'].  $this->createListLi(isset($v_main_topics["children"]) ? $v_main_topics["children"] : null,$count++) . '</li>' ;
+
+
+        }
+
+        $list .= '</ul>';
+
+        return $list;
+
+    }
+
+
+
+    public function buildTree(array $elements, $parentId = 0) {
+        $branch = array();
+        // dd($elements);
+        foreach ($elements as $element) {
+            // dd($element);   
+            // $element['downline_count']=  $this->CustomerModel->recursive_get_downline_count($element['customer_id']);;
+            if ($element['link_family_id'] == $parentId) {
+                $children = $this->buildTree($elements, $element['user_id']);
+                if (!empty($children)) {
+                    $element['children'] = $children;
+                    // dd($element);
+                }
+                $branch[] = $element;
+            }
+        }
+        return $branch;
+    }
+
+}    
+
+

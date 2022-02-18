@@ -20,12 +20,18 @@
 </div>
 <div id="chart-container"></div>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+
+
 <link rel="stylesheet" href="<?= base_url() ?>/assets/css/style.css">
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
 
 <script type="text/javascript" src="<?= base_url() ?>/assets/js/jquery.orgchart.js"></script>
-<link href="<?= base_url() ?>/assets/css/jquery.orgchart.css" rel="stylesheet">
+<link href= "<?= base_url() ?>/assets/css/jquery.orgchart.css" rel="stylesheet">
 
 <link href="<?= base_url() ?>/assets/plugins/chartjs/css/chartjs.css" rel="stylesheet">
 

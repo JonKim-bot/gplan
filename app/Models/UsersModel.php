@@ -15,6 +15,7 @@ class UsersModel extends BaseModel{
 
 
 
+
     function get_family_user($limit = "", $page = 1, $filter = array()){
         $this->builder = $this->db->table($this->tableName);
         $this->builder->select('*');
@@ -88,6 +89,7 @@ class UsersModel extends BaseModel{
         $this->builder->where($this->tableName . '.deleted',0);
 
         $this->builder->orderBy($this->tableName . '.users_id','DESC');
+        
 
         if ($limit != '') {
             $count = $this->getCount($filter);
@@ -96,6 +98,7 @@ class UsersModel extends BaseModel{
             $pages = $count / $limit;
             $pages = ceil($pages);
             $pagination = $this->getPaging($limit, $offset, $page, $pages, $filter,$this->builder);
+
             return $pagination;
 
         }
@@ -104,5 +107,7 @@ class UsersModel extends BaseModel{
 
     }
 
+
+    
 
 }

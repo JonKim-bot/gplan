@@ -19,6 +19,32 @@ class FamilyModel extends BaseModel
     }
 
     
+    function getWhere($where,$limit = "", $page = 1, $filter = array()){
+        $this->builder = $this->db->table($this->tableName);
+        $this->builder->select($this->tableName . '.*,users.*');
+        //sample_to_replace
+        $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
+        $this->builder->where($where);
+        $this->builder->where($this->tableName . '.deleted',0);
+        $this->builder->orderBy($this->tableName . '.user_id','DESC');
+
+        if ($limit != '') {
+            $count = $this->getCount($filter);
+            // die($this->builder->getCompiledSelect(false));
+            $offset = ($page - 1) * $limit;
+            $pages = $count / $limit;
+            $pages = ceil($pages);
+            $pagination = $this->getPaging($limit, $offset, $page, $pages, $filter,$this->builder);
+            
+            return $pagination;
+
+        }
+        $query = $this->builder->get();
+        return $query->getResultArray();
+
+
+    }
+
     public function user_family($family_id){
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
@@ -121,5 +147,72 @@ class FamilyModel extends BaseModel
 
 
    
+
+    public function getTree($user_id)
+    {
+        $this->builder->select("*");
+        $this->builder->where("link_family_id", $user_id);
+        $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
+        $this->builder->where("family.deleted", 0);
+
+        $users = $this->builder->get()->getResultArray();
+        foreach ($users as $key => $row) {
+            // $users[$key]['self_sales'] = $this->getSelfSales($row['user_id']);
+            // $users[$key]['total_received_point'] = $this->PointModel->get_total_received_point($row['user_id']);
+            // $users[$key]['group_sales'] = $this->getGroupTotalSales($row['user_id']);
+            // $users[$key]['downline_count'] = $this->recursive_get_downline_count($row['user_id']);
+            // //included own sales
+            
+            $this->builder->select("*");
+            $this->builder->where("link_family_id", $row['user_id']);
+            $this->builder->where("family.deleted", 0);
+
+            $child = $this->builder->get()->getResultArray();
+            foreach ($child as $ckey => $crow) {
+                // $child[$ckey]['self_sales'] = $this->getSelfSales($crow['user_id']);
+                // $child[$ckey]['total_received_point'] = $this->PointModel->get_total_received_point($crow['user_id']);
+                // $child[$ckey]['group_sales'] = $this->getGroupTotalSales($crow['user_id']);
+                // $child[$ckey]['downline_count'] = $this->recursive_get_downline_count($crow['user_id']);
+
+                $this->builder->select("*");
+                $this->builder->where("link_family_id", $crow['user_id']);
+                $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
+
+                $this->builder->where("family.deleted", 0);
+
+                $gchild = $this->builder->get()->getResultArray();
+                foreach ($gchild as $gkey => $grow) {
+                    // $gchild[$gkey]['self_sales'] = $this->getSelfSales($grow['user_id']);
+                    // $gchild[$gkey]['total_received_point'] = $this->PointModel->get_total_received_point($grow['user_id']);
+                    // $gchild[$gkey]['group_sales'] = $this->getGroupTotalSales($grow['user_id']);
+                    // $gchild[$gkey]['downline_count'] = $this->recursive_get_downline_count($grow['user_id']);
+
+                    $this->builder->select("*");
+                    $this->builder->where("link_family_id", $grow['user_id']);
+                    $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
+
+                    $this->builder->where("family.deleted", 0);
+    
+                    $ggchild = $this->builder->get()->getResultArray();
+                    foreach ($ggchild as $ggkey => $ggrow) {
+                        // $ggchild[$ggkey]['self_sales'] = $this->getSelfSales($ggrow['user_id']);
+                        // $ggchild[$ggkey]['total_received_point'] = $this->PointModel->get_total_received_point($ggrow['user_id']);
+                        // $ggchild[$ggkey]['group_sales'] = $this->getGroupTotalSales($ggrow['user_id']);
+                        // $ggchild[$ggkey]['downline_count'] = $this->recursive_get_downline_count($ggrow['user_id']);
+
+                    }
+            
+                    $gchild[$gkey]['child'] = $ggchild;
+
+                }
+                $child[$ckey]['child'] = $gchild;
+            }
+            $users[$key]['child'] = $child;
+        }
+
+        return $users;
+
+    }
+
 }
 ?>
