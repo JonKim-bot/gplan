@@ -69,13 +69,19 @@ class Access extends BaseController
                 $this->pagedata['error'] = 'This Account has been DEACTIVATED';
             }
 
+            if (!empty($login_data) and $login_data['is_verified'] == 0) {
+                $error = true;
+                $this->pagedata['error'] = 'This Account has not been VERIFIED yet';
+            }
+
             // dd($login_data);
             if (!$error) {
                 $login_data['type_id'] = 1;
                 $session->set('login_data', $login_data);
                 $session->set('login_id', $login_id);
 
-                return redirect()->to(base_url('admin', 'refresh'));
+
+                return redirect()->to(base_url('users/detail/1', 'refresh'));
             }
         }
 

@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url('/WalletWithdraw/add'); ?>">
+                            <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url('/Withdraw/add'); ?>">
                                 <!-- <div class="form-group">
                                 <label for="">Profile Picture</label>
                                 <div class="custom-file">

@@ -193,12 +193,25 @@ Withdrawal
     : null ?>" href="<?= base_url('Users/detail/1') ?>">
 <i class="cil-people c-sidebar-nav-icon"></i>
 Personal Detail
+
 <span class="badge badge-pill badge-warning"></span>
 
 </a>
 
 </li>
 
+<li class="c-sidebar-nav-item ">
+<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/qrcode/1'
+    ? 'c-active'
+    : null ?>" href="<?= base_url('Users/qrcode/1') ?>">
+<i class="cil-people c-sidebar-nav-icon"></i>
+QR Code
+
+<span class="badge badge-pill badge-warning"></span>
+
+</a>
+
+</li>
 
                 <?php } ?>
               

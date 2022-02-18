@@ -87,17 +87,21 @@ class Withdraw extends BaseController
         $data['modified_date'] = date('Y-m-d');
         
 
-        // $remarks = "Withdrawal on user " . $wallet_withdraw['name'];
+        $remarks = "Withdrawal on user " . $wallet_withdraw['name'];
 
-        // $balance = $this->WalletModel->get_balance($wallet_withdraw['users_id']);
-        // if($balance)
-        // $this->WalletModel->wallet_out(
-        //     $wallet_withdraw['users_id'],
-        //     $wallet_withdraw['amount'],
-        //     $remarks,
-        // );
-        $this->WalletWithdrawModel->updateWhere($where, $data);
-        return redirect()->to($_SERVER['HTTP_REFERER']);
+        $balance = $this->WalletModel->get_balance($wallet_withdraw['users_id']);
+        if($balance >= $wallet_withdraw['amount']){
+            $this->WalletModel->wallet_out(
+                $wallet_withdraw['users_id'],
+                $wallet_withdraw['amount'],
+                $remarks,
+            );
+            $this->WalletWithdrawModel->updateWhere($where, $data);
+            return redirect()->to($_SERVER['HTTP_REFERER']);
+        }else{
+            die("Balance not enought (need to change this alert to pop up)");
+            // return redirect()->to($_SERVER['HTTP_REFERER']);
+        }
     }
     public function change_status($wallet_withdraw_id)
     {
@@ -212,6 +216,7 @@ class Withdraw extends BaseController
                 if (session()->get('login_data')['type_id'] == '1') { 
                     $users_id = session()->get('login_id');
                     $_POST['users_id'] = $users_id;
+
                 }
 
                 $data = $this->get_insert_data($_POST);

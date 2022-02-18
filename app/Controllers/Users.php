@@ -175,6 +175,47 @@ class Users extends BaseController
 
     }
 
+    
+    public function qrcode($users_id)
+    {
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $users_id = session()->get('login_id');
+        }
+        // dd($users_id);
+        $where = [
+            'users.users_id' => $users_id,
+        ];
+
+        $users = $this->UsersModel->getWhere($where)[0];
+        $this->pageData['users'] = $users;
+        $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
+        $field = $this->UsersModel->get_field([
+            'created_by',
+
+            'modified_by',
+            'deleted',
+        ]);
+        $this->pageData['detail'] = $this->generate_detail(
+            $field,
+            $users,
+            'banner'
+        );
+        $users_wallet = $this->WalletModel->get_transaction_by_users([
+            'users.users_id' => $users_id,
+        ]);
+
+        $this->pageData['wallet'] = $users_wallet;
+        $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
+
+
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/qrcode');
+        echo view('admin/footer');
+    }
+
+
+
     public function detail($users_id)
     {
 
@@ -293,6 +334,7 @@ class Users extends BaseController
             'created_date',
         ]);
 
+
         echo view('admin/header', $this->pageData);
         echo view('admin/users/edit');
         echo view('admin/footer');
@@ -313,7 +355,7 @@ class Users extends BaseController
 
         $user = $this->FamilyModel->getTree($user_id);
 
-        
+
         // dd($users_1);
         // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
 
