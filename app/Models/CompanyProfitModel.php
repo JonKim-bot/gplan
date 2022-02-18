@@ -88,6 +88,7 @@ class CompanyProfitModel extends BaseModel
     }
 
     function company_profit_in($users_id, $amount, $remarks,$family_id = 0 ,$company_profit_withdrawal_id = 0,$company_profit_topup_id = 0 )
+
     {
 
         $balance = $this->get_balance($users_id);
@@ -95,9 +96,6 @@ class CompanyProfitModel extends BaseModel
         $data = [
             'users_id' => $users_id,
             'company_profit_in' => $amount,
-            'family_id' => $family_id,
-            'company_profit_withdraw_id' => $company_profit_withdrawal_id,
-            'company_profit_topup_id' => $company_profit_topup_id,
             'balance' => $balance + $amount,
             'remarks' => $remarks,
 

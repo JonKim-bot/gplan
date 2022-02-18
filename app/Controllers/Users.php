@@ -9,6 +9,7 @@ use App\Models\UsersModel;
 use App\Models\FamilyModel;
 
 use App\Models\WalletModel;
+use App\Models\CompanyProfitModel;
 
 class Users extends BaseController
 {
@@ -17,7 +18,8 @@ class Users extends BaseController
         $this->WalletModel = new WalletModel();
         $this->FamilyModel = new FamilyModel();
 
-        
+        $this->CompanyProfitModel = new CompanyProfitModel();
+
 
         $this->UsersModel = new UsersModel();
         if (
@@ -64,6 +66,7 @@ class Users extends BaseController
             'banner'
             );
 
+    
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
         echo view('admin/users/all');
@@ -157,8 +160,10 @@ class Users extends BaseController
         $users = $this->UsersModel->getWhere($where)[0];
         if($users['is_verified'] == 0){
             $is_verified = 1;
+            $remarks = "Profit 500 from users " . $users['name'] ;
+            $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
             $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
-
+    
         }else{
             $is_verified = 0;
         }
