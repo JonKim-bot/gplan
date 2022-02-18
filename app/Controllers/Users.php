@@ -6,6 +6,7 @@ namespace App\Controllers;
 
 use App\Core\BaseController;
 use App\Models\UsersModel;
+use App\Models\FamilyModel;
 
 use App\Models\WalletModel;
 
@@ -14,6 +15,7 @@ class Users extends BaseController
     public function __construct()
     {
         $this->WalletModel = new WalletModel();
+        $this->FamilyModel = new FamilyModel();
 
         $this->UsersModel = new UsersModel();
         if (
@@ -108,7 +110,7 @@ class Users extends BaseController
                 // die();
                 $users_id = $this->UsersModel->insertNew($data);
 
-                $this->UsersModel->insert_new_member($users_id,$_POST['family_id']);
+                $this->FamilyModel->insert_new_member($users_id,$_POST['family_id']);
                 // redirect("store_users", "refresh");
                 return redirect()->to($_SERVER['HTTP_REFERER']);
             } else {

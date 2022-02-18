@@ -58,8 +58,9 @@ class FamilyModel extends BaseModel
         if(empty($existed)){
             $slot_family_id = $this->find_empty_slot($family_id);
 
-            $this->db->insert('family', ['link_family_id' => $slot_family_id, 'user_id' => $new_member]);
-            $new_family_id = $this->db->insert_id();
+            $new_family_id = $this->insertNew(['link_family_id' => $slot_family_id, 'user_id' => $new_member]);
+            // $this->db->insert('family', );
+            // $new_family_id = $this->db->insertID();
             $this->insert_commission($new_family_id);
         }
         $this->user_family($family_id);
