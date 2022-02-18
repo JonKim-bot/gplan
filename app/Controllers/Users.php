@@ -286,4 +286,32 @@ class Users extends BaseController
         // dd('asd');
         return redirect()->to($_SERVER['HTTP_REFERER']);
     }
+
+
+    function tree($user_id = 1)
+    {
+
+        $users_1 = $this->User_model->get_where(['user_id' => $user_id]);
+
+        $user = $this->User_model->get_tree($user_id);
+        $users = array_merge($users_1,$user);
+        // dd($users);
+        $tree =  $this->buildTree($users,$user_id);
+        $users_1[0]['children'] = $tree;
+        $tree = $users_1;
+        $ulli = $this->createListLi($tree);
+        // dd($users_1);
+        // dd($ulli);
+
+        // $this->show_404_if_empty($user);
+
+        $this->page_data["ulli"] = $ulli;
+
+
+        $this->load->view("admin/header", $this->page_data);
+        $this->load->view("admin/user/ul_of_tree");
+        $this->load->view("admin/footer");
+    }
+
+    
 }
