@@ -49,7 +49,7 @@ class FamilyModel extends BaseModel
     public function user_family($family_id){
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
-        $this->debug($result);
+        // $this->debug($result);
     }
 
     public function recursive_users($families){
@@ -163,7 +163,6 @@ class FamilyModel extends BaseModel
             // $users[$key]['group_sales'] = $this->getGroupTotalSales($row['user_id']);
             // $users[$key]['downline_count'] = $this->recursive_get_downline_count($row['user_id']);
             // //included own sales
-            
             $this->builder->select("*");
             $this->builder->where("link_family_id", $row['user_id']);
             $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');

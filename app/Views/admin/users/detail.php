@@ -74,6 +74,13 @@
                                                             <tr>
                                                         <th>Last Edited By</th>
                                                         <th><?= $modified_by ?></th>
+                                                        </tr>
+
+                                                            <tr>
+                                                        <th>Tree</th>
+                                                        <th><a class="btn btn-primary" target="_blank" href="<?= base_url() ?>/user/tree/<?= $users['users_id'] ?>">View Tree</a></th>
+                                                        </tr>
+
 
                                                         <tr>
                                                             <th>QR Code</th>
@@ -86,7 +93,6 @@
 
                                                             </th>
                                                         </tr>
-                                                    </tr>
 
                                                                 <tr>
                                                                     <th scope="row">Name</th>

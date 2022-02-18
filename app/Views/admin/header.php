@@ -149,14 +149,14 @@ Admin
 </a>
 </li>
 
-<li class="c-sidebar-nav-item ">
+<!-- <li class="c-sidebar-nav-item ">
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/tree'
     ? 'c-active'
     : null ?>" href="<?= base_url('Users/tree') ?>">
 <i class="cil-people c-sidebar-nav-icon"></i>
 Referal
 </a>
-</li>
+</li> -->
 
                   
                         </ul>
