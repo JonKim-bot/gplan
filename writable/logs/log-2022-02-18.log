@@ -1189,3 +1189,42 @@ CRITICAL - 2022-02-18 15:34:15 --> Invalid file: admin/company_profit/all.php
 #5 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #6 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 {main}
+CRITICAL - 2022-02-18 15:49:14 --> Unknown column 'balance' in 'field list'
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `co...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 D:\www\gplan\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 D:\www\gplan\app\Core\BaseModel.php(1269): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\gplan\app\Models\CompanyProfitModel.php(105): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\gplan\app\Controllers\Users.php(164): App\Models\CompanyProfitModel->company_profit_in('12', 500, 'Profit 500 from...')
+#7 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('12')
+#8 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#9 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-02-18 15:49:46 --> Unknown column 'remarks' in 'field list'
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `co...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 D:\www\gplan\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 D:\www\gplan\app\Core\BaseModel.php(1269): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\gplan\app\Models\CompanyProfitModel.php(105): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\gplan\app\Controllers\Users.php(164): App\Models\CompanyProfitModel->company_profit_in('12', 500, 'Profit 500 from...')
+#7 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('12')
+#8 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#9 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-02-18 15:49:47 --> Unknown column 'remarks' in 'field list'
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `co...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 D:\www\gplan\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 D:\www\gplan\app\Core\BaseModel.php(1269): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\gplan\app\Models\CompanyProfitModel.php(105): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\gplan\app\Controllers\Users.php(164): App\Models\CompanyProfitModel->company_profit_in('12', 500, 'Profit 500 from...')
+#7 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('12')
+#8 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#9 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
