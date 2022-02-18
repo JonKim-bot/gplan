@@ -1,6 +1,7 @@
 <?php namespace App\Models;
 
 use App\Core\BaseModel;
+use App\Models\WalletModel;
 
 class FamilyModel extends BaseModel
 {
@@ -85,6 +86,8 @@ class FamilyModel extends BaseModel
     }
 
     public function insert_commission($family_id){
+        $this->WalletModel = new WalletModel();
+
         $upline = $this->recursive_upline($family_id); // find all upline
         $commission = 10;
         foreach($upline as $row){
@@ -94,9 +97,11 @@ class FamilyModel extends BaseModel
             }
             $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];
             $user_id = $user['user_id'];
-            $existed = $this->db->query("SELECT * FROM family_commission WHERE user_id = $user_id AND family_id = $family_id")->getResultArray();
+            $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
             if(empty($existed)){
-                $this->db->insert('family_commission', ['user_id' => $user_id, 'commission' => $commission, 'family_id' => $family_id]);
+                $remarks = 'Commision for ' . $user_id . ' With amount of ' . $commission;
+                $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
+                // $this->db->insert('family_commission', ['user_id' => $user_id, 'commission' => $commission, 'family_id' => $family_id]);
             }
         }
     }

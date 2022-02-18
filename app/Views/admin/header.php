@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <html lang="en">
     <head>
         <!-- <base href="./"> -->
@@ -47,7 +48,7 @@
                  
            
            
-                
+<!--                 
                   
                     <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
@@ -58,7 +59,7 @@
                     WalletTopup
                     <span class="badge badge-pill badge-warning"><?= $undone_topup ?></span>
                     </a>
-                    </li>
+                    </li> -->
                     <li class="c-sidebar-nav-item ">
 
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'

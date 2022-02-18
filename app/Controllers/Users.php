@@ -17,6 +17,8 @@ class Users extends BaseController
         $this->WalletModel = new WalletModel();
         $this->FamilyModel = new FamilyModel();
 
+        
+
         $this->UsersModel = new UsersModel();
         if (
             session()->get('login_data') == null &&
@@ -92,7 +94,7 @@ class Users extends BaseController
                     'password' => $hash['password'],
                     'nric_name' => $input['nric_name'],
                     'nric' => $input['nric'],
-
+                    'family_id' => $input['family_id'],
                     // 'ssm_name' => $input['ssm_name'],
                     // 'ssm_number' => $input['ssm_number'],
                     'salt' => $hash['salt'],
@@ -100,18 +102,13 @@ class Users extends BaseController
                 ];
                 $data = $this->upload_image_with_data($data, 'nric_front');
                 $data = $this->upload_image_with_data($data, 'nric_back');
-                // $data = $this->upload_image_with_data($data, 'ssm_cert');
-
-                // $where_role = array(
-                //     'role.role_id' => $_POST['role_id']
-                // );
-                // $role = $this->Role_model->get_where($where_role);
-                // $data['name'] = $role[0]['role'];
-                // die();
+              
                 $users_id = $this->UsersModel->insertNew($data);
+                
 
-                $this->FamilyModel->insert_new_member($users_id,$_POST['family_id']);
-                // redirect("store_users", "refresh");
+                // $this->FamilyModel->insert_new_member($users_id,$_POST['family_id']);
+                
+
                 return redirect()->to($_SERVER['HTTP_REFERER']);
             } else {
                 $this->page_data['error'] = 'Failed to add user data';
@@ -160,6 +157,8 @@ class Users extends BaseController
         $users = $this->UsersModel->getWhere($where)[0];
         if($users['is_verified'] == 0){
             $is_verified = 1;
+            $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
+
         }else{
             $is_verified = 0;
         }

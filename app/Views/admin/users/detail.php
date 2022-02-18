@@ -85,6 +85,12 @@
                                                                     <th scope="row">email</th>
                                                                     <td><?= $users["email"] ?></td>
                                                                 </tr>
+
+                                                                <tr>
+                                                                    <th scope="row">Family Name</th>
+                                                                    <td><?= $users["family_name"] ?></td>
+                                                                </tr>
+
                                                                 <tr>
                                                                     <th scope="row">Contact</th>
                                                                     <td><?= $users["contact"] ?></td>

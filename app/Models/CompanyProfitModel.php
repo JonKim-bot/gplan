@@ -2,9 +2,9 @@
 
 
 use App\Core\BaseModel;
-// use App\Models\WalletTopupModel;
+// use App\Models\CompanyProfitTopupModel;
 
-class WalletModel extends BaseModel
+class CompanyProfitModel extends BaseModel
 
 {
     public function __construct()
@@ -12,12 +12,12 @@ class WalletModel extends BaseModel
     {
         parent::__construct();
 
-        $this->tableName = 'wallet';
+        $this->tableName = 'company_profit';
 
-        $this->primaryKey = 'wallet_id';
+        $this->primaryKey = 'company_profit_id';
 
-        // $this->WalletModel = new WalletModel();
-        // $this->WalletTopupModel = new WalletTopupModel();
+        // $this->CompanyProfitModel = new CompanyProfitModel();
+        // $this->CompanyProfitTopupModel = new CompanyProfitTopupModel();
 
         $this->builder = $this->db->table($this->tableName);
     }
@@ -50,7 +50,7 @@ class WalletModel extends BaseModel
         $this->builder->select('*');
         $this->builder->from($this->table_name);
         $this->builder->where('users_id', $users_id);
-        $this->builder->orderBy('wallet_id', 'DESC');
+        $this->builder->orderBy('company_profit_id', 'DESC');
         $query = $this->builder->get()->getResultArray();
 
 
@@ -65,8 +65,8 @@ class WalletModel extends BaseModel
         $this->builder->select('*');
         $this->builder->from($this->table_name);
         $this->builder->where('users_id', $users_id);
-        // $this->builder->where('wallet.is_commissiontier', 1);
-        $this->builder->orderBy('wallet_id', 'DESC');
+        // $this->builder->where('company_profit.is_commissiontier', 1);
+        $this->builder->orderBy('company_profit_id', 'DESC');
         $query = $this->builder->get()->getResultArray();
         
 
@@ -82,21 +82,21 @@ class WalletModel extends BaseModel
             'amount' => $amount,
         ];
 
-        // $top_up_id = $this->WalletTopupModel->insertNew($data);
+        // $top_up_id = $this->CompanyProfitTopupModel->insertNew($data);
         return $top_up_id;
     }
 
-    function wallet_in($users_id, $amount, $remarks,$family_id = 0 ,$wallet_withdrawal_id = 0,$wallet_topup_id = 0 )
+    function company_profit_in($users_id, $amount, $remarks,$family_id = 0 ,$company_profit_withdrawal_id = 0,$company_profit_topup_id = 0 )
     {
 
         $balance = $this->get_balance($users_id);
 
         $data = [
             'users_id' => $users_id,
-            'wallet_in' => $amount,
+            'company_profit_in' => $amount,
             'family_id' => $family_id,
-            'wallet_withdraw_id' => $wallet_withdrawal_id,
-            'wallet_topup_id' => $wallet_topup_id,
+            'company_profit_withdraw_id' => $company_profit_withdrawal_id,
+            'company_profit_topup_id' => $company_profit_topup_id,
             'balance' => $balance + $amount,
             'remarks' => $remarks,
 
@@ -106,16 +106,16 @@ class WalletModel extends BaseModel
         $this->insertNew($data);
     }
 
-    function wallet_out($users_id, $amount, $remarks, $wallet_withdrawal_id = 0)
+    function company_profit_out($users_id, $amount, $remarks, $company_profit_withdrawal_id = 0)
     {
         $balance = $this->get_balance($users_id);
 
         $data = [
             'users_id' => $users_id,
-            'wallet_out' => $amount,
+            'company_profit_out' => $amount,
             'balance' => $balance - $amount,
             'remarks' => $remarks,
-            'wallet_withdrawal_id' => $wallet_withdrawal_id,
+            'company_profit_withdrawal_id' => $company_profit_withdrawal_id,
         ];
         // $users_bank = $this->users_model->get_users_bank([
         //     'users.users_id' => $users_id
@@ -128,7 +128,7 @@ class WalletModel extends BaseModel
         //     'bank_name' => $users_bank['bank_name'],
         //     'account_name' => $users_bank['account_name'],
         // ];
-        // $this->Wallet_withdrawal_model->insert($data_withdrawal);
+        // $this->CompanyProfit_withdrawal_model->insert($data_withdrawal);
         $this->insertNew($data);
     }
 
@@ -139,7 +139,7 @@ class WalletModel extends BaseModel
         $data = [
             'users_id' => $users_id,
             'is_commissiontier' => 1,
-            'wallet_in' => $data['amount'],
+            'company_profit_in' => $data['amount'],
             'balance' => $balance + $data['amount'],
             'remarks' => $data['remarks'],
         ];
@@ -155,20 +155,20 @@ class WalletModel extends BaseModel
         //     'bank_name' => $users_bank['bank_name'],
         //     'account_name' => $users_bank['account_name'],
         // ];
-        // $this->Wallet_withdrawal_model->insert($data_withdrawal);
+        // $this->CompanyProfit_withdrawal_model->insert($data_withdrawal);
         $this->insertNew($data);
     }
 
-    function get_total_wallet_in($users_id)
+    function get_total_company_profit_in($users_id)
     {
-        $this->builder->select('SUM(wallet_in) as total_wallet_in');
+        $this->builder->select('SUM(company_profit_in) as total_company_profit_in');
         $this->builder->from($this->table_name);
         $this->builder->where('users_id', $users_id);
 
         $query = $this->builder->get()->getResultArray();
 
         if (!empty($query)) {
-            $result = $query[0]['total_wallet_in'];
+            $result = $query[0]['total_company_profit_in'];
         } else {
             $result = 0;
         }
@@ -176,16 +176,16 @@ class WalletModel extends BaseModel
         return $result;
     }
 
-    function get_total_wallet_out($users_id)
+    function get_total_company_profit_out($users_id)
     {
-        $this->builder->select('SUM(wallet_out) as total_wallet_out');
+        $this->builder->select('SUM(company_profit_out) as total_company_profit_out');
         $this->builder->from($this->table_name);
         $this->builder->where('users_id', $users_id);
 
         $query = $this->builder->get()->getResultArray();
 
         if (!empty($query)) {
-            $result = $query[0]['total_wallet_out'];
+            $result = $query[0]['total_company_profit_out'];
         } else {
             $result = 0;
         }
@@ -196,15 +196,15 @@ class WalletModel extends BaseModel
     function get_transaction($limit = '', $page = 1, $filter = [], $where = [])
     {
         $this->builder->select(
-            'wallet.*, users.name AS users, users.name as name, users.contact, (wallet_in - wallet_out) AS transaction'
+            'company_profit.*, users.name AS users, users.name as name, users.contact, (company_profit_in - company_profit_out) AS transaction'
         );
         $this->builder->from($this->table_name);
         $this->builder->join(
             'users',
-            'wallet.users_id = users.users_id AND users.deleted = 0',
+            'company_profit.users_id = users.users_id AND users.deleted = 0',
             'left'
         );
-        $this->builder->orderBy('wallet.created_date DESC');
+        $this->builder->orderBy('company_profit.created_date DESC');
         if (!empty($where)) {
             $this->builder->where($where);
         }
@@ -232,19 +232,19 @@ class WalletModel extends BaseModel
     function get_transaction_wherein($wherein, $where = [])
     {
         $this->builder->select(
-            'wallet.*, users.name AS users, users.name as name, users.contact, (wallet_in - wallet_out) AS transaction'
+            'company_profit.*, users.name AS users, users.name as name, users.contact, (company_profit_in - company_profit_out) AS transaction'
         );
         $this->builder->from($this->table_name);
         $this->builder->join(
             'users',
-            'wallet.users_id = users.users_id AND users.deleted = 0',
+            'company_profit.users_id = users.users_id AND users.deleted = 0',
             'left'
         );
-        $this->builder->orderBy('wallet.created_date DESC');
+        $this->builder->orderBy('company_profit.created_date DESC');
         if (!empty($where)) {
             $this->builder->where($where);
         }
-        $this->builder->whereIn('wallet.users_id', $wherein);
+        $this->builder->whereIn('company_profit.users_id', $wherein);
         $query = $this->builder->get();
         return $query->getResultArray();
     }
@@ -253,15 +253,15 @@ class WalletModel extends BaseModel
     function get_transaction_by_users($where = [])
     {
         $this->builder->select(
-            'wallet.*, users.name AS users, users.name, users.contact, (wallet_in - wallet_out) AS transaction'
+            'company_profit.*, users.name AS users, users.name, users.contact, (company_profit_in - company_profit_out) AS transaction'
         );
         $this->builder->from($this->table_name);
         $this->builder->join(
             'users',
-            'wallet.users_id = users.users_id AND users.deleted = 0',
+            'company_profit.users_id = users.users_id AND users.deleted = 0',
             'left'
         );
-        $this->builder->orderBy('wallet.created_date DESC');
+        $this->builder->orderBy('company_profit.created_date DESC');
         if (!empty($where)) {
             $this->builder->where($where);
         }
@@ -274,11 +274,11 @@ class WalletModel extends BaseModel
     {
 
         $this->builder->select(
-            'wallet.*, (wallet_in - wallet_out) AS wallet_in'
+            'company_profit.*, (company_profit_in - company_profit_out) AS company_profit_in'
         );
         $this->builder->from($this->table_name);
         $this->builder->where($where);
-        $this->builder->orderBy('wallet_id DESC');
+        $this->builder->orderBy('company_profit_id DESC');
         $this->builder->limit($limit, $page);
 
         $query = $this->builder->get();
@@ -287,11 +287,11 @@ class WalletModel extends BaseModel
 
     function get_where($where, $limit = '', $page = 1, $filter = [])
     {
-        $this->builder->select('wallet.*');
+        $this->builder->select('company_profit.*');
         $this->builder->from($this->table_name);
         $this->builder->where($where);
-        $this->builder->where('wallet.deleted', 0);
-        $this->builder->orderBy('wallet.wallet_id', 'DESC');
+        $this->builder->where('company_profit.deleted', 0);
+        $this->builder->orderBy('company_profit.company_profit_id', 'DESC');
 
         if ($limit != '') {
             $count = $this->getCount($filter);
@@ -317,7 +317,7 @@ class WalletModel extends BaseModel
     {
         $users = $this->builder
             ->query(
-                'SELECT users.users_id, users.name as users, users.contact FROM wallet JOIN users ON users.users_id = wallet.users_id GROUP BY wallet.users_id'
+                'SELECT users.users_id, users.name as users, users.contact FROM company_profit JOIN users ON users.users_id = company_profit.users_id GROUP BY company_profit.users_id'
             )
             ->getResultArray();
 
@@ -330,10 +330,10 @@ class WalletModel extends BaseModel
 
     function get_history_new($users_id)
     {
-        $sql = "(SELECT wallet.wallet_in, ABS(wallet_out) as wallet_out,wallet.created_date,'Success' as status,'Transaction' as type,wallet.remarks
-        FROM wallet WHERE wallet.users_id = $users_id and wallet_withdraw_id = 0 and wallet_topup_id = 0 )
+        $sql = "(SELECT company_profit.company_profit_in, ABS(company_profit_out) as company_profit_out,company_profit.created_date,'Success' as status,'Transaction' as type,company_profit.remarks
+        FROM company_profit WHERE company_profit.users_id = $users_id and company_profit_withdraw_id = 0 and company_profit_topup_id = 0 )
         UNION 
-       ( SELECT wallet_topup.amount as wallet_in,0 as wallet_out,wallet_topup.created_date,
+       ( SELECT company_profit_topup.amount as company_profit_in,0 as company_profit_out,company_profit_topup.created_date,
        
         (
             CASE
@@ -341,12 +341,12 @@ class WalletModel extends BaseModel
                 WHEN is_rejected = 1 THEN 'Rejected'
                 ELSE 'Pending'
             END
-        ) as status , 'Topup' as type,wallet_topup.remarks
-        FROM wallet_topup
-        WHERE wallet_topup.users_id = $users_id)
+        ) as status , 'Topup' as type,company_profit_topup.remarks
+        FROM company_profit_topup
+        WHERE company_profit_topup.users_id = $users_id)
         UNION 
 
-       ( SELECT wallet_withdraw.amount as wallet_in,0 as wallet_out,wallet_withdraw.created_date,
+       ( SELECT company_profit_withdraw.amount as company_profit_in,0 as company_profit_out,company_profit_withdraw.created_date,
       
         (
             CASE
@@ -354,19 +354,19 @@ class WalletModel extends BaseModel
                 WHEN is_rejected = 1 THEN 'Rejected'
                 ELSE 'Pending'
             END
-        ) as status , 'Withdrawal' as type, wallet_withdraw.remarks 
-        FROM wallet_withdraw
-        WHERE wallet_withdraw.users_id = $users_id)
+        ) as status , 'Withdrawal' as type, company_profit_withdraw.remarks 
+        FROM company_profit_withdraw
+        WHERE company_profit_withdraw.users_id = $users_id)
         order by created_date desc;
         
         
         ";
         // dd($sql);
-        // $this->builder->select('wallet.*, ABS(wallet_out) as wallet_out');
+        // $this->builder->select('company_profit.*, ABS(company_profit_out) as company_profit_out');
         // $this->builder->from($this->table_name);
         // $this->builder->where($where);
         
-        // $this->builder->orderBy('wallet_id DESC');
+        // $this->builder->orderBy('company_profit_id DESC');
         $result = $this->db->query($sql)->getResultArray();
         // dd($result);
         return $result;
@@ -374,20 +374,20 @@ class WalletModel extends BaseModel
         // return $query->getResultArray();
     }
 
-    function update_wallet($data)
+    function update_company_profit($data)
     {
         $balance = $this->get_balance($data['users_id']);
-        $wallet_in = $data['amount'] > 0 ? $data['amount'] : 0;
-        $wallet_out = $data['amount'] < 0 ? $data['amount'] : 0;
-        $wallet_withdrawal_id = !empty($data['wallet_withdraw_id']) ? $data['wallet_withdraw_id'] : 0;
+        $company_profit_in = $data['amount'] > 0 ? $data['amount'] : 0;
+        $company_profit_out = $data['amount'] < 0 ? $data['amount'] : 0;
+        $company_profit_withdrawal_id = !empty($data['company_profit_withdraw_id']) ? $data['company_profit_withdraw_id'] : 0;
 
         $data = [
             'users_id' => $data['users_id'],
             'auction_id' => $data['auction_id'],
-            'wallet_in' => $wallet_in,
-            'wallet_withdraw_id' => $wallet_withdrawal_id,
-            'wallet_out' => $wallet_out,
-            'balance' => $balance + $wallet_in + $wallet_out,
+            'company_profit_in' => $company_profit_in,
+            'company_profit_withdraw_id' => $company_profit_withdrawal_id,
+            'company_profit_out' => $company_profit_out,
+            'balance' => $balance + $company_profit_in + $company_profit_out,
             'remarks' => $data['remarks'],
         ];
         $this->insertNew($data);

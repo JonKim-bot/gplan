@@ -56,6 +56,8 @@
                                                 <th data-filter="usersname">User Name</th>
                                                 <th data-filter="usersname">Contact</th>
                                                 <th data-filter="email">Email</th>
+                                                <th data-filter="email">Family Name</th>
+
                                                 <th>Verify Status</th>
 
                                                 <th></th>
@@ -75,8 +77,13 @@
 
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['contact'] ?></a></td>
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['email'] ?></a></td>
-                                                    <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>
+                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['family_name'] ?></a></td>
 
+                                                    <?php if($row['is_verified'] == 0){ ?>
+                                                    <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>
+                                                    <?php }else{ ?>
+                                                        <td>Verified</td>
+                                                    <?php } ?>
                                           
                                                     <td><a href="<?= base_url() ?>/users/delete/<?= $row['users_id'] ?>" class="btn btn-danger delete-button"><i class="fa fa-trash"></i> Delete</a></td>
                                                 </tr>

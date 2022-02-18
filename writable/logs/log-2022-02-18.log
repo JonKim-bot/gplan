@@ -1044,3 +1044,91 @@ CRITICAL - 2022-02-18 15:09:35 --> Table 'gplan.family_commission' doesn't exist
 #8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #10 {main}
+CRITICAL - 2022-02-18 15:13:59 --> Table 'gplan.family_commission' doesn't exist
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT * FROM f...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM f...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM f...')
+#3 D:\www\gplan\app\Models\FamilyModel.php(100): CodeIgniter\Database\BaseConnection->query('SELECT * FROM f...')
+#4 D:\www\gplan\app\Models\FamilyModel.php(65): App\Models\FamilyModel->insert_commission(7)
+#5 D:\www\gplan\app\Controllers\Users.php(113): App\Models\FamilyModel->insert_new_member(7, '1')
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->add()
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-18 15:14:00 --> Table 'gplan.family_commission' doesn't exist
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT * FROM f...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM f...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM f...')
+#3 D:\www\gplan\app\Models\FamilyModel.php(100): CodeIgniter\Database\BaseConnection->query('SELECT * FROM f...')
+#4 D:\www\gplan\app\Models\FamilyModel.php(65): App\Models\FamilyModel->insert_commission(8)
+#5 D:\www\gplan\app\Controllers\Users.php(113): App\Models\FamilyModel->insert_new_member(8, '1')
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->add()
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-18 15:14:12 --> Unknown column 'user_id' in 'where clause'
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT * FROM w...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM w...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM w...')
+#3 D:\www\gplan\app\Models\FamilyModel.php(100): CodeIgniter\Database\BaseConnection->query('SELECT * FROM w...')
+#4 D:\www\gplan\app\Models\FamilyModel.php(65): App\Models\FamilyModel->insert_commission(9)
+#5 D:\www\gplan\app\Controllers\Users.php(113): App\Models\FamilyModel->insert_new_member(9, '1')
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->add()
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-18 15:26:15 --> Cannot redeclare App\Models\UsersModel::getAll()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-02-18 15:26:16 --> Cannot redeclare App\Models\UsersModel::getAll()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-02-18 15:26:16 --> Cannot redeclare App\Models\UsersModel::getAll()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-02-18 15:26:39 --> Cannot redeclare App\Models\UsersModel::getAll()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-02-18 15:26:43 --> Undefined index: family_name
+#0 D:\www\gplan\app\Views\admin\users\all.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 80, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/all', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(68): view('admin/users/all')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 15:27:54 --> Undefined index: family_name
+#0 D:\www\gplan\app\Views\admin\users\all.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 80, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/all', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(69): view('admin/users/all')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 15:27:55 --> Undefined index: family_name
+#0 D:\www\gplan\app\Views\admin\users\all.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 80, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/all', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(69): view('admin/users/all')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-18 15:27:57 --> Undefined index: family_name
+#0 D:\www\gplan\app\Views\admin\users\all.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 80, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/all', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(69): view('admin/users/all')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
