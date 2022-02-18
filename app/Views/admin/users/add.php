@@ -45,6 +45,17 @@
                                     <label for="">Name</label>
                                     <input type="text" class="form-control" name="name" placeholder="Name" required>
                                 </div>
+
+                                <div class="form-group">
+                                    <select name="family_id" id="" class="form-control">
+                                            <option value="0">None</option>
+                                            <?php foreach($users as $row){ ?>
+                                                <option value="<?= $row['family_id'] ?>"><?= $row['name'] ?></option>
+
+
+                                            <?php } ?>
+                                    </select>
+                                </div>
                                 <div class="form-group">
                                     <label for="">Password</label>
                                     <input type="password" class="form-control" name="password" placeholder="Password" required>

@@ -13,6 +13,27 @@ class UsersModel extends BaseModel{
 		$this->primaryKey = "users_id";
 	}
 
+    function get_family_user($limit = "", $page = 1, $filter = array()){
+        $this->builder = $this->db->table($this->tableName);
+        $this->builder->select('*');
+        $this->builder->where($this->tableName . '.deleted',0);
+        $this->builder->join('family', 'family.user_id = '.$this->tableName.'.users_id', 'left');
+
+
+        if ($limit != '') {
+            $count = $this->getCount($filter);
+            // die($this->builder->getCompiledSelect(false));
+            $offset = ($page - 1) * $limit;
+            $pages = $count / $limit;
+            $pages = ceil($pages);
+            $pagination = $this->getPaging($limit, $offset, $page, $pages, $filter,$this->builder);
+            return $pagination;
+    
+        }
+        $query = $this->builder->get();
+        return $query->getResultArray();
+    }
+
 
     function getCountUndone($limit = "", $page = 1, $filter = array()){
         $this->builder = $this->db->table($this->tableName);
@@ -90,11 +111,11 @@ class UsersModel extends BaseModel{
         $next = array();
         $stop = true;
         foreach($families[$key] as $row){
-            $family = $this->db->query("SELECT * FROM family WHERE link_family_id = $row")->getResultArray();
+            $family = $this->db->query("SELECT * FROM family WHERE link_family_id = $row")->result_array();
             foreach($family as $fmy){
                 array_push($next, $fmy['user_id']);
                 $family_id = $fmy['family_id'];
-                $more = $this->db->query("SELECT * FROM family WHERE link_family_id = $family_id")->getResultArray();
+                $more = $this->db->query("SELECT * FROM family WHERE link_family_id = $family_id")->result_array();
                 if(!empty($more)){
                     $stop = false;
                 }
@@ -102,7 +123,7 @@ class UsersModel extends BaseModel{
         }
         array_push($families, $next);
         // check if level 15 full
-        if(isset($result[15]) && count($result[15]) == 30){
+        if(isset($families[15]) && count($families[15]) == 30){
             return $families;
         }
         if(!$stop){
