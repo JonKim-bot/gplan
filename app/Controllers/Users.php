@@ -318,6 +318,9 @@ class Users extends BaseController
 
         $users_1[0]['children'] = $tree;
         $tree = $users_1;
+
+ 
+
         $ulli = $this->createListLi($tree);
         // dd($users_1);
         // dd($ulli);
@@ -335,7 +338,7 @@ class Users extends BaseController
 
         
         echo view('admin/header', $this->pageData);
-        echo view('admin/users/ul_of_tree', $this->pageData);
+        echo view('admin/users/ul_of_tree');
         echo view('admin/footer');
     }
 
