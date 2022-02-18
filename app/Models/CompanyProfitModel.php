@@ -13,6 +13,7 @@ class CompanyProfitModel extends BaseModel
         parent::__construct();
 
         $this->tableName = 'company_profit';
+        
 
         $this->primaryKey = 'company_profit_id';
 

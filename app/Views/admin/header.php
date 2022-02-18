@@ -90,6 +90,17 @@ Withdrawal
                     </a>
                     </li>
                    
+                    <li class="c-sidebar-nav-item ">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                    'CompanyProfit'
+                        ? 'c-active'
+                        : null ?>" href="<?= base_url('CompanyProfit') ?>">
+                    <i class="cil-smile c-sidebar-nav-icon"></i>
+                    Company Profit
+
+                    </a>
+                    </li>
+                   
                  
 
                   <!-- <li class="c-sidebar-nav-item ">
@@ -118,6 +129,7 @@ Users
 <span class="badge badge-pill badge-warning"><?= $undone_user ?></span>
 
 </a>
+
 </li>
 <li class="c-sidebar-nav-item ">
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Admin'

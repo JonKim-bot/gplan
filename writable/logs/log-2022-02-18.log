@@ -1132,3 +1132,60 @@ CRITICAL - 2022-02-18 15:27:57 --> Undefined index: family_name
 #6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-02-18 15:33:05 --> Unknown column 'company_profit_in' in 'field list'
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `company...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `company...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `company...')
+#3 D:\www\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `company...', Array, false)
+#4 D:\www\gplan\app\Models\CompanyProfitModel.php(227): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\gplan\app\Controllers\CompanyProfit.php(100): App\Models\CompanyProfitModel->get_transaction('', 1, Array, Array)
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\CompanyProfit->index()
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyProfit))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-18 15:33:32 --> Unknown column 'company_profit_in' in 'field list'
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `company...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `company...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `company...')
+#3 D:\www\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `company...', Array, false)
+#4 D:\www\gplan\app\Models\CompanyProfitModel.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\gplan\app\Controllers\CompanyProfit.php(101): App\Models\CompanyProfitModel->get_transaction('', 1, Array, Array)
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\CompanyProfit->index()
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyProfit))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-18 15:33:54 --> Unknown column 'company_profit.created_date' in 'order clause'
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `company...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `company...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `company...')
+#3 D:\www\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `company...', Array, false)
+#4 D:\www\gplan\app\Models\CompanyProfitModel.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\gplan\app\Controllers\CompanyProfit.php(101): App\Models\CompanyProfitModel->get_transaction('', 1, Array, Array)
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\CompanyProfit->index()
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyProfit))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-18 15:33:55 --> Unknown column 'company_profit.created_date' in 'order clause'
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `company...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `company...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `company...')
+#3 D:\www\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `company...', Array, false)
+#4 D:\www\gplan\app\Models\CompanyProfitModel.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\gplan\app\Controllers\CompanyProfit.php(101): App\Models\CompanyProfitModel->get_transaction('', 1, Array, Array)
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\CompanyProfit->index()
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyProfit))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-18 15:34:15 --> Invalid file: admin/company_profit/all.php
+#0 D:\www\gplan\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/company_p...')
+#1 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/company_p...', Array, true)
+#2 D:\www\gplan\app\Controllers\CompanyProfit.php(107): view('admin/company_p...')
+#3 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\CompanyProfit->index()
+#4 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyProfit))
+#5 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
