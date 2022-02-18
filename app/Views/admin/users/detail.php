@@ -97,14 +97,7 @@
                                                                     <th scope="row">NRIC Name</th>
                                                                     <td><?= $users["nric_name"] ?></td>
                                                                 </tr>
-                                                                <tr>
-                                                                    <th scope="row">SSM name</th>
-                                                                    <td><?= $users["ssm_name"] ?></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">SSM number</th>
-                                                                    <td><?= $users["ssm_number"] ?></td>
-                                                                </tr>
+                                                             
                                                                 <tr>
                                                                     <th scope="row">Nric frontend</th>
                                                                     <td>
@@ -133,21 +126,7 @@
                                                                     </td>
                                                                 </tr>
                                                                
-                                                                <tr>
-                                                                    <th scope="row">SSM Cert</th>
-                                                                    <td>
-                                                                        <div class="row">
-
-                                                                            <div class="col-lg-12 col-xl-12">
-                                                                            <a target="_blank" href="<?= base_url() . $users['ssm_cert'] ?>">
-
-                                                                                <img src="<?= base_url(). $users['ssm_cert'] ?>" width="200" class="img-fluid d-block m-auto" alt="">
-                                                                                </a>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
+                                                              
 
                                                                 <tr>
                                                                     <th scope="row">Remarks</th>

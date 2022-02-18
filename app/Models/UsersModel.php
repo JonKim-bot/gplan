@@ -35,7 +35,7 @@ class UsersModel extends BaseModel{
         $query = $this->builder->get();
         return $query->getResultArray()[0]['total'];
     }
-
+    
 function getAll($limit = "", $page = 1, $filter = array()){
     $this->builder = $this->db->table($this->tableName);
     $this->builder->select($this->tableName . '.*');

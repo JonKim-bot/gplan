@@ -90,6 +90,7 @@ class Users extends BaseController
                     'password' => $hash['password'],
                     'nric_name' => $input['nric_name'],
                     'nric' => $input['nric'],
+
                     // 'ssm_name' => $input['ssm_name'],
                     // 'ssm_number' => $input['ssm_number'],
                     'salt' => $hash['salt'],
@@ -246,12 +247,10 @@ class Users extends BaseController
                     'contact' => $input['contact'],
                     'nric_name' => $input['nric_name'],
                     'nric' => $input['nric'],
-                    'ssm_name' => $input['ssm_name'],
-                    'ssm_number' => $input['ssm_number'],
                 ];
                 $data = $this->upload_image_with_data($data, 'nric_front');
                 $data = $this->upload_image_with_data($data, 'nric_back');
-                $data = $this->upload_image_with_data($data, 'ssm_cert');
+                // $data = $this->upload_image_with_data($data, 'ssm_cert');
 
                 if ($input['password'] != '') {
                     $hash = $this->hash($input['password']);

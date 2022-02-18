@@ -34,6 +34,11 @@
                             <label class="custom-file-label" for="" aria-describedby="">Choose file</label>
                         </div>
                     </div> -->
+                             <?php if (isset($error)) { ?>
+                                <div class="alert-message" role="alert">
+                                        <?= $error; ?>
+                                    </div>
+                                <?php } ?>
                     <div class="form-group">
                                     <label for="">Name</label>
                                     <input type="text" class="form-control" value="<?=  $users['name'] ?>" name="name" placeholder="Name" required>
@@ -56,14 +61,7 @@
                                     <input type="text" name="nric_name" class="form-control" value="<?=  $users['nric_name'] ?>">
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="">SSM name</label>
-                                    <input type="text" class="form-control" name="ssm_name" placeholder="SSM Name" value="<?=  $users['ssm_name'] ?>" >
-                                </div>    
-                                <div class="form-group">
-                                    <label for="">SSM Number</label>
-                                    <input type="text" class="form-control" name="ssm_number" placeholder="SSM Number" value="<?=  $users['ssm_number'] ?>" >
-                                </div>    
+                            
                                 <div class="form-group">
                                     <label for="">Nric Front</label>
                                     <input type="file" name="nric_front" class="form-control" accept="image/png, image/jpeg" >
@@ -72,10 +70,7 @@
                                     <label for="">Nric Back</label>
                                     <input type="file" name="nric_back" class="form-control" accept="image/png, image/jpeg" >
                                 </div>
-                                <div class="form-group">
-                                    <label for="">SSM Cert</label>
-                                    <input type="file" name="ssm_cert" class="form-control" accept="image/png, image/jpeg" >
-                                </div>  
+                     
 
                                 <div class="form-group">
                                     <label for="">Password</label>
