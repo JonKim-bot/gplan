@@ -69,15 +69,7 @@
                                     <label for="">Nric Name</label>
                                     <input type="text" name="nric_name" class="form-control" >
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="">SSM name</label>
-                                    <input type="text" class="form-control" name="ssm_name" placeholder="SSM Name" >
-                                </div>    
-                                <div class="form-group">
-                                    <label for="">SSM Number</label>
-                                    <input type="text" class="form-control" name="ssm_number" placeholder="SSM Number" >
-                                </div>    
+ 
                                 <div class="form-group">
                                     <label for="">Nric Front</label>
                                     <input type="file" name="nric_front" class="form-control" accept="image/png, image/jpeg" >
@@ -86,10 +78,7 @@
                                     <label for="">Nric Back</label>
                                     <input type="file" name="nric_back" class="form-control" accept="image/png, image/jpeg" >
                                 </div>
-                                <div class="form-group">
-                                    <label for="">SSM Cert</label>
-                                    <input type="file" name="ssm_cert" class="form-control" accept="image/png, image/jpeg" >
-                                </div>    
+                             
                                 <div class="form-group">
                                     <button class="btn btn-primary float-right" type="submit"> Submit</button>
                                 </div>

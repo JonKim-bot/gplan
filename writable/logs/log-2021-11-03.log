@@ -1,0 +1,116 @@
+CRITICAL - 2021-11-03 10:25:25 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\Car.php(110): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 110, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-03 10:36:31 --> Undefined index: qna_id
+#0 D:\www\carlink_backend\app\Core\BaseController.php(149): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 149, Array)
+#1 D:\www\carlink_backend\app\Controllers\Qna.php(85): App\Core\BaseController->generate_detail(Array, Array, 'banner')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Qna->detail('11')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-11-03 10:36:31 --> Undefined index: qna_id
+#0 D:\www\carlink_backend\app\Core\BaseController.php(149): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 149, Array)
+#1 D:\www\carlink_backend\app\Controllers\Qna.php(85): App\Core\BaseController->generate_detail(Array, Array, 'banner')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Qna->detail('11')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-11-03 10:47:01 --> Undefined property: App\Controllers\Auction::$AuctionWishlistModel
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 54, Array)
+#1 D:\www\carlink_backend\app\Controllers\Auction.php(145): App\Controllers\Auction->get_wishlist_user('1')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->detail('1')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-11-03 10:47:23 --> syntax error, unexpected '$this' (T_VARIABLE)
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Auction/detail/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Auction/detail/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-03 11:00:33 --> Undefined variable: auction_to_loop
+#0 D:\www\carlink_backend\app\Views\admin\auction\detail.php(197): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 197, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/auction/d...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Auction.php(152): view('admin/auction/d...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-03 11:01:02 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Auction/detail/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Auction/detail/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-03 11:01:03 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Auction/detail/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Auction/detail/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-03 11:01:03 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Auction/detail/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Auction/detail/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-03 11:01:04 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Auction/detail/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Auction/detail/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-03 11:20:59 --> Column 'deposit_amount' cannot be null
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1206): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink_backend\app\Core\BaseModel.php(1326): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\app\Controllers\Car.php(95): App\Core\BaseModel->copy('8', Array)
+#7 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->copy('8')
+#8 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-11-03 14:41:09 --> Undefined index: image_back
+#0 D:\www\carlink_backend\app\Views\admin\users\detail.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 82, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Users.php(139): view('admin/users/det...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Users->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-03 14:53:56 --> Undefined index: image_back
+#0 D:\www\carlink_backend\app\Views\admin\users\detail.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 82, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Users.php(137): view('admin/users/det...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Users->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-03 15:32:41 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\Car.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 112, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

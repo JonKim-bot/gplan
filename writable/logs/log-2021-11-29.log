@@ -1,0 +1,251 @@
+CRITICAL - 2021-11-29 13:17:48 --> Undefined index: car_id
+#0 D:\www\carlink_backend\app\Controllers\InspectionDetail.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 69, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->add()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:18:02 --> Unknown column 'car_id' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `in...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1217): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink_backend\app\Controllers\InspectionDetail.php(67): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->add()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-29 13:18:50 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Controllers\InspectionDetail.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 70, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->add()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:19:00 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Controllers\InspectionDetail.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 70, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->add()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:34:49 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 109, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:34:55 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 109, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:35:16 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 109, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:35:49 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 109, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:36:20 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 109, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:36:42 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 109, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:38:02 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 109, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:38:05 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Core\BaseModel.php(1700): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 1700, Array)
+#1 D:\www\carlink_backend\app\Core\BaseModel.php(1263): App\Core\BaseModel->insert_log('hard_delete', '9283')
+#2 D:\www\carlink_backend\app\Controllers\CarInspection.php(260): App\Core\BaseModel->hardDelete('9283')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspection->delete_()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspection))
+#5 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-11-29 13:41:03 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 109, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:45:24 --> Column 'inspection_detail_id' in field list is ambiguous
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT inspecti...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT inspecti...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT inspecti...')
+#3 D:\www\carlink_backend\app\Models\InspectionDetailModel.php(85): CodeIgniter\Database\BaseConnection->query('SELECT inspecti...')
+#4 D:\www\carlink_backend\app\Controllers\InspectionType.php(189): App\Models\InspectionDetailModel->getWhereCar(Array)
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-11-29 13:45:25 --> Column 'inspection_detail_id' in field list is ambiguous
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT inspecti...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT inspecti...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT inspecti...')
+#3 D:\www\carlink_backend\app\Models\InspectionDetailModel.php(85): CodeIgniter\Database\BaseConnection->query('SELECT inspecti...')
+#4 D:\www\carlink_backend\app\Controllers\InspectionType.php(189): App\Models\InspectionDetailModel->getWhereCar(Array)
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-11-29 13:48:35 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 94, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(211): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 13:48:35 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 94, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(211): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 13:48:36 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 94, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(211): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 13:48:52 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 94, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(211): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 13:48:53 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 94, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(211): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 13:49:09 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 94, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(211): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 13:49:10 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 94, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(211): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 13:49:10 --> Undefined index: inspection_detail_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 94, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(211): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '37')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 13:49:46 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\CarInspection.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 66, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspection->mark_pass_fail_status()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:49:55 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\CarInspection.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 66, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspection->mark_pass_fail_status()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 13:50:13 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(156): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 156, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_percentage()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-29 17:05:08 --> Trying to access array offset on value of type null
+#0 D:\www\carlink_backend\app\Views\admin\header.php(355): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\carlink_...', 355, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Auction.php(101): view('admin/header', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 17:05:08 --> Trying to access array offset on value of type null
+#0 D:\www\carlink_backend\app\Views\admin\header.php(355): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\carlink_...', 355, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Auction.php(137): view('admin/header', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->Ended()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-29 17:21:45 --> Trying to access array offset on value of type null
+#0 D:\www\carlink_backend\app\Views\admin\header.php(355): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\carlink_...', 355, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Auction.php(137): view('admin/header', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->Ended()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

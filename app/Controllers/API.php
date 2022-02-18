@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -71,7 +68,6 @@ class API extends BaseController
 
         $this->pageData = [];
         $this->BannerModel = new BannerModel();
-
 
         $this->BankModel = new BankModel();
 
@@ -382,7 +378,7 @@ class API extends BaseController
                 'brand.deleted' => 0,
             ];
 
-            if(isset($_POST['show_at_filter'])){
+            if (isset($_POST['show_at_filter'])) {
                 $where['show_at_filter'] = 1;
             }
             $where = $this->convert_array_to_where($where);
@@ -432,7 +428,6 @@ class API extends BaseController
             return $this->fail(['error' => $exception->getMessage()]);
             // dd($exception->getMessage());
         }
-        
     }
 
     public function get_state()
@@ -558,12 +553,10 @@ class API extends BaseController
         }
     }
 
-
     //get end..
 
     // daniel start here, car list, car detail, car inspection
     public function validate_token($token, $end_immediate = true)
-
     {
         $where = [
             'users.token' => $token,
@@ -578,7 +571,6 @@ class API extends BaseController
 
     public function convert_array_to_where($data)
     {
-
         array_walk($data, function (&$value, $key) {
             if (strpos($key, ' ') !== false) {
                 $value = "{$key} '{$value}'";
@@ -609,22 +601,23 @@ class API extends BaseController
         $input = $this->getRequestInput($this->request);
         // $input['car_id'] = 48;
 
-
         $car = $this->CarModel->getAuctionCar($input['car_id'])[0];
 
         $where = [
-            'auction.car_id' => $car['car_id']
+            'auction.car_id' => $car['car_id'],
         ];
         $auction = $this->AuctionModel->getWhere($where)[0];
         // dd($auction);
-        $stickers = $this->CarStickerModel->getWhere(['car_sticker.car_id' => $input['car_id'], 'car_sticker.is_active' => 1]);
+        $stickers = $this->CarStickerModel->getWhere([
+            'car_sticker.car_id' => $input['car_id'],
+            'car_sticker.is_active' => 1,
+        ]);
 
         $images = [];
         $image = $this->CarImageModel->getWhere([
             'car_id' => $input['car_id'],
         ]);
         foreach ($image as $img) {
-
             array_push($images, base_url() . $img['image']);
         }
 
@@ -634,9 +627,7 @@ class API extends BaseController
         unset($car['car_id']);
         unset($car['car_user_id']);
 
-        
         $details = [];
-        
 
         // $no_of_previos_owner = $car['no_of_previous_owner'];
         // $no_of_seats = $car['no_of_seats'];
@@ -647,13 +638,12 @@ class API extends BaseController
         // $last_plate_no = $plate_no[-1];
         // $complete_plate_no = $first_plate_no . 'XXXXX' . $last_plate_no;
         if ($auction['auction_status_id'] > 2) {
-            $complete_plate_no = ($plate_no);
-            $complete_chassis_no = ($car['chassis_no']);
-            $complete_seller_id = ($car['seller_ID']);
+            $complete_plate_no = $plate_no;
+            $complete_chassis_no = $car['chassis_no'];
+            $complete_seller_id = $car['seller_ID'];
         } else {
             //    dd($car['seller_ID']);
             $complete_seller_id = $this->get_mask_text($car['seller_ID']);
-
 
             $complete_plate_no = $this->get_mask_text($plate_no);
             $complete_chassis_no = $this->get_mask_text($car['chassis_no']);
@@ -661,7 +651,6 @@ class API extends BaseController
 
         // unset($car['license_plate_no']);
         unset($car['plate_no']);
-
 
         foreach ($car as $index => $val) {
             if ($index == 'license_plate_no') {
@@ -721,7 +710,7 @@ class API extends BaseController
                 $result = [
                     'summary' => $summary,
                     'write_up' =>
-                    'Bidder have to deposit RM' .
+                        'Bidder have to deposit RM' .
                         $car['deposit_amount'] .
                         ' first then only eligible for bidding session.',
                 ];
@@ -735,8 +724,6 @@ class API extends BaseController
     public function get_car_inspection()
     {
         if ($_POST) {
-
-
             try {
                 $input = $this->getRequestInput($this->request);
                 $car_id = $input['car_id'];
@@ -839,12 +826,10 @@ class API extends BaseController
                 $this->CarInspectionModel->insertNew([
                     'inspection_detail_id' => $row['inspection_detail_id'],
                     'car_id' => $car_id,
-                    
                 ]);
             }
         }
     }
-
 
     public function get_auction_date()
     {
@@ -911,11 +896,10 @@ class API extends BaseController
                 //     return $this->fail(['error' => 'Invalid Token']);
                 // }
 
-
                 $data = [
                     'auction.deleted' => 0,
                     'auction.auction_section_id' =>
-                    $input['auction_section_id'],
+                        $input['auction_section_id'],
                 ];
                 $data = $this->get_filter_data($data, $input);
                 if (isset($input['transmission_id'])) {
@@ -928,7 +912,6 @@ class API extends BaseController
                 $where = $this->convert_array_to_where($data);
                 // $where = "auction.deleted = 0 AND auction.auction_section_id = $auction_section_id";
                 $auctions = $this->AuctionModel->getWhereFilter(
-
                     $where,
                     $filter_id,
                     $user_id
@@ -980,7 +963,7 @@ class API extends BaseController
                     4
                 );
                 $text =
-                    'Dear Carlink Customer, your OTP for registration is ' .
+                    'Dear Gplan Customer, your OTP for registration is ' .
                     $otp .
                     '. Use this OTP to validate your registration.';
 
@@ -1021,7 +1004,6 @@ class API extends BaseController
         return $data;
     }
 
-
     public function register()
     {
         if ($_POST) {
@@ -1046,7 +1028,6 @@ class API extends BaseController
                     ]);
                 }
 
-
                 if ($input['password'] != $input['password2']) {
                     return $this->fail(['error' => 'Password Not Match!']);
                 }
@@ -1068,7 +1049,6 @@ class API extends BaseController
 
                 $token = md5($users_id . date('Y-m-d h:i:s'));
                 $this->UsersModel->updateWhere(
-
                     ['users_id' => $user['users_id']],
                     ['token' => $token]
                 );
@@ -1128,29 +1108,28 @@ class API extends BaseController
                     $where = [
                         'fb_id' => $input['fb_id'],
                     ];
-                    
                 } elseif ($input['login_method'] == 'google') {
                     $where = [
                         'g_id' => $input['g_id'],
                     ];
                 } else {
-                    die(json_encode([
-                        'status' => false,
-                        'message' => 'Login method unsupported',
-                    ]));
+                    die(
+                        json_encode([
+                            'status' => false,
+                            'message' => 'Login method unsupported',
+                        ])
+                    );
                 }
 
-
                 $login = $this->UsersModel->getWhere($where);
-                if($_POST['email'] != ""){
+                if ($_POST['email'] != '') {
                     $exists_email = $this->checkExistsEmail($_POST['email']);
                     if ($exists_email) {
                         return $this->fail([
                             'error' => 'Email Address Already Existed!',
                         ]);
                     }
-                }                
-
+                }
 
                 if (empty($login)) {
                     $data = [
@@ -1171,7 +1150,7 @@ class API extends BaseController
                 $login = $login[0];
                 $token = md5($login['users_id'] . date('Y-m-d h:i:s'));
                 $this->UsersModel->updateWhere(
-                    ['users_id' => $login['users_id']],
+                    ['users_id' => $login['users_id']]
                     // ['token' => $token]
                 );
 
@@ -1192,13 +1171,10 @@ class API extends BaseController
         }
     }
 
-
     public function login()
     {
         if ($_POST) {
             try {
-
-
                 $input = $this->getRequestInput($this->request);
                 $contact = preg_replace('/[^0-9.]+/', '', $input['contact']);
                 $contact =
@@ -1312,7 +1288,6 @@ class API extends BaseController
                 $this->UsersModel->updateWhere(
                     ['users_id' => $input['users_id']],
                     $data
-
                 );
                 $user = $this->UsersModel->getWhere([
                     'users_id' => $input['users_id'],
@@ -1391,7 +1366,6 @@ class API extends BaseController
         }
     }
 
-
     public function format_wallet_record($wallet_record)
     {
         foreach ($wallet_record as $key => $row) {
@@ -1445,7 +1419,7 @@ class API extends BaseController
                 if (!$verified) {
                     return $this->fail([
                         'error' =>
-                        'Account not verified by admin , please contact admin to verify your account',
+                            'Account not verified by admin , please contact admin to verify your account',
                     ]);
                 }
                 $data = [
@@ -1463,7 +1437,6 @@ class API extends BaseController
             }
         }
     }
-
 
     public function get_upload_path()
     {
@@ -1490,7 +1463,7 @@ class API extends BaseController
                 if (!$verified) {
                     return $this->fail([
                         'error' =>
-                        'Account not verified by admin , please contact admin to verify your account',
+                            'Account not verified by admin , please contact admin to verify your account',
                     ]);
                 }
 
@@ -1530,7 +1503,6 @@ class API extends BaseController
     }
 
     public function get_wallet_history()
-
     {
         if ($_POST) {
             try {
@@ -1538,7 +1510,6 @@ class API extends BaseController
                 // $input['users_id'] = 28;
                 $wallet = $this->WalletModel->get_history_new(
                     $input['users_id']
-
                 );
                 $wallet = $this->format_wallet_record($wallet);
                 // dd($wallet);
@@ -1547,7 +1518,6 @@ class API extends BaseController
                 return $this->fail(['error' => $exception->getMessage()]);
             }
         }
-
     }
 
     public function add_wishlist()
@@ -1557,7 +1527,6 @@ class API extends BaseController
                 $input = $this->getRequestInput($this->request);
 
                 $this->AuctionWishlistModel->insertNew([
-
                     'users_id' => $input['users_id'],
                     'auction_id' => $input['auction_id'],
                 ]);
@@ -1589,12 +1558,9 @@ class API extends BaseController
 
     public function get_notifications()
     {
-
-
         if ($_POST) {
             try {
                 $input = $this->getRequestInput($this->request);
-
 
                 $user_id = $this->validate_token($input['token']);
                 if ($user_id == 0) {
@@ -1645,7 +1611,6 @@ class API extends BaseController
                     return $this->fail(['error' => 'Invalid Token']);
                 }
 
-
                 $this->NotificationModel->updateWhere(
                     ['notification_id' => $input['notification_id']],
                     ['is_read' => 1]
@@ -1669,9 +1634,7 @@ class API extends BaseController
     }
 
     public function get_popular_auctions()
-
     {
-
         try {
             $auctions = $this->AuctionModel->getPopularAuction();
 
@@ -1698,7 +1661,6 @@ class API extends BaseController
         if ($_POST) {
             try {
                 $input = $this->getRequestInput($this->request);
-
 
                 $data = [
                     'brand_id' => $input['brand_id'],
@@ -1770,7 +1732,6 @@ class API extends BaseController
 
                 return $this->respond(['data' => $bids]);
             } catch (Exception $exception) {
-
                 return $this->fail(['error' => $exception->getMessage()]);
             }
         }
@@ -1812,7 +1773,7 @@ class API extends BaseController
             ])[0];
             return $this->fail([
                 'error' =>
-                'To start the bidding, you will need to deposit RM' .
+                    'To start the bidding, you will need to deposit RM' .
                     $auction['deposit_amount'] .
                     ' for the entry',
             ]);
@@ -1821,7 +1782,7 @@ class API extends BaseController
         if (!$verified) {
             return $this->fail([
                 'error' =>
-                'Account not verified by admin , please contact admin to verify your account',
+                    'Account not verified by admin , please contact admin to verify your account',
             ]);
         }
         return $this->respond(['data' => 'valid for bidding']);
@@ -1836,7 +1797,7 @@ class API extends BaseController
                 if (!$verified) {
                     return $this->fail([
                         'error' =>
-                        'Account not verified by admin , please contact admin to verify your account',
+                            'Account not verified by admin , please contact admin to verify your account',
                     ]);
                 }
 
@@ -1850,51 +1811,48 @@ class API extends BaseController
                     ])[0];
                     return $this->fail([
                         'error' =>
-                        'To start the bidding, you will need to deposit RM' .
+                            'To start the bidding, you will need to deposit RM' .
                             $auction['deposit_amount'] .
-
                             ' for the entry',
                     ]);
                 }
 
-
                 $ended = $this->check_if_auction_ended($input['auction_id']);
                 if ($ended) {
-                    die(json_encode([
-                        'status' => false,
-                        'message' => 'Auction Ended',
-                    ]));
+                    die(
+                        json_encode([
+                            'status' => false,
+                            'message' => 'Auction Ended',
+                        ])
+                    );
                     // return $this->fail(['error' => 'Auction Ended']);
                 }
 
                 $final_auto_users_id = $this->BidModel->get_last_users_id(
                     $input['auction_id']
-
                 );
                 if ($input['users_id'] == $final_auto_users_id) {
                     // return $this->fail([
                     //     'error' => 'You are the highest bid now',
                     // ]);
-                    die(json_encode([
-                        'status' => false,
-                        'message' => 'You are the highest bid now',
-                    ]));
+                    die(
+                        json_encode([
+                            'status' => false,
+                            'message' => 'You are the highest bid now',
+                        ])
+                    );
                 }
-
-
 
                 $current_selling_price = $this->BidModel->get_current_selling_price(
                     $input['auction_id']
-
                 );
-
 
                 $data = [
                     'users_id' => $input['users_id'],
                     'auction_id' => $input['auction_id'],
                     'price' => $input['price'],
                     'current_selling_price' =>
-                    $current_selling_price + $input['price'],
+                        $current_selling_price + $input['price'],
                 ];
                 $this->BidModel->insertNew($data);
                 // $this->run_auto_bid($input['auction_id']);
@@ -1908,11 +1866,9 @@ class API extends BaseController
 
     function get_auction_detail()
     {
-
         if ($_POST) {
             try {
                 $input = $this->getRequestInput($this->request);
-
 
                 $data = ['auction_id' => $input['auction_id']];
                 $where = $this->convert_array_to_where($data);
@@ -1961,7 +1917,6 @@ class API extends BaseController
                 'remarks' => 'Entry Of Auction ID' . $auction['auction_id'],
             ];
             $this->WalletModel->update_wallet($data);
-
         }
 
         return true;
@@ -1994,7 +1949,7 @@ class API extends BaseController
                         'auction_id' => $input['auction_id'],
                         'amount' => '-' . $deposit_amount,
                         'remarks' =>
-                        'Entry Of Auction ID' . $auction['auction_id'],
+                            'Entry Of Auction ID' . $auction['auction_id'],
                     ];
                     $this->WalletModel->update_wallet($data);
                 }
@@ -2010,7 +1965,6 @@ class API extends BaseController
     {
         // recursive auto bid if new record added
 
-
         if ($_POST) {
             try {
                 $input = $this->getRequestInput($this->request);
@@ -2024,7 +1978,7 @@ class API extends BaseController
                     ])[0];
                     return $this->fail([
                         'error' =>
-                        'To start the bidding, you will need to deposit RM' .
+                            'To start the bidding, you will need to deposit RM' .
                             $auction['deposit_amount'] .
                             ' for the entry',
                     ]);
@@ -2032,10 +1986,12 @@ class API extends BaseController
 
                 $ended = $this->check_if_auction_ended($input['auction_id']);
                 if ($ended) {
-                    die(json_encode([
-                        'status' => false,
-                        'message' => 'Auction Ended',
-                    ]));
+                    die(
+                        json_encode([
+                            'status' => false,
+                            'message' => 'Auction Ended',
+                        ])
+                    );
                     // return $this->fail(['error' => 'Auction Ended']);
                 }
 
@@ -2059,17 +2015,20 @@ class API extends BaseController
         }
     }
 
-
     function run_auto_bid($auction_id)
     {
-    
         $ended = $this->check_if_auction_ended($auction_id);
         if ($ended) {
             return false;
         }
-        $bids = $this->database->query("select * from bid where auction_id = ? order by current_selling_price desc limit 1", array($auction_id))->getResultArray();
+        $bids = $this->database
+            ->query(
+                'select * from bid where auction_id = ? order by current_selling_price desc limit 1',
+                [$auction_id]
+            )
+            ->getResultArray();
 
-                // $sql = 'SELECT * FROM car';
+        // $sql = 'SELECT * FROM car';
         // $result = $this->database->query($sql)->getResultArray();
 
         $current_selling_price = 0;
@@ -2078,43 +2037,40 @@ class API extends BaseController
             $current_selling_price = $bids[0]['current_selling_price'];
             $user = $bids[0]['users_id'];
         } else {
-            $current_selling_price = $this->AuctionModel->getWhereRaw(['auction_id' => $auction_id])[0]['starting_price'];
+            $current_selling_price = $this->AuctionModel->getWhereRaw([
+                'auction_id' => $auction_id,
+            ])[0]['starting_price'];
             $user = -1;
-           
         }
 
         // $auto = $this->database->query("select * from bid where auction_id = ? order by price desc limit 1")->getResultArray();
 
-
-        $auto = $this->database->query(
-            "select users_id, max(max_price) as max_price, price from bid_auto where auction_id = ? and max_price  > ? and users_id != ? group by users_id",
-            array(
-                $auction_id,
-                $current_selling_price,
-                $user
+        $auto = $this->database
+            ->query(
+                'select users_id, max(max_price) as max_price, price from bid_auto where auction_id = ? and max_price  > ? and users_id != ? group by users_id',
+                [$auction_id, $current_selling_price, $user]
             )
-
-        )->getResultArray();
+            ->getResultArray();
 
         if (count($auto)) {
-            echo "Add";
-           
-            $this->BidModel->insertNew(array(
-                "auction_id" => $auction_id,
-                "users_id" => $auto[0]['users_id'],
-                "price" => $auto[0]['price'],
-                "current_selling_price" => intval($auto[0]['price']) + intval($current_selling_price),
-            ));
+            echo 'Add';
+
+            $this->BidModel->insertNew([
+                'auction_id' => $auction_id,
+                'users_id' => $auto[0]['users_id'],
+                'price' => $auto[0]['price'],
+                'current_selling_price' =>
+                    intval($auto[0]['price']) + intval($current_selling_price),
+            ]);
             $this->run_auto_bid($auction_id);
         } else {
-            die("DONE");
+            die('DONE');
         }
     }
 
     function run_auto_bid_new()
     {
         if ($_POST) {
-
             var_dump('START RUN AUTO BID');
             $auction_id = $_POST['auction_id'];
             $ended = $this->check_if_auction_ended($auction_id);
@@ -2125,25 +2081,34 @@ class API extends BaseController
             // get auto_bid record
             // find final bid
             // find final bid user
-            // loop bid record to check 
+            // loop bid record to check
             // skip if final bid is bid by final bid user
             // else insert new record
             // if last auto bid not reach auto bid maximum, recursive
 
             $autos = $this->BidAutoModel->getWhereGroupUser($auction_id);
             // die(var_dump($autos));
-            $final_selling_price = $this->BidModel->get_current_selling_price($auction_id);
-            $final_auto_users_id = $this->BidModel->get_last_users_id($auction_id);
+            $final_selling_price = $this->BidModel->get_current_selling_price(
+                $auction_id
+            );
+            $final_auto_users_id = $this->BidModel->get_last_users_id(
+                $auction_id
+            );
 
             foreach ($autos as $row) {
-
-                $current_selling_price = $this->BidModel->get_current_selling_price($auction_id);
-                $last_users_id = $this->BidModel->get_last_users_id($auction_id);
+                $current_selling_price = $this->BidModel->get_current_selling_price(
+                    $auction_id
+                );
+                $last_users_id = $this->BidModel->get_last_users_id(
+                    $auction_id
+                );
                 $next_selling_price = $current_selling_price + $row['price'];
 
                 // skip if same users
-                if ($last_users_id != $row['users_id'] && $next_selling_price <= $row['max_price']) {
-
+                if (
+                    $last_users_id != $row['users_id'] &&
+                    $next_selling_price <= $row['max_price']
+                ) {
                     $data = [
                         'users_id' => $row['users_id'],
                         'auction_id' => $row['auction_id'],
@@ -2170,7 +2135,10 @@ class API extends BaseController
             }
 
             // check if available auto record more than 1
-            $existed = $this->BidAutoModel->getWhereGroup($auction_id, $final_selling_price);
+            $existed = $this->BidAutoModel->getWhereGroup(
+                $auction_id,
+                $final_selling_price
+            );
             if (count($existed) == 1) {
                 var_dump('END RUN AUTO BID');
                 return false;
@@ -2209,7 +2177,6 @@ class API extends BaseController
                 // if($user_id == 0){
                 //     return $this->fail(['error' => 'Invalid Token']);
                 // }
-
 
                 $data = [
                     'auction.deleted' => 0,
@@ -2298,7 +2265,6 @@ class API extends BaseController
                 }
                 $auctions = $this->AuctionModel->getWishList($user_id);
 
-
                 return $this->respond(['data' => $auctions]);
             } catch (Exception $exception) {
                 return $this->fail(['error' => $exception->getMessage()]);
@@ -2306,12 +2272,10 @@ class API extends BaseController
         }
     }
 
-
     function get_auction_history()
     {
         if ($_POST) {
             try {
-
                 $input = $this->getRequestInput($this->request);
                 $users_id = $this->validate_token($input['token']);
                 if ($users_id == 0) {
@@ -2345,7 +2309,6 @@ class API extends BaseController
                     ['seller_status_id' => 1]
                 );
 
-
                 // send notification to buyer
                 $auction = $this->AuctionModel->getWhere([
                     'auction.auction_id' => $input['auction_id'],
@@ -2367,12 +2330,8 @@ class API extends BaseController
         }
     }
 
-
-
     function rebid_auction()
     {
-
-
         if ($_POST) {
             try {
                 $input = $this->getRequestInput($this->request);
@@ -2381,7 +2340,7 @@ class API extends BaseController
                     ['auction_id' => $input['auction_id']],
                     ['seller_status_id' => 3]
                 );
-               
+
                 return $this->respond(['data' => $input]);
             } catch (Exception $exception) {
                 return $this->fail(['error' => $exception->getMessage()]);
@@ -2389,10 +2348,8 @@ class API extends BaseController
         }
     }
 
-
     function withdraw_auction()
     {
-
         if ($_POST) {
             try {
                 $input = $this->getRequestInput($this->request);
@@ -2401,7 +2358,7 @@ class API extends BaseController
                     ['auction_id' => $input['auction_id']],
                     ['seller_status_id' => 4]
                 );
-               
+
                 return $this->respond(['data' => $input]);
             } catch (Exception $exception) {
                 return $this->fail(['error' => $exception->getMessage()]);
@@ -2409,10 +2366,8 @@ class API extends BaseController
         }
     }
 
-
     function reject_auction_result()
     {
-
         if ($_POST) {
             try {
                 $input = $this->getRequestInput($this->request);
@@ -2500,7 +2455,6 @@ class API extends BaseController
     public function verify_otp_password()
     {
         if ($_POST) {
-
             try {
                 // users_id, otp
                 $input = $this->getRequestInput($this->request);
@@ -2535,7 +2489,6 @@ class API extends BaseController
         foreach ($auctions as $auction) {
             $auction_id = $auction['auction_id'];
             $end_datetime = date(
-
                 'Y-m-d H:i:s',
                 strtotime($auction['date'] . ' ' . $auction['end_time'])
             );
@@ -2642,7 +2595,6 @@ class API extends BaseController
         }
     }
 
-
     public function ended_bid_result()
     {
         if ($_POST) {
@@ -2730,7 +2682,6 @@ class API extends BaseController
     }
 
     public function send_notification(
-
         $users_id,
         $name,
         $description,
@@ -2780,13 +2731,11 @@ class API extends BaseController
 
                 foreach ($status as $key => $row) {
                     $auctions = $this->AuctionModel->getAuctionRawBuyer(
-
                         $row['auction_status_buyer_id'],
                         $users_id
                     );
                     $status[$key]['auctions'] = $auctions;
                 }
-
 
                 return $this->respond(['data' => $status]);
             } catch (Exception $exception) {
@@ -2870,29 +2819,41 @@ class API extends BaseController
 
     function date_getFullTimeDifference($start, $end)
     {
-        $uts['start']      =    strtotime($start);
-        $uts['end']        =    strtotime($end);
+        $uts['start'] = strtotime($start);
+        $uts['end'] = strtotime($end);
         if ($uts['start'] !== -1 && $uts['end'] !== -1) {
             if ($uts['end'] >= $uts['start']) {
-                $diff    =    $uts['end'] - $uts['start'];
-                if ($years = intval((floor($diff / 31104000))))
+                $diff = $uts['end'] - $uts['start'];
+                if ($years = intval(floor($diff / 31104000))) {
                     $diff = $diff % 31104000;
-                if ($months = intval((floor($diff / 2592000))))
+                }
+                if ($months = intval(floor($diff / 2592000))) {
                     $diff = $diff % 2592000;
-                if ($days = intval((floor($diff / 86400))))
+                }
+                if ($days = intval(floor($diff / 86400))) {
                     $diff = $diff % 86400;
-                if ($hours = intval((floor($diff / 3600))))
+                }
+                if ($hours = intval(floor($diff / 3600))) {
                     $diff = $diff % 3600;
-                if ($minutes = intval((floor($diff / 60))))
+                }
+                if ($minutes = intval(floor($diff / 60))) {
                     $diff = $diff % 60;
-                $diff    =    intval($diff);
-                return (array('years' => $years, 'months' => $months, 'days' => $days, 'hours' => $hours, 'minutes' => $minutes, 'seconds' => $diff));
+                }
+                $diff = intval($diff);
+                return [
+                    'years' => $years,
+                    'months' => $months,
+                    'days' => $days,
+                    'hours' => $hours,
+                    'minutes' => $minutes,
+                    'seconds' => $diff,
+                ];
             } else {
                 return false;
                 // echo "Ending date/time is earlier than the start date/time";
             }
         } else {
-            echo "Invalid date/time data detected";
+            echo 'Invalid date/time data detected';
         }
     }
 
@@ -2906,22 +2867,23 @@ class API extends BaseController
         // default end time
 
         $auction_section_end_date_time = $this->AuctionSectionModel->getWhere([
-            'auction_section_id' => $auction['auction_section_id']
+            'auction_section_id' => $auction['auction_section_id'],
         ])[0];
         $end_datetime = date(
             'Y-m-d H:i:s',
-            strtotime($auction_section_end_date_time['date'] . ' ' . $auction_section_end_date_time['end_time'])
+            strtotime(
+                $auction_section_end_date_time['date'] .
+                    ' ' .
+                    $auction_section_end_date_time['end_time']
+            )
         );
-
 
         $time_now = date('Y-m-d H:i:s');
         $end_time = $auction['date'] . ' ' . $auction['end_time'];
 
         $time_diff = $this->date_getFullTimeDifference($time_now, $end_time);
-        
 
         if ($time_diff != false) {
-
             if ($time_diff['seconds'] <= 30 && $time_diff['minutes'] <= 0) {
                 // bidding end time
                 $bid = $this->BidModel->get_last_bid($auction_id);
@@ -2930,20 +2892,24 @@ class API extends BaseController
                     $bid = $bid[0];
 
                     if (
-                        date('Y-m-d H:i:s', strtotime($bid['created_date']) + 30) >
-                        $end_time
+                        date(
+                            'Y-m-d H:i:s',
+                            strtotime($bid['created_date']) + 30
+                        ) > $end_time
                     ) {
                         // $ended = true;
                         // $end_time = date('H:i:s', strtotime($end_time) + 30);
                         $howmanysectoendtime = 30 - $time_diff['seconds'];
-                        $end_time = date('H:i:s', strtotime($end_time) + $howmanysectoendtime);
-
+                        $end_time = date(
+                            'H:i:s',
+                            strtotime($end_time) + $howmanysectoendtime
+                        );
 
                         $this->AuctionModel->updateWhere(
                             [
                                 'auction_id' => $auction_id,
                             ],
-                            ['end_time' =>  $end_time]
+                            ['end_time' => $end_time]
                         );
                     }
                 }
@@ -2993,9 +2959,9 @@ class API extends BaseController
         if ($_POST) {
             try {
                 $input = $this->getRequestInput($this->request);
-                $banner = $this->BannerModel->getWhere(
-                    ['type_id' => $input['type_id']],
-                );
+                $banner = $this->BannerModel->getWhere([
+                    'type_id' => $input['type_id'],
+                ]);
                 return $this->respond(['data' => $banner]);
             } catch (Exception $exception) {
                 return $this->fail(['error' => $exception->getMessage()]);
@@ -3031,7 +2997,6 @@ class API extends BaseController
                 $rule =
                     "For every ssuccessful bid of vehicles purchased with cash, the Buyer's Premium is RM450 + Handling Fee (shown above). With Loan, the Buyer's Premium is RM650 + Handling Fee (shown above).";
 
-
                 return $this->respond(['data' => $result, 'rule' => $rule]);
             } catch (Exception $exception) {
                 return $this->fail(['error' => $exception->getMessage()]);
@@ -3056,7 +3021,6 @@ class API extends BaseController
             }
         }
     }
-
 
     public function get_areas()
     {
@@ -3141,8 +3105,6 @@ class API extends BaseController
                 $start = 0;
                 $end = 300000;
 
-
-
                 $result = [];
                 while ($start <= $end) {
                     array_push($result, $start);
@@ -3200,7 +3162,6 @@ class API extends BaseController
                 return $this->fail(['error' => 'Invalid Token']);
             }
 
-
             $where = [
                 'users.users_id' => $users_id,
             ];
@@ -3228,7 +3189,6 @@ class API extends BaseController
     }
 
     public function verify_send_otp()
-
     {
         if ($_POST) {
             try {
@@ -3278,7 +3238,7 @@ class API extends BaseController
                     4
                 );
                 $text =
-                    'Dear Carlink Customer, your OTP for forgot password is ' .
+                    'Dear Gplan Customer, your OTP for forgot password is ' .
                     $otp .
                     '. Use this OTP to reset your password.';
 
@@ -3306,7 +3266,6 @@ class API extends BaseController
 
     public function get_car_image()
     {
-    
         if ($_POST) {
             $where = [
                 'car_image.car_id' => $_POST['car_id'],

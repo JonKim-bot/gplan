@@ -1,0 +1,133 @@
+CRITICAL - 2021-02-25 15:18:20 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(606): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 606, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-25 15:18:29 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(606): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 606, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-25 15:18:45 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(606): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 606, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-25 15:19:07 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(607): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 607, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-25 15:19:09 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(607): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 607, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-25 15:19:31 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(607): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 607, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-25 15:19:33 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(607): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 607, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-25 15:20:08 --> Undefined index: month
+#0 D:\www\plantation\app\Controllers\API.php(637): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 637, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-25 15:20:18 --> Array to string conversion
+#0 D:\www\plantation\app\Models\AttendenceModel.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'D:\\www\\plantati...', 48, Array)
+#1 D:\www\plantation\app\Models\AttendenceModel.php(178): App\Models\AttendenceModel->get_attendance_hour_overtime_payslip('working_day', 'total_working_d...', 'total_working_d...', Array)
+#2 D:\www\plantation\app\Controllers\API.php(648): App\Models\AttendenceModel->get_for_pay_slip(Array)
+#3 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#4 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-25 15:37:31 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\plantation\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\plantation\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `worker`...', Array, false)
+#3 D:\www\plantation\app\Models\WorkerModel.php(55): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\www\plantation\app\Controllers\API.php(613): App\Models\WorkerModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-02-25 15:37:43 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\plantation\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\plantation\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `worker`...', Array, false)
+#3 D:\www\plantation\app\Models\WorkerModel.php(55): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\www\plantation\app\Controllers\API.php(613): App\Models\WorkerModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-02-25 15:38:02 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\plantation\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\plantation\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `worker`...', Array, false)
+#3 D:\www\plantation\app\Models\WorkerModel.php(55): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\www\plantation\app\Controllers\API.php(613): App\Models\WorkerModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-02-25 15:38:29 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\plantation\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\plantation\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `worker`...', Array, false)
+#3 D:\www\plantation\app\Models\WorkerModel.php(55): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\www\plantation\app\Controllers\API.php(613): App\Models\WorkerModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-02-25 15:52:16 --> Unknown database 'plantation'
+#0 D:\www\plantation\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\plantation\system\Database\BaseConnection.php(1611): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\plantation\app\Core\BaseModel.php(85): CodeIgniter\Database\BaseConnection->getFieldNames('company')
+#3 D:\www\plantation\app\Controllers\API.php(293): App\Core\BaseModel->getAll()
+#4 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_company()
+#5 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#6 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-25 15:52:16 --> Unknown database 'plantation'
+#0 D:\www\plantation\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\plantation\system\Database\BaseConnection.php(1611): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\plantation\app\Core\BaseModel.php(85): CodeIgniter\Database\BaseConnection->getFieldNames('company')
+#3 D:\www\plantation\app\Controllers\API.php(293): App\Core\BaseModel->getAll()
+#4 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_company()
+#5 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#6 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

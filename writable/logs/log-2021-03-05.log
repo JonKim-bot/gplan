@@ -1,0 +1,153 @@
+CRITICAL - 2021-03-05 09:55:04 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(863): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 863, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->login()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 10:16:26 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(863): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 863, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->login()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 10:16:27 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(863): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 863, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->login()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 10:16:33 --> Undefined index: token
+#0 D:\www\plantation\app\Controllers\API.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 73, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#2 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 10:16:55 --> Undefined index: token
+#0 D:\www\plantation\app\Controllers\API.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 77, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#2 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 10:16:56 --> Undefined index: token
+#0 D:\www\plantation\app\Controllers\API.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 77, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#2 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 10:17:15 --> Call to a member function setContentType() on null
+#0 D:\www\plantation\system\API\ResponseTrait.php(134): App\Controllers\API->format(Array)
+#1 D:\www\plantation\system\API\ResponseTrait.php(166): App\Controllers\API->respond(Array, 400, '')
+#2 D:\www\plantation\app\Controllers\API.php(89): App\Controllers\API->fail(Array)
+#3 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#4 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-05 10:17:28 --> Call to a member function setContentType() on null
+#0 D:\www\plantation\system\API\ResponseTrait.php(134): App\Controllers\API->format(Array)
+#1 D:\www\plantation\system\API\ResponseTrait.php(166): App\Controllers\API->respond(Array, 400, '')
+#2 D:\www\plantation\app\Controllers\API.php(90): App\Controllers\API->fail(Array)
+#3 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#4 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-05 10:17:29 --> Call to a member function setContentType() on null
+#0 D:\www\plantation\system\API\ResponseTrait.php(134): App\Controllers\API->format(Array)
+#1 D:\www\plantation\system\API\ResponseTrait.php(166): App\Controllers\API->respond(Array, 400, '')
+#2 D:\www\plantation\app\Controllers\API.php(90): App\Controllers\API->fail(Array)
+#3 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#4 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-05 10:17:30 --> Call to a member function setContentType() on null
+#0 D:\www\plantation\system\API\ResponseTrait.php(134): App\Controllers\API->format(Array)
+#1 D:\www\plantation\system\API\ResponseTrait.php(166): App\Controllers\API->respond(Array, 400, '')
+#2 D:\www\plantation\app\Controllers\API.php(90): App\Controllers\API->fail(Array)
+#3 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#4 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-05 10:18:08 --> syntax error, unexpected 'use' (T_USE)
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_admin')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_admin')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 12:28:14 --> Column 'created_date' in where clause is ambiguous
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `dispatc...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `dispatc...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `dispatc...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `dispatc...', Array, false)
+#4 D:\www\plantation\app\Models\DispatchModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(124): App\Models\DispatchModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_production_chart()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-03-05 12:33:25 --> Undefined index: 
+#0 D:\www\plantation\app\Controllers\API.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 113, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_production_chart()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 12:33:27 --> Undefined index: 
+#0 D:\www\plantation\app\Controllers\API.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 113, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_production_chart()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 13:52:04 --> Undefined index: month
+#0 D:\www\plantation\app\Controllers\API.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 115, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_production_chart()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 13:52:14 --> Undefined variable: month
+#0 D:\www\plantation\app\Controllers\API.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\plantati...', 155, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_production_chart()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 13:52:15 --> Undefined variable: month
+#0 D:\www\plantation\app\Controllers\API.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\plantati...', 155, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_production_chart()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 13:52:17 --> Undefined variable: month
+#0 D:\www\plantation\app\Controllers\API.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\plantati...', 155, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_production_chart()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 13:54:09 --> Undefined index: month
+#0 D:\www\plantation\app\Controllers\API.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 115, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_production_chart()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-05 13:54:11 --> Undefined index: month
+#0 D:\www\plantation\app\Controllers\API.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 115, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_production_chart()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

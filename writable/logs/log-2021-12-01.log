@@ -1,0 +1,24 @@
+CRITICAL - 2021-12-01 12:47:07 --> syntax error, unexpected end of file
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/auction/d...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\Auction.php(268): view('admin/auction/d...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->detail('34')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-01 12:47:16 --> syntax error, unexpected end of file
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/auction/d...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\Auction.php(268): view('admin/auction/d...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->detail('34')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-01 12:47:16 --> syntax error, unexpected end of file
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/auction/d...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\Auction.php(268): view('admin/auction/d...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->detail('34')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

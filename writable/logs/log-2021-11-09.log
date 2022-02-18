@@ -1,0 +1,255 @@
+CRITICAL - 2021-11-09 11:34:40 --> Unknown database 'carlink_1ive'
+#0 D:\www\carlink_backend\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `admin`....', Array, false)
+#3 D:\www\carlink_backend\app\Models\AdminModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\www\carlink_backend\app\Controllers\Access.php(28): App\Models\AdminModel->getWhere(Array)
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Access->login()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Access))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-11-09 12:04:32 --> Undefined property: App\Controllers\Users::$WalletModel
+#0 D:\www\carlink_backend\app\Controllers\Users.php(137): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 137, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Users->detail('1')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-09 12:04:34 --> Undefined property: App\Controllers\Users::$WalletModel
+#0 D:\www\carlink_backend\app\Controllers\Users.php(137): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 137, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Users->detail('1')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-09 12:04:54 --> Unknown column 'users.user_id' in 'where clause'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletModel.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Users.php(141): App\Models\WalletModel->get_transaction_by_users(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Users->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:04:54 --> Unknown column 'users.user_id' in 'where clause'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletModel.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Users.php(141): App\Models\WalletModel->get_transaction_by_users(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Users->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:04:55 --> Unknown column 'users.user_id' in 'where clause'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletModel.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Users.php(141): App\Models\WalletModel->get_transaction_by_users(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Users->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:05:04 --> Unknown column 'users.user_id' in 'where clause'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletModel.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Users.php(141): App\Models\WalletModel->get_transaction_by_users(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Users->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:05:04 --> Unknown column 'users.user_id' in 'where clause'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletModel.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Users.php(141): App\Models\WalletModel->get_transaction_by_users(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Users->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:24:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(SELECT balance from wallet where users.users_id = uid order by wallet_id desc)
+' at line 2
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:24:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(SELECT balance from wallet where users.users_id = uid order by wallet_id desc)
+' at line 2
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:24:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(SELECT balance from wallet where users.users_id = uid order by wallet_id desc) ' at line 2
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:24:17 --> Subquery returns more than 1 row
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:24:17 --> Subquery returns more than 1 row
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:24:17 --> Subquery returns more than 1 row
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:25:47 --> Subquery returns more than 1 row
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:25:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by wallet_id desc ) as balance
+FROM `wallet_withdraw`
+LEFT JOIN `users` ON' at line 1
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:25:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by wallet_id desc ) as balance
+FROM `wallet_withdraw`
+LEFT JOIN `users` ON' at line 1
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:25:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by wallet_id desc ) as balance
+FROM `wallet_withdraw`
+LEFT JOIN `users` ON' at line 1
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:29:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by wallet_id ded) as balance
+FROM `wallet_withdraw`
+LEFT JOIN `users` ON `' at line 1
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:29:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by wallet_id desc) as balance
+FROM `wallet_withdraw`
+LEFT JOIN `users` ON ' at line 1
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-09 12:29:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by wallet_id desc) as balance
+FROM `wallet_withdraw`
+LEFT JOIN `users` ON ' at line 1
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet_...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet_...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet_...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet_...', Array, false)
+#4 D:\www\carlink_backend\app\Models\WalletWithdrawModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Withdraw.php(17): App\Models\WalletWithdrawModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Withdraw->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}

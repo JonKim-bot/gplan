@@ -1,0 +1,1156 @@
+CRITICAL - 2021-02-19 10:30:46 --> Undefined property: CodeIgniter\HTTP\Response::$data
+#0 D:\www\plantation\app\Controllers\API.php(350): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\plantati...', 350, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 10:38:12 --> Undefined property: App\Controllers\API::$AttendanceModel
+#0 D:\www\plantation\app\Controllers\API.php(354): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\plantati...', 354, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 10:38:26 --> Column 'worker_id' in where clause is ambiguous
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `attende...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `attende...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `attende...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `attende...', Array, false)
+#4 D:\www\plantation\app\Models\AttendenceModel.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(354): App\Models\AttendenceModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 10:38:27 --> Column 'worker_id' in where clause is ambiguous
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `attende...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `attende...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `attende...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `attende...', Array, false)
+#4 D:\www\plantation\app\Models\AttendenceModel.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(354): App\Models\AttendenceModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 11:17:05 --> Unknown column 'subdivision.subdivision' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `deducti...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `deducti...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `deducti...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `deducti...', Array, false)
+#4 D:\www\plantation\app\Models\DeductionModel.php(71): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(364): App\Models\DeductionModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 11:18:33 --> Unknown column 'deduction.deducted' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `deducti...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `deducti...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `deducti...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `deducti...', Array, false)
+#4 D:\www\plantation\app\Models\DeductionModel.php(70): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(364): App\Models\DeductionModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 11:33:17 --> Unknown column 'worker.name' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT sum(dedu...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(dedu...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(dedu...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT sum(dedu...', Array, false)
+#4 D:\www\plantation\app\Models\DeductionModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(364): App\Models\DeductionModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 11:33:18 --> Unknown column 'worker.name' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT sum(dedu...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(dedu...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(dedu...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT sum(dedu...', Array, false)
+#4 D:\www\plantation\app\Models\DeductionModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(364): App\Models\DeductionModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 11:33:21 --> Unknown column 'designation.designation' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT sum(dedu...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(dedu...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(dedu...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT sum(dedu...', Array, false)
+#4 D:\www\plantation\app\Models\DeductionModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(364): App\Models\DeductionModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 11:33:22 --> Unknown column 'designation.designation' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT sum(dedu...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(dedu...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(dedu...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT sum(dedu...', Array, false)
+#4 D:\www\plantation\app\Models\DeductionModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(364): App\Models\DeductionModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 11:35:11 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workdon...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workdon...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:28 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:28 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workdon...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workdon...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:28 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:29 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:29 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workdon...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workdon...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:29 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:32 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:32 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_admin')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_admin')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:32 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:45 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_admin')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_admin')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:45 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:45 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:48 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:48 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_subdivi...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_subdivi...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:48 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:51 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:51 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:35:51 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workdon...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workdon...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:31 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:31 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:31 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workers')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workers')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:31 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:42 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workers')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workers')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:42 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:42 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:42 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:43 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workers')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workers')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:43 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:43 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:50:43 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:00 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workers')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workers')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:00 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:00 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:00 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:03 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:03 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:03 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:03 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workers')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workers')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:07 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workers')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workers')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:07 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:07 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:51:07 --> syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 11:57:11 --> Unknown column 'deduction.worker_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(69): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(366): App\Models\WorkdoneModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 11:59:13 --> Unknown column 'subdivision.subdivision' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(370): App\Models\WorkdoneModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 12:11:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `subdivision`.`subdivision`, `designation`.`designation`
+FROM `workdone`
+JOIN `' at line 1
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(370): App\Models\WorkdoneModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 12:12:40 --> Unknown column 'deduct_for.deduct_for_id' in 'group statement'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT SUM(work...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(work...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(work...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT SUM(work...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(69): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(370): App\Models\WorkdoneModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 12:18:56 --> Undefined variable: attendence
+#0 D:\www\plantation\app\Controllers\API.php(373): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\plantati...', 373, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 12:34:53 --> Undefined variable: subdivision
+#0 D:\www\plantation\app\Controllers\API.php(376): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\plantati...', 376, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 13:36:56 --> Unknown column 'worker.company_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(473): App\Core\BaseModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 13:37:15 --> Unknown column 'attendance.worker_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `attende...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `attende...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `attende...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `attende...', Array, false)
+#4 D:\www\plantation\app\Models\AttendenceModel.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(479): App\Models\AttendenceModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 13:37:16 --> Unknown column 'attendance.worker_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `attende...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `attende...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `attende...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `attende...', Array, false)
+#4 D:\www\plantation\app\Models\AttendenceModel.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(479): App\Models\AttendenceModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 13:39:41 --> Undefined index: total_working_day_working_hour
+#0 D:\www\plantation\app\Controllers\API.php(479): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 479, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 13:57:51 --> Undefined index: total_working_day_working_hour
+#0 D:\www\plantation\app\Controllers\API.php(488): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 488, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 13:58:01 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(487): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 487, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 13:58:02 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(487): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 487, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 13:58:38 --> Undefined index: total_working_day_working_hour
+#0 D:\www\plantation\app\Controllers\API.php(489): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 489, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:02:39 --> syntax error, unexpected '}'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_payment...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_payment...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:02:43 --> syntax error, unexpected '}'
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_payment...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_payment...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:04:50 --> Undefined index: total_working_day_working_hour
+#0 D:\www\plantation\app\Controllers\API.php(490): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 490, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:05:24 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(490): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 490, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:05:25 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(490): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 490, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:05:26 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(490): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 490, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:17:54 --> Unknown column 'worker.company_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(482): App\Core\BaseModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 14:34:22 --> Illegal string offset 'totla'
+#0 D:\www\plantation\app\Controllers\API.php(513): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\plantati...', 513, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:34:31 --> Illegal string offset 'total'
+#0 D:\www\plantation\app\Controllers\API.php(513): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\plantati...', 513, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:34:47 --> Illegal string offset 'total'
+#0 D:\www\plantation\app\Controllers\API.php(513): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\plantati...', 513, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:38:44 --> Undefined property: App\Controllers\API::$WorkdoneModel
+#0 D:\www\plantation\app\Controllers\API.php(513): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\plantati...', 513, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:40:43 --> Column 'worker_id' in where clause is ambiguous
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT SUM(work...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(work...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(work...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT SUM(work...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(513): App\Models\WorkdoneModel->get_for_pay_summary(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 14:40:55 --> Column 'designation_id' in where clause is ambiguous
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT SUM(work...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(work...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(work...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT SUM(work...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(513): App\Models\WorkdoneModel->get_for_pay_summary(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 14:40:57 --> Column 'designation_id' in where clause is ambiguous
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT SUM(work...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(work...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(work...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT SUM(work...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(513): App\Models\WorkdoneModel->get_for_pay_summary(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 14:43:04 --> Undefined index: designation_id
+#0 D:\www\plantation\app\Controllers\API.php(511): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 511, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:45:27 --> Undefined index: designation_id
+#0 D:\www\plantation\app\Controllers\API.php(511): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 511, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 14:52:16 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(557): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 557, Array)
+#1 [internal function]: App\Controllers\API->App\Controllers\{closure}(0)
+#2 D:\www\plantation\app\Controllers\API.php(558): array_map(Object(Closure), Array)
+#3 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#4 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-19 14:53:10 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(556): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 556, Array)
+#1 [internal function]: App\Controllers\API->App\Controllers\{closure}(0)
+#2 D:\www\plantation\app\Controllers\API.php(557): array_map(Object(Closure), Array)
+#3 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#4 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-19 14:59:21 --> Column 'company_id' in where clause is ambiguous
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `deducti...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `deducti...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `deducti...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `deducti...', Array, false)
+#4 D:\www\plantation\app\Models\DeductionModel.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(511): App\Models\DeductionModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 15:04:20 --> Unknown column 'deduction.company_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(145): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(538): App\Core\BaseModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 15:04:30 --> Unknown column 'deduction.deduct_for' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT sum(dedu...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(dedu...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(dedu...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT sum(dedu...', Array, false)
+#4 D:\www\plantation\app\Models\DeductionModel.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(505): App\Models\DeductionModel->get_for_pay_summary(Array)
+#6 D:\www\plantation\app\Controllers\API.php(563): App\Controllers\API->get_deduction_cost('2', Array)
+#7 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#8 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#9 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-02-19 15:05:03 --> Unknown column 'deduction.deduct_for_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT sum(dedu...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(dedu...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(dedu...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT sum(dedu...', Array, false)
+#4 D:\www\plantation\app\Models\DeductionModel.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(505): App\Models\DeductionModel->get_for_pay_summary(Array)
+#6 D:\www\plantation\app\Controllers\API.php(563): App\Controllers\API->get_deduction_cost('2', Array)
+#7 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#8 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#9 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-02-19 15:05:32 --> Undefined index: deduct_id
+#0 D:\www\plantation\app\Controllers\API.php(517): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 517, Array)
+#1 D:\www\plantation\app\Controllers\API.php(563): App\Controllers\API->get_deduction_cost('2', Array)
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 15:05:54 --> Undefined index: deduct_id
+#0 D:\www\plantation\app\Controllers\API.php(517): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 517, Array)
+#1 D:\www\plantation\app\Controllers\API.php(563): App\Controllers\API->get_deduction_cost('2', Array)
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 15:06:15 --> Undefined index: deduct_id
+#0 D:\www\plantation\app\Controllers\API.php(517): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 517, Array)
+#1 D:\www\plantation\app\Controllers\API.php(563): App\Controllers\API->get_deduction_cost('2', Array)
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 15:06:17 --> Undefined index: deduct_id
+#0 D:\www\plantation\app\Controllers\API.php(517): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 517, Array)
+#1 D:\www\plantation\app\Controllers\API.php(563): App\Controllers\API->get_deduction_cost('2', Array)
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 15:14:20 --> Division by zero
+#0 D:\www\plantation\app\Controllers\API.php(579): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'D:\\www\\plantati...', 579, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 15:28:35 --> Undefined index: total_working_day_working_hour
+#0 D:\www\plantation\app\Controllers\API.php(371): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 371, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 15:52:57 --> No database selected
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(171): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(71): App\Core\BaseModel->verifyToken(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#7 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 16:01:33 --> Undefined index: total_overtime
+#0 D:\www\plantation\app\Controllers\API.php(374): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 374, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 16:27:30 --> Undefined index: total
+#0 D:\www\plantation\app\Controllers\API.php(414): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 414, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 16:28:18 --> Undefined index: LDU2C
+#0 D:\www\plantation\app\Controllers\API.php(414): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 414, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 16:41:11 --> Use of undefined constant in - assumed 'in' (this will throw an Error in a future version of PHP)
+#0 D:\www\plantation\app\Controllers\API.php(416): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'D:\\www\\plantati...', 416, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 16:41:17 --> Use of undefined constant in - assumed 'in' (this will throw an Error in a future version of PHP)
+#0 D:\www\plantation\app\Controllers\API.php(416): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'D:\\www\\plantati...', 416, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 16:46:47 --> Unknown column 'designation.subdivision_id' in 'group statement'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT SUM(work...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(work...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(work...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT SUM(work...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(72): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(404): App\Models\WorkdoneModel->get_for_pay_slip(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 17:04:42 --> Unknown column 'designation.designation' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT SUM(work...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(work...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(work...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT SUM(work...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(410): App\Models\WorkdoneModel->get_sum(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 17:04:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`subdivision_id`
+FROM `workdone`
+JOIN `worker` ON `worker`.`worker_id` = `workd' at line 1
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT SUM(work...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(work...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(work...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT SUM(work...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(410): App\Models\WorkdoneModel->get_sum(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 17:04:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`subdivision_id`
+FROM `workdone`
+JOIN `worker` ON `worker`.`worker_id` = `workd' at line 1
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT SUM(work...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(work...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(work...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT SUM(work...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(410): App\Models\WorkdoneModel->get_sum(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 17:24:39 --> Column 'designation_id' in where clause is ambiguous
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT SUM(work...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(work...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(work...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT SUM(work...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(110): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(419): App\Models\WorkdoneModel->get_worker_subdivision(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payslip_detail()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 18:02:46 --> Undefined index: total_overtime
+#0 D:\www\plantation\app\Controllers\API.php(607): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 607, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 18:03:24 --> Undefined index: -d_no
+#0 D:\www\plantation\app\Controllers\API.php(632): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 632, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 18:06:20 --> Undefined property: App\Controllers\API::$WorkdoneModel
+#0 D:\www\plantation\app\Controllers\API.php(574): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\plantati...', 574, Array)
+#1 D:\www\plantation\app\Controllers\API.php(618): App\Controllers\API->get_work_cost('2')
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 18:06:22 --> Undefined property: App\Controllers\API::$WorkdoneModel
+#0 D:\www\plantation\app\Controllers\API.php(574): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\plantati...', 574, Array)
+#1 D:\www\plantation\app\Controllers\API.php(618): App\Controllers\API->get_work_cost('2')
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 18:17:13 --> Unknown column 'workcode.work_type' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(574): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\app\Controllers\API.php(625): App\Controllers\API->get_work_cost('2')
+#7 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#8 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#9 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-02-19 18:17:35 --> Unknown column 'workcode_id.workcode_id' in 'on clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(574): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\app\Controllers\API.php(625): App\Controllers\API->get_work_cost('2')
+#7 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#8 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#9 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-02-19 18:17:36 --> Unknown column 'workcode_id.workcode_id' in 'on clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(574): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\app\Controllers\API.php(625): App\Controllers\API->get_work_cost('2')
+#7 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#8 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#9 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-02-19 18:17:48 --> Unknown column 'workcode.work_type' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(574): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\app\Controllers\API.php(625): App\Controllers\API->get_work_cost('2')
+#7 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#8 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#9 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-02-19 18:17:49 --> Unknown column 'workcode.work_type' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(574): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\app\Controllers\API.php(625): App\Controllers\API->get_work_cost('2')
+#7 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#8 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#9 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-02-19 18:18:26 --> Unknown column 'work' in 'group statement'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(157): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(574): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\app\Controllers\API.php(625): App\Controllers\API->get_work_cost('2')
+#7 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#8 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#9 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-02-19 18:20:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '// GROUP_CONCAT(workcode.work_type_id) AS work_type
+FROM `workdone`
+JOIN `worker' at line 1
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(157): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(574): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\app\Controllers\API.php(625): App\Controllers\API->get_work_cost('2')
+#7 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#8 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#9 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-02-19 18:21:09 --> Undefined property: App\Controllers\API::$WorkCodeModel
+#0 D:\www\plantation\app\Controllers\API.php(579): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\plantati...', 579, Array)
+#1 D:\www\plantation\app\Controllers\API.php(624): App\Controllers\API->get_work_cost('2')
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 18:21:10 --> Undefined property: App\Controllers\API::$WorkCodeModel
+#0 D:\www\plantation\app\Controllers\API.php(579): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\plantati...', 579, Array)
+#1 D:\www\plantation\app\Controllers\API.php(624): App\Controllers\API->get_work_cost('2')
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 18:22:54 --> Undefined index: workcode
+#0 D:\www\plantation\app\Controllers\API.php(580): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 580, Array)
+#1 D:\www\plantation\app\Controllers\API.php(625): App\Controllers\API->get_work_cost('2')
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 18:22:55 --> Undefined index: workcode
+#0 D:\www\plantation\app\Controllers\API.php(580): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 580, Array)
+#1 D:\www\plantation\app\Controllers\API.php(625): App\Controllers\API->get_work_cost('2')
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-19 18:28:03 --> Undefined index: workder_id
+#0 D:\www\plantation\app\Controllers\API.php(625): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 625, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 18:28:05 --> Undefined index: workder_id
+#0 D:\www\plantation\app\Controllers\API.php(625): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 625, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-19 18:30:34 --> Unknown column 'total' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(163): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(627): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 18:30:35 --> Unknown column 'total' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(163): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(627): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 18:32:43 --> Unknown column 'grand_rate' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(166): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(627): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 18:32:44 --> Unknown column 'grand_rate' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(166): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(627): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 18:33:06 --> Invalid use of group function
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(166): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(627): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 18:33:25 --> Invalid use of group function
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(166): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(627): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-19 18:38:59 --> Unknown column 'workcode.work_category' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workdon...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workdon...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workdon...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workdon...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(166): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(627): App\Models\WorkdoneModel->get_work_code_id(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_payment_summary()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}

@@ -1,0 +1,490 @@
+CRITICAL - 2021-01-07 09:45:57 --> Unknown column 'attendance.company_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(213): App\Core\BaseModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_attendence()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 09:50:13 --> Undefined index: user_name
+#0 D:\www\plantation\app\Controllers\API.php(1709): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1709, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:50:15 --> Undefined index: user_name
+#0 D:\www\plantation\app\Controllers\API.php(1709): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1709, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:50:16 --> Undefined index: user_name
+#0 D:\www\plantation\app\Controllers\API.php(1709): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1709, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:50:17 --> Undefined index: user_name
+#0 D:\www\plantation\app\Controllers\API.php(1709): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1709, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:55:10 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:55:11 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:55:13 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:55:23 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:55:24 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:56:12 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:56:13 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:56:39 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:56:54 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:56:55 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:57:25 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1713): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1713, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 09:57:55 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1715): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1715, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:01:28 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(903): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 903, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:01:37 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(903): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 903, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:01:38 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(903): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 903, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:02:04 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(903): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 903, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:02:05 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(903): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 903, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:02:06 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(903): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 903, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:03:38 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(895): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 895, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:03:49 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(895): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 895, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:03:50 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(895): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 895, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:04:48 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(895): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 895, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:05:17 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(895): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 895, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:05:18 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(895): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 895, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:06:07 --> Undefined index: username
+#0 D:\www\plantation\app\Controllers\API.php(899): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 899, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:07:12 --> Undefined index: contact
+#0 D:\www\plantation\app\Controllers\API.php(930): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 930, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:07:17 --> Undefined index: contact
+#0 D:\www\plantation\app\Controllers\API.php(930): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 930, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:07:52 --> Undefined index: contact
+#0 D:\www\plantation\app\Controllers\API.php(922): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 922, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:13:21 --> Undefined index: email
+#0 D:\www\plantation\app\Controllers\API.php(1709): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1709, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:13:53 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1700): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1700, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:13:55 --> Undefined index: admin_id
+#0 D:\www\plantation\app\Controllers\API.php(1700): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1700, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin_by_id()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:14:41 --> Undefined index: admin.admin_id
+#0 D:\www\plantation\app\Models\AdminModel.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 30, Array)
+#1 D:\www\plantation\app\Controllers\API.php(241): App\Models\AdminModel->getWhere(Array)
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-07 10:14:41 --> Undefined index: admin.admin_id
+#0 D:\www\plantation\app\Models\AdminModel.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 30, Array)
+#1 D:\www\plantation\app\Controllers\API.php(241): App\Models\AdminModel->getWhere(Array)
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-07 10:57:24 --> Undefined index: role
+#0 D:\www\plantation\app\Controllers\API.php(698): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 698, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 10:59:35 --> Unknown column 'role' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `es...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(704): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_role()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 10:59:51 --> Unknown column 'role' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `es...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(704): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_role()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 11:00:23 --> Unknown column 'created_by' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ro...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ro...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ro...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ro...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(704): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_role()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 11:03:42 --> Call to undefined method App\Models\RoleModel::hardDelete
+#0 D:\www\plantation\app\Controllers\API.php(1511): CodeIgniter\Model->__call('hardDelete', Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->delete_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 11:07:29 --> Unknown column 'attendance.company_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(213): App\Core\BaseModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_attendence()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 11:08:16 --> Unknown column 'attendance.company_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(213): App\Core\BaseModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_attendence()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 11:09:24 --> Unknown column 'attendance.company_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(213): App\Core\BaseModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_attendence()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 13:40:12 --> Column 'company_id' cannot be null
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(388): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_worker()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 13:41:30 --> Column 'company_id' cannot be null
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(388): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_worker()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 13:44:56 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\www\\plantati...', 101, Array)
+#1 D:\www\plantation\system\Session\Handlers\FileHandler.php(101): ini_set('session.save_pa...', 'D:\\www\\plantati...')
+#2 D:\www\plantation\system\Config\Services.php(763): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+#3 D:\www\plantation\system\Config\BaseService.php(123): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 D:\www\plantation\system\Config\Services.php(752): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#5 D:\www\plantation\system\Common.php(894): CodeIgniter\Config\Services::session()
+#6 D:\www\plantation\app\Core\BaseModel.php(25): session()
+#7 D:\www\plantation\app\Models\AdminModel.php(11): App\Core\BaseModel->__construct()
+#8 D:\www\plantation\app\Controllers\API.php(38): App\Models\AdminModel->__construct()
+#9 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#10 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#11 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-01-07 13:44:56 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at D:\www\plantation\app\Config\Events.php:27) in D:\www\plantation\system\Debug\Exceptions.php:162
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'D:\\www\\plantati...', 162, Array)
+#1 D:\www\plantation\system\Debug\Exceptions.php(162): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-07 13:45:09 --> Column 'company_id' cannot be null
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(388): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_worker()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 13:45:09 --> Column 'company_id' cannot be null
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(388): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_worker()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 13:45:09 --> Column 'company_id' cannot be null
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(388): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_worker()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 18:59:52 --> Unknown column 'attendance.company_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(216): App\Core\BaseModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_attendence()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 18:59:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 6
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *, (SELE...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, (SELE...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, (SELE...')
+#3 D:\www\plantation\app\Models\WorkerModel.php(30): CodeIgniter\Database\BaseConnection->query('SELECT *, (SELE...', NULL)
+#4 D:\www\plantation\app\Controllers\API.php(230): App\Models\WorkerModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workers()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-01-07 18:59:57 --> Unknown column 'attendance.company_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(216): App\Core\BaseModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_attendence()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-07 19:01:06 --> Column 'marital' cannot be null
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(388): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_worker()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}

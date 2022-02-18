@@ -1,0 +1,1403 @@
+CRITICAL - 2021-10-27 10:08:08 --> Trying to access array offset on value of type null
+#0 D:\www\carlink\app\Views\admin\header.php(286): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\carlink\\...', 286, Array)
+#1 D:\www\carlink\system\View\View.php(246): include('D:\\www\\carlink\\...')
+#2 D:\www\carlink\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\carlink\app\Controllers\Role.php(36): view('admin/header', Array)
+#4 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Role->index()
+#5 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Role))
+#6 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-27 10:11:28 --> Unknown column 'title' in 'admin'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('\r\n             ...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 D:\www\carlink\app\Core\BaseModel.php(1531): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 D:\www\carlink\app\Models\AdminModel.php(9): App\Core\BaseModel->change_title_to_name()
+#5 D:\www\carlink\app\Controllers\Access.php(11): App\Models\AdminModel->__construct()
+#6 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\Access->__construct()
+#7 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 10:11:29 --> Unknown column 'title' in 'admin'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('\r\n             ...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('\r\n             ...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n             ...')
+#3 D:\www\carlink\app\Core\BaseModel.php(1531): CodeIgniter\Database\BaseConnection->query('\r\n             ...')
+#4 D:\www\carlink\app\Models\AdminModel.php(9): App\Core\BaseModel->change_title_to_name()
+#5 D:\www\carlink\app\Controllers\Access.php(11): App\Models\AdminModel->__construct()
+#6 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\Access->__construct()
+#7 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 10:22:37 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Head...', 'D:\\www\\carlink\\...', 101, Array)
+#1 D:\www\carlink\system\Session\Handlers\FileHandler.php(101): ini_set('session.save_pa...', 'D:\\www\\carlink\\...')
+#2 D:\www\carlink\system\Config\Services.php(763): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+#3 D:\www\carlink\system\Config\BaseService.php(123): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 D:\www\carlink\system\Config\Services.php(752): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#5 D:\www\carlink\system\Common.php(894): CodeIgniter\Config\Services::session()
+#6 D:\www\carlink\app\Core\BaseModel.php(24): session()
+#7 D:\www\carlink\app\Models\AuctionStatusModel.php(9): App\Core\BaseModel->__construct()
+#8 D:\www\carlink\app\Controllers\AuctionStatus.php(15): App\Models\AuctionStatusModel->__construct()
+#9 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\AuctionStatus->__construct()
+#10 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#11 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-10-27 12:51:44 --> Unknown column 'car_inspection_detail.car_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car`.*\n...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car`.*\n...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car`.*\n...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car`.*\n...', Array, false)
+#4 D:\www\carlink\app\Models\CarModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Car.php(31): App\Models\CarModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Car->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:51:48 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:52:35 --> Unknown column 'car_inspection_detail.car_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car`.*\n...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car`.*\n...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car`.*\n...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car`.*\n...', Array, false)
+#4 D:\www\carlink\app\Models\CarModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Car.php(31): App\Models\CarModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Car->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:53:05 --> Unknown column 'car_inspection_part.car_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car`.*\n...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car`.*\n...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car`.*\n...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car`.*\n...', Array, false)
+#4 D:\www\carlink\app\Models\CarModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Car.php(31): App\Models\CarModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Car->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:53:33 --> Unknown column 'car_inspection_detail.car_inspection_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink\app\Models\CarInspectionModel.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\CarInspection.php(31): App\Models\CarInspectionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\CarInspection->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspection))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:53:50 --> Unknown column 'car_inspection_detail.car_inspection_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink\app\Models\CarInspectionModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\CarInspection.php(31): App\Models\CarInspectionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\CarInspection->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspection))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:53:50 --> Unknown column 'car_inspection_detail.car_inspection_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink\app\Models\CarInspectionModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\CarInspection.php(31): App\Models\CarInspectionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\CarInspection->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspection))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:54:36 --> Unknown column 'car_inspection_detail.inspection_detail_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `inspect...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inspect...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inspect...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `inspect...', Array, false)
+#4 D:\www\carlink\app\Models\InspectionDetailModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\InspectionDetail.php(31): App\Models\InspectionDetailModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:55:26 --> Unknown column 'notification_type.notification_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `notific...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `notific...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `notific...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `notific...', Array, false)
+#4 D:\www\carlink\app\Models\NotificationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Notification.php(31): App\Models\NotificationModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Notification->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:55:54 --> Unknown column 'qna_type.qna_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `qna`.*\n...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `qna`.*\n...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `qna`.*\n...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `qna`.*\n...', Array, false)
+#4 D:\www\carlink\app\Models\QnaModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Qna.php(31): App\Models\QnaModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 12:56:27 --> Unknown column 'wallet_topup.wallet_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 D:\www\carlink\app\Models\WalletModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Wallet.php(31): App\Models\WalletModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 13:09:48 --> Column 'brand_id' in where clause is ambiguous
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `brand`....')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `brand`....')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `brand`....')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `brand`....', Array, false)
+#4 D:\www\carlink\app\Models\BrandModel.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Brand.php(78): App\Models\BrandModel->getWhere(Array)
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Brand->detail('63')
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Brand))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 13:09:58 --> Column 'brand_id' in where clause is ambiguous
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `brand`....')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `brand`....')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `brand`....')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `brand`....', Array, false)
+#4 D:\www\carlink\app\Models\BrandModel.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Brand.php(78): App\Models\BrandModel->getWhere(Array)
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Brand->detail('63')
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Brand))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:46:02 --> Undefined offset: 0
+#0 D:\www\carlink\app\Core\BaseModel.php(160): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink\\...', 160, Array)
+#1 D:\www\carlink\app\Controllers\Brand.php(87): App\Core\BaseModel->get_field(Array, Array)
+#2 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Brand->detail('63')
+#3 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Brand))
+#4 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-27 14:53:58 --> Argument 2 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type int or null, string given, called in D:\www\carlink\app\Controllers\Model.php on line 71
+#0 D:\www\carlink\app\Controllers\Model.php(71): CodeIgniter\HTTP\RedirectResponse->to('http://localhos...', 'refresh')
+#1 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Model->copy('1')
+#2 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Model))
+#3 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-27 14:56:49 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:05 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:06 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:06 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:07 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:07 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:07 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:07 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:07 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:08 --> Unknown column 'auction_status.auction_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink\app\Models\AuctionModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Auction.php(31): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:36 --> Unknown column 'car_inspection_detail.car_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car`.*\n...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car`.*\n...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car`.*\n...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car`.*\n...', Array, false)
+#4 D:\www\carlink\app\Models\CarModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Car.php(31): App\Models\CarModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Car->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:57:57 --> Unknown column 'car_inspection_detail.car_inspection_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink\app\Models\CarInspectionModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\CarInspection.php(31): App\Models\CarInspectionModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\CarInspection->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspection))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:58:26 --> Unknown column 'qna_type.qna_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `qna`.*\n...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `qna`.*\n...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `qna`.*\n...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `qna`.*\n...', Array, false)
+#4 D:\www\carlink\app\Models\QnaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Qna.php(31): App\Models\QnaModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:58:51 --> Unknown column 'notification_type.notification_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `notific...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `notific...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `notific...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `notific...', Array, false)
+#4 D:\www\carlink\app\Models\NotificationModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Notification.php(31): App\Models\NotificationModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Notification->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 14:59:24 --> Unknown column 'wallet_topup.wallet_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 D:\www\carlink\app\Models\WalletModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Wallet.php(31): App\Models\WalletModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 15:00:25 --> Column 'model_id' in where clause is ambiguous
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `model`....')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `model`....')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `model`....')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `model`....', Array, false)
+#4 D:\www\carlink\app\Models\ModelModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Model.php(79): App\Models\ModelModel->getWhere(Array)
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Model->detail('1')
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Model))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 15:07:21 --> Column 'model_id' in where clause is ambiguous
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `model`....')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `model`....')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `model`....')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `model`....', Array, false)
+#4 D:\www\carlink\app\Models\ModelModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Model.php(79): App\Models\ModelModel->getWhere(Array)
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Model->detail('1')
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Model))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 15:07:22 --> Column 'model_id' in where clause is ambiguous
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `model`....')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `model`....')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `model`....')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `model`....', Array, false)
+#4 D:\www\carlink\app\Models\ModelModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Model.php(79): App\Models\ModelModel->getWhere(Array)
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Model->detail('1')
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Model))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 15:08:10 --> Cannot use empty array elements in arrays
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-10-27 15:08:10 --> Cannot use empty array elements in arrays
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-10-27 15:12:59 --> Unknown column 'brand.model_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `brand`....')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `brand`....')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `brand`....')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `brand`....', Array, false)
+#4 D:\www\carlink\app\Models\BrandModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Brand.php(32): App\Models\BrandModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Brand->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Brand))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 15:12:59 --> Unknown column 'brand.model_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `brand`....')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `brand`....')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `brand`....')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `brand`....', Array, false)
+#4 D:\www\carlink\app\Models\BrandModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Brand.php(32): App\Models\BrandModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Brand->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Brand))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 15:13:00 --> Unknown column 'brand.model_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `brand`....')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `brand`....')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `brand`....')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `brand`....', Array, false)
+#4 D:\www\carlink\app\Models\BrandModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Brand.php(32): App\Models\BrandModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Brand->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Brand))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 15:40:01 --> Undefined offset: 0
+#0 D:\www\carlink\app\Controllers\Brand.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink\\...', 79, Array)
+#1 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Brand->detail('login.html')
+#2 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Brand))
+#3 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-27 15:53:18 --> Unknown column 'car_inspection_detail.inspection_detail_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `inspect...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inspect...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inspect...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `inspect...', Array, false)
+#4 D:\www\carlink\app\Models\InspectionDetailModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\InspectionDetail.php(31): App\Models\InspectionDetailModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 16:08:10 --> Undefined variable: qna
+#0 D:\www\carlink\app\Views\admin\qna\edit.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink\\...', 5, Array)
+#1 D:\www\carlink\system\View\View.php(246): include('D:\\www\\carlink\\...')
+#2 D:\www\carlink\system\Common.php(1087): CodeIgniter\View\View->render('admin/qna/edit', Array, true)
+#3 D:\www\carlink\app\Controllers\Qna.php(117): view('admin/qna/edit')
+#4 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#5 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#6 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-27 16:08:11 --> Undefined variable: qna
+#0 D:\www\carlink\app\Views\admin\qna\edit.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink\\...', 5, Array)
+#1 D:\www\carlink\system\View\View.php(246): include('D:\\www\\carlink\\...')
+#2 D:\www\carlink\system\Common.php(1087): CodeIgniter\View\View->render('admin/qna/edit', Array, true)
+#3 D:\www\carlink\app\Controllers\Qna.php(117): view('admin/qna/edit')
+#4 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#5 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#6 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-27 16:08:43 --> Undefined variable: data
+#0 D:\www\carlink\app\Core\BaseModel.php(1003): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink\\...', 1003, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1585): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:08:44 --> Undefined variable: data
+#0 D:\www\carlink\app\Core\BaseModel.php(1003): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink\\...', 1003, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1585): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:08:45 --> Undefined variable: data
+#0 D:\www\carlink\app\Core\BaseModel.php(1003): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink\\...', 1003, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1585): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:08:46 --> Undefined variable: data
+#0 D:\www\carlink\app\Core\BaseModel.php(1003): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink\\...', 1003, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1585): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:09:23 --> Call to a member function getCompiledSelect() on string
+#0 D:\www\carlink\app\Core\BaseModel.php(1590): App\Core\BaseModel->generate_edit_input('3')
+#1 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#2 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#3 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#4 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-27 16:09:24 --> Call to a member function getCompiledSelect() on string
+#0 D:\www\carlink\app\Core\BaseModel.php(1590): App\Core\BaseModel->generate_edit_input('3')
+#1 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#2 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#3 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#4 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-27 16:09:24 --> Call to a member function getCompiledSelect() on string
+#0 D:\www\carlink\app\Core\BaseModel.php(1590): App\Core\BaseModel->generate_edit_input('3')
+#1 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#2 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#3 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#4 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-27 16:09:29 --> Call to a member function getCompiledSelect() on array
+#0 D:\www\carlink\app\Core\BaseModel.php(1590): App\Core\BaseModel->generate_edit_input('3')
+#1 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#2 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#3 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#4 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-27 16:09:29 --> Call to a member function getCompiledSelect() on array
+#0 D:\www\carlink\app\Core\BaseModel.php(1590): App\Core\BaseModel->generate_edit_input('3')
+#1 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#2 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#3 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#4 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-27 16:09:30 --> Call to a member function getCompiledSelect() on array
+#0 D:\www\carlink\app\Core\BaseModel.php(1590): App\Core\BaseModel->generate_edit_input('3')
+#1 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#2 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#3 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#4 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-27 16:11:14 --> syntax error, unexpected ';', expecting ')'
+#0 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#1 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Core\\BaseMo...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Core\\BaseMo...')
+#3 D:\www\carlink\app\Models\QnaModel.php(5): spl_autoload_call('App\\Core\\BaseMo...')
+#4 D:\www\carlink\system\Autoloader\Autoloader.php(365): require_once('D:\\www\\carlink\\...')
+#5 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#6 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\QnaM...')
+#7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\QnaM...')
+#8 D:\www\carlink\app\Controllers\Qna.php(15): spl_autoload_call('App\\Models\\QnaM...')
+#9 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\Qna->__construct()
+#10 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#11 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-10-27 16:11:14 --> syntax error, unexpected ';', expecting ')'
+#0 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#1 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Core\\BaseMo...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Core\\BaseMo...')
+#3 D:\www\carlink\app\Models\QnaModel.php(5): spl_autoload_call('App\\Core\\BaseMo...')
+#4 D:\www\carlink\system\Autoloader\Autoloader.php(365): require_once('D:\\www\\carlink\\...')
+#5 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#6 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\QnaM...')
+#7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\QnaM...')
+#8 D:\www\carlink\app\Controllers\Qna.php(15): spl_autoload_call('App\\Models\\QnaM...')
+#9 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\Qna->__construct()
+#10 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#11 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-10-27 16:11:15 --> syntax error, unexpected ';', expecting ')'
+#0 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#1 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Core\\BaseMo...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Core\\BaseMo...')
+#3 D:\www\carlink\app\Models\QnaModel.php(5): spl_autoload_call('App\\Core\\BaseMo...')
+#4 D:\www\carlink\system\Autoloader\Autoloader.php(365): require_once('D:\\www\\carlink\\...')
+#5 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#6 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\QnaM...')
+#7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\QnaM...')
+#8 D:\www\carlink\app\Controllers\Qna.php(15): spl_autoload_call('App\\Models\\QnaM...')
+#9 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\Qna->__construct()
+#10 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#11 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-10-27 16:11:19 --> syntax error, unexpected ';', expecting ')'
+#0 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#1 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Core\\BaseMo...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Core\\BaseMo...')
+#3 D:\www\carlink\app\Models\QnaModel.php(5): spl_autoload_call('App\\Core\\BaseMo...')
+#4 D:\www\carlink\system\Autoloader\Autoloader.php(365): require_once('D:\\www\\carlink\\...')
+#5 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#6 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\QnaM...')
+#7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\QnaM...')
+#8 D:\www\carlink\app\Controllers\Qna.php(15): spl_autoload_call('App\\Models\\QnaM...')
+#9 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\Qna->__construct()
+#10 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#11 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-10-27 16:11:33 --> Not unique table/alias: 'qna_type'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1592): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:11:34 --> Not unique table/alias: 'qna_type'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1592): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:11:35 --> Not unique table/alias: 'qna_type'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1592): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:15:08 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:09 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:10 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:11 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:12 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:13 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:13 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:13 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:14 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:15 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:15 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:15 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:16 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:15:17 --> Illegal string offset 'qna_type_id'
+#0 D:\www\carlink\app\Core\BaseModel.php(837): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\www\\carlink\\...', 837, Array)
+#1 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#2 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#3 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#4 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#5 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-10-27 16:16:00 --> syntax error, unexpected '$fields' (T_VARIABLE), expecting ';' or '{'
+#0 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#1 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Core\\BaseMo...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Core\\BaseMo...')
+#3 D:\www\carlink\app\Models\QnaModel.php(5): spl_autoload_call('App\\Core\\BaseMo...')
+#4 D:\www\carlink\system\Autoloader\Autoloader.php(365): require_once('D:\\www\\carlink\\...')
+#5 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#6 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\QnaM...')
+#7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\QnaM...')
+#8 D:\www\carlink\app\Controllers\Qna.php(15): spl_autoload_call('App\\Models\\QnaM...')
+#9 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\Qna->__construct()
+#10 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#11 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-10-27 16:16:01 --> syntax error, unexpected '$fields' (T_VARIABLE), expecting ';' or '{'
+#0 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#1 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Core\\BaseMo...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Core\\BaseMo...')
+#3 D:\www\carlink\app\Models\QnaModel.php(5): spl_autoload_call('App\\Core\\BaseMo...')
+#4 D:\www\carlink\system\Autoloader\Autoloader.php(365): require_once('D:\\www\\carlink\\...')
+#5 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#6 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\QnaM...')
+#7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\QnaM...')
+#8 D:\www\carlink\app\Controllers\Qna.php(15): spl_autoload_call('App\\Models\\QnaM...')
+#9 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\Qna->__construct()
+#10 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#11 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-10-27 16:16:02 --> syntax error, unexpected '$fields' (T_VARIABLE), expecting ';' or '{'
+#0 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#1 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Core\\BaseMo...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Core\\BaseMo...')
+#3 D:\www\carlink\app\Models\QnaModel.php(5): spl_autoload_call('App\\Core\\BaseMo...')
+#4 D:\www\carlink\system\Autoloader\Autoloader.php(365): require_once('D:\\www\\carlink\\...')
+#5 D:\www\carlink\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('D:\\www\\carlink\\...')
+#6 D:\www\carlink\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\QnaM...')
+#7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\QnaM...')
+#8 D:\www\carlink\app\Controllers\Qna.php(15): spl_autoload_call('App\\Models\\QnaM...')
+#9 D:\www\carlink\system\CodeIgniter.php(886): App\Controllers\Qna->__construct()
+#10 D:\www\carlink\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#11 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-10-27 16:17:42 --> Undefined variable: where
+#0 D:\www\carlink\app\Controllers\Qna.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink\\...', 102, Array)
+#1 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#2 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#3 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-27 16:22:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:22:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:22:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:22:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:22:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:22:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:22:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:22:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:22:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:22:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*, `qna_type`, `qna_type`
+WHERE `qna_type`.`deleted` = 0' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(808): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1594): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:25:21 --> Not unique table/alias: 'qna_type'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(810): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Core\BaseModel.php(1596): App\Core\BaseModel->generate_edit_input('3')
+#6 D:\www\carlink\app\Controllers\Qna.php(114): App\Core\BaseModel->get_final_form_edit('3', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->edit('3')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:32:44 --> Unknown column 'qna_type' in 'field list'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `qn...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qn...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qn...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qn...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(1204): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink\app\Core\BaseModel.php(1326): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink\app\Controllers\Qna.php(70): App\Core\BaseModel->copy('2')
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->copy('2')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 16:34:23 --> Unknown column 'qna_type' in 'field list'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `qn...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qn...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qn...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qn...', Array, false)
+#4 D:\www\carlink\app\Core\BaseModel.php(1206): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink\app\Core\BaseModel.php(1331): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink\app\Controllers\Qna.php(71): App\Core\BaseModel->copy('2', Array)
+#7 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Qna->copy('2')
+#8 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qna))
+#9 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 17:14:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+
+        CASE
+            WHEN status_id = 1 THEN "How it work"
+          ' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT toturial...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT toturial...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT toturial...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT toturial...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:14:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+
+        CASE
+            WHEN status_id = 1 THEN "How it work"
+          ' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT toturial...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT toturial...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT toturial...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT toturial...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:14:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+
+        CASE
+            WHEN status_id = 1 THEN "How it work"
+          ' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT toturial...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT toturial...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT toturial...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT toturial...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:14:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+
+        CASE
+            WHEN status_id = 1 THEN "How it work"
+          ' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT toturial...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT toturial...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT toturial...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT toturial...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:14:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(
+
+        CASE
+            WHEN status_id = 1 THEN "How it work"
+          ' at line 2
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT toturial...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT toturial...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT toturial...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT toturial...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+    )as result
+FROM `toturial`
+WHERE `toturial`.`deleted` = 0' at line 7
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+    )as result
+FROM `toturial`
+WHERE `toturial`.`deleted` = 0' at line 7
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+    )as result
+FROM `toturial`
+WHERE `toturial`.`deleted` = 0' at line 7
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+    )as result
+FROM `toturial`
+WHERE `toturial`.`deleted` = 0' at line 7
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+    )as result
+FROM `toturial`
+WHERE `toturial`.`deleted` = 0' at line 7
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+    )as result
+FROM `toturial`
+WHERE `toturial`.`deleted` = 0' at line 7
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+    )
+FROM `toturial`
+WHERE `toturial`.`deleted` = 0' at line 7
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+    )
+FROM `toturial`
+WHERE `toturial`.`deleted` = 0' at line 7
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:16 --> Unknown column 'result' in 'field list'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:15:17 --> Unknown column 'result' in 'field list'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `toturia...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `toturia...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `toturia...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `toturia...', Array, false)
+#4 D:\www\carlink\app\Models\ToturialModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\Toturial.php(31): App\Models\ToturialModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\Toturial->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:17:45 --> Unknown column 'car_inspection_detail.inspection_detail_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `inspect...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inspect...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inspect...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `inspect...', Array, false)
+#4 D:\www\carlink\app\Models\InspectionDetailModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\InspectionDetail.php(31): App\Models\InspectionDetailModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:25:13 --> Unknown column 'car_inspection_detail.inspection_detail_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `inspect...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inspect...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inspect...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `inspect...', Array, false)
+#4 D:\www\carlink\app\Models\InspectionDetailModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\InspectionDetail.php(31): App\Models\InspectionDetailModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:35:33 --> Unknown column 'name' in 'field list'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `in...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 D:\www\carlink\app\Core\BaseModel.php(1713): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...')
+#4 D:\www\carlink\app\Core\BaseModel.php(1207): App\Core\BaseModel->insert_log('create', 1)
+#5 D:\www\carlink\app\Controllers\InspectionType.php(54): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionType->add()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:36:02 --> Unknown column 'name' in 'field list'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `in...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 D:\www\carlink\app\Core\BaseModel.php(1713): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...')
+#4 D:\www\carlink\app\Core\BaseModel.php(1207): App\Core\BaseModel->insert_log('create', 2)
+#5 D:\www\carlink\app\Controllers\InspectionType.php(54): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionType->add()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:55:04 --> Unknown column 'car_inspection_detail.inspection_detail_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `inspect...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inspect...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inspect...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `inspect...', Array, false)
+#4 D:\www\carlink\app\Models\InspectionDetailModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\InspectionDetail.php(31): App\Models\InspectionDetailModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:58:07 --> Unknown column 'car_inspection_detail.inspection_detail_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `inspect...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inspect...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inspect...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `inspect...', Array, false)
+#4 D:\www\carlink\app\Models\InspectionDetailModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\InspectionDetail.php(31): App\Models\InspectionDetailModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 17:58:36 --> Unknown column 'inspection_part_id' in 'field list'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `in...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 D:\www\carlink\app\Core\BaseModel.php(1713): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...')
+#4 D:\www\carlink\app\Core\BaseModel.php(1207): App\Core\BaseModel->insert_log('create', 1)
+#5 D:\www\carlink\app\Controllers\InspectionPart.php(54): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionPart->add()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionPart))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 18:00:22 --> Unknown column 'car_inspection_detail.inspection_detail_id' in 'on clause'
+#0 D:\www\carlink\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `inspect...')
+#1 D:\www\carlink\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inspect...')
+#2 D:\www\carlink\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inspect...')
+#3 D:\www\carlink\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `inspect...', Array, false)
+#4 D:\www\carlink\app\Models\InspectionDetailModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink\app\Controllers\InspectionDetail.php(31): App\Models\InspectionDetailModel->getAll()
+#6 D:\www\carlink\system\CodeIgniter.php(914): App\Controllers\InspectionDetail->index()
+#7 D:\www\carlink\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionDetail))
+#8 D:\www\carlink\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-27 18:34:19 --> Unknown column 'type' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `to...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `to...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `to...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `to...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1206): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink_backend\app\Core\BaseModel.php(1331): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\app\Controllers\Toturial.php(70): App\Core\BaseModel->copy('2')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Toturial->copy('2')
+#8 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-27 18:34:43 --> Unknown column 'type' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `to...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `to...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `to...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `to...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1206): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink_backend\app\Core\BaseModel.php(1331): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\app\Controllers\Toturial.php(70): App\Core\BaseModel->copy('2')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Toturial->copy('2')
+#8 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Toturial))
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}

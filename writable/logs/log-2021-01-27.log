@@ -1,0 +1,41 @@
+CRITICAL - 2021-01-27 18:27:26 --> Undefined index: password2
+#0 D:\www\plantation\app\Controllers\API.php(681): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 681, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-27 18:29:14 --> Undefined index: admin.company_id
+#0 D:\www\plantation\app\Models\AdminModel.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 30, Array)
+#1 D:\www\plantation\app\Core\BaseController.php(88): App\Models\AdminModel->getWhere(Array)
+#2 D:\www\plantation\app\Controllers\API.php(668): App\Core\BaseController->checkExists('emmwee')
+#3 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_admin()
+#4 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-27 18:30:13 --> Undefined index: admin.username
+#0 D:\www\plantation\app\Models\AdminModel.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 47, Array)
+#1 D:\www\plantation\app\Core\BaseController.php(89): App\Models\AdminModel->getWhereAdmin(Array)
+#2 D:\www\plantation\app\Controllers\API.php(668): App\Core\BaseController->checkExists('emmwee')
+#3 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_admin()
+#4 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-27 18:30:14 --> Undefined index: admin.username
+#0 D:\www\plantation\app\Models\AdminModel.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 47, Array)
+#1 D:\www\plantation\app\Core\BaseController.php(89): App\Models\AdminModel->getWhereAdmin(Array)
+#2 D:\www\plantation\app\Controllers\API.php(668): App\Core\BaseController->checkExists('emmwee')
+#3 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_admin()
+#4 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-27 18:31:10 --> Undefined index: password2
+#0 D:\www\plantation\app\Controllers\API.php(683): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 683, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

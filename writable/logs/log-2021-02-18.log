@@ -1,0 +1,175 @@
+CRITICAL - 2021-02-18 17:42:14 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:42:16 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:42:17 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:42:20 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:42:21 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:42:22 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:42:23 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:42:25 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:42:26 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:42:28 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:43:42 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:43:44 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:43:46 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:43:49 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:43 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_deducti...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_deducti...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:44 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workdon...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workdon...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:45 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_deducti...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_deducti...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:47 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workdon...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workdon...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:49 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workers')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workers')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:49 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:49 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_dispatc...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_dispatc...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:56 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_dispatc...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_dispatc...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:57 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_deducti...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_deducti...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:57 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_workers')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_workers')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-18 17:46:57 --> syntax error, unexpected 'public' (T_PUBLIC), expecting '('
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_attenda...')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_attenda...')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

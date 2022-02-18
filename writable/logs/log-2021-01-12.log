@@ -1,0 +1,12 @@
+CRITICAL - 2021-01-12 10:24:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT * FROM w...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM w...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM w...')
+#3 D:\www\plantation\app\Models\WorkerModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT * FROM w...', NULL)
+#4 D:\www\plantation\app\Controllers\API.php(514): App\Models\WorkerModel->checkWorkerExisted(Array)
+#5 D:\www\plantation\app\Controllers\API.php(531): App\Controllers\API->checkWorkerExisted(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->register_worker()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}

@@ -21,7 +21,7 @@ class App extends BaseConfig
 	|
 	*/
     // public $baseURL = 'http://128.199.116.200/commonextract/plantation_backend/';
-    public $baseURL = 'http://localhost/carlink_backend/';
+    public $baseURL = 'http://localhost/gplan/';
     // public $baseURL = 'http://206.189.80.215/carlink_backend/';
 
     /*

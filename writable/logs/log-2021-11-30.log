@@ -1,0 +1,12 @@
+CRITICAL - 2021-11-30 13:04:38 --> Unknown column 'car_id' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1254): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink_backend\app\Controllers\CarInspection.php(154): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspection->add_image()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspection))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}

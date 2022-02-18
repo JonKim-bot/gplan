@@ -1,0 +1,1028 @@
+CRITICAL - 2021-10-28 11:06:06 --> Trying to access array offset on value of type null
+#0 D:\www\carlink_backend\app\Views\admin\header.php(280): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\carlink_...', 280, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Admin.php(39): view('admin/header', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Admin->index()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 11:22:09 --> Unknown column 'sticker' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1689): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1203): App\Core\BaseModel->insert_log('create', 1)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(56): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->add()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 11:43:26 --> Undefined variable: table
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 39, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(91): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 11:44:35 --> Unknown column 'model' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1202): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink_backend\app\Core\BaseModel.php(1322): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\app\Controllers\Car.php(74): App\Core\BaseModel->copy('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->copy('1')
+#8 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-28 12:24:47 --> Undefined variable: bid
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 47, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(99): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 12:24:55 --> Undefined variable: bid
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 47, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(99): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 12:34:40 --> Undefined variable: table_image
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 88, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(109): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 12:34:41 --> Undefined variable: table_image
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 88, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(109): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 13:11:23 --> Class 'App\Controllers\CarInspectionTypeModel' not found
+#0 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Car->__construct()
+#1 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-10-28 13:11:37 --> Class 'App\Controllers\CarInspectionTypeModel' not found
+#0 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Car->__construct()
+#1 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-10-28 13:12:15 --> Undefined variable: car_inspection_type
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 122, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(116): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 13:12:16 --> Undefined variable: car_inspection_type
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 122, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(116): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 13:12:24 --> Undefined variable: car_inspection_type
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 122, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(116): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 14:27:58 --> Undefined variable: form
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(188): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 188, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(120): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 14:27:59 --> Undefined variable: form
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(188): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 188, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(120): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 14:28:14 --> Undefined variable: form
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(188): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 188, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(120): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 14:37:18 --> Undefined variable: form_arr
+#0 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 13, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(122): view('admin/modal/car...', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 14:37:19 --> Undefined variable: form_arr
+#0 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 13, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(122): view('admin/modal/car...', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 14:37:42 --> Undefined variable: modal_car_inspection
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 175, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(125): view('admin/car/detai...', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 14:37:42 --> Undefined variable: modal_car_inspection
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 175, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(125): view('admin/car/detai...', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 14:41:59 --> Undefined property: App\Controllers\Car::$CarImage
+#0 D:\www\carlink_backend\app\Controllers\Car.php(129): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 129, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-28 14:42:00 --> Undefined property: App\Controllers\Car::$CarImage
+#0 D:\www\carlink_backend\app\Controllers\Car.php(129): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 129, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-28 14:42:05 --> Undefined property: App\Controllers\Car::$CarImage
+#0 D:\www\carlink_backend\app\Controllers\Car.php(129): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 129, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-28 14:42:05 --> Undefined property: App\Controllers\Car::$CarImage
+#0 D:\www\carlink_backend\app\Controllers\Car.php(129): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 129, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-28 14:42:06 --> Undefined index: image
+#0 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 14, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(132): App\Controllers\Car->get_modal(Array, Array, '/CarImage/add', 'modalAdd')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-10-28 14:42:07 --> Undefined index: image
+#0 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 14, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(132): App\Controllers\Car->get_modal(Array, Array, '/CarImage/add', 'modalAdd')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-10-28 14:43:18 --> Undefined index: image
+#0 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 14, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(132): App\Controllers\Car->get_modal(Array, Array, '/CarImage/add', 'modalAdd')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-10-28 14:44:37 --> explode() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode(Array, '/')
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:38 --> explode() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode(Array, '/')
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:50 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array, '/')
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:50 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array, '/')
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:51 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:52 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:52 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:53 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:53 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:53 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:53 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:53 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:54 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:54 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:54 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:54 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:54 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:54 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:55 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:44:55 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:45:32 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:45:41 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:45:41 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'D:\\www\\carlink_...', 6, Array)
+#1 D:\www\carlink_backend\app\Views\admin\modal\car_model.php(6): explode('/', Array)
+#2 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#3 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/modal/car...', Array, true)
+#4 D:\www\carlink_backend\app\Controllers\Car.php(147): view('admin/modal/car...', Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(122): App\Controllers\Car->get_modal(Array, Array, '/CarInspectionT...', 'modalcar_inspec...')
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:50:34 --> Unknown column 'inspection_type_id.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink_backend\app\Models\CarInspectionTypeModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Car.php(110): App\Models\CarInspectionTypeModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:50:35 --> Unknown column 'inspection_type_id.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink_backend\app\Models\CarInspectionTypeModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Car.php(110): App\Models\CarInspectionTypeModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 14:52:57 --> Unknown column 'inspection_type' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1203): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink_backend\app\Core\BaseModel.php(1323): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(70): App\Core\BaseModel->copy('1')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->copy('1')
+#8 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-28 14:53:45 --> Unknown column 'inspection_type' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1203): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink_backend\app\Core\BaseModel.php(1323): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(70): App\Core\BaseModel->copy('1', Array)
+#7 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->copy('1')
+#8 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-10-28 15:28:42 --> Undefined property: App\Controllers\CarInspectionType::$CarInspectionPartModel
+#0 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 90, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-28 15:28:43 --> Undefined property: App\Controllers\CarInspectionType::$CarInspectionPartModel
+#0 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 90, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-28 15:29:03 --> Cannot use App\Models\CarInspectionTypeModel as CarInspectionTypeModel because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-10-28 15:29:03 --> Cannot use App\Models\CarInspectionTypeModel as CarInspectionTypeModel because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-10-28 15:33:48 --> syntax error, unexpected ')', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('CarInspectionTy...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('CarInspectionTy...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-28 15:33:48 --> syntax error, unexpected ')', expecting variable (T_VARIABLE) or '{' or '$'
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('CarInspectionTy...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('CarInspectionTy...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-10-28 15:38:11 --> Invalid argument supplied for foreach()
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'D:\\www\\carlink_...', 44, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(110): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:22:53 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 117, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:22:53 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 117, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:22:54 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 117, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:22:54 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 117, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:22:54 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 117, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:23:22 --> Undefined index: 
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:23:23 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:23:23 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:23:38 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:23:39 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:23:39 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:23:39 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:23:39 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:23:39 --> Undefined index: inspection_part_id
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(117): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:26:01 --> Undefined variable: form_inspection_type
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(115): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:26:12 --> Undefined variable: form_inspection_type
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(115): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:26:12 --> Undefined variable: form_inspection_type
+#0 D:\www\carlink_backend\app\Views\admin\car_inspection_type\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 116, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(115): view('admin/car_inspe...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-10-28 16:40:55 --> Unknown column 'inspection_part_id' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1203): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\carlink_backend\app\Controllers\CarInspectionDetail.php(54): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionDetail->add()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionDetail))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 16:41:25 --> Unknown column 'inspection_detail_id' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1690): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1204): App\Core\BaseModel->insert_log('create', 1)
+#5 D:\www\carlink_backend\app\Controllers\CarInspectionDetail.php(54): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionDetail->add()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionDetail))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 16:42:28 --> Unknown column 'inspection_detail_id' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1690): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1204): App\Core\BaseModel->insert_log('create', 2)
+#5 D:\www\carlink_backend\app\Controllers\CarInspectionDetail.php(54): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionDetail->add()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionDetail))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 16:48:35 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:35 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:35 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:35 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:35 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:35 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:41 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:41 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:41 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:42 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:46 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:47 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:47 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:47 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:47 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 16:48:47 --> syntax error, unexpected '?>'
+#0 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car_inspe...', Array, true)
+#1 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(123): view('admin/car_inspe...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-10-28 17:10:38 --> Column 'status_id' in field list is ambiguous
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink_backend\app\Models\CarInspectionDetailModel.php(70): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(114): App\Models\CarInspectionDetailModel->getWhere(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 17:10:39 --> Column 'status_id' in field list is ambiguous
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink_backend\app\Models\CarInspectionDetailModel.php(70): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(114): App\Models\CarInspectionDetailModel->getWhere(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 17:10:39 --> Column 'status_id' in field list is ambiguous
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink_backend\app\Models\CarInspectionDetailModel.php(70): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(114): App\Models\CarInspectionDetailModel->getWhere(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 17:10:40 --> Column 'status_id' in field list is ambiguous
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `car_ins...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `car_ins...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `car_ins...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `car_ins...', Array, false)
+#4 D:\www\carlink_backend\app\Models\CarInspectionDetailModel.php(70): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(114): App\Models\CarInspectionDetailModel->getWhere(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\CarInspectionType->detail('3')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarInspectionType))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-10-28 17:17:27 --> fopen(D:\www\carlink_backend\writable\session/ci_sessionf8jlhb9fa8aglfanfk6vc3hn865djop3): failed to open stream: Resource temporarily unavailable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(D:\\www\\ca...', 'D:\\www\\carlink_...', 174, Array)
+#1 D:\www\carlink_backend\system\Session\Handlers\FileHandler.php(174): fopen('D:\\www\\carlink_...', 'c+b')
+#2 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('f8jlhb9fa8aglfa...')
+#3 D:\www\carlink_backend\system\Session\Session.php(1005): session_start()
+#4 D:\www\carlink_backend\system\Session\Session.php(240): CodeIgniter\Session\Session->startSession()
+#5 D:\www\carlink_backend\system\Config\Services.php(771): CodeIgniter\Session\Session->start()
+#6 D:\www\carlink_backend\system\Config\BaseService.php(123): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#7 D:\www\carlink_backend\system\Config\Services.php(752): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#8 D:\www\carlink_backend\system\Common.php(894): CodeIgniter\Config\Services::session()
+#9 D:\www\carlink_backend\app\Core\BaseModel.php(25): session()
+#10 D:\www\carlink_backend\app\Models\CarInspectionTypeModel.php(9): App\Core\BaseModel->__construct()
+#11 D:\www\carlink_backend\app\Controllers\CarInspectionType.php(17): App\Models\CarInspectionTypeModel->__construct()
+#12 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\CarInspectionType->__construct()
+#13 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#14 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#16 {main}

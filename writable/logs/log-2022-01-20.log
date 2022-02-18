@@ -1,0 +1,40 @@
+CRITICAL - 2022-01-20 16:26:33 --> Undefined index: type_id
+#0 D:\www\carlink_backend\app\Views\admin\header.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 46, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Admin.php(41): view('admin/header', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Admin->index()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-20 16:27:02 --> Undefined index: type_id
+#0 D:\www\carlink_backend\app\Views\admin\header.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 46, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Admin.php(41): view('admin/header', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Admin->index()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-20 16:27:02 --> Undefined index: type_id
+#0 D:\www\carlink_backend\app\Views\admin\header.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 46, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Admin.php(41): view('admin/header', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Admin->index()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-01-20 16:27:06 --> Undefined index: type_id
+#0 D:\www\carlink_backend\app\Views\admin\header.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 46, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Admin.php(41): view('admin/header', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Admin->index()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

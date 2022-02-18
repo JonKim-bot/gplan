@@ -1,0 +1,294 @@
+CRITICAL - 2021-12-15 10:19:51 --> Unknown column 'sticker.deleted' in 'where clause'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(136): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Sticker.php(31): App\Core\BaseModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Sticker->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sticker))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:20:05 --> Call to a member function listTables() on null
+#0 D:\www\carlink_backend\app\Models\StickerModel.php(8): App\Core\BaseModel->add_required_field()
+#1 D:\www\carlink_backend\app\Controllers\Sticker.php(15): App\Models\StickerModel->__construct()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Sticker->__construct()
+#3 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-15 10:20:06 --> Call to a member function listTables() on null
+#0 D:\www\carlink_backend\app\Models\StickerModel.php(8): App\Core\BaseModel->add_required_field()
+#1 D:\www\carlink_backend\app\Controllers\Sticker.php(15): App\Models\StickerModel->__construct()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Sticker->__construct()
+#3 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-15 10:20:17 --> Call to a member function listTables() on null
+#0 D:\www\carlink_backend\app\Models\StickerModel.php(8): App\Core\BaseModel->add_required_field()
+#1 D:\www\carlink_backend\app\Controllers\Sticker.php(15): App\Models\StickerModel->__construct()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Sticker->__construct()
+#3 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-15 10:20:17 --> Call to a member function listTables() on null
+#0 D:\www\carlink_backend\app\Models\StickerModel.php(8): App\Core\BaseModel->add_required_field()
+#1 D:\www\carlink_backend\app\Controllers\Sticker.php(15): App\Models\StickerModel->__construct()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Sticker->__construct()
+#3 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-15 10:20:18 --> Call to a member function listTables() on null
+#0 D:\www\carlink_backend\app\Models\StickerModel.php(8): App\Core\BaseModel->add_required_field()
+#1 D:\www\carlink_backend\app\Controllers\Sticker.php(15): App\Models\StickerModel->__construct()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Sticker->__construct()
+#3 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-15 10:20:48 --> Table 'carlink1201.sticker_log' doesn't exist
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `st...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1744): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1257): App\Core\BaseModel->insert_log('create', 1)
+#5 D:\www\carlink_backend\app\Controllers\Sticker.php(54): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Sticker->add()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sticker))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:41:04 --> You must use the "set" method to update an entry.
+#0 D:\www\carlink_backend\system\Database\BaseBuilder.php(2219): CodeIgniter\Database\BaseBuilder->validateInsert()
+#1 D:\www\carlink_backend\app\Core\BaseModel.php(1254): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 D:\www\carlink_backend\app\Controllers\Car.php(62): App\Core\BaseModel->insertNew(Array)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(46): App\Controllers\Car->generate_sticker()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Car->__construct()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-15 10:41:33 --> You must use the "set" method to update an entry.
+#0 D:\www\carlink_backend\system\Database\BaseBuilder.php(2219): CodeIgniter\Database\BaseBuilder->validateInsert()
+#1 D:\www\carlink_backend\app\Core\BaseModel.php(1254): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 D:\www\carlink_backend\app\Controllers\Car.php(65): App\Core\BaseModel->insertNew(Array)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(46): App\Controllers\Car->generate_sticker()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Car->__construct()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-15 10:41:34 --> You must use the "set" method to update an entry.
+#0 D:\www\carlink_backend\system\Database\BaseBuilder.php(2219): CodeIgniter\Database\BaseBuilder->validateInsert()
+#1 D:\www\carlink_backend\app\Core\BaseModel.php(1254): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 D:\www\carlink_backend\app\Controllers\Car.php(65): App\Core\BaseModel->insertNew(Array)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(46): App\Controllers\Car->generate_sticker()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Car->__construct()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-15 10:41:34 --> You must use the "set" method to update an entry.
+#0 D:\www\carlink_backend\system\Database\BaseBuilder.php(2219): CodeIgniter\Database\BaseBuilder->validateInsert()
+#1 D:\www\carlink_backend\app\Core\BaseModel.php(1254): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 D:\www\carlink_backend\app\Controllers\Car.php(65): App\Core\BaseModel->insertNew(Array)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(46): App\Controllers\Car->generate_sticker()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Car->__construct()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-15 10:41:47 --> You must use the "set" method to update an entry.
+#0 D:\www\carlink_backend\system\Database\BaseBuilder.php(2219): CodeIgniter\Database\BaseBuilder->validateInsert()
+#1 D:\www\carlink_backend\app\Core\BaseModel.php(1254): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 D:\www\carlink_backend\app\Controllers\Car.php(62): App\Core\BaseModel->insertNew(Array)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(46): App\Controllers\Car->generate_sticker()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Car->__construct()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-15 10:41:47 --> You must use the "set" method to update an entry.
+#0 D:\www\carlink_backend\system\Database\BaseBuilder.php(2219): CodeIgniter\Database\BaseBuilder->validateInsert()
+#1 D:\www\carlink_backend\app\Core\BaseModel.php(1254): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 D:\www\carlink_backend\app\Controllers\Car.php(62): App\Core\BaseModel->insertNew(Array)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(46): App\Controllers\Car->generate_sticker()
+#4 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Car->__construct()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-15 10:48:25 --> Undefined index: inspection_type_id
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(229): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 229, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(284): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('40')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-15 10:48:26 --> Undefined index: inspection_type_id
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(229): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 229, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(284): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('40')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-15 10:48:28 --> Undefined index: inspection_type_id
+#0 D:\www\carlink_backend\app\Views\admin\car\detail.php(229): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 229, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/car/detai...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\Car.php(284): view('admin/car/detai...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->detail('40')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-12-15 10:51:32 --> Undefined property: App\Controllers\Car::$CarStickerMoedl
+#0 D:\www\carlink_backend\app\Controllers\Car.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 54, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-15 10:51:38 --> Undefined property: App\Controllers\Car::$CarStickerMoedl
+#0 D:\www\carlink_backend\app\Controllers\Car.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 54, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-12-15 10:51:38 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::update() must be of the type array or null, int given, called in D:\www\carlink_backend\app\Core\BaseModel.php on line 1266
+#0 D:\www\carlink_backend\app\Core\BaseModel.php(1266): CodeIgniter\Database\BaseBuilder->update(0)
+#1 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, 0)
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-15 10:51:39 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::update() must be of the type array or null, int given, called in D:\www\carlink_backend\app\Core\BaseModel.php on line 1266
+#0 D:\www\carlink_backend\app\Core\BaseModel.php(1266): CodeIgniter\Database\BaseBuilder->update(0)
+#1 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, 0)
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-12-15 10:51:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0 = ''
+WHERE `car_sticker`.`car_sticker_id` = '1'' at line 1
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `car_sti...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `car_sti...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `car_sti...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2441): CodeIgniter\Database\BaseConnection->query('UPDATE `car_sti...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1266): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:51:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0 = ''
+WHERE `car_sticker`.`car_sticker_id` = '1'' at line 1
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `car_sti...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `car_sti...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `car_sti...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2441): CodeIgniter\Database\BaseConnection->query('UPDATE `car_sti...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1266): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:51:52 --> Unknown column 'is_active' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1784): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1267): App\Core\BaseModel->insert_where_log('update', 'car_sticker.car...')
+#5 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:51:53 --> Unknown column 'is_active' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1784): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1267): App\Core\BaseModel->insert_where_log('update', 'car_sticker.car...')
+#5 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:51:54 --> Unknown column 'is_active' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1784): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1267): App\Core\BaseModel->insert_where_log('update', 'car_sticker.car...')
+#5 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:52:21 --> Unknown column 'is_active' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1784): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1267): App\Core\BaseModel->insert_where_log('update', 'car_sticker.car...')
+#5 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:52:21 --> Unknown column 'is_active' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1784): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1267): App\Core\BaseModel->insert_where_log('update', 'car_sticker.car...')
+#5 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:52:41 --> Unknown column 'is_active' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1784): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1267): App\Core\BaseModel->insert_where_log('update', 'car_sticker.car...')
+#5 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-12-15 10:52:42 --> Unknown column 'is_active' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ca...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1784): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1267): App\Core\BaseModel->insert_where_log('update', 'car_sticker.car...')
+#5 D:\www\carlink_backend\app\Controllers\Car.php(61): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Car->set_sticker_active('1', '40')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Car))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}

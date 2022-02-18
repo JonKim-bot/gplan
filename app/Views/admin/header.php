@@ -5,8 +5,8 @@
         <!-- <base href="./"> -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=CarLinkice-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Car Link Admin Panel</title>
+        <meta name="viewport" content="width=Gplanice-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Gplan Admin Panel</title>
         <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0/css/all.min.css">
         <!-- Main styles for this application-->
         <link href="<?= base_url(
@@ -28,90 +28,32 @@
     <body class="c-app">
         <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
             <div class="c-sidebar-brand d-md-down-none">
-                <!-- <svg class="c-sidebar-brand-full" width="118" height="46" alt="CarLinkUI Logo">
+                <!-- <svg class="c-sidebar-brand-full" width="118" height="46" alt="GplanUI Logo">
                     <use xlink:href="assets/brand/coreui-pro.svg#full"></use>
                 </svg>
-                <svg class="c-sidebar-brand-minimized" width="46" height="46" alt="CarLinkUI Logo">
+                <svg class="c-sidebar-brand-minimized" width="46" height="46" alt="GplanUI Logo">
                     <use xlink:href="assets/brand/coreui-pro.svg#signet"></use>
 				</svg> -->
-				<span class="c-sidebar-brand-full" style="font-size:20px;">CarLink. </span>
-				<span class="c-sidebar-brand-minimized" style="font-size:20px;">CarLink</span>
+				<span class="c-sidebar-brand-full" style="font-size:20px;">Gplan. </span>
+				<span class="c-sidebar-brand-minimized" style="font-size:20px;">Gplan</span>
             </div>
             <?php $uri = service('uri');
 // $session = session();
 // $session = \Config\Services::session();
 ?>
             <ul class="c-sidebar-nav ps ps--active-y">
-            <?php
-            if (session()->get('login_data')['type_id'] == "0") {
-            ?>
+            <?php if (session()->get('login_data')['type_id'] == '0') { ?>
                 
                  
-                <li class="c-sidebar-nav-item ">
-                    <!-- <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'About'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('About') ?>">
-                    <i class="cil-drop c-sidebar-nav-icon"></i>
-                    About
-                    </a>
-                    </li>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Variant'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Variant') ?>">
-                    <i class="cil-star c-sidebar-nav-icon"></i>
-                    Variant
-                    </a>
-
-                    </li>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Service'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Service') ?>">
-                    <i class="cil-school c-sidebar-nav-icon"></i>
-                    Service
-                    </a>
-                    </li>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'AuctionStatus'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('AuctionStatus') ?>">
-                    <i class="cil-list-filter c-sidebar-nav-icon"></i>
-                    AuctionStatus
-                    </a>
-                    </li> -->
-                    <li class="c-sidebar-nav-title">Operation</li>
-
-
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Auction'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Auction') ?>">
-                    <i class="cil-elevator c-sidebar-nav-icon"></i>
-                    Auction 
-                    </a>
-                    </li>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'AuctionSection'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('AuctionSection') ?>">
-                    <i class="cil-euro c-sidebar-nav-icon"></i>
-                    Auction Time
-                    </a>
-                    </li>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Car'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Car') ?>">
-                    <i class="cil-scrubber c-sidebar-nav-icon"></i>
-                    Car
-                    </a>
-                    </li>
+           
+           
+                
                   
                     <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Topup'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Topup') ?>">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                    'Topup'
+                        ? 'c-active'
+                        : null ?>" href="<?= base_url('Topup') ?>">
                     <i class="cil-storage c-sidebar-nav-icon"></i>
                     WalletTopup
                     <span class="badge badge-pill badge-warning"><?= $undone_topup ?></span>
@@ -120,221 +62,40 @@
                     <li class="c-sidebar-nav-item ">
 
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
-? 'c-active'
-: null ?>" href="<?= base_url('Withdraw') ?>">
+    ? 'c-active'
+    : null ?>" href="<?= base_url('Withdraw') ?>">
 <i class="cil-storage c-sidebar-nav-icon"></i>
 Withdrawal
 <span class="badge badge-pill badge-warning"><?= $undone_withdraw ?></span>
 
 </a>
 </li>
-<li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'BestOffer'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('BestOffer') ?>">
-                    <i class="cil-storage c-sidebar-nav-icon"></i>
-                    Sell My Car Form
-                    <span class="badge badge-pill badge-warning"><?= $undone_offer ?></span>
-
-                    </a>
-                    </li>
-                      
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'GetInTouch'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('GetInTouch') ?>">
-                    <i class="cil-storage c-sidebar-nav-icon"></i>
-                    Contact Form
-                    <span class="badge badge-pill badge-warning"><?= $undone_intouch ?></span>
-
-                    </a>
-                    </li>
-
-
-
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'NotificationUpdate'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('NotificationUpdate') ?>">
-                    <i class="cil-send c-sidebar-nav-icon"></i>
-                    Maintenance Notification
-                    </a>
-                    </li>
-                   
-                
-
-              
-                    
-                  
                  
                
-<!--               
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Auction'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Auction/Ended') ?>">
-                    <i class="cil-elevator c-sidebar-nav-icon"></i>
-                    Auction Ended
-                    <span class="badge badge-pill badge-warning"><?= $undone_auction ?></span>
-
-                    </a>
-                    </li> -->
-                    <!-- 
-
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Bid'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Bid') ?>">
-                    <i class="cil-fax c-sidebar-nav-icon"></i>
-                    Bid
-                    </a>
-                    </li>
-
-                 
-                
-
-                    <!-- <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Notification'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Notification') ?>">
-
-                    <i class="cil-send c-sidebar-nav-icon"></i>
-                    Notification
-                    </a>
-                    </li> -->
-                  
                  
                   
 
                     <li class="c-sidebar-nav-divider"></li>
                     <li class="c-sidebar-nav-title">Components</li>
-                    <li class="c-sidebar-nav-dropdown">
-                        <!-- <a class="c-sidebar-nav-dropdown-toggle" href="">
-                            <i class="cil-settings c-sidebar-nav-icon"></i>
-                            Settings
-                        </a> -->
-                        <!-- <ul class="c-sidebar-nav-dropdown-items"> -->
-
-                        <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Banner'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Banner') ?>">
-                    <i class="cil-drop c-sidebar-nav-icon"></i>
-                    Banner
-                    </a>
-                    </li>
-                    
+                   
                     <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Brand'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Brand') ?>">
-                    <i class="cil-pool c-sidebar-nav-icon"></i>
-                    Brand & Model
-                    </a>
-                    </li>
-                    
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'State'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('State') ?>">
-                    <i class="cil-moon c-sidebar-nav-icon"></i>
-                    State
-                    </a>
-                    </li>
-
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Color'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Color') ?>">
-
-                    <i class="cil-lightbulb c-sidebar-nav-icon"></i>
-                    Car Color
-                    </a>
-                    </li>
-                     
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Sticker'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Sticker') ?>">
-
-                    <i class="cil-lightbulb c-sidebar-nav-icon"></i>
-                    Car Sticker
-                    </a>
-                    </li>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'TransferFee'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('TransferFee') ?>">
-                    <i class="cil-pool c-sidebar-nav-icon"></i>
-                    Transfer Fee
-                    </a>
-                    </li>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Wallet'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Wallet') ?>">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                    'Wallet'
+                        ? 'c-active'
+                        : null ?>" href="<?= base_url('Wallet') ?>">
                     <i class="cil-smile c-sidebar-nav-icon"></i>
                     Transaction
 
                     </a>
                     </li>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Qna'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Qna') ?>">
-                    <i class="cil-star c-sidebar-nav-icon"></i>
-                    QnA
-                    </a>
-                    </li>
-                         
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'QnaType'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('QnaType') ?>">
-                    <i class="cil-task c-sidebar-nav-icon"></i>
-                    QnA Type                   
-                 </a>
-                    </li>
-
-                        <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'NotificationType'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('NotificationType') ?>">
-                    <i class="cil-tags c-sidebar-nav-icon"></i>
-                    Notification Type
-                    </a>
-                    </li>
-                  
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'InspectionDetail'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('InspectionDetail') ?>">
-                    <i class="cil-loop c-sidebar-nav-icon"></i>
-                    Inspection Detail
-                    </a>
-                    </li>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'InspectionPart'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('InspectionPart') ?>">
-                    <i class="cil-locomotive c-sidebar-nav-icon"></i>
-                    Inspection Part
-                    </a>
-                    </li>
-               
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'InspectionType'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('InspectionType') ?>">
-                    <i class="cil-lock-unlocked c-sidebar-nav-icon"></i>
-                    Inspection Type
-                    </a>
-                    </li>
+                   
+                 
 
                   <!-- <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Toturial'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Toturial') ?>">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                    'Toturial'
+                        ? 'c-active'
+                        : null ?>" href="<?= base_url('Toturial') ?>">
                     <i class="cil-menu c-sidebar-nav-icon"></i>
                     Tutorial
                     </a>
@@ -349,8 +110,8 @@ Withdrawal
 
 <li class="c-sidebar-nav-item ">
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users'
-? 'c-active'
-: null ?>" href="<?= base_url('Users') ?>">
+    ? 'c-active'
+    : null ?>" href="<?= base_url('Users') ?>">
 <i class="cil-people c-sidebar-nav-icon"></i>
 Users
 <span class="badge badge-pill badge-warning"><?= $undone_user ?></span>
@@ -359,10 +120,10 @@ Users
 </li>
 <li class="c-sidebar-nav-item ">
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Admin'
-? 'c-active'
-: null ?>" href="<?= base_url('Admin') ?>">
+    ? 'c-active'
+    : null ?>" href="<?= base_url('Admin') ?>">
 <i class="cil-people c-sidebar-nav-icon"></i>
-Admin & Inspector
+Admin 
 </a>
 </li>
                   
@@ -374,9 +135,7 @@ Admin & Inspector
 
 
 
-            <?php
-            if (session()->get('login_data')['type_id'] == "1") {
-            ?>
+            <?php if (session()->get('login_data')['type_id'] == '1') { ?>
 
                 <style>
                     .delete-button{
@@ -384,27 +143,30 @@ Admin & Inspector
                     }
                 </style>
                     <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Car'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Car') ?>">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                    'Car'
+                        ? 'c-active'
+                        : null ?>" href="<?= base_url('Car') ?>">
                     <i class="cil-scrubber c-sidebar-nav-icon"></i>
                     Car
                     </a>
                     </li>
                   
                     <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Brand'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('Brand') ?>">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                    'Brand'
+                        ? 'c-active'
+                        : null ?>" href="<?= base_url('Brand') ?>">
                     <i class="cil-pool c-sidebar-nav-icon"></i>
                     Brand & Model
                     </a>
                     </li>
 
                     <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'State'
-                    ? 'c-active'
-                    : null ?>" href="<?= base_url('State') ?>">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                    'State'
+                        ? 'c-active'
+                        : null ?>" href="<?= base_url('State') ?>">
                     <i class="cil-moon c-sidebar-nav-icon"></i>
                     State
                     </a>
@@ -432,7 +194,7 @@ Admin & Inspector
             <a class="c-header-brand d-lg-none c-header-brand-sm-up-center" href="<?= base_url() ?>/dashboard">
                 <!-- <svg width="118" height="46" alt="CoreUI Logo">
                     <use xlink:href="assets/brand/coreui-pro.svg#full"></use>
-                </svg> -->CarLink
+                </svg> -->Gplan
             </a>
             <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true" style="line-height: 1;">
             <i class="cil-menu c-icon c-icon-lg"></i>

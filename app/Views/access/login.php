@@ -1,4 +1,4 @@
-
+    
 <div class="col-md-6">
     <img src="https://carlink.my/static/media/Logo%203D%20Png.8b5ebdda.png" style="margin-bottom:20px" width="100%" alt="">
 <div class="card-group">
@@ -7,7 +7,7 @@
             <div class="card-body">
                 
                 <div class="" style="display:flex;">
-                    <h5 class="text-muted">CarLink Admin Panel</h5>
+                    <h5 class="text-muted">Gplan Admin Panel</h5>
                     <ul class="c-header-nav mfs-auto rm-flex">
                         <li class="c-header-nav-item c-d-legacy-none">
                             <button class="c-class-toggler c-header-nav-btn" type="button" id="header-tooltip" data-target="body" data-class="c-dark-theme" data-toggle="c-tooltip" data-placement="bottom" title="" data-original-title="Toggle Light/Dark Mode" aria-describedby="tooltip615585">
@@ -18,13 +18,13 @@
                     </ul>
                 </div>
                 <br>
-                <form method="POST" action="<?= base_url()?>/access/login">
+                <form method="POST" action="<?= base_url() ?>/access/login">
                     <?php if (isset($error)) { ?>
                         <div class="alert-message"  role="alert">
-                            <?= $error; ?>						
+                            <?= $error ?>						
                         </div>
-                    <?php }?>
-                    <!-- <p class="text-muted">CarLink Admin Panel</p> -->
+                    <?php } ?>
+                    <!-- <p class="text-muted">Gplan Admin Panel</p> -->
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">

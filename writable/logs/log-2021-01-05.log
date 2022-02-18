@@ -1,0 +1,251 @@
+CRITICAL - 2021-01-05 11:01:28 --> Call to a member function format() on string
+#0 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_workdone()
+#1 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#2 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-05 11:02:08 --> Call to a member function format() on string
+#0 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_workdone()
+#1 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#2 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-05 11:02:11 --> Call to a member function format() on string
+#0 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_workdone()
+#1 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#2 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-05 11:02:33 --> Undefined property: App\Controllers\API::$WorkdoneModel
+#0 D:\www\plantation\app\Controllers\API.php(311): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\plantati...', 311, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_workdone()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-05 11:02:41 --> Table 'plantation.work_done' doesn't exist
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(197): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(311): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_workdone()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-05 11:06:50 --> Table 'plantation.worddone' doesn't exist
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(197): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(311): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_workdone()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-05 11:07:11 --> Unknown column 'designation_id' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(197): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(311): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_workdone()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-05 11:07:13 --> Unknown column 'designation_id' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `wo...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `wo...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `wo...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `wo...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(197): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\www\plantation\app\Controllers\API.php(311): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->insert_workdone()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-05 11:27:16 --> Unknown column 'deduction.designation_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *,\r\n    ...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *,\r\n    ...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *,\r\n    ...')
+#3 D:\www\plantation\app\Models\WorkdoneModel.php(28): CodeIgniter\Database\BaseConnection->query('SELECT *,\r\n    ...')
+#4 D:\www\plantation\app\Controllers\API.php(188): App\Models\WorkDoneModel->getAll()
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workdone()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-01-05 11:29:05 --> Unknown column 'deduction.worker_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *,\r\n    ...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *,\r\n    ...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *,\r\n    ...')
+#3 D:\www\plantation\app\Models\WorkdoneModel.php(28): CodeIgniter\Database\BaseConnection->query('SELECT *,\r\n    ...')
+#4 D:\www\plantation\app\Controllers\API.php(188): App\Models\WorkDoneModel->getAll()
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workdone()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-01-05 11:32:36 --> Table 'plantation.area' doesn't exist
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\plantation\app\Models\WorkdoneModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(188): App\Models\WorkDoneModel->getAll()
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workdone()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-05 11:52:31 --> Access denied for user '****'@'localhost' (using password: NO)
+#0 D:\www\plantation\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\plantation\system\Database\BaseConnection.php(1611): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\plantation\app\Core\BaseModel.php(84): CodeIgniter\Database\BaseConnection->getFieldNames('role')
+#3 D:\www\plantation\app\Controllers\API.php(290): App\Core\BaseModel->getAll()
+#4 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_role()
+#5 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#6 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-05 16:32:01 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(257): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 257, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workcode()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-05 16:32:03 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(257): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 257, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workcode()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-05 16:32:14 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(257): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 257, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workcode()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-05 16:33:37 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 230, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-05 16:34:25 --> Undefined index: company_id
+#0 D:\www\plantation\app\Models\AdminModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 29, Array)
+#1 D:\www\plantation\app\Controllers\API.php(233): App\Models\AdminModel->getWhere(Array)
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-05 16:34:27 --> Undefined index: company_id
+#0 D:\www\plantation\app\Models\AdminModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 29, Array)
+#1 D:\www\plantation\app\Controllers\API.php(233): App\Models\AdminModel->getWhere(Array)
+#2 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin()
+#3 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#4 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-05 16:35:07 --> Access denied for user '****'@'localhost' (using password: NO)
+#0 D:\www\plantation\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\plantation\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\plantation\app\Models\AdminModel.php(29): CodeIgniter\Database\BaseConnection->query('SELECT *, (SELE...', '0')
+#3 D:\www\plantation\app\Controllers\API.php(233): App\Models\AdminModel->getWhere(Array)
+#4 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_admin()
+#5 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#6 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-05 16:42:58 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 259, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workcode()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-05 17:06:34 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(247): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 247, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_deduction()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-05 17:07:14 --> Reference 'designation' not supported (forward reference in item list)
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *,\r\n    ...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *,\r\n    ...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *,\r\n    ...')
+#3 D:\www\plantation\app\Models\DeductionModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT *,\r\n    ...', '0')
+#4 D:\www\plantation\app\Controllers\API.php(249): App\Models\DeductionModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_deduction()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-01-05 17:08:38 --> Unknown column 'worker.designation_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *,\r\n    ...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *,\r\n    ...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *,\r\n    ...')
+#3 D:\www\plantation\app\Models\DeductionModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT *,\r\n    ...', '0')
+#4 D:\www\plantation\app\Controllers\API.php(249): App\Models\DeductionModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_deduction()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-01-05 17:09:24 --> Unknown column 'worker.designation_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *,\r\n    ...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *,\r\n    ...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *,\r\n    ...')
+#3 D:\www\plantation\app\Models\DeductionModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT *,\r\n    ...', '0')
+#4 D:\www\plantation\app\Controllers\API.php(249): App\Models\DeductionModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_deduction()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-01-05 17:09:25 --> Unknown column 'worker.designation_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *,\r\n    ...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *,\r\n    ...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *,\r\n    ...')
+#3 D:\www\plantation\app\Models\DeductionModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT *,\r\n    ...', '0')
+#4 D:\www\plantation\app\Controllers\API.php(249): App\Models\DeductionModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_deduction()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-01-05 17:10:06 --> Unknown column 'worker.designation_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *,\r\n    ...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *,\r\n    ...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *,\r\n    ...')
+#3 D:\www\plantation\app\Models\DeductionModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT *,\r\n    ...', '0')
+#4 D:\www\plantation\app\Controllers\API.php(249): App\Models\DeductionModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_deduction()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-01-05 17:10:07 --> Unknown column 'worker.designation_id' in 'where clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *,\r\n    ...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *,\r\n    ...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *,\r\n    ...')
+#3 D:\www\plantation\app\Models\DeductionModel.php(40): CodeIgniter\Database\BaseConnection->query('SELECT *,\r\n    ...', '0')
+#4 D:\www\plantation\app\Controllers\API.php(249): App\Models\DeductionModel->getWhere(Array)
+#5 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_deduction()
+#6 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#7 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}

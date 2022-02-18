@@ -1,0 +1,222 @@
+CRITICAL - 2021-02-10 11:01:15 --> Call to a member function setContentType() on null
+#0 D:\www\plantation\system\API\ResponseTrait.php(134): App\Controllers\API->format(Array)
+#1 D:\www\plantation\system\API\ResponseTrait.php(166): App\Controllers\API->respond(Array, 400, '')
+#2 D:\www\plantation\app\Controllers\API.php(84): App\Controllers\API->fail(Array)
+#3 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#4 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-10 11:01:17 --> Call to a member function setContentType() on null
+#0 D:\www\plantation\system\API\ResponseTrait.php(134): App\Controllers\API->format(Array)
+#1 D:\www\plantation\system\API\ResponseTrait.php(166): App\Controllers\API->respond(Array, 400, '')
+#2 D:\www\plantation\app\Controllers\API.php(84): App\Controllers\API->fail(Array)
+#3 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#4 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-10 11:01:24 --> Call to a member function setContentType() on null
+#0 D:\www\plantation\system\API\ResponseTrait.php(134): App\Controllers\API->format(Array)
+#1 D:\www\plantation\system\API\ResponseTrait.php(166): App\Controllers\API->respond(Array, 400, '')
+#2 D:\www\plantation\app\Controllers\API.php(84): App\Controllers\API->fail(Array)
+#3 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#4 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-10 11:03:57 --> Call to a member function setContentType() on null
+#0 D:\www\plantation\system\API\ResponseTrait.php(134): App\Controllers\API->format(Array)
+#1 D:\www\plantation\system\API\ResponseTrait.php(166): App\Controllers\API->respond(Array, 400, '')
+#2 D:\www\plantation\app\Controllers\API.php(84): App\Controllers\API->fail(Array, 400)
+#3 D:\www\plantation\system\CodeIgniter.php(886): App\Controllers\API->__construct()
+#4 D:\www\plantation\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#5 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-10 11:41:06 --> Unknown column 'last_login' in 'field list'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `admin` ...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `admin` ...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `admin` ...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(2441): CodeIgniter\Database\BaseConnection->query('UPDATE `admin` ...', Array, false)
+#4 D:\www\plantation\app\Core\BaseModel.php(240): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\www\plantation\app\Controllers\API.php(480): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->login()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-10 11:45:25 --> Table 'plantation.uom_id' doesn't exist
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workcod...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workcod...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workcod...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workcod...', Array, false)
+#4 D:\www\plantation\app\Models\WorkCodeModel.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(554): App\Models\WorkcodeModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workcode()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-10 11:46:15 --> Unknown column 'workcode.work_category' in 'on clause'
+#0 D:\www\plantation\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `workcod...')
+#1 D:\www\plantation\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `workcod...')
+#2 D:\www\plantation\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `workcod...')
+#3 D:\www\plantation\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `workcod...', Array, false)
+#4 D:\www\plantation\app\Models\WorkCodeModel.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\plantation\app\Controllers\API.php(554): App\Models\WorkcodeModel->getWhere(Array)
+#6 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_workcode()
+#7 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#8 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-10 11:54:06 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(144): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 144, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_subdivisions()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 11:54:34 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 142, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_subdivisions()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 11:54:35 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 142, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_subdivisions()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 11:55:02 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 142, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_subdivisions()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 11:55:03 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 142, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_subdivisions()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 11:55:13 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 142, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_subdivisions()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 11:55:14 --> Trying to access array offset on value of type null
+#0 D:\www\plantation\app\Controllers\API.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\plantati...', 142, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_subdivisions()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 11:58:33 --> Cannot use try without catch or finally
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-02-10 11:58:42 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 142, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_subdivisions()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 12:01:38 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(748): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 748, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 12:05:30 --> Undefined index: company_id
+#0 D:\www\plantation\app\Controllers\API.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1686, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 12:14:36 --> Undefined index: role_id
+#0 D:\www\plantation\app\Controllers\API.php(1679): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1679, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 12:15:07 --> Undefined index: role_id
+#0 D:\www\plantation\app\Controllers\API.php(1679): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\plantati...', 1679, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->edit_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 13:22:10 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(761): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 761, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 13:22:35 --> syntax error, unexpected 'return' (T_RETURN)
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 13:22:35 --> syntax error, unexpected 'return' (T_RETURN)
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_company')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_company')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 13:22:35 --> syntax error, unexpected 'return' (T_RETURN)
+#0 D:\www\plantation\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('API/get_role')
+#1 D:\www\plantation\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('API/get_role')
+#2 D:\www\plantation\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 13:22:41 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(761): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 761, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 13:24:38 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(761): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 761, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 13:25:08 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(761): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 761, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 13:25:15 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(761): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 761, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-10 13:26:17 --> Undefined offset: 0
+#0 D:\www\plantation\app\Controllers\API.php(761): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\plantati...', 761, Array)
+#1 D:\www\plantation\system\CodeIgniter.php(914): App\Controllers\API->get_role()
+#2 D:\www\plantation\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API))
+#3 D:\www\plantation\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\plantation\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

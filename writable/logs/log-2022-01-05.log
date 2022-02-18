@@ -1,0 +1,84 @@
+CRITICAL - 2022-01-05 20:16:45 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\carlink_backend\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(489): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#3 D:\www\carlink_backend\system\Database\BaseConnection.php(1676): CodeIgniter\Database\MySQLi\Connection->_fieldData('`admin`')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1647): CodeIgniter\Database\BaseConnection->getFieldData('admin')
+#5 D:\www\carlink_backend\app\Models\AdminModel.php(12): App\Core\BaseModel->single_log('admin')
+#6 D:\www\carlink_backend\app\Controllers\Access.php(11): App\Models\AdminModel->__construct()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Access->__construct()
+#8 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-01-05 20:16:52 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\carlink_backend\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(489): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#3 D:\www\carlink_backend\system\Database\BaseConnection.php(1676): CodeIgniter\Database\MySQLi\Connection->_fieldData('`admin`')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1647): CodeIgniter\Database\BaseConnection->getFieldData('admin')
+#5 D:\www\carlink_backend\app\Models\AdminModel.php(12): App\Core\BaseModel->single_log('admin')
+#6 D:\www\carlink_backend\app\Controllers\Access.php(11): App\Models\AdminModel->__construct()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Access->__construct()
+#8 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-01-05 20:17:03 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\carlink_backend\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(489): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#3 D:\www\carlink_backend\system\Database\BaseConnection.php(1676): CodeIgniter\Database\MySQLi\Connection->_fieldData('`admin`')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1647): CodeIgniter\Database\BaseConnection->getFieldData('admin')
+#5 D:\www\carlink_backend\app\Models\AdminModel.php(12): App\Core\BaseModel->single_log('admin')
+#6 D:\www\carlink_backend\app\Controllers\Access.php(11): App\Models\AdminModel->__construct()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Access->__construct()
+#8 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-01-05 20:17:07 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\carlink_backend\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(489): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#3 D:\www\carlink_backend\system\Database\BaseConnection.php(1676): CodeIgniter\Database\MySQLi\Connection->_fieldData('`admin`')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1647): CodeIgniter\Database\BaseConnection->getFieldData('admin')
+#5 D:\www\carlink_backend\app\Models\AdminModel.php(12): App\Core\BaseModel->single_log('admin')
+#6 D:\www\carlink_backend\app\Controllers\Access.php(11): App\Models\AdminModel->__construct()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Access->__construct()
+#8 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-01-05 20:17:11 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\carlink_backend\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(489): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#3 D:\www\carlink_backend\system\Database\BaseConnection.php(1676): CodeIgniter\Database\MySQLi\Connection->_fieldData('`admin`')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1647): CodeIgniter\Database\BaseConnection->getFieldData('admin')
+#5 D:\www\carlink_backend\app\Models\AdminModel.php(12): App\Core\BaseModel->single_log('admin')
+#6 D:\www\carlink_backend\app\Controllers\Access.php(11): App\Models\AdminModel->__construct()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Access->__construct()
+#8 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-01-05 20:17:18 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\carlink_backend\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(489): CodeIgniter\Database\BaseConnection->query('SHOW COLUMNS FR...')
+#3 D:\www\carlink_backend\system\Database\BaseConnection.php(1676): CodeIgniter\Database\MySQLi\Connection->_fieldData('`admin`')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1647): CodeIgniter\Database\BaseConnection->getFieldData('admin')
+#5 D:\www\carlink_backend\app\Models\AdminModel.php(12): App\Core\BaseModel->single_log('admin')
+#6 D:\www\carlink_backend\app\Controllers\Access.php(11): App\Models\AdminModel->__construct()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(886): App\Controllers\Access->__construct()
+#8 D:\www\carlink_backend\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}

@@ -1,0 +1,520 @@
+CRITICAL - 2021-11-22 15:20:52 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(295): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 295, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('12')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:21:07 --> Undefined offset: 0
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\carlink_...', 170, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->detail('12')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:21:15 --> Undefined property: App\Controllers\Auction::$NotificationModel
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 333, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:21:35 --> syntax error, unexpected 'class' (T_CLASS)
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Auction/edit/34')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Auction/edit/34')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:21:36 --> Unknown column 'buyer_status' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2441): CodeIgniter\Database\BaseConnection->query('UPDATE `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1216): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(344): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 15:21:36 --> Unknown column 'buyer_status' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(2441): CodeIgniter\Database\BaseConnection->query('UPDATE `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1216): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(344): App\Core\BaseModel->updateWhere(Array, Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 15:22:36 --> Undefined variable: name
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(333): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 333, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:22:54 --> Undefined variable: name
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(332): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 332, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:22:55 --> Undefined variable: name
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(339): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 339, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:22:56 --> Undefined variable: name
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(339): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 339, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:23:22 --> Undefined variable: name
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(336): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 336, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:23:23 --> Undefined variable: data
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(341): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 341, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:23:23 --> Undefined variable: data
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(341): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\carlink_...', 341, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:53:02 --> Undefined property: App\Controllers\Notification::$NotificationUpdateModel
+#0 D:\www\carlink_backend\app\Controllers\Notification.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 69, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Notification->add_update()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:55:23 --> Undefined property: App\Controllers\Notification::$NotificationUpdateModel
+#0 D:\www\carlink_backend\app\Controllers\Notification.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 69, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Notification->add_update()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:55:24 --> Undefined property: App\Controllers\Notification::$NotificationUpdateModel
+#0 D:\www\carlink_backend\app\Controllers\Notification.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 69, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Notification->add_update()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:55:25 --> Undefined property: App\Controllers\Notification::$NotificationUpdateModel
+#0 D:\www\carlink_backend\app\Controllers\Notification.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 69, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Notification->add_update()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:55:25 --> Undefined property: App\Controllers\Notification::$NotificationUpdateModel
+#0 D:\www\carlink_backend\app\Controllers\Notification.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 69, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Notification->add_update()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 15:55:25 --> Undefined property: App\Controllers\Notification::$NotificationUpdateModel
+#0 D:\www\carlink_backend\app\Controllers\Notification.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 69, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Notification->add_update()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notification))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 16:16:15 --> Table 'carlink1122.user' doesn't exist
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO not...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1032): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 D:\www\carlink_backend\app\Controllers\NotificationUpdate.php(66): App\Core\BaseModel->processSql('INSERT INTO not...')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\NotificationUpdate->add()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotificationUpdate))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-11-22 16:16:23 --> Table 'carlink1122.user' doesn't exist
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO not...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1032): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 D:\www\carlink_backend\app\Controllers\NotificationUpdate.php(66): App\Core\BaseModel->processSql('INSERT INTO not...')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\NotificationUpdate->add()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotificationUpdate))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-11-22 16:16:23 --> Unknown column 'asd' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO not...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1032): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 D:\www\carlink_backend\app\Controllers\NotificationUpdate.php(66): App\Core\BaseModel->processSql('INSERT INTO not...')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\NotificationUpdate->add()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotificationUpdate))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-11-22 16:16:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.users_id,4 FROM users WHERE users.deleted = 0 and token != ''' at line 2
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO not...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO not...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO not...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1032): CodeIgniter\Database\BaseConnection->query('INSERT INTO not...')
+#4 D:\www\carlink_backend\app\Controllers\NotificationUpdate.php(66): App\Core\BaseModel->processSql('INSERT INTO not...')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\NotificationUpdate->add()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotificationUpdate))
+#7 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-11-22 16:20:40 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:16 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:16 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:17 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:17 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:17 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:17 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:17 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:17 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:31 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:31 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:21:49 --> Unknown column 'car.seller_status_id' in 'on clause'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(68): App\Models\AuctionModel->getAll()
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->index()
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:22:49 --> Unknown column 'users.name' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(202): App\Models\AuctionModel->getWhere(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->detail('34')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:23:05 --> Unknown column 'car.seller_status_id' in 'on clause'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `auction...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `auction...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `auction...')
+#3 D:\www\carlink_backend\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `auction...', Array, false)
+#4 D:\www\carlink_backend\app\Models\AuctionModel.php(122): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(202): App\Models\AuctionModel->getWhere(Array)
+#6 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->detail('34')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#8 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-11-22 16:23:09 --> Unknown column 'notification_update_id' in 'field list'
+#0 D:\www\carlink_backend\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `no...')
+#1 D:\www\carlink_backend\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 D:\www\carlink_backend\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 D:\www\carlink_backend\app\Core\BaseModel.php(1701): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...')
+#4 D:\www\carlink_backend\app\Core\BaseModel.php(1215): App\Core\BaseModel->insert_log('create', 63)
+#5 D:\www\carlink_backend\app\Controllers\Auction.php(330): App\Core\BaseModel->insertNew(Array)
+#6 D:\www\carlink_backend\app\Controllers\Auction.php(371): App\Controllers\Auction->send_notification_to_user('Congraulations,...', 'Thanks for choo...', '34', '0')
+#7 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->edit('34')
+#8 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#9 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-11-22 16:52:16 --> syntax error, unexpected '$this' (T_VARIABLE)
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('InspectionType/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('InspectionType/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 16:52:17 --> syntax error, unexpected '$this' (T_VARIABLE)
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('InspectionType/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('InspectionType/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 16:52:17 --> syntax error, unexpected '$this' (T_VARIABLE)
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('InspectionType/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('InspectionType/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 16:53:27 --> Undefined index: car_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 74, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(147): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '38')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-22 16:53:54 --> Undefined index: car_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 74, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(148): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '38')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-22 16:54:09 --> Undefined index: car_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 74, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(148): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '38')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-22 16:54:10 --> Undefined index: car_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 74, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(148): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '38')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-22 16:54:10 --> Undefined index: car_id
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\detail.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 74, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(148): view('admin/inspectio...')
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->detail('1', '38')
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-22 17:31:45 --> Undefined property: App\Controllers\InspectionType::$CarInspectionModel
+#0 D:\www\carlink_backend\app\Controllers\InspectionType.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\carlink_...', 105, Array)
+#1 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#2 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 17:32:06 --> Cannot use App\Models\InspectionDetailModel as InspectionDetailModel because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-11-22 17:32:09 --> Undefined index: inspection_detail
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\get_inspection_part.php(4): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 4, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(130): view('admin/inspectio...', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-22 17:32:10 --> Undefined index: inspection_detail
+#0 D:\www\carlink_backend\app\Views\admin\inspection_type\get_inspection_part.php(4): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 4, Array)
+#1 D:\www\carlink_backend\system\View\View.php(246): include('D:\\www\\carlink_...')
+#2 D:\www\carlink_backend\system\Common.php(1087): CodeIgniter\View\View->render('admin/inspectio...', Array, true)
+#3 D:\www\carlink_backend\app\Controllers\InspectionType.php(130): view('admin/inspectio...', Array)
+#4 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\InspectionType->get_inspection_part()
+#5 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InspectionType))
+#6 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-22 17:59:03 --> syntax error, unexpected '}'
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('InspectionType/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('InspectionType/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 17:59:03 --> syntax error, unexpected '}'
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('InspectionType/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('InspectionType/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 17:59:04 --> syntax error, unexpected '}'
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('InspectionType/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('InspectionType/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 17:59:04 --> syntax error, unexpected '}'
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('InspectionType/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('InspectionType/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 17:59:04 --> syntax error, unexpected '}'
+#0 D:\www\carlink_backend\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('InspectionType/...')
+#1 D:\www\carlink_backend\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('InspectionType/...')
+#2 D:\www\carlink_backend\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-22 18:14:06 --> Undefined index: seller_id
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(157): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 157, Array)
+#1 D:\www\carlink_backend\app\Controllers\Auction.php(180): App\Controllers\Auction->send_notification_to_seller(40)
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->add()
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-11-22 18:14:13 --> Undefined index: seller_id
+#0 D:\www\carlink_backend\app\Controllers\Auction.php(157): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\carlink_...', 157, Array)
+#1 D:\www\carlink_backend\app\Controllers\Auction.php(180): App\Controllers\Auction->send_notification_to_seller(41)
+#2 D:\www\carlink_backend\system\CodeIgniter.php(914): App\Controllers\Auction->add()
+#3 D:\www\carlink_backend\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auction))
+#4 D:\www\carlink_backend\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\carlink_backend\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
