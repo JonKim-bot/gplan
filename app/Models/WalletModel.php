@@ -11,7 +11,6 @@ class WalletModel extends BaseModel
     {
         parent::__construct();
 
-        $this->all_logs();
         $this->tableName = 'wallet';
 
         $this->primaryKey = 'wallet_id';

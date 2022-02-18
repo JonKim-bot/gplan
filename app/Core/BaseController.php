@@ -27,9 +27,6 @@ use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\HTTP\IncomingRequest;
 use App\Models\WalletTopupModel;
 use App\Models\WalletWithdrawModel;
-use App\Models\BestOfferModel;
-use App\Models\GetInTouchModel;
-use App\Models\AuctionModel;
 
 class BaseController extends Controller
 {
@@ -73,15 +70,9 @@ class BaseController extends Controller
         
         $this->WalletTopupModel = new WalletTopupModel();
         $this->WalletWithdrawModel = new WalletWithdrawModel();
-        $this->BestOfferModel = new BestOfferModel();
-        $this->GetInTouchModel = new GetInTouchModel();
-        $this->AuctionModel = new AuctionModel();
-        $this->pageData['undone_auction'] = $this->AuctionModel->getCountUndone();
 
         $this->pageData['undone_withdraw'] = $this->WalletWithdrawModel->getCountOfUndone();
         $this->pageData['undone_topup'] = $this->WalletTopupModel->getCountOfUndone();
-        $this->pageData['undone_intouch'] = $this->GetInTouchModel->getCountUndone();
-        $this->pageData['undone_offer'] = $this->BestOfferModel->getCountUndone();
 
         $this->pageData['undone_user'] = $this->UsersModel->getCountUndone();
 

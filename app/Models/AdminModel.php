@@ -9,7 +9,7 @@ class AdminModel extends BaseModel{
 		parent::__construct();
 		$this->tableName = "admin";
 		$this->primaryKey = "admin_id";
-        $this->single_log('admin');
+        // $this->single_log('admin');
     }
 function getAll($limit = "", $page = 1, $filter = array()){
     $this->builder = $this->db->table($this->tableName);
