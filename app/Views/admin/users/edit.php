@@ -70,7 +70,7 @@
                                     <label for="">Nric Back</label>
                                     <input type="file" name="nric_back" class="form-control" accept="image/png, image/jpeg" >
                                 </div>
-                     
+                    
 
                                 <div class="form-group">
                                     <label for="">Password</label>

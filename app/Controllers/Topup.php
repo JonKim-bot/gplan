@@ -123,6 +123,7 @@ class Topup extends BaseController
         
     }
 
+
     public function detail($wallet_topup_id)
     {
         $where = [
@@ -220,6 +221,8 @@ class Topup extends BaseController
             'modified_by',
             'deleted',
             'modified_date',
+            'is_approved',
+            'is_rejected',
             'receipt',
             'is_paid',
             'created_date',
