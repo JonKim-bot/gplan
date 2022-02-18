@@ -2345,3 +2345,15 @@ CRITICAL - 2022-02-18 17:37:52 --> Undefined index: username
 #6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-02-18 19:17:13 --> Table 'gplan.role' doesn't exist
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\www\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\www\gplan\app\Core\BaseModel.php(1346): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\gplan\app\Controllers\Access.php(42): App\Core\BaseModel->login('62000', 'asd')
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Access->loginUser()
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Access))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}

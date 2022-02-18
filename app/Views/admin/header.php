@@ -57,18 +57,7 @@
                  
            
            
-<!--                 
-                  
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
-                    'Topup'
-                        ? 'c-active'
-                        : null ?>" href="<?= base_url('Topup') ?>">
-                    <i class="cil-storage c-sidebar-nav-icon"></i>
-                    WalletTopup
-                    <span class="badge badge-pill badge-warning"><?= $undone_topup ?></span>
-                    </a>
-                    </li> -->
+
                     <li class="c-sidebar-nav-item ">
 
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
@@ -149,16 +138,6 @@ Admin
 </a>
 </li>
 
-<!-- <li class="c-sidebar-nav-item ">
-<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/tree'
-    ? 'c-active'
-    : null ?>" href="<?= base_url('Users/tree') ?>">
-<i class="cil-people c-sidebar-nav-icon"></i>
-Referal
-</a>
-</li> -->
-
-                  
                         </ul>
                     </li>
 
@@ -174,36 +153,50 @@ Referal
                         display: none;
                     }
                 </style>
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
-                    'Car'
-                        ? 'c-active'
-                        : null ?>" href="<?= base_url('Car') ?>">
-                    <i class="cil-scrubber c-sidebar-nav-icon"></i>
-                    Car
-                    </a>
-                    </li>
+                        <li class="c-sidebar-nav-item ">
+
+<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
+    ? 'c-active'
+    : null ?>" href="<?= base_url('Withdraw') ?>">
+<i class="cil-storage c-sidebar-nav-icon"></i>
+Withdrawal
+<span class="badge badge-pill badge-warning"><?= $undone_withdraw ?></span>
+
+</a>
+</li>
+                 
+               
+                 
                   
+
+                    <li class="c-sidebar-nav-divider"></li>
+                    <li class="c-sidebar-nav-title">Components</li>
+                   
                     <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
-                    'Brand'
+                    'Wallet'
                         ? 'c-active'
-                        : null ?>" href="<?= base_url('Brand') ?>">
-                    <i class="cil-pool c-sidebar-nav-icon"></i>
-                    Brand & Model
+                        : null ?>" href="<?= base_url('Wallet') ?>">
+                    <i class="cil-smile c-sidebar-nav-icon"></i>
+                    Transaction
+
                     </a>
                     </li>
+                   
 
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
-                    'State'
-                        ? 'c-active'
-                        : null ?>" href="<?= base_url('State') ?>">
-                    <i class="cil-moon c-sidebar-nav-icon"></i>
-                    State
-                    </a>
-                    </li>
+                    <li class="c-sidebar-nav-title">User</li>
 
+<li class="c-sidebar-nav-item ">
+<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users'
+    ? 'c-active'
+    : null ?>" href="<?= base_url('Users') ?>">
+<i class="cil-people c-sidebar-nav-icon"></i>
+Users
+<span class="badge badge-pill badge-warning"></span>
+
+</a>
+
+</li>
 
 
                 <?php } ?>
