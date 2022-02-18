@@ -41,10 +41,7 @@
                                         <?= $error; ?>
                                     </div>
                                 <?php } ?>
-                                <div class="form-group">
-                                    <label for="wallet_withdraw">Image</label>
-                                    <input type="file" class="form-control" name="logo" placeholder="WalletWithdraw" required>
-                                </div>
+                          
 
                                 <?= $final_form ?>
 

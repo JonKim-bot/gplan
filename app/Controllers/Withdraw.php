@@ -1,5 +1,6 @@
 <?php namespace App\Controllers;
 
+
 use App\Core\BaseController;
 use App\Models\WalletModel;
 use App\Models\WalletWithdrawModel;
@@ -215,6 +216,8 @@ class Withdraw extends BaseController
             'modified_by',
             'deleted',
             'modified_date',
+            'is_approved',
+            'is_rejected',
             'receipt',
             'is_paid',
             'created_date',
