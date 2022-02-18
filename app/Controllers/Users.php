@@ -114,6 +114,8 @@ class Users extends BaseController
             }
         }
 
+        $this->pageData['users'] = $this->UsersModel->get_family_user();
+
         echo view('admin/header', $this->pageData);
         echo view('admin/users/add');
         echo view('admin/footer');

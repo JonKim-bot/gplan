@@ -17,7 +17,7 @@ class UsersModel extends BaseModel{
         $this->builder = $this->db->table($this->tableName);
         $this->builder->select('*');
         $this->builder->where($this->tableName . '.deleted',0);
-        $this->builder->join('family', 'family.user_id = '.$this->tableName.'.users_id', 'left');
+        $this->builder->join('family', 'family.user_id = '.$this->tableName.'.users_id');
 
 
         if ($limit != '') {
