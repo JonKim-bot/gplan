@@ -98,14 +98,7 @@ class BaseController extends Controller
 
     }
 
-    public function get_user_name($users_id){
-        $where = [
-            'users.users_id' => $users_id
-        ];
-        $users = $this->UsersModel->getWhere($where)[0]['name'];
-        return $users;
 
-    }
     public function get_modified_by($admin_id) {
         $where  = [
             'admin.admin_id' => $admin_id

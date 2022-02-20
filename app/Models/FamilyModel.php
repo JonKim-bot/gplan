@@ -114,6 +114,7 @@ class FamilyModel extends BaseModel
 
     public function insert_commission($family_id){
         $this->WalletModel = new WalletModel();
+        $this->UsersModel = new UsersModel();
 
         $upline = $this->recursive_upline($family_id); // find all upline
         $commission = 10;
@@ -126,7 +127,7 @@ class FamilyModel extends BaseModel
             $user_id = $user['user_id'];
             $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
             if(empty($existed)){
-                $remarks = 'Commision for ' . $this->get_user_name($user_id) . ' With amount of ' . $commission ;
+                $remarks = 'Commision for ' . $this->UsersModel->get_user_name($user_id) . ' With amount of ' . $commission ;
                 $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
                 // $this->db->insert('family_commission', ['user_id' => $user_id, 'commission' => $commission, 'family_id' => $family_id]);
             }

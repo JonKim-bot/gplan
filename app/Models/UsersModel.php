@@ -14,6 +14,14 @@ class UsersModel extends BaseModel{
 		$this->primaryKey = "users_id";
 	}
 
+    public function get_user_name($users_id){
+        $where = [
+            'users.users_id' => $users_id
+        ];
+        $users = $this->getWhere($where)[0]['name'];
+        return $users;
+
+    }
 
 
 
