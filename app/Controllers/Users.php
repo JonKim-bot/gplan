@@ -161,7 +161,7 @@ class Users extends BaseController
         $users = $this->UsersModel->getWhere($where)[0];
         if($users['is_verified'] == 0){
             $is_verified = 1;
-            $remarks = "Profit 500 from users " . $users['name'] ;
+            $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
             $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
     
@@ -208,6 +208,7 @@ class Users extends BaseController
 
         $this->pageData['wallet'] = $users_wallet;
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
+
 
 
         echo view('admin/header', $this->pageData);
@@ -382,7 +383,7 @@ class Users extends BaseController
         echo view('admin/header', $this->pageData);
         echo view('admin/users/ul_of_tree');
         // echo view('admin/footer');
-        
+
     }
 
 

@@ -1,4 +1,5 @@
 <div class="c-subheader justify-content-between px-3">
+
     <ol class="breadcrumb border-0 m-0 px-0 px-md-3">
         <li class="breadcrumb-item">Home</li>
         <li class="breadcrumb-item active"><a href="<?= base_url() ?>/users">User</a></li>
@@ -77,7 +78,7 @@
 
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['contact'] ?></a></td>
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['email'] ?></a></td>
-                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['family_name'] ?></a></td>
+                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_family_id'] ?>"><?= $row['family_name'] ?></a></td>
 
                                                     <?php if($row['is_verified'] == 0){ ?>
                                                     <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>

@@ -2,6 +2,7 @@
 
 
 
+
 use App\Core\BaseModel;
 
 class UsersModel extends BaseModel{
@@ -83,7 +84,10 @@ class UsersModel extends BaseModel{
     }
     function getWhere($where,$limit = "", $page = 1, $filter = array()){
         $this->builder = $this->db->table($this->tableName);
-        $this->builder->select($this->tableName . '.*,users.family_id as fid,(SELECT name FROM users WHERE users_id = fid) as family_name');
+        $this->builder->select($this->tableName . '.*,users.family_id as fid,(SELECT name FROM users WHERE users_id = fid) as family_name,
+        (SELECT users_id FROM users WHERE users_id = fid) as users_family_id
+        
+        ');
         //sample_to_replace
         $this->builder->where($where);
         $this->builder->where($this->tableName . '.deleted',0);
