@@ -2,6 +2,7 @@
 
 
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -380,7 +381,7 @@ class Users extends BaseController
 
         echo view('admin/header', $this->pageData);
         echo view('admin/users/ul_of_tree');
-        echo view('admin/footer');
+        // echo view('admin/footer');
     }
 
 
