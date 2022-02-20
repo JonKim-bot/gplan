@@ -2,6 +2,7 @@
 
 
 
+
 use App\Core\BaseController;
 use App\Models\WalletModel;
 use App\Models\UsersModel;
@@ -85,6 +86,10 @@ class Wallet extends BaseController
         ($_GET and isset($_GET['users_id']))
             ? $_GET['users_id']
             : 0;
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $users_id = session()->get('login_id');
+        }
         $where = [];
         if($users_id > 0){
             $where = [
@@ -99,6 +104,11 @@ class Wallet extends BaseController
                 'DATE(wallet.created_date) <=' => $dateTo,
             ];
         }
+
+
+  
+        // dd($users_id);
+   
 
         $this->pageData['users_id'] = $users_id;
 

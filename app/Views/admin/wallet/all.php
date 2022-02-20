@@ -50,15 +50,20 @@
                                 </select>
                             </div> -->
                             
-                            <div class="form-group col-sm-12 col-md-3">
-                                <label for="" class="c-label">Filter User</label>
-                                <select class="form-control filter" name="users_id">
+                            
+                            <?php if (session()->get('login_data')['type_id'] == '0') {  ?>
+                                <div class="form-group col-sm-12 col-md-3">
+                                    <label for="" class="c-label">Filter User</label>
+                                    <select class="form-control filter" name="users_id">
+
                                     <?php foreach($users as $row){ ?>
                                         <option value="<?= $row['users_id'] ?>" <?= isset($_GET['users_id']) && $_GET['users_id'] == $users_id ? 'selected' : '' ?>><?= $row['username'] ?></option>
                                     <?php } ?>
+                                    </select>
+                                </div>
+                                <?php 
+                                } ?>
 
-                                </select>
-                            </div>
                             <div class="form-group col-sm-12 col-md-3">
                                 <label for="" class="c-label">Date From</label>
                                 <br>

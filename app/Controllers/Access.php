@@ -53,6 +53,7 @@ class Access extends BaseController
                 $login = $this->UsersModel->login($input["username"], $input["password"]);
                 if (!empty($login)) {
                     $login_data = $login[0];
+
                     $login_id = $login[0]["user_id"];
                 } else {
                     $error = true;
@@ -161,7 +162,14 @@ class Access extends BaseController
         $session = session();
 
         $session->destroy();
+        if (session()->get('login_data')['type_id'] == '0') { 
+            return redirect()->to(base_url('access/login', 'refresh'));
 
-        return redirect()->to(base_url('access/login', 'refresh'));
+        }else{
+            
+            return redirect()->to(base_url('access/loginUser', 'refresh'));
+        }
+
+
     }
 }

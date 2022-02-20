@@ -98,7 +98,7 @@ Withdrawal
                     'Wallet'
                         ? 'c-active'
                         : null ?>" href="<?= base_url('Wallet') ?>">
-                    <i class="cil-smile c-sidebar-nav-icon"></i>
+                    <i class="cil-money c-sidebar-nav-icon"></i>
                     Transaction
 
                     </a>
@@ -210,7 +210,7 @@ Personal Detail
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/qrcode/1'
     ? 'c-active'
     : null ?>" href="<?= base_url('Users/qrcode/1') ?>">
-<i class="cil-people c-sidebar-nav-icon"></i>
+<i class="cil-qr-code c-sidebar-nav-icon"></i>
 QR Code
 
 <span class="badge badge-pill badge-warning"></span>
@@ -218,6 +218,30 @@ QR Code
 </a>
 
 </li>
+<li class="c-sidebar-nav-item ">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                    'Wallet'
+                    
+                        ? 'c-active'
+                        : null ?>" href="<?= base_url('Wallet') ?>">
+                    <i class="cil-money c-sidebar-nav-icon"></i>
+                    Transaction
+
+                    </a>
+                    </li>
+
+
+                    <li class="c-sidebar-nav-item ">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                    'User/Tree/1'
+                    
+                        ? 'c-active'
+                        : null ?>" href="<?= base_url('Users/Tree/1') ?>">
+                    <i class="cil-smile c-sidebar-nav-icon"></i>
+                    Family Tree
+
+                    </a>
+                    </li>
 
                 <?php } ?>
               

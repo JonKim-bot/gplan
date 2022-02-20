@@ -111,7 +111,7 @@
                                                         </tr>
 
                                                             <tr>
-                                                        <th>Tree</th>
+                                                        <th>Family Tree</th>
                                                         <th><a class="btn btn-primary" target="_blank" href="<?= base_url() ?>/users/tree/<?= $users['users_id'] ?>">View Tree</a></th>
                                                         </tr>
 

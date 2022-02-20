@@ -180,6 +180,7 @@ class Users extends BaseController
         }
         $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
 
+
         return redirect()->to($_SERVER['HTTP_REFERER']);
 
     }
@@ -210,6 +211,7 @@ class Users extends BaseController
             $users,
             'banner'
         );
+
         $users_wallet = $this->WalletModel->get_transaction_by_users([
             'users.users_id' => $users_id,
         ]);
@@ -230,6 +232,7 @@ class Users extends BaseController
     {
 
         if (session()->get('login_data')['type_id'] == '1') { 
+
             $users_id = session()->get('login_id');
         }
         // dd($users_id);
@@ -360,6 +363,12 @@ class Users extends BaseController
 
     function tree($user_id = 1)
     {
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $user_id = session()->get('login_id');
+        }
+
 
         $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
 
