@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 
+
 <html lang="en">
     <head>
         <!-- <base href="./"> -->
@@ -274,7 +275,7 @@ QR Code
                 
                 <li class="c-header-nav-item dropdown">
                     <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <div class="c-avatar"><img class="c-avatar-img" src="<?= base_url() ?>/public/Default-User-Image.jpg" alt=""></div>
+                        <div class="c-avatar"><img class="c-avatar-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/2048px-User_icon_2.svg.png" alt=""></div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right pt-0">
                         <div class="dropdown-header bg-light py-2">
