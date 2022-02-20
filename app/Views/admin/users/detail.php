@@ -1,4 +1,5 @@
 <div class="c-subheader justify-content-between px-3">
+
     <ol class="breadcrumb border-0 m-0 px-0 px-md-3">
         <li class="breadcrumb-item">Home</li>
         <li class="breadcrumb-item"><a href="<?= base_url('users') ?>">User</a></li>
@@ -38,10 +39,32 @@
                                                 <?php if (session()->get('login_data')['type_id'] == '0') {  ?>
 
                                                     <div class="col-lg-12 col-xl-12">
-                                                        <a href="<?= base_url() ?>/Users/verify_user/<?= $users['users_id'] ?>" class="btn btn-<?= $users['is_verified'] == 1 ? "success" : "danger" ?>"><?= $users['is_verified'] == 1 ? "Verified" : "Not verified" ?></a>
+                                                        <?php if($users['is_verified'] == 0){ ?>
+
+                                                            <a href="<?= base_url() ?>/Users/verify_user/<?= $users['users_id'] ?>" class="btn btn-<?= $users['is_verified'] == 1 ? "success" : "asd" ?>"><?= $users['is_verified'] == 1 ? "Verified" : "Not verified" ?></a>
+                                                        <?php }else{ ?>
+                                                            <a  class="btn btn-primary text-white">Verified</a>
+
+                                                        <?php } ?>
                                                         <!-- <img src="" width="200" class="img-fluid d-block m-auto" alt=""> -->
                                                     </div>
                                                 <?php } ?>
+
+
+                                                <?php if (session()->get('login_data')['type_id'] == '1') {  ?>
+
+                                            <div class="col-lg-12 col-xl-12">
+                                                <?php if($users['is_verified'] == 0){ ?>
+
+                                                    <a  class="btn btn-danger text-white">Not Verified</a>
+                                                <?php }else{ ?>
+                                                    <a  class="btn btn-primary text-white">Verified</a>
+
+                                                <?php } ?>
+                                                <!-- <img src="" width="200" class="img-fluid d-block m-auto" alt=""> -->
+                                            </div>
+                                            <?php } ?>
+
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +102,7 @@
                                                         <table class="table m-0">
                                                             <tbody>
                                                             <tr>
-                                                        <th>Total Commision</th>
+                                                        <th>Balance : </th>
                                                         <th><?= $balance ?></th>
                                                         </tr>
                                                             <tr>
@@ -115,7 +138,7 @@
                                                                 </tr>
 
                                                                 <tr>
-                                                                    <th scope="row">Family Name</th>
+                                                                    <th scope="row">Referral Name</th>
                                                                     <td><?= $users["family_name"] ?></td>
                                                                 </tr>
 

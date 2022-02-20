@@ -2,6 +2,7 @@
 
 
 
+
 <html lang="en">
     <head>
         <!-- <base href="./"> -->
@@ -59,6 +60,19 @@
            
            
 
+                <li class="c-sidebar-nav-title">Operation</li>
+
+<li class="c-sidebar-nav-item ">
+<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users'
+    ? 'c-active'
+    : null ?>" href="<?= base_url('Users') ?>">
+<i class="cil-people c-sidebar-nav-icon"></i>
+Users
+<span class="badge badge-pill badge-warning"><?= $undone_user ?></span>
+
+</a>
+
+</li>
                     <li class="c-sidebar-nav-item ">
 
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
@@ -89,7 +103,7 @@ Withdrawal
 
                     </a>
                     </li>
-                   
+<!--                    
                     <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
                     'CompanyProfit'
@@ -99,7 +113,7 @@ Withdrawal
                     Company Profit
 
                     </a>
-                    </li>
+                    </li> -->
                    
                  
 
@@ -118,19 +132,8 @@ Withdrawal
                   
                  
 
-                    <li class="c-sidebar-nav-title">User</li>
-
-<li class="c-sidebar-nav-item ">
-<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users'
-    ? 'c-active'
-    : null ?>" href="<?= base_url('Users') ?>">
-<i class="cil-people c-sidebar-nav-icon"></i>
-Users
-<span class="badge badge-pill badge-warning"><?= $undone_user ?></span>
-
-</a>
-
-</li>
+                    <li class="c-sidebar-nav-title">Admin</li>
+                 
 <li class="c-sidebar-nav-item ">
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Admin'
     ? 'c-active'
@@ -166,6 +169,8 @@ Withdrawal
 
 </a>
 </li>
+
+
                  
                
                  

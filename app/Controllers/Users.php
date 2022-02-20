@@ -54,7 +54,12 @@ class Users extends BaseController
             $where['users.is_verified'] = $is_verified;
         }        
         $users = $this->UsersModel->getWhere($where);
-        
+        $users_count = 0;
+        if(!empty($users)){
+            $users_count = count($users);
+        }
+
+        $this->pageData['users_count'] = $users_count;
         // dd($users);
         $field = $this->UsersModel->get_field([
             'created_by',
@@ -96,6 +101,7 @@ class Users extends BaseController
                     'email' => $input['email'],
                     'username' => $input['contact'],
                     'contact' => $input['contact'],
+
                     'password' => $hash['password'],
                     'nric_name' => $input['nric_name'],
                     'nric' => $input['nric'],
@@ -150,6 +156,7 @@ class Users extends BaseController
     //     echo view('admin/footer');
     // }
 
+    
     // public function copy($users_id){
     //     $users = $this->UsersModel->copy($users_id);
     //     return redirect()->to(base_url('Users', 'refresh'));

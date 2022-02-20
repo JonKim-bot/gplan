@@ -48,16 +48,18 @@
                     </form>
                         <div class="row">
                             <div class="col-sm-12">
+                                <p>Total Users : <?= $users_count ?></p>
+
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered no-footer datatable" id="users_list_table" data-method="get" data-url="<?= base_url("users") ?>" style="border-collapse: collapse !important">
                                         <thead>
                                             <tr role="row">
                                                 <th>No.</th>
-                                                <th data-filter="usersname">User ID</th>
+                                                <!-- <th data-filter="usersname">User ID</th> -->
                                                 <th data-filter="usersname">User Name</th>
                                                 <th data-filter="usersname">Contact</th>
                                                 <th data-filter="email">Email</th>
-                                                <th data-filter="email">Family Name</th>
+                                                <th data-filter="email">Referral Name</th>
 
                                                 <th>Verify Status</th>
 
@@ -72,7 +74,7 @@
                                                 <tr>
 
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $i ?></a></td>
-                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['users_id'] ?></a></td>
+                                                    <!-- <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['users_id'] ?></a></td> -->
 
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['name'] ?></a></td>
 

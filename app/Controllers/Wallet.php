@@ -1,6 +1,7 @@
 <?php namespace App\Controllers;
 
 
+
 use App\Core\BaseController;
 use App\Models\WalletModel;
 use App\Models\UsersModel;
@@ -35,18 +36,20 @@ class Wallet extends BaseController
             ($_GET and isset($_GET['dateTo']))
                 ? $_GET['dateTo']
                 : date('Y-m-d');
+        $users_id =
+        ($_GET and isset($_GET['users_id']))
+            ? $_GET['users_id']
+            : 0;
         $where = [];
-        if($filter_id == 1){
+        if($users_id > 0){
             $where = [
-                'wallet_out <' => 0,
+                'wallet.users_id' => $users_id,
                                
                 'DATE(wallet.created_date) >=' => $dateFrom,
                 'DATE(wallet.created_date) <=' => $dateTo,
             ];
-        }else if($filter_id == 2){
+        }else{
             $where = [
-                'wallet_out' => 0,
-                  
                 'DATE(wallet.created_date) >=' => $dateFrom,
                 'DATE(wallet.created_date) <=' => $dateTo,
             ];
@@ -78,15 +81,15 @@ class Wallet extends BaseController
                 ? $_GET['dateTo']
                 : date('Y-m-d');
         $where = [];
-        if($filter_id == 1){
+        $users_id =
+        ($_GET and isset($_GET['users_id']))
+            ? $_GET['users_id']
+            : 0;
+        $where = [];
+        if($users_id > 0){
             $where = [
-                'wallet_out <' => 0,
-                'DATE(wallet.created_date) >=' => $dateFrom,
-                'DATE(wallet.created_date) <=' => $dateTo,
-            ];
-        }else if($filter_id == 2){
-            $where = [
-                'wallet_out' => 0,
+                'wallet.users_id' => $users_id,
+                               
                 'DATE(wallet.created_date) >=' => $dateFrom,
                 'DATE(wallet.created_date) <=' => $dateTo,
             ];
@@ -97,10 +100,12 @@ class Wallet extends BaseController
             ];
         }
 
+        $this->pageData['users_id'] = $users_id;
 
         $this->pageData['dateFrom'] = $dateFrom;
         $this->pageData['dateTo'] = $dateTo;
 
+        $this->pageData['users'] = $this->UsersModel->getAll();
 
         $users_wallet = $this->WalletModel->get_transaction('',1,[],$where);
         // dd($users_wallet);

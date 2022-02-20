@@ -233,3 +233,155 @@ CRITICAL - 2022-02-20 16:52:21 --> Call to undefined method App\Models\FamilyMod
 #5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #6 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 {main}
+CRITICAL - 2022-02-20 20:09:51 --> Undefined variable: users
+#0 C:\xampp\htdocs\gplan\app\Views\admin\wallet\all.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet/al...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(116): view('admin/wallet/al...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-20 20:09:52 --> Undefined variable: users
+#0 C:\xampp\htdocs\gplan\app\Views\admin\wallet\all.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet/al...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(116): view('admin/wallet/al...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-20 20:10:07 --> Column 'users_id' in where clause is ambiguous
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletModel.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(110): App\Models\WalletModel->get_transaction('', 1, Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-20 20:10:13 --> Column 'users_id' in where clause is ambiguous
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletModel.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(110): App\Models\WalletModel->get_transaction('', 1, Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-20 20:10:34 --> Undefined index: username
+#0 C:\xampp\htdocs\gplan\app\Views\admin\wallet\all.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet/al...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(116): view('admin/wallet/al...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-20 20:10:35 --> Undefined index: username
+#0 C:\xampp\htdocs\gplan\app\Views\admin\wallet\all.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet/al...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(116): view('admin/wallet/al...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-20 20:10:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' `users`.`contact`, (wallet_in - wallet_out) AS transaction
+FROM `wallet`
+LEF...' at line 1
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletModel.php(229): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(110): App\Models\WalletModel->get_transaction('', 1, Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-20 20:10:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' `users`.`contact`, (wallet_in - wallet_out) AS transaction
+FROM `wallet`
+LEF...' at line 1
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletModel.php(229): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(110): App\Models\WalletModel->get_transaction('', 1, Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-20 20:10:51 --> Unknown column 'users' in 'field list'
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletModel.php(229): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(110): App\Models\WalletModel->get_transaction('', 1, Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-20 20:10:52 --> Unknown column 'users' in 'field list'
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletModel.php(229): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(110): App\Models\WalletModel->get_transaction('', 1, Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-20 20:10:59 --> Unknown column 'users' in 'field list'
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletModel.php(229): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(110): App\Models\WalletModel->get_transaction('', 1, Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-20 20:10:59 --> Unknown column 'users' in 'field list'
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletModel.php(229): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(110): App\Models\WalletModel->get_transaction('', 1, Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-20 20:11:00 --> Unknown column 'users' in 'field list'
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT `wallet`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `wallet`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `wallet`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT `wallet`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletModel.php(229): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Controllers\Wallet.php(110): App\Models\WalletModel->get_transaction('', 1, Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Wallet->index()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wallet))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}

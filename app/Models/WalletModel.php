@@ -2,6 +2,7 @@
 
 
 
+
 use App\Core\BaseModel;
 // use App\Models\WalletTopupModel;
 
@@ -197,7 +198,7 @@ class WalletModel extends BaseModel
     function get_transaction($limit = '', $page = 1, $filter = [], $where = [])
     {
         $this->builder->select(
-            'wallet.*, users.name AS users, users.name as name, users.contact, (wallet_in - wallet_out) AS transaction'
+            'wallet.*, users.name AS users, users.name as name,users.username, users.contact, (wallet_in - wallet_out) AS transaction'
         );
         $this->builder->from($this->table_name);
         $this->builder->join(

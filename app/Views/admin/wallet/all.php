@@ -39,7 +39,7 @@
                 <div id="" class="dataTables_wrapper dt-bootstrap4 no-footer">
                 <form method="GET" id="filter_form">
                         <div class="row">
-
+<!-- 
                             <div class="form-group col-sm-12 col-md-3">
                                 <label for="" class="c-label">Filter</label>
                                 <select class="form-control filter" name="filter_id">
@@ -48,8 +48,17 @@
                                     <option value="2" <?= isset($_GET['filter_id']) && $_GET['filter_id'] == 2 ? 'selected' : '' ?>>Credit</option>
 
                                 </select>
-                            </div>
+                            </div> -->
+                            
+                            <div class="form-group col-sm-12 col-md-3">
+                                <label for="" class="c-label">Filter User</label>
+                                <select class="form-control filter" name="users_id">
+                                    <?php foreach($users as $row){ ?>
+                                        <option value="<?= $row['users_id'] ?>" <?= isset($_GET['users_id']) && $_GET['users_id'] == $users_id ? 'selected' : '' ?>><?= $row['username'] ?></option>
+                                    <?php } ?>
 
+                                </select>
+                            </div>
                             <div class="form-group col-sm-12 col-md-3">
                                 <label for="" class="c-label">Date From</label>
                                 <br>
@@ -78,6 +87,8 @@
                                             <th>No.</th>
                                             <th data-sort="name" data-filter="name">Name</th>
                                 <th data-sort="contact" data-filter="contact">Contact</th>
+                                <th data-sort="" data-filter="">Balance</th>
+
                                 <th data-sort="" data-filter="">Credit</th>
                                 <th data-sort="" data-filter="">Debit</th>
 
@@ -93,9 +104,9 @@
                                             <tr>
                                             <td><?= $i ?></td>
 
-                                            <td><?= $row['name'] ?></td>
+                                            <td><?= $row['username'] ?></td>
                                     <td><?= $row['contact'] ?></td>
-                                    <!-- <td><?= $row['transaction'] ?></td> -->
+                                    <td><?= $row['balance'] ?></td>
                                     <td><?= $row['wallet_in'] ?></td>
                                     <td><?= ltrim($row['wallet_out'], '-'); ?></td>
 
