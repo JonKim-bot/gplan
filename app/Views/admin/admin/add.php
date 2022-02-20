@@ -65,7 +65,7 @@
                                 <label for="">Email</label>
                                 <input type="email" class="form-control" name="email" placeholder="Email" required>
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                             <label for="">Role</label>
 
                             <select name="type_id" class="form-control select2" id="">
@@ -73,7 +73,7 @@
                                 <option value="1"  >Inspector</option>
                             </select>
                         
-                            </div>
+                            </div> -->
 
                             <div class="form-group">
                                 <button class="btn btn-primary float-right" type="submit"> Submit</button>

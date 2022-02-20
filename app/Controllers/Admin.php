@@ -2,6 +2,7 @@
 
 
 
+
 use App\Core\BaseController;
 use App\Models\AdminModel;
 use App\Models\UsersModel;
@@ -95,7 +96,7 @@ class Admin extends BaseController
                     'username' => $input['username'],
                     'contact' => $input['contact'],
                     'email' => $input['email'],
-                    'type_id' => $_POST['type_id'],
+                    // 'type_id' => $_POST['type_id'],
 
                     'password' => $hash['password'],
                     'salt' => $hash['salt'],
@@ -184,7 +185,7 @@ class Admin extends BaseController
                     // 'username' => $input['username'],
                     'name' => $input['name'],
                     
-                    'type_id' => $_POST['type_id'],
+                    // 'type_id' => $_POST['type_id'],
                     'contact' => $input['contact'],
                     'email' => $input['email'],
                     "modified_date" => date("Y-m-d H:i:s"),

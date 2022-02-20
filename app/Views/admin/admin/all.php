@@ -41,7 +41,6 @@
                                             <th data-filter="name">Name</th>
                                             <th data-filter="contact">Contact</th>
                                             <th data-filter="email">Email</th>
-                                            <th data-filter="email">Super Admin</th>
 
                                             <th></th>
                                         </tr>
@@ -57,7 +56,6 @@
                                                 <td><a href="<?= base_url() ?>/admin/detail/<?= $row['admin_id']?>"><?= $row['name'] ?></a></td>
                                                 <td><a href="<?= base_url() ?>/admin/detail/<?= $row['admin_id']?>"><?= $row['contact'] ?></a></td>
                                                 <td><a href="<?= base_url() ?>/admin/detail/<?= $row['admin_id']?>"><?= $row['email'] ?></a></td>
-                                                <td><a href="<?= base_url() ?>/admin/detail/<?= $row['admin_id']?>"><?= $row['type_id'] == 1 ? 'Inspector' : 'Super Admin' ?></a></td>
 
                                                 <td><a href="<?= base_url() ?>/admin/delete/<?= $row['admin_id']?>" class="btn btn-danger delete-button" ><i class="fa fa-trash"></i> Delete</a></td>
                                             </tr>
