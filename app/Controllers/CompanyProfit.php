@@ -51,6 +51,12 @@ class CompanyProfit extends BaseController
                 'DATE(company_profit.created_date) >=' => $dateFrom,
                 'DATE(company_profit.created_date) <=' => $dateTo,
             ];
+        }else{
+
+            $where = [
+                'DATE(company_profit.created_date) >=' => $dateFrom,
+                'DATE(company_profit.created_date) <=' => $dateTo,
+            ];
         }
 
         $users_company_profit = $this->CompanyProfitModel->get_transaction('',1,[],$where);
@@ -88,6 +94,11 @@ class CompanyProfit extends BaseController
         }else if($filter_id == 2){
             $where = [
                 'company_profit_out' => 0,
+                'DATE(company_profit.created_date) >=' => $dateFrom,
+                'DATE(company_profit.created_date) <=' => $dateTo,
+            ];
+        }else{
+            $where = [
                 'DATE(company_profit.created_date) >=' => $dateFrom,
                 'DATE(company_profit.created_date) <=' => $dateTo,
             ];

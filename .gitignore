@@ -10,6 +10,7 @@
 # # OS X Thumbnails
 # ._*
 
+
 # # Windows image file caches
 # Thumbs.db
 # ehthumbs.db
@@ -50,8 +51,8 @@
 # #-------------------------
 # # Temporary Files
 # #-------------------------
-# writable/cache/*
-# !writable/cache/index.html
+writable/cache/*
+!writable/cache/index.html
 
 # writable/logs/*
 # !writable/logs/index.html

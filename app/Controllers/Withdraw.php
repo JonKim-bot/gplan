@@ -2,6 +2,7 @@
 
 
 
+
 use App\Core\BaseController;
 use App\Models\WalletModel;
 use App\Models\WalletWithdrawModel;
@@ -92,6 +93,7 @@ class Withdraw extends BaseController
 
         $balance = $this->WalletModel->get_balance($wallet_withdraw['users_id']);
         if($balance >= $wallet_withdraw['amount']){
+            
             $this->WalletModel->wallet_out(
                 $wallet_withdraw['users_id'],
                 $wallet_withdraw['amount'],
@@ -100,7 +102,8 @@ class Withdraw extends BaseController
             $this->WalletWithdrawModel->updateWhere($where, $data);
             return redirect()->to($_SERVER['HTTP_REFERER']);
         }else{
-            die("Balance not enought (need to change this alert to pop up)");
+            alert('Balance not enought');
+            locationhref(base_url().'/withdraw');
             // return redirect()->to($_SERVER['HTTP_REFERER']);
         }
     }
@@ -224,9 +227,20 @@ class Withdraw extends BaseController
 
                 $data = $this->upload_image_with_data($data, 'receipt');
                 // dd($data);
-                $this->WalletWithdrawModel->insertNew($data);
-
-                return redirect()->to($_SERVER['HTTP_REFERER']);
+                $balance = $this->WalletModel->get_balance($_POST['users_id']);
+                if(floatval($balance) >= floatval($_POST['amount'])){
+                    $this->WalletModel->wallet_out(
+                        $_POST['users_id'],
+                        $_POST['amount'],
+                        $_POST['remarks'],
+                    );
+                    $wallet_withdraw_id = $this->WalletWithdrawModel->insertNew($data);
+                    return redirect()->to($_SERVER['HTTP_REFERER']);
+                }else{
+                    alert('Balance not enought');
+                    locationhref(base_url().'/withdraw');
+                    // return redirect()->to($_SERVER['HTTP_REFERER']);
+                }
             }
         }
 

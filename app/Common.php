@@ -23,6 +23,14 @@
         die();
 
     }
+
+    function alert($message){
+        echo "<script>alert('".$message."')</script>";
+    }
+
+    function locationhref($path){
+        echo "<script>location.href='".$path."';</script>";
+    }
     function get_buyer_status($status_id){
         if($status_id == 0){
             return "Pending";

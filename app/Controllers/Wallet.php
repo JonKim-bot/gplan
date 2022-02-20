@@ -90,6 +90,11 @@ class Wallet extends BaseController
                 'DATE(wallet.created_date) >=' => $dateFrom,
                 'DATE(wallet.created_date) <=' => $dateTo,
             ];
+        }else{
+            $where = [
+                'DATE(wallet.created_date) >=' => $dateFrom,
+                'DATE(wallet.created_date) <=' => $dateTo,
+            ];
         }
 
 
@@ -116,6 +121,7 @@ class Wallet extends BaseController
 
 
             $error = false;
+
 
             if (!$error) {
 

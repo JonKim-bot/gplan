@@ -1,6 +1,7 @@
 <?php namespace App\Models;
 
 
+
 use App\Core\BaseModel;
 // use App\Models\WalletTopupModel;
 
@@ -115,7 +116,7 @@ class WalletModel extends BaseModel
             'wallet_out' => $amount,
             'balance' => $balance - $amount,
             'remarks' => $remarks,
-            'wallet_withdrawal_id' => $wallet_withdrawal_id,
+            'wallet_withdraw_id' => $wallet_withdrawal_id,
         ];
         // $users_bank = $this->users_model->get_users_bank([
         //     'users.users_id' => $users_id

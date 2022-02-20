@@ -79,6 +79,10 @@
                                                         <table class="table m-0">
                                                             <tbody>
                                                             <tr>
+                                                        <th>Total Commision</th>
+                                                        <th><?= $balance ?></th>
+                                                        </tr>
+                                                            <tr>
                                                         <th>Last Edited By</th>
                                                         <th><?= $modified_by ?></th>
                                                         </tr>
