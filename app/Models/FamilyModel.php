@@ -88,8 +88,8 @@ class FamilyModel extends BaseModel
         foreach($families[$key] as $row){
             $family = $this->db->query("SELECT * FROM family WHERE link_family_id = $row")->getResultArray();
             foreach($family as $fmy){
-                array_push($next, $fmy['user_id']);
                 $family_id = $fmy['family_id'];
+                array_push($next, $family_id);
                 $more = $this->db->query("SELECT * FROM family WHERE link_family_id = $family_id")->getResultArray();
                 if(!empty($more)){
                     $stop = false;
@@ -117,7 +117,6 @@ class FamilyModel extends BaseModel
         $existed = $this->db->query("SELECT * FROM family WHERE user_id = $new_member")->getResultArray();
         if(empty($existed)){
             $slot_family_id = $this->find_empty_slot($family_id);
-
             $new_family_id = $this->insertNew(['link_family_id' => $slot_family_id, 'user_id' => $new_member]);
             // $this->db->insert('family', );
             // $new_family_id = $this->db->insertID();
@@ -132,7 +131,6 @@ class FamilyModel extends BaseModel
         $slot_family_id = $family_id;
         foreach($result as $index => $row){ // result index = level;
             if($index != 0 && count($row) < $index * 2){  // count($result[$index]) < $index * 2 then mean level no full 
-
                 foreach($result[$index - 1] as $link){
                     $find_slot = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $link HAVING total < 2")->getResultArray();
                     if(!empty($find_slot)){
@@ -142,10 +140,11 @@ class FamilyModel extends BaseModel
                 }
             }
         }
-
-        // dd($result);
-        if($slot_family_id == $family_id && count($result) > 1){
-            $slot_family_id = $result[count($result) -1][0];
+        // double check if this slot is available
+        $slots = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $slot_family_id")->getResultArray();
+        if($slots[0]['total'] == 2){            
+            $max_key = max(array_keys($result));
+            $slot_family_id = $result[$max_key][0]; // set the last row first family_id
         }
         return $slot_family_id;
     }

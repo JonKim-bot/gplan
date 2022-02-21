@@ -225,20 +225,17 @@ class Users extends BaseController
     }
 
     public function verify_user($users_id){
+
         $where = [
             'users.users_id' => $users_id
         ];
-
         $users = $this->UsersModel->getWhere($where)[0];
 
         if($users['is_verified'] == 0){
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
-
-
             // dd($users['family_id']);
-
             $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
     
         }else{
@@ -315,7 +312,7 @@ class Users extends BaseController
 
         // foreach($users as $key => $row){
         $family_name = '';
-        // dd($key);
+        
         $upline_name = '';
         if($users['family_id'] > 0){
             $where = [
