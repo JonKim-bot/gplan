@@ -4,7 +4,7 @@
                 </main>
             </div>
             <footer class="c-footer">
-                <div><a href="#">CarLink.</a> &copy; 2020 Creative Labs.</div>
+                <div><a href="#">Gplan.</a> &copy; 2020 Creative Labs.</div>
                 <!-- <div class="ml-auto">Powered by&nbsp;<a href="#">wynndarrien</a></div> -->
             </footer>
 
@@ -22,6 +22,7 @@
            
            
    
+
            <!-- <script src="<?=base_url()?>/assets/js/core/main.js"></script> -->
    
            <script src="<?=base_url()?>/assets/js/core/permission.js"></script>
