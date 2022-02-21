@@ -282,7 +282,7 @@ class Users extends BaseController
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
         $family_id = 0;
         
-        $family = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
+        $family = $this->FamilyModel->getWhere(['family.user_id' => $users_id]);
         if(!empty($family)){
             $family_id = $family[0]['family_id'];
         }

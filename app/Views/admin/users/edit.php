@@ -39,6 +39,12 @@
                                         <?= $error; ?>
                                     </div>
                                 <?php } ?>
+
+                                <div class="form-group">
+                                    <label for="">User Name</label>
+                                    <input type="text" class="form-control" value="<?= $users['username'] ?>"  placeholder="User Name"  readonly>
+                                </div>
+
                     <div class="form-group">
                                     <label for="">Name</label>
                                     <input type="text" class="form-control" value="<?=  $users['name'] ?>" name="name" placeholder="Name" required>

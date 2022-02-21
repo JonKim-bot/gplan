@@ -29,6 +29,7 @@ class Withdraw extends BaseController
         $field = $this->WalletWithdrawModel->get_field([
             'created_by',
             'users_id',
+
             'modified_by',
             'deleted',
         ]);
@@ -93,21 +94,22 @@ class Withdraw extends BaseController
 
         $remarks = "Withdrawal on user " . $wallet_withdraw['name'];
 
-        $balance = $this->WalletModel->get_balance($wallet_withdraw['users_id']);
-        if($balance >= $wallet_withdraw['amount']){
+
+        // $balance = $this->WalletModel->get_balance($wallet_withdraw['users_id']);
+        // if($balance >= $wallet_withdraw['amount']){
             
-            $this->WalletModel->wallet_out(
-                $wallet_withdraw['users_id'],
-                $wallet_withdraw['amount'],
-                $remarks,
-            );
+            // $this->WalletModel->wallet_out(
+            //     $wallet_withdraw['users_id'],
+            //     $wallet_withdraw['amount'],
+            //     $remarks,
+            // );
             $this->WalletWithdrawModel->updateWhere($where, $data);
             return redirect()->to($_SERVER['HTTP_REFERER']);
-        }else{
-            alert('Balance not enought');
-            locationhref(base_url().'/withdraw');
-            // return redirect()->to($_SERVER['HTTP_REFERER']);
-        }
+        // }else{
+        //     alert('Balance not enought');
+        //     locationhref(base_url().'/withdraw');
+        //     // return redirect()->to($_SERVER['HTTP_REFERER']);
+        // }
     }
     public function change_status($wallet_withdraw_id)
     {
@@ -240,7 +242,7 @@ class Withdraw extends BaseController
                         $_POST['remarks'],
                     );
                     $wallet_withdraw_id = $this->WalletWithdrawModel->insertNew($data);
-                    return redirect()->to($_SERVER['HTTP_REFERER']);
+                    return redirect()->to(base_url('withdraw/detail/' . $wallet_withdraw_id, 'refresh'));
                 }else{
                     alert('Balance not enought');
                     locationhref(base_url().'/withdraw');
