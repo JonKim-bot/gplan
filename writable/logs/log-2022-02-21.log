@@ -197,3 +197,19 @@ CRITICAL - 2022-02-21 14:52:22 --> Table 'gplan.admin_log' doesn't exist
 #8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #10 {main}
+CRITICAL - 2022-02-21 15:00:41 --> Undefined variable: where
+#0 D:\www\gplan\app\Models\FamilyModel.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 28, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(143): App\Models\FamilyModel->getAll()
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->add()
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-21 15:00:48 --> Undefined variable: where
+#0 D:\www\gplan\app\Models\FamilyModel.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 28, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(143): App\Models\FamilyModel->getAll()
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->add()
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

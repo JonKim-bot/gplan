@@ -18,6 +18,34 @@ class FamilyModel extends BaseModel
 
     }
 
+
+        
+    function getAll($limit = "", $page = 1, $filter = array()){
+        $this->builder = $this->db->table($this->tableName);
+        $this->builder->select($this->tableName . '.*,users.name');
+        //sample_to_replace
+        $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
+        $this->builder->where($this->tableName . '.deleted',0);
+        $this->builder->orderBy($this->tableName . '.user_id','DESC');
+
+        if ($limit != '') {
+            $count = $this->getCount($filter);
+            // die($this->builder->getCompiledSelect(false));
+
+            $offset = ($page - 1) * $limit;
+            $pages = $count / $limit;
+            $pages = ceil($pages);
+            $pagination = $this->getPaging($limit, $offset, $page, $pages, $filter,$this->builder);
+            
+            return $pagination;
+
+        }
+        $query = $this->builder->get();
+        return $query->getResultArray();
+
+    }
+
+
     
     function getWhere($where,$limit = "", $page = 1, $filter = array()){
         $this->builder = $this->db->table($this->tableName);
@@ -43,7 +71,6 @@ class FamilyModel extends BaseModel
         $query = $this->builder->get();
         return $query->getResultArray();
 
-
     }
 
     public function user_family($family_id){
@@ -52,6 +79,7 @@ class FamilyModel extends BaseModel
         // $this->debug($result);
     }
 
+    
     public function recursive_users($families){
         $key = array_key_last($families);
         $next = array();

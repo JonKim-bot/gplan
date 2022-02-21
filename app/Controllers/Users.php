@@ -140,7 +140,7 @@ class Users extends BaseController
             }
         }
 
-        $this->pageData['users'] = $this->UsersModel->get_family_user();
+        $this->pageData['users'] = $this->FamilyModel->getAll();
 
         echo view('admin/header', $this->pageData);
         echo view('admin/users/add');
@@ -181,6 +181,7 @@ class Users extends BaseController
             'users.users_id' => $users_id
         ];
         $users = $this->UsersModel->getWhere($where)[0];
+
         if($users['is_verified'] == 0){
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
