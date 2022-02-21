@@ -3,6 +3,7 @@
 
 
 
+
 <html lang="en">
     <head>
         <!-- <base href="./"> -->
@@ -70,7 +71,7 @@
     ? 'c-active'
     : null ?>" href="<?= base_url('Users') ?>">
 <i class="cil-people c-sidebar-nav-icon"></i>
-Users
+Registration
 <span class="badge badge-pill badge-warning"><?= $undone_user ?></span>
 
 </a>
