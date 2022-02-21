@@ -85,7 +85,7 @@ class Access extends BaseController
                 return redirect()->to(base_url('users/detail/1', 'refresh'));
             }
         }
-        
+
 
         echo view('access/header', $this->pageData);
         echo view('access/login_user');
@@ -175,7 +175,13 @@ class Access extends BaseController
                 $session->set('login_data', $login_data);
                 $session->set('login_id', $login_id);
 
-                return redirect()->to(base_url('admin', 'refresh'));
+                if($type_id == 1){
+                    return redirect()->to(base_url('users/detail/1', 'refresh'));
+
+                }else{
+
+                    return redirect()->to(base_url('admin', 'refresh'));
+                }
             }
         }
 
@@ -188,6 +194,7 @@ class Access extends BaseController
 
     {
         $session = session();
+
 
         $session->destroy();
         // if (session()->get('login_data')['type_id'] == '0') { 

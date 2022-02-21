@@ -63,13 +63,7 @@
                         </div>
                         <div class="card-body">
                             <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url() . "/main/add/" . $family_id; ?>">
-                                <!-- <div class="form-group">
-                                <label for="">Profile Picture</label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                                </div>
-                            </div> -->
+                                
                                 <?php if (isset($error)) { ?>
                                     <div class="alert-message" role="alert">
                                         <?= $error; ?>
@@ -84,13 +78,14 @@
                                     <label for="">User Name</label>
                                     <input type="text" class="form-control" name="username" placeholder="User Name" required>
                                 </div>
-                                
+
 
                                 <div class="form-group">
                                     <label for="">Password</label>
                                     <input type="password" class="form-control" name="password" placeholder="Password" required>
                                 </div>
                                 <div class="form-group">
+                                    
                                     <label for="">Confirm Password</label>
                                     <input type="password" class="form-control" name="password2" placeholder="Confirm Password" required>
                                 </div>
@@ -102,6 +97,15 @@
                                     <label for="">Email</label>
                                     <input type="email" class="form-control" name="email" placeholder="Email" required>
                                 </div>
+
+                                <div class="form-group">
+                                <label for="">Receipt</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile02" name="receipt">
+                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                </div>
+                            </div>
+
                                 <!-- <div class="form-group">
                                     <label for="">Nric</label>
                                     <input type="text" name="nric" class="form-control" >

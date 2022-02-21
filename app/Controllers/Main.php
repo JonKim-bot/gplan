@@ -104,7 +104,7 @@ class Main extends BaseController
                     'salt' => $hash['salt'],
                     // 'created_by'    => $this->session->userdata('login_id')
                 ];
-                $data = $this->upload_image_with_data($data, 'nric_front');
+                $data = $this->upload_image_with_data($data, 'receipt');
 
                 $data = $this->upload_image_with_data($data, 'nric_back');
               
@@ -171,6 +171,8 @@ class Main extends BaseController
             $is_verified = 0;
         }
         $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
+
+
 
         return redirect()->to($_SERVER['HTTP_REFERER']);
 

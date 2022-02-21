@@ -27,6 +27,7 @@
             'assets/plugins/select2/select2.css'
         ) ?>">
 
+
             <link href="<?= base_url() ?>/assets/plugins/chartjs/css/chartjs.css" rel="stylesheet">
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
@@ -167,7 +168,7 @@ Admin
     : null ?>" href="<?= base_url('Withdraw') ?>">
 <i class="cil-storage c-sidebar-nav-icon"></i>
 Withdrawal
-<span class="badge badge-pill badge-warning"><?= $undone_withdraw ?></span>
+<span class="badge badge-pill badge-warning"></span>
 
 </a>
 </li>
