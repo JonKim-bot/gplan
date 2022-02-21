@@ -106,7 +106,8 @@ class Access extends BaseController
             ];
 
             $admin = $this->AdminModel->getWhere($where);
-            // $user = $this->UsernModel->getWhere($where);
+            
+            $user = $this->UsersModel->getWhere($where);
             // dd($admin);
             if (!empty($admin)) {
                 $login = $this->AdminModel->login(
@@ -117,6 +118,8 @@ class Access extends BaseController
                 if (!empty($login)) {
                     $login_data = $login[0];
                     $login_id = $login[0]['admin_id'];
+                    $type_id = 0;
+
                 } else {
                     $error = true;
                     $this->pageData['error'] = 'Invalid Username and Password';
@@ -131,9 +134,32 @@ class Access extends BaseController
                     $this->pageData["error"] = "Invalid Username and Password";
 
                 }
-            } */ else {
+            } */ else if(!empty($user)){
+
+
+
+                $login = $this->UsersModel->login(
+                    $input['username'],
+                    $input['password']
+                );
+
+                if (!empty($login)) {
+                    $login_data = $login[0];
+                    $login_id = $login[0]['users_id'];
+
+                    $type_id = 1;
+                } else {
+                    $error = true;
+                    $this->pageData['error'] = 'Invalid Username and Password';
+                }
+
+
+
+            }else{
                 $error = true;
                 $this->pageData['error'] = 'Invalid Username and Password';
+
+                
             }
 
             if (!empty($login_data) and $login_data['deleted'] == 1) {
@@ -143,7 +169,7 @@ class Access extends BaseController
 
             // dd($login_data);
             if (!$error) {
-                $login_data['type_id'] = 0;
+                $login_data['type_id'] = $type_id;
 
                 $session->set('login_data', $login_data);
                 $session->set('login_id', $login_id);
@@ -158,17 +184,18 @@ class Access extends BaseController
     }
 
     public function logout()
+
     {
         $session = session();
 
         $session->destroy();
-        if (session()->get('login_data')['type_id'] == '0') { 
+        // if (session()->get('login_data')['type_id'] == '0') { 
             return redirect()->to(base_url('access/login', 'refresh'));
 
-        }else{
+        // }else{
             
-            return redirect()->to(base_url('access/loginUser', 'refresh'));
-        }
+        //     return redirect()->to(base_url('access/loginUser', 'refresh'));
+        // }
 
 
     }

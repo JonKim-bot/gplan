@@ -29,6 +29,7 @@ class BaseModel extends Model
 
         // $session = \Config\Services::session();
         $session = session();
+        
         $uri = service('uri');
 
         $this->builder = $this->db->table($this->tableName);

@@ -38,3 +38,10 @@ CRITICAL - 2022-02-21 13:59:11 --> Trying to access array offset on value of typ
 #6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-02-21 14:11:40 --> Undefined property: App\Controllers\Access::$UserModel
+#0 D:\www\gplan\app\Controllers\Access.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\www\\gplan\\ap...', 140, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Access->login()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Access))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
