@@ -29,6 +29,8 @@
 
             <link href="<?= base_url() ?>/assets/plugins/chartjs/css/chartjs.css" rel="stylesheet">
 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
 
 
@@ -98,7 +100,7 @@ Withdrawal
                     'Wallet'
                         ? 'c-active'
                         : null ?>" href="<?= base_url('Wallet') ?>">
-                    <i class="cil-money c-sidebar-nav-icon"></i>
+                    <i class="cil-money  c-sidebar-nav-icon"></i>
                     Transaction
 
                     </a>

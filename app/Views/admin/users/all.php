@@ -38,8 +38,8 @@
                                 <label for="" class="c-label">User Type</label>
                                 <select class="form-control filter" name="is_verified">
                                     <option value="99">All</option>
-                                    <option value="1" >Verified</option>
-                                    <option value="0">Not Verified</option>
+                                    <option value="1"  <?= isset($_GET['is_verified']) && $_GET['is_verified'] == 1 ? 'selected' : ''  ?>>Verified</option>
+                                    <option value="0"  <?= isset($_GET['is_verified']) && $_GET['is_verified'] == 0 ? 'selected' : ''  ?>>Not Verified</option>
 
                                 </select>
                             </div>

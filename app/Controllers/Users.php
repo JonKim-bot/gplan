@@ -71,8 +71,7 @@ class Users extends BaseController
             $users,
             'users',
             'banner'
-            );
-
+        );
     
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
@@ -368,6 +367,7 @@ class Users extends BaseController
 
             $user_id = session()->get('login_id');
         }
+
 
 
         $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
