@@ -87,8 +87,17 @@ class Users extends BaseController
 
             if ($input['password'] != $input['password2']) {
                 $error = true;
-                $this->page_data['error'] = 'Passwords do not match';
-                $this->page_data['input'] = $input;
+                $this->pageData['error'] = 'Passwords do not match';
+                $this->pageData['input'] = $input;
+            }
+
+
+
+            $existed = $this->checkExists($input['contact']);
+            if($existed){
+                $error = true;
+                $this->pageData['error'] = 'Contact already existed';
+                $this->pageData['input'] = $input;
             }
 
             if (!$error) {
@@ -118,8 +127,9 @@ class Users extends BaseController
 
                 // $this->FamilyModel->insert_new_member($users_id,$_POST['family_id']);
                 
+                return redirect()->to(base_url('users/detail/' . $users_id, 'refresh'));
 
-                return redirect()->to($_SERVER['HTTP_REFERER']);
+                // return redirect()->to($_SERVER['HTTP_REFERER']);
             } else {
                 $this->page_data['error'] = 'Failed to add user data';
             }
@@ -459,7 +469,8 @@ class Users extends BaseController
         foreach($main_topics as $k_main_topics => $v_main_topics )
         {
             // dd($v_main_topics);
-            $list .= '<li>'.$v_main_topics['username']  . " - ". $v_main_topics['name'] .  $this->createListLi(isset($v_main_topics["children"]) ? $v_main_topics["children"] : null,$count++) . '</li>' ;
+            $list .= '<li>'.$v_main_topics['username']  . " 
+            - ". $v_main_topics['name'] .  $this->createListLi(isset($v_main_topics["children"]) ? $v_main_topics["children"] : null,$count++) . '</li>' ;
 
 
         }
