@@ -29,7 +29,7 @@ class BaseModel extends Model
 
         // $session = \Config\Services::session();
         $session = session();
-        
+
         $uri = service('uri');
 
         $this->builder = $this->db->table($this->tableName);
@@ -1280,6 +1280,7 @@ class BaseModel extends Model
     {
         $this->builder = $this->db->table($this->tableName);
         $this->builder->where($where);
+
         $this->builder->update($data);
         // $this->insert_where_log('update', $where);
     }
@@ -1306,7 +1307,8 @@ class BaseModel extends Model
 
         $this->builder->where($this->primaryKey, $primaryKey);
         $this->builder->update($data);
-        $this->insert_log('soft delete', $primaryKey);
+
+        // $this->insert_log('soft delete', $primaryKey);
     }
 
     public function hardDelete($primaryKey)
@@ -1314,7 +1316,7 @@ class BaseModel extends Model
         $this->builder = $this->db->table($this->tableName);
 
         $this->builder->where($this->primaryKey, $primaryKey);
-        $this->insert_log('hard_delete', $primaryKey);
+        // $this->insert_log('hard_delete', $primaryKey);
 
         $this->builder->delete();
     }

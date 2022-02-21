@@ -173,3 +173,27 @@ CRITICAL - 2022-02-21 14:18:45 --> Undefined variable: row
 #6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-02-21 14:52:17 --> Table 'gplan.users_log' doesn't exist
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `us...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\www\gplan\app\Core\BaseModel.php(1776): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...')
+#4 D:\www\gplan\app\Core\BaseModel.php(1309): App\Core\BaseModel->insert_log('soft delete', '2')
+#5 D:\www\gplan\app\Controllers\Users.php(376): App\Core\BaseModel->softDelete('2')
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->delete('2')
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-21 14:52:22 --> Table 'gplan.admin_log' doesn't exist
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `ad...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 D:\www\gplan\app\Core\BaseModel.php(1776): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...')
+#4 D:\www\gplan\app\Core\BaseModel.php(1309): App\Core\BaseModel->insert_log('soft delete', '2')
+#5 D:\www\gplan\app\Controllers\Admin.php(222): App\Core\BaseModel->softDelete('2')
+#6 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Admin->delete('2')
+#7 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}

@@ -115,6 +115,20 @@
         }
     });
         
+
+        
+    $(document).on("click", ".delete-button", function (e) {
+        e.preventDefault();
+
+        var delete_record = confirm("Are you sure you want to delete this record?");
+        var path = $(this).attr("href");
+
+        if (delete_record === true) {
+            window.location.replace(path);
+        }
+    });
+        
+        
 </script>
 
 
