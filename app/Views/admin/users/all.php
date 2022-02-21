@@ -60,7 +60,10 @@
                                                 <th data-filter="usersname">Contact</th>
                                                 <th data-filter="email">Email</th>
                                                 <th data-filter="email">Referral Name</th>
+                                                <th data-filter="email">Upline Name</th>
+
                                                 <th data-filter="email">Family Tree</th>
+
 
                                                 <th>Verify Status</th>
 
@@ -81,7 +84,8 @@
 
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['contact'] ?></a></td>
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['email'] ?></a></td>
-                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_family_id'] ?>"><?= $row['family_name'] ?></a></td>
+                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['family_name'] ?></a></td>
+                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['upline_name'] ?></a></td>
 
                                                     <td>
                                                     <?php if($row['is_verified'] == 0){ ?>

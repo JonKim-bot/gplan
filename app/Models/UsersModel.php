@@ -74,7 +74,7 @@ class UsersModel extends BaseModel{
 
     function getAll($limit = "", $page = 1, $filter = array()){
         $this->builder = $this->db->table($this->tableName);
-        $this->builder->select($this->tableName . '.*,users.users_id,(SELECT username FROM users WHERE users_id = users.family_id) as family_name');
+        $this->builder->select($this->tableName . '.*,users.users_id,(SELECT username FROM users WHERE users_id = (SELECT users_id FROM family WHERE family.family_id = users.family_id)) as family_name');
         //sample_to_replace
         $this->builder->where($this->tableName . '.deleted',0);
         $this->builder->orderBy($this->tableName . '.users_id','DESC');
@@ -94,7 +94,12 @@ class UsersModel extends BaseModel{
     }
     function getWhere($where,$limit = "", $page = 1, $filter = array()){
         $this->builder = $this->db->table($this->tableName);
-        $this->builder->select($this->tableName . '.*,users.family_id as fid,(SELECT name FROM users WHERE users_id = fid) as family_name,
+        // -- (SELECT name FROM users WHERE users_id = (SELECT user_id FROM family WHERE family.family_id = fid)) as family_name,
+
+        $this->builder->select($this->tableName . '.*,users.family_id as fid,
+        
+
+
         (SELECT users_id FROM users WHERE users_id = fid) as users_family_id
         
         ');

@@ -229,3 +229,80 @@ CRITICAL - 2022-02-21 15:41:20 --> Undefined offset: 0
 #4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2022-02-21 16:02:35 --> Undefined offset: 0
+#0 D:\www\gplan\app\Controllers\Users.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 84, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-21 16:02:35 --> Undefined offset: 0
+#0 D:\www\gplan\app\Controllers\Users.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 84, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-21 16:02:36 --> Undefined offset: 0
+#0 D:\www\gplan\app\Controllers\Users.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 84, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-21 16:02:36 --> Undefined offset: 0
+#0 D:\www\gplan\app\Controllers\Users.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 84, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-21 16:02:36 --> Undefined offset: 0
+#0 D:\www\gplan\app\Controllers\Users.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 84, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-21 16:02:36 --> Undefined offset: 0
+#0 D:\www\gplan\app\Controllers\Users.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 84, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-21 16:02:37 --> Undefined offset: 0
+#0 D:\www\gplan\app\Controllers\Users.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 84, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-21 16:03:02 --> Undefined index: family_name
+#0 D:\www\gplan\app\Views\admin\users\all.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 84, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/all', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(97): view('admin/users/all')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 16:03:03 --> Undefined index: family_name
+#0 D:\www\gplan\app\Views\admin\users\all.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 84, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/all', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(97): view('admin/users/all')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 16:05:28 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(527): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 527, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(461): App\Controllers\Users->createListLi(Array)
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('9')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
