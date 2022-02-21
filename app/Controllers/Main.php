@@ -87,6 +87,7 @@ class Main extends BaseController
                 $this->pageData['input'] = $input;
             }
             if (!$error) {
+
                 $hash = $this->hash($input['password']);
                 $input['contact'] = $this->format_contact($input['contact']);
 
@@ -118,7 +119,7 @@ class Main extends BaseController
                 $this->page_data['error'] = 'Failed to add user data';
             }
         }
-        $this->pageData['users'] = $this->UsersModel->get_family_user();
+        $this->pageData['users'] = $this->FamilyModel->getAll();
 
         $this->pageData['family_id'] = $family_id;
 
