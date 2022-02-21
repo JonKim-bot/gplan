@@ -93,7 +93,7 @@ class Main extends BaseController
                 $data = [
                     'name' => $input['name'],
                     'email' => $input['email'],
-                    'username' => $input['contact'],
+                    'username' => $input['username'],
                     'contact' => $input['contact'],
                     'password' => $hash['password'],
                     // 'nric_name' => $input['nric_name'],
@@ -105,6 +105,7 @@ class Main extends BaseController
                     // 'created_by'    => $this->session->userdata('login_id')
                 ];
                 $data = $this->upload_image_with_data($data, 'receipt');
+
 
                 $data = $this->upload_image_with_data($data, 'nric_back');
               

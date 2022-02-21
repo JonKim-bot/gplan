@@ -71,6 +71,7 @@ class Access extends BaseController
             }
 
             if (!empty($login_data) and $login_data['is_verified'] == 0) {
+
                 $error = true;
                 $this->pagedata['error'] = 'This Account has not been VERIFIED yet';
             }
@@ -165,9 +166,18 @@ class Access extends BaseController
 
             if (!empty($login_data) and $login_data['deleted'] == 1) {
                 $error = true;
-                $this->pagedata['error'] = 'This Account has been DEACTIVATED';
+                $this->pageData['error'] = 'This Account has been DEACTIVATED';
             }
 
+
+            if($type_id == 1){
+                if (!empty($login_data) and $login_data['is_verified'] == 0) {
+                
+                    $error = true;
+                    $this->pageData['error'] = 'This Account has not been VERIFIED yet';
+                }
+    
+            }
             // dd($login_data);
             if (!$error) {
                 $login_data['type_id'] = $type_id;
@@ -181,6 +191,7 @@ class Access extends BaseController
                 }else{
 
                     return redirect()->to(base_url('admin', 'refresh'));
+
                 }
             }
         }

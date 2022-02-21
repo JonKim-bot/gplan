@@ -123,6 +123,7 @@ class Users extends BaseController
                 ];
                 $data = $this->upload_image_with_data($data, 'nric_front');
                 $data = $this->upload_image_with_data($data, 'nric_back');
+                
               
                 $users_id = $this->UsersModel->insertNew($data);
 
@@ -352,7 +353,7 @@ class Users extends BaseController
             }
         }
 
-        
+
         // $this->pageData['form'] = $this->UsersModel->generate_edit_input($users_id);
         $this->pageData[
             'final_form'

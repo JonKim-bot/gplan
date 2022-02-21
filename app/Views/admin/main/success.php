@@ -38,7 +38,7 @@
 
 	<footer class="site-footer" id="footer" style="padding-top:50px">
     <p class="lead">
-    <a class="btn btn-primary btn-sm text-white" href="<?= base_url() ?>/access/loginUser" role="button">Continue to login</a>
+    <a class="btn btn-primary btn-sm text-white" href="<?= base_url() ?>/access/login" role="button">Continue to login</a>
   </p>	</footer>
 </body>
 </html>
