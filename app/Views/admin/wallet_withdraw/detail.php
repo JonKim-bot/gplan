@@ -23,13 +23,13 @@
                                 <a class="card-header-action">
                                     <i class="cil-arrow-circle-top c-icon minimize-card"></i>
                                 </a>
-                                <a class="card-header-action" href="<?php echo site_url(
+                                <!-- <a class="card-header-action" href="<?php echo site_url(
                                                                         'WalletWithdraw/edit'
                                                                     ) .
-                                                                        '/' .
+                                                                    '/' .
                                                                         $wallet_withdraw['wallet_withdraw_id']; ?>">
                                     <button class="btn btn-warning"><i class="cil-pencil c-icon"></i>Edit</button></i>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                         <div class="c-card-body">

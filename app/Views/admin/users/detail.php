@@ -18,7 +18,7 @@
 
         <div class="fade-in">
             <div class="row">
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <div class="card">
                         <div class="c-card-header">
                             Status
@@ -46,7 +46,6 @@
                                                             <a  class="btn btn-primary text-white">Verified</a>
 
                                                         <?php } ?>
-                                                        <!-- <img src="" width="200" class="img-fluid d-block m-auto" alt=""> -->
                                                     </div>
                                                 <?php } ?>
 
@@ -61,7 +60,6 @@
                                                     <a  class="btn btn-primary text-white">Verified</a>
 
                                                 <?php } ?>
-                                                <!-- <img src="" width="200" class="img-fluid d-block m-auto" alt=""> -->
                                             </div>
                                             <?php } ?>
 
@@ -72,7 +70,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-6">
                     <div class="card">
                         <div class="c-card-header">
@@ -105,6 +103,38 @@
                                                         <th>Balance : </th>
                                                         <th><?= $balance ?></th>
                                                         </tr> -->
+
+                                                        <tr>
+
+                                                        <th>
+                                                            Status
+                                                        </th>
+                                                        <td>
+
+                                                            <?php if (session()->get('login_data')['type_id'] == '0') {  ?>
+            
+                                                                    <?php if($users['is_verified'] == 0){ ?>
+            
+                                                                        <a href="<?= base_url() ?>/Users/verify_user/<?= $users['users_id'] ?>" class="btn btn-<?= $users['is_verified'] == 1 ? "success" : "asd" ?>"><?= $users['is_verified'] == 1 ? "Verified" : "Not verified" ?></a>
+                                                                    <?php }else{ ?>
+                                                                        <a  class="btn btn-primary text-white">Verified</a>
+            
+                                                                    <?php } ?>
+                                                            <?php } ?>
+                                                            <?php if (session()->get('login_data')['type_id'] == '1') {  ?>
+    
+                                                                <?php if($users['is_verified'] == 0){ ?>
+    
+                                                                    <a  class="btn btn-danger text-white">Not Verified</a>
+                                                                <?php }else{ ?>
+                                                                    <a  class="btn btn-primary text-white">Verified</a>
+    
+                                                                <?php } ?>
+                                                            <?php } ?>
+                                                        </td>
+
+
+                                                        </tr>
                                                             <tr>
                                                         <th>Last Edited By</th>
                                                         <th><?= $modified_by ?></th>
@@ -112,7 +142,16 @@
 
                                                             <tr>
                                                         <th>Family Tree</th>
-                                                        <th><a class="btn btn-primary" target="_blank" href="<?= base_url() ?>/users/tree/<?= $users['users_id'] ?>">View Tree</a></th>
+
+                                                        <?php if($users['is_verified'] == 0){ ?>
+                                                        
+                                                        <th><a>Don Have Family Yet</a></th>
+
+                                                        <?php }else{ ?>
+
+                                                            <th><a class="btn btn-primary" target="_blank" href="<?= base_url() ?>/users/tree/<?= $users['users_id'] ?>">View Tree</a></th>
+                                                    <?php } ?>
+                                                    
                                                         </tr>
 
 
@@ -161,6 +200,7 @@
                                                                         <div class="row">
                                                                             <div class="col-lg-12 col-xl-12">
                                                                                 <a target="_blank" href="<?= base_url() . $users['nric_front'] ?>">
+
                                                                                     <img src="<?= base_url(). $users['nric_front'] ?>" width="200" class="img-fluid d-block m-auto" alt="">
                                                                                 </a>
                                                                             </div>

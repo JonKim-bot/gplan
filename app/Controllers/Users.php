@@ -61,6 +61,7 @@ class Users extends BaseController
 
         $this->pageData['users_count'] = $users_count;
         // dd($users);
+        
         $field = $this->UsersModel->get_field([
             'created_by',
             'modified_by',
@@ -123,6 +124,7 @@ class Users extends BaseController
                 $data = $this->upload_image_with_data($data, 'nric_back');
               
                 $users_id = $this->UsersModel->insertNew($data);
+
                 
 
                 // $this->FamilyModel->insert_new_member($users_id,$_POST['family_id']);
@@ -383,6 +385,8 @@ class Users extends BaseController
 
         $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
 
+        // dd($users_1);
+
         $user = $this->FamilyModel->getTree($user_id);
 
 
@@ -401,7 +405,6 @@ class Users extends BaseController
 
         $tree = $users_1;
 
-        
         
         // dd($tree);
         $ulli = $this->createListLi($tree);

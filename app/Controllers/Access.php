@@ -85,6 +85,7 @@ class Access extends BaseController
                 return redirect()->to(base_url('users/detail/1', 'refresh'));
             }
         }
+        
 
         echo view('access/header', $this->pageData);
         echo view('access/login_user');

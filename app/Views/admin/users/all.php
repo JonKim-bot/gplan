@@ -84,9 +84,13 @@
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_family_id'] ?>"><?= $row['family_name'] ?></a></td>
 
                                                     <td>
+                                                    <?php if($row['is_verified'] == 0){ ?>
+                                                        <a>Don Have Family Yet</a>
 
-                                                    <a class="btn btn-primary" target="_blank" href="<?= base_url() ?>/users/tree/<?= $row['users_id'] ?>">View Tree</a>
+                                                        <?php }else{ ?>
+                                                            <a class="btn btn-primary" target="_blank" href="<?= base_url() ?>/users/tree/<?= $row['users_id'] ?>">View Tree</a>
 
+                                                    <?php } ?>
                                                     </td>
                                                     <?php if($row['is_verified'] == 0){ ?>
                                                     <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>

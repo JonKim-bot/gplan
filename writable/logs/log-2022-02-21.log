@@ -45,3 +45,131 @@ CRITICAL - 2022-02-21 14:11:40 --> Undefined property: App\Controllers\Access::$
 #3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-02-21 14:15:46 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(472): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 472, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(407): App\Controllers\Users->createListLi(Array)
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('5')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-21 14:15:49 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(472): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 472, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(407): App\Controllers\Users->createListLi(Array)
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('5')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-21 14:16:06 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(472): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 472, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(407): App\Controllers\Users->createListLi(Array)
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('5')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-21 14:18:05 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(474): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 474, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(409): App\Controllers\Users->createListLi(Array)
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('5')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-21 14:18:06 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(474): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 474, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(409): App\Controllers\Users->createListLi(Array)
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('5')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-21 14:18:06 --> Undefined index: username
+#0 D:\www\gplan\app\Controllers\Users.php(474): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 474, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(409): App\Controllers\Users->createListLi(Array)
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('5')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-21 14:18:20 --> Undefined variable: row
+#0 D:\www\gplan\app\Views\admin\users\detail.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 116, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(277): view('admin/users/det...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->detail('2')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 14:18:44 --> Undefined variable: row
+#0 D:\www\gplan\app\Views\admin\users\detail.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 121, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(277): view('admin/users/det...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->detail('2')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 14:18:44 --> Undefined variable: row
+#0 D:\www\gplan\app\Views\admin\users\detail.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 121, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(277): view('admin/users/det...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->detail('2')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 14:18:44 --> Undefined variable: row
+#0 D:\www\gplan\app\Views\admin\users\detail.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 121, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(277): view('admin/users/det...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->detail('2')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 14:18:44 --> Undefined variable: row
+#0 D:\www\gplan\app\Views\admin\users\detail.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 121, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(277): view('admin/users/det...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->detail('2')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 14:18:45 --> Undefined variable: row
+#0 D:\www\gplan\app\Views\admin\users\detail.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 121, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(277): view('admin/users/det...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->detail('2')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 14:18:45 --> Undefined variable: row
+#0 D:\www\gplan\app\Views\admin\users\detail.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 121, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(277): view('admin/users/det...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->detail('2')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 14:18:45 --> Undefined variable: row
+#0 D:\www\gplan\app\Views\admin\users\detail.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 121, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/det...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(277): view('admin/users/det...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->detail('2')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
