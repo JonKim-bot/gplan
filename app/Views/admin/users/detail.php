@@ -50,9 +50,7 @@
                                                                                 <th>
                     
                                                                                 <div class="c-cardbody">
-                                    <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?= base_url() ?>/main/add/<?= $users[
-    'family_id'
-] ?>&choe=UTF-8" 
+                                    <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?= base_url() ?>/main/add/<?= $family_id ?>&choe=UTF-8" 
                                     style="margin: auto; border: 3px solid green; padding: 10px;display: block; margin-left: auto; margin-right: auto;">
                                     </div>
                     
@@ -267,6 +265,7 @@
                                                                                         'nric_back'
                                                                                     ] ?>" width="200" class="img-fluid d-block m-auto" alt="">
                                                                                 </a>
+
 
                                                                             </div>
                                                                         </div>

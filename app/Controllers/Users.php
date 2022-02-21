@@ -142,6 +142,7 @@ class Users extends BaseController
 
         $this->pageData['users'] = $this->FamilyModel->getAll();
 
+
         echo view('admin/header', $this->pageData);
         echo view('admin/users/add');
         echo view('admin/footer');
@@ -279,7 +280,13 @@ class Users extends BaseController
 
         $this->pageData['wallet'] = $users_wallet;
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
-
+        $family_id = 0;
+        
+        $family = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
+        if(!empty($family)){
+            $family_id = $family[0]['family_id'];
+        }
+        $this->pageData['family_id'] = $family_id ;
 
         echo view('admin/header', $this->pageData);
         echo view('admin/users/detail');
@@ -380,6 +387,7 @@ class Users extends BaseController
         $this->UsersModel->softDelete($users_id);
         // dd('asd');
         return redirect()->to($_SERVER['HTTP_REFERER']);
+
     }
 
 
