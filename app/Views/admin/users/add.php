@@ -51,7 +51,7 @@
                                     <select name="family_id" id="" class="form-control">
                                             <option value="0">None</option>
                                             <?php foreach($users as $row){ ?>
-                                                <option value="<?= $row['family_id'] ?>"><?= $row['name'] ?></option>
+                                                <option value="<?= $row['family_id'] ?>"><?= $row['family_id'] ?> <?= $row['name'] ?></option>
 
 
                                             <?php } ?>
@@ -87,7 +87,7 @@
                                     <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
                                 </div>
                             </div>
-                            
+
                                 <!-- <div class="form-group">
                                     <label for="">Nric</label>
                                     <input type="text" name="nric" class="form-control" >

@@ -72,10 +72,10 @@ class Users extends BaseController
             $field,
             $users,
             'users',
-
             'banner'
         );
-    
+
+        
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
         echo view('admin/users/all');
@@ -438,8 +438,8 @@ class Users extends BaseController
         $users_1[0]['children'] = $tree;
 
         $tree = $users_1;
-
         
+
         // dd($tree);
         $ulli = $this->createListLi($tree);
         
@@ -506,7 +506,7 @@ class Users extends BaseController
         foreach($main_topics as $k_main_topics => $v_main_topics )
         {
             // dd($v_main_topics);
-            
+
             $list .= '<li>'.$v_main_topics['username']  . " 
             - ". $v_main_topics['name'] .  $this->createListLi(isset($v_main_topics["children"]) ? $v_main_topics["children"] : null,$count++) . '</li>' ;
 
