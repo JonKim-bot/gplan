@@ -1,0 +1,40 @@
+CRITICAL - 2022-02-21 13:59:10 --> Trying to access array offset on value of type null
+#0 D:\www\gplan\app\Views\admin\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\gplan\\ap...', 59, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\gplan\app\Controllers\Withdraw.php(160): view('admin/header', Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->detail('1')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 13:59:10 --> Trying to access array offset on value of type null
+#0 D:\www\gplan\app\Views\admin\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\gplan\\ap...', 59, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\gplan\app\Controllers\Withdraw.php(162): view('admin/header', Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->detail('1')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 13:59:10 --> Trying to access array offset on value of type null
+#0 D:\www\gplan\app\Views\admin\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\gplan\\ap...', 59, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\gplan\app\Controllers\Withdraw.php(162): view('admin/header', Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->detail('1')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-21 13:59:11 --> Trying to access array offset on value of type null
+#0 D:\www\gplan\app\Views\admin\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\gplan\\ap...', 59, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 D:\www\gplan\app\Controllers\Withdraw.php(162): view('admin/header', Array)
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->detail('1')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

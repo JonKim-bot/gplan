@@ -40,7 +40,7 @@
                                         <thead>
                                             <tr role="row">
                                                 <th>No.</th>
-                                                <th data-filter="name">User ID</th>
+                                                <!-- <th data-filter="name">User ID</th> -->
 
                                                 <th data-filter="name">User Name</th>
                                                 <th data-sort="" data-filter="">Amount Withdraw</th>
@@ -62,7 +62,7 @@
                                             ?>
                                                 <tr>
                                                     <td><a href="<?= base_url() ?>/Withdraw/detail/<?= $row['wallet_withdraw_id'] ?>"><?= $i ?></a></td>
-                                                    <td><a href="<?= base_url() ?>/Withdraw/detail/<?= $row['wallet_withdraw_id'] ?>"><?= $row['users_id'] ?></a></td>
+                                                    <!-- <td><a href="<?= base_url() ?>/Withdraw/detail/<?= $row['wallet_withdraw_id'] ?>"><?= $row['users_id'] ?></a></td> -->
                                                     <td><a href="<?= base_url() ?>/Withdraw/detail/<?= $row['wallet_withdraw_id'] ?>"><?= $row['users'] ?></a></td>
                                                     <td><a href="<?= base_url() ?>/Withdraw/detail/<?= $row['wallet_withdraw_id'] ?>"><?= $row['amount'] ?></a></td>
                                                     <td><a href="<?= base_url() ?>/Withdraw/detail/<?= $row['wallet_withdraw_id'] ?>"><?= $row['bank_acc'] ?></a></td>

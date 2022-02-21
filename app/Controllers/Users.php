@@ -197,6 +197,7 @@ class Users extends BaseController
         ];
 
         $users = $this->UsersModel->getWhere($where)[0];
+
         $this->pageData['users'] = $users;
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
         $field = $this->UsersModel->get_field([
@@ -380,6 +381,7 @@ class Users extends BaseController
 
         // dd($user);  
 
+
         $users = array_merge($users_1,$user);
         // dd($users);
         $tree =  $this->buildTree($users,$user_id);
@@ -457,7 +459,7 @@ class Users extends BaseController
         foreach($main_topics as $k_main_topics => $v_main_topics )
         {
             // dd($v_main_topics);
-            $list .= '<li>'.$v_main_topics['username'].  $this->createListLi(isset($v_main_topics["children"]) ? $v_main_topics["children"] : null,$count++) . '</li>' ;
+            $list .= '<li>'.$v_main_topics['username']  . " - ". $v_main_topics['name'] .  $this->createListLi(isset($v_main_topics["children"]) ? $v_main_topics["children"] : null,$count++) . '</li>' ;
 
 
         }

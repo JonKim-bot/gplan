@@ -28,6 +28,7 @@ class Withdraw extends BaseController
 
         $field = $this->WalletWithdrawModel->get_field([
             'created_by',
+            'users_id',
             'modified_by',
             'deleted',
         ]);
@@ -89,6 +90,7 @@ class Withdraw extends BaseController
         $data['modified_date'] = date('Y-m-d');
         
 
+
         $remarks = "Withdrawal on user " . $wallet_withdraw['name'];
 
         $balance = $this->WalletModel->get_balance($wallet_withdraw['users_id']);
@@ -146,6 +148,9 @@ class Withdraw extends BaseController
             'modified_by',
             'deleted',
             'receipt',
+
+            'is_approved',
+            'is_rejected',
             'is_paid',
             'users_id',
         ]);

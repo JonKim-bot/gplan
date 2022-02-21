@@ -57,7 +57,7 @@
                                     <select class="form-control filter" name="users_id">
 
                                     <?php foreach($users as $row){ ?>
-                                        <option value="<?= $row['users_id'] ?>" <?= isset($_GET['users_id']) && $_GET['users_id'] == $users_id ? 'selected' : '' ?>><?= $row['username'] ?></option>
+                                        <option value="<?= $row['users_id'] ?>" <?= isset($_GET['users_id']) && $_GET['users_id'] == $users_id ? 'selected' : '' ?>><?= $row['username'] ?> - <?= $row['name'] ?></option>
                                     <?php } ?>
                                     </select>
                                 </div>

@@ -101,10 +101,10 @@
                                                     <div class="table-responsive">
                                                         <table class="table m-0">
                                                             <tbody>
-                                                            <tr>
+                                                            <!-- <tr>
                                                         <th>Balance : </th>
                                                         <th><?= $balance ?></th>
-                                                        </tr>
+                                                        </tr> -->
                                                             <tr>
                                                         <th>Last Edited By</th>
                                                         <th><?= $modified_by ?></th>
