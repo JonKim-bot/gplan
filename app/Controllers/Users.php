@@ -312,7 +312,7 @@ class Users extends BaseController
 
         // foreach($users as $key => $row){
         $family_name = '';
-        
+
         $upline_name = '';
         if($users['family_id'] > 0){
             $where = [
@@ -378,6 +378,7 @@ class Users extends BaseController
     }
 
 
+    
     public function add_remarks($users_id)
     {
         $where = [

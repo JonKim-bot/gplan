@@ -93,6 +93,7 @@ class FamilyModel extends BaseModel
                 $more = $this->db->query("SELECT * FROM family WHERE link_family_id = $family_id")->getResultArray();
                 if(!empty($more)){
                     $stop = false;
+                    
                 }
             }
         }
