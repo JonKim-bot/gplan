@@ -334,8 +334,9 @@ class Users extends BaseController
                     // 'nric_name' => $input['nric_name'],
                     // 'nric' => $input['nric'],
                 ];
-                $data = $this->upload_image_with_data($data, 'nric_front');
+                $data = $this->upload_image_with_data($data, 'receipt');
                 $data = $this->upload_image_with_data($data, 'nric_back');
+
                 // $data = $this->upload_image_with_data($data, 'ssm_cert');
 
                 if ($input['password'] != '') {
@@ -346,10 +347,12 @@ class Users extends BaseController
                 }
                 $this->UsersModel->updateWhere($where, $data);
 
+
                 return redirect()->to($_SERVER['HTTP_REFERER']);
             }
         }
 
+        
         // $this->pageData['form'] = $this->UsersModel->generate_edit_input($users_id);
         $this->pageData[
             'final_form'

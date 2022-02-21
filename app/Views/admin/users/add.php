@@ -78,6 +78,16 @@
                                     <label for="">Email</label>
                                     <input type="email" class="form-control" name="email" placeholder="Email" required>
                                 </div>
+
+                                
+                                <div class="form-group">
+                                <label for="">Receipt</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile02" name="receipt">
+                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                </div>
+                            </div>
+                            
                                 <!-- <div class="form-group">
                                     <label for="">Nric</label>
                                     <input type="text" name="nric" class="form-control" >
