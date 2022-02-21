@@ -52,7 +52,7 @@
                                     <label for="">Email</label>
                                     <input type="email" class="form-control" name="email" value="<?=  $users['email'] ?>" placeholder="Email" required>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="">Nric</label>
                                     <input type="text" name="nric" class="form-control" value="<?=  $users['nric'] ?>">
                                 </div>
@@ -69,7 +69,7 @@
                                 <div class="form-group">
                                     <label for="">Nric Back</label>
                                     <input type="file" name="nric_back" class="form-control" accept="image/png, image/jpeg" >
-                                </div>
+                                </div> -->
                     
 
                                 <div class="form-group">

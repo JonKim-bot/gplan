@@ -58,6 +58,10 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
+                                    <label for="">User Name</label>
+                                    <input type="text" class="form-control" name="username" placeholder="User Name" required>
+                                </div>
+                                <div class="form-group">
                                     <label for="">Password</label>
                                     <input type="password" class="form-control" name="password" placeholder="Password" required>
                                 </div>
@@ -65,6 +69,7 @@
                                     <label for="">Confirm Password</label>
                                     <input type="password" class="form-control" name="password2" placeholder="Confirm Password" required>
                                 </div>
+                                
                                 <div class="form-group">
                                     <label for="">Contact Number</label>
                                     <input type="text" class="form-control" name="contact" placeholder="Contact Number" required>
@@ -73,7 +78,7 @@
                                     <label for="">Email</label>
                                     <input type="email" class="form-control" name="email" placeholder="Email" required>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="">Nric</label>
                                     <input type="text" name="nric" class="form-control" >
                                 </div>
@@ -90,7 +95,7 @@
                                     <label for="">Nric Back</label>
                                     <input type="file" name="nric_back" class="form-control" accept="image/png, image/jpeg" >
                                 </div>
-                             
+                              -->
                                 <div class="form-group">
                                     <button class="btn btn-primary float-right" type="submit"> Submit</button>
                                 </div>

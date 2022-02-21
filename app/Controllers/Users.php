@@ -61,7 +61,7 @@ class Users extends BaseController
 
         $this->pageData['users_count'] = $users_count;
         // dd($users);
-        
+
         $field = $this->UsersModel->get_field([
             'created_by',
             'modified_by',
@@ -94,10 +94,11 @@ class Users extends BaseController
 
 
 
-            $existed = $this->checkExists($input['contact']);
+            $existed = $this->checkExists($input['username']);
+
             if($existed){
                 $error = true;
-                $this->pageData['error'] = 'Contact already existed';
+                $this->pageData['error'] = 'Username already existed';
                 $this->pageData['input'] = $input;
             }
 
@@ -108,12 +109,12 @@ class Users extends BaseController
                 $data = [
                     'name' => $input['name'],
                     'email' => $input['email'],
-                    'username' => $input['contact'],
+                    'username' => $input['username'],
                     'contact' => $input['contact'],
 
                     'password' => $hash['password'],
-                    'nric_name' => $input['nric_name'],
-                    'nric' => $input['nric'],
+                    // 'nric_name' => $input['nric_name'],
+                    // 'nric' => $input['nric'],
                     'family_id' => $input['family_id'],
                     // 'ssm_name' => $input['ssm_name'],
                     // 'ssm_number' => $input['ssm_number'],
@@ -241,6 +242,7 @@ class Users extends BaseController
 
 
     public function detail($users_id)
+
     {
 
         if (session()->get('login_data')['type_id'] == '1') { 
@@ -329,8 +331,8 @@ class Users extends BaseController
                     'email' => $input['email'],
                     'username' => $input['contact'],
                     'contact' => $input['contact'],
-                    'nric_name' => $input['nric_name'],
-                    'nric' => $input['nric'],
+                    // 'nric_name' => $input['nric_name'],
+                    // 'nric' => $input['nric'],
                 ];
                 $data = $this->upload_image_with_data($data, 'nric_front');
                 $data = $this->upload_image_with_data($data, 'nric_back');
@@ -392,6 +394,7 @@ class Users extends BaseController
 
         // dd($users_1);
         // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
+
 
         // dd($user);  
 

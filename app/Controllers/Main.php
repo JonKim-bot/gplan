@@ -80,6 +80,12 @@ class Main extends BaseController
                 $this->page_data['input'] = $input;
             }
 
+            $existed = $this->checkExists($input['username']);
+            if($existed){
+                $error = true;
+                $this->pageData['error'] = 'Username already existed';
+                $this->pageData['input'] = $input;
+            }
             if (!$error) {
                 $hash = $this->hash($input['password']);
                 $input['contact'] = $this->format_contact($input['contact']);
@@ -90,8 +96,8 @@ class Main extends BaseController
                     'username' => $input['contact'],
                     'contact' => $input['contact'],
                     'password' => $hash['password'],
-                    'nric_name' => $input['nric_name'],
-                    'nric' => $input['nric'],
+                    // 'nric_name' => $input['nric_name'],
+                    // 'nric' => $input['nric'],
                     'family_id' => $family_id,
                     // 'ssm_name' => $input['ssm_name'],
                     // 'ssm_number' => $input['ssm_number'],
@@ -99,6 +105,7 @@ class Main extends BaseController
                     // 'created_by'    => $this->session->userdata('login_id')
                 ];
                 $data = $this->upload_image_with_data($data, 'nric_front');
+
                 $data = $this->upload_image_with_data($data, 'nric_back');
               
 

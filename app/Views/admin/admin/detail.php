@@ -1,4 +1,5 @@
 <div class="c-subheader justify-content-between px-3">
+
 	<ol class="breadcrumb border-0 m-0 px-0 px-md-3">
 		<li class="breadcrumb-item">Home</li>
         <li class="breadcrumb-item"><a href="<?= base_url('admin') ?>">Admin</a></li>
@@ -17,7 +18,7 @@
 	
 	<div class="fade-in">
         <div class="row">
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <div class="card">
                     <div class="c-card-header">
                         Profile Picture
@@ -45,8 +46,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
+            </div> -->
+            <div class="col-md-12">
                 <div class="card">
                     <div class="c-card-header">
                         Admin Details

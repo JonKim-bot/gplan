@@ -208,7 +208,7 @@ Personal Detail
 
 </li>
 
-<li class="c-sidebar-nav-item ">
+<!-- <li class="c-sidebar-nav-item ">
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/qrcode/1'
     ? 'c-active'
     : null ?>" href="<?= base_url('Users/qrcode/1') ?>">
@@ -219,7 +219,7 @@ QR Code
 
 </a>
 
-</li>
+</li> -->
 <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
                     'Wallet'
@@ -244,6 +244,7 @@ QR Code
 
                     </a>
                     </li>
+
 
                 <?php } ?>
               

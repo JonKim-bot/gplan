@@ -20,7 +20,7 @@
             <div class="card-header">
             Transaction Details
                 <div class="card-header-actions">
-                    <?php if(isset($_GET['filter_id'])){ ?>
+                    <?php if(isset($_GET['users_id'])){ ?>
 
                     <a  href="<?= base_url() ?>/Wallet/export_csv?filter_id=<?= isset($_GET['filter_id']) ? $_GET['filter_id'] : '0' ?>&dateFrom=<?= $_GET['dateFrom'] ?>&dateTo=<?= $_GET['dateTo'] ?>" class="btn btn-primary pull-left export">
                         Export To Csv
@@ -57,6 +57,7 @@
                                     <select class="form-control filter" name="users_id">
 
                                     <?php foreach($users as $row){ ?>
+
 
                                         <?php if($users_id== $row['users_id']){ ?>
 

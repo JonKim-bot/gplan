@@ -34,6 +34,7 @@ class Wallet extends BaseController
             ? $_GET['dateFrom']
             : date('Y-m-d');
         $dateTo =
+        
             ($_GET and isset($_GET['dateTo']))
                 ? $_GET['dateTo']
                 : date('Y-m-d');
@@ -76,6 +77,7 @@ class Wallet extends BaseController
 
         ($_GET and isset($_GET['dateFrom']))
             ? $_GET['dateFrom']
+
             : date('Y-m-d');
         $dateTo =
             ($_GET and isset($_GET['dateTo']))
@@ -91,14 +93,15 @@ class Wallet extends BaseController
             $users_id = session()->get('login_id');
         }
         $where = [];
-        if($users_id > 0){
+        if($users_id > 0 && ($dateFrom != "" && $dateTo != "")){
             $where = [
                 'wallet.users_id' => $users_id,
                                
                 'DATE(wallet.created_date) >=' => $dateFrom,
                 'DATE(wallet.created_date) <=' => $dateTo,
             ];
-        }else{
+        }else if(($dateFrom != "" && $dateTo != "")){
+
             $where = [
                 'DATE(wallet.created_date) >=' => $dateFrom,
                 'DATE(wallet.created_date) <=' => $dateTo,

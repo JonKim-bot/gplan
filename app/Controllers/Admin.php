@@ -106,6 +106,7 @@ class Admin extends BaseController
                 // $this->debug($data);
                 // dd($data);
 
+
                 $this->AdminModel->insertNew($data);
 
                 return redirect()->to(base_url('admin', "refresh"));
@@ -169,8 +170,8 @@ class Admin extends BaseController
             }
 
             //single upload
-            $getUpload = $this->request->getFile('thumbnail');
-            $thumbnail = $getUpload->getName();
+            // $getUpload = $this->request->getFile('thumbnail');
+            // $thumbnail = $getUpload->getName();
 
             //multiple upload
             // $getUpload = $this->request->getFileMultiple('thumbnail');
@@ -192,15 +193,15 @@ class Admin extends BaseController
                     'modified_by' => session()->get('login_id'),
                 );
 
-                if (!empty($thumbnail)) {
-                    $data['thumbnail'] = $thumbnail;
-                    $getUpload->move('./assets/img/admin', $thumbnail);
+                // if (!empty($thumbnail)) {
+                //     $data['thumbnail'] = $thumbnail;
+                //     $getUpload->move('./assets/img/admin', $thumbnail);
 
-                    // foreach ($getUpload as $files){
-                    //     $thumbnail = $files->getName();
-                    //     $files->move('./assets/img/admin', $thumbnail);
-                    // }
-                }
+                //     // foreach ($getUpload as $files){
+                //     //     $thumbnail = $files->getName();
+                //     //     $files->move('./assets/img/admin', $thumbnail);
+                //     // }
+                // }
 
                 $this->AdminModel->updateWhere($where, $data);
 

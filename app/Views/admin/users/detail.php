@@ -18,10 +18,10 @@
 
         <div class="fade-in">
             <div class="row">
-                <!-- <div class="col-md-6">
+                <div class="col-md-6">
                     <div class="card">
                         <div class="c-card-header">
-                            Status
+                            Qr Code
                             <div class="card-header-actions">
                                 <a class="card-header-action">
                                     <i class="cil-arrow-circle-top c-icon minimize-card"></i>
@@ -36,33 +36,26 @@
                                     <div class="col-lg-12">
                                         <div class="general-info">
                                             <div class="row">
-                                                <?php if (session()->get('login_data')['type_id'] == '0') {  ?>
-
-                                                    <div class="col-lg-12 col-xl-12">
-                                                        <?php if($users['is_verified'] == 0){ ?>
-
-                                                            <a href="<?= base_url() ?>/Users/verify_user/<?= $users['users_id'] ?>" class="btn btn-<?= $users['is_verified'] == 1 ? "success" : "asd" ?>"><?= $users['is_verified'] == 1 ? "Verified" : "Not verified" ?></a>
-                                                        <?php }else{ ?>
-                                                            <a  class="btn btn-primary text-white">Verified</a>
-
-                                                        <?php } ?>
-                                                    </div>
-                                                <?php } ?>
-
-
-                                                <?php if (session()->get('login_data')['type_id'] == '1') {  ?>
+                                               
 
                                             <div class="col-lg-12 col-xl-12">
-                                                <?php if($users['is_verified'] == 0){ ?>
-
-                                                    <a  class="btn btn-danger text-white">Not Verified</a>
-                                                <?php }else{ ?>
-                                                    <a  class="btn btn-primary text-white">Verified</a>
-
-                                                <?php } ?>
-                                            </div>
-                                            <?php } ?>
-
+                                                    <div class="table-responsive">
+                                                        <table class="table m-0">
+                                                            <tbody>
+                                                                <tr>
+                                                                                <th>
+                    
+                                                                                <div class="c-cardbody">
+                                    <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?= base_url() ?>/main/add/<?= $users['family_id'] ?>&choe=UTF-8" 
+                                    style="margin: auto; border: 3px solid green; padding: 10px;display: block; margin-left: auto; margin-right: auto;">
+                                    </div>
+                    
+                                                                                </th>
+                                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -70,7 +63,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <div class="col-md-6">
                     <div class="card">
                         <div class="c-card-header">
@@ -80,12 +73,12 @@
                                     <i class="cil-arrow-circle-top c-icon minimize-card"></i>
                                 </a>
 
-                                <?php if (session()->get('login_data')['type_id'] == '0') {  ?>
+                                <!-- <?php if (session()->get('login_data')['type_id'] == '0') {  ?> -->
 
 <a class="card-header-action" href="<?php echo site_url('users/edit') . '/' . $users['users_id'] ?>">
     <i class="cil-pencil c-icon"></i>
 </a>
-<?php } ?>
+<!-- <?php } ?> -->
                             </div>
                         </div>
                         <div class="c-card-body">
@@ -103,6 +96,7 @@
                                                         <th>Balance : </th>
                                                         <th><?= $balance ?></th>
                                                         </tr> -->
+
 
                                                         <tr>
 
@@ -134,6 +128,7 @@
                                                         </td>
 
 
+
                                                         </tr>
                                                             <tr>
                                                         <th>Last Edited By</th>
@@ -155,18 +150,7 @@
                                                         </tr>
 
 
-                                                        <tr>
-                                                            <th>QR Code</th>
-                                                            <th>
-
-                                                            <div class="c-cardbody">
-                <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?= base_url() ?>/main/add/<?= $users['family_id'] ?>&choe=UTF-8" 
-                style="margin: auto; border: 3px solid green; padding: 10px;display: block; margin-left: auto; margin-right: auto;">
-                </div>
-
-                                                            </th>
-                                                        </tr>
-
+                                                    
                                                                 <tr>
                                                                     <th scope="row">Name</th>
                                                                     <td><?= $users["name"] ?></td>
@@ -185,7 +169,7 @@
                                                                     <th scope="row">Contact</th>
                                                                     <td><?= $users["contact"] ?></td>
                                                                 </tr>
-                                                                <tr>
+                                                                <!-- <tr>
                                                                     <th scope="row">NRIC</th>
                                                                     <td><?= $users["nric"] ?></td>
                                                                 </tr>
@@ -221,8 +205,8 @@
                                                                             </div>
                                                                         </div>
                                                                     </td>
-                                                                </tr>
-                                                               
+                                                                </tr> -->
+<!--                                                                
                                                               
 
                                                                 <tr>
@@ -232,13 +216,15 @@
                                                                         <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url('/users/add_remarks/' . "/" . $users['users_id']); ?>">
                                                                             <textarea name="remarks" id="" cols="30" rows="10" class="form-control"><?= $users['remarks'] ?></textarea>
                                                                             <div class="form-group">
+
                                                                                 <button class="btn btn-primary float-right" type="submit"> Save</button>
                                                                             </div>
                                                                         </form>
                                                                     </td>
                                                                 </tr>
+                                                                
 
-                                                               
+                                                                -->
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -257,6 +243,7 @@
 	
 	<div class="fade-in">
         <div class="card">
+
             <div class="card-header">
                 Wallet Details 
                 <h1>Balance : <?= $balance ?></h1>

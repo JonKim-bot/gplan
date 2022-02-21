@@ -34,14 +34,14 @@
                             <label class="custom-file-label" for="" aria-describedby="">Choose file</label>
                         </div>
                     </div> -->
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="">Profile Picture</label>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" name="thumbnail" id="thumbnail" multiple>
                             <label class="custom-file-label" for="" aria-describedby="">Choose file</label>
                         </div>
                         <small class="smallalert">* LEAVE BLANK IF NOT CHANGE THUMBNAIL **</small>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="">Username</label>
                         <input type="text" class="form-control" name="admin" placeholder="Username" value="<?= $admin["username"]?>" required readonly>
