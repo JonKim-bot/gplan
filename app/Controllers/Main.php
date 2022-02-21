@@ -69,7 +69,9 @@ class Main extends BaseController
     }
 
     public function add($family_id)
+
     {
+
         if ($_POST) {
             $input = $_POST;
             $error = false;
@@ -86,6 +88,11 @@ class Main extends BaseController
                 $this->pageData['error'] = 'Username already existed';
                 $this->pageData['input'] = $input;
             }
+
+
+            // $family_id = $this->FamilyModel->find_empty_slot($family_id);
+
+
             if (!$error) {
 
                 $hash = $this->hash($input['password']);
@@ -121,6 +128,7 @@ class Main extends BaseController
         }
         $this->pageData['users'] = $this->FamilyModel->getAll();
 
+
         $this->pageData['family_id'] = $family_id;
 
         echo view('admin/main/add', $this->pageData);
@@ -154,6 +162,7 @@ class Main extends BaseController
     // }
 
     // public function copy($users_id){
+
     //     $users = $this->UsersModel->copy($users_id);
     //     return redirect()->to(base_url('Users', 'refresh'));
     // }
@@ -167,6 +176,8 @@ class Main extends BaseController
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
+
+
             $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
     
         }else{

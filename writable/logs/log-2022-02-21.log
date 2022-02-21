@@ -213,3 +213,19 @@ CRITICAL - 2022-02-21 15:00:48 --> Undefined variable: where
 #4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2022-02-21 15:41:17 --> Undefined offset: 0
+#0 D:\www\gplan\app\Models\FamilyModel.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 145, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(187): App\Models\FamilyModel->find_empty_slot('5')
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->test_find('5')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-21 15:41:20 --> Undefined offset: 0
+#0 D:\www\gplan\app\Models\FamilyModel.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 145, Array)
+#1 D:\www\gplan\app\Controllers\Users.php(187): App\Models\FamilyModel->find_empty_slot('6')
+#2 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->test_find('6')
+#3 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

@@ -41,6 +41,7 @@ class FamilyModel extends BaseModel
 
         }
         $query = $this->builder->get();
+
         return $query->getResultArray();
 
     }
@@ -95,7 +96,10 @@ class FamilyModel extends BaseModel
                 }
             }
         }
-        array_push($families, $next);
+        if(!empty($next)){
+            array_push($families, $next);
+        }
+
         // check if level 15 full
         if(isset($families[15]) && count($families[15]) == 30){
             return $families;
@@ -128,6 +132,7 @@ class FamilyModel extends BaseModel
         $slot_family_id = $family_id;
         foreach($result as $index => $row){ // result index = level;
             if($index != 0 && count($row) < $index * 2){  // count($result[$index]) < $index * 2 then mean level no full 
+
                 foreach($result[$index - 1] as $link){
                     $find_slot = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $link HAVING total < 2")->getResultArray();
                     if(!empty($find_slot)){
@@ -136,6 +141,11 @@ class FamilyModel extends BaseModel
                     }
                 }
             }
+        }
+
+        // dd($result);
+        if($slot_family_id == $family_id && count($result) > 1){
+            $slot_family_id = $result[count($result) -1][0];
         }
         return $slot_family_id;
     }

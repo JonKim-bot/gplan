@@ -15,6 +15,7 @@ use App\Models\CompanyProfitModel;
 
 class Users extends BaseController
 {
+
     public function __construct()
     {
         $this->WalletModel = new WalletModel();
@@ -71,6 +72,7 @@ class Users extends BaseController
             $field,
             $users,
             'users',
+
             'banner'
         );
     
@@ -101,7 +103,11 @@ class Users extends BaseController
                 $error = true;
                 $this->pageData['error'] = 'Username already existed';
                 $this->pageData['input'] = $input;
+
             }
+
+
+            // $input['family_id'] = $this->FamilyModel->find_empty_slot($input['family_id']);
 
             if (!$error) {
                 $hash = $this->hash($input['password']);
@@ -122,7 +128,7 @@ class Users extends BaseController
                     'salt' => $hash['salt'],
                     // 'created_by'    => $this->session->userdata('login_id')
                 ];
-                $data = $this->upload_image_with_data($data, 'nric_front');
+                $data = $this->upload_image_with_data($data, 'receipt');
                 $data = $this->upload_image_with_data($data, 'nric_back');
 
               
@@ -141,6 +147,7 @@ class Users extends BaseController
         }
 
         $this->pageData['users'] = $this->FamilyModel->getAll();
+
 
 
         echo view('admin/header', $this->pageData);
@@ -176,19 +183,26 @@ class Users extends BaseController
     //     $users = $this->UsersModel->copy($users_id);
     //     return redirect()->to(base_url('Users', 'refresh'));
     // }
+    public function test_find($family_id){
+        $family_id = $this->FamilyModel->find_empty_slot($family_id);
+        dd($family_id);
+    }
 
     public function verify_user($users_id){
         $where = [
             'users.users_id' => $users_id
         ];
+
         $users = $this->UsersModel->getWhere($where)[0];
 
         if($users['is_verified'] == 0){
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
-           
-           
+
+
+            // dd($users['family_id']);
+
             $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
     
         }else{
@@ -282,6 +296,7 @@ class Users extends BaseController
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
         $family_id = 0;
         
+
         $family = $this->FamilyModel->getWhere(['family.user_id' => $users_id]);
         if(!empty($family)){
             $family_id = $family[0]['family_id'];
@@ -491,6 +506,7 @@ class Users extends BaseController
         foreach($main_topics as $k_main_topics => $v_main_topics )
         {
             // dd($v_main_topics);
+            
             $list .= '<li>'.$v_main_topics['username']  . " 
             - ". $v_main_topics['name'] .  $this->createListLi(isset($v_main_topics["children"]) ? $v_main_topics["children"] : null,$count++) . '</li>' ;
 
