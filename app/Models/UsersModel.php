@@ -25,6 +25,7 @@ class UsersModel extends BaseModel{
 
 
 
+    
     function get_family_user($limit = "", $page = 1, $filter = array()){
         $this->builder = $this->db->table($this->tableName);
         $this->builder->select('*');

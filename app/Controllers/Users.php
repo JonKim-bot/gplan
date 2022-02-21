@@ -81,6 +81,7 @@ class Users extends BaseController
     }
 
     public function add()
+    
     {
         if ($_POST) {
             $input = $_POST;
@@ -123,7 +124,7 @@ class Users extends BaseController
                 ];
                 $data = $this->upload_image_with_data($data, 'nric_front');
                 $data = $this->upload_image_with_data($data, 'nric_back');
-                
+
               
                 $users_id = $this->UsersModel->insertNew($data);
 
@@ -184,6 +185,8 @@ class Users extends BaseController
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
+           
+           
             $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
     
         }else{
