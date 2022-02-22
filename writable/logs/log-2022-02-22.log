@@ -1,0 +1,24 @@
+CRITICAL - 2022-02-22 10:22:46 --> No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\xampp\htdocs\gplan\app\Models\WalletWithdrawModel.php(126): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\gplan\app\Core\BaseController.php(75): App\Models\WalletWithdrawModel->getCountOfUndone()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 10:22:53 --> No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\xampp\htdocs\gplan\app\Models\WalletWithdrawModel.php(126): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\gplan\app\Core\BaseController.php(75): App\Models\WalletWithdrawModel->getCountOfUndone()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
