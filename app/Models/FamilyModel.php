@@ -1,5 +1,6 @@
 <?php namespace App\Models;
 
+
 use App\Core\BaseModel;
 use App\Models\WalletModel;
 
@@ -77,6 +78,7 @@ class FamilyModel extends BaseModel
     public function user_family($family_id){
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
+        return count($result) - 1;
         // $this->debug($result);
     }
 

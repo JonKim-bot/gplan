@@ -91,3 +91,57 @@ CRITICAL - 2022-02-22 15:57:22 --> Access denied for user '****'@'localhost' (us
 #7 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2022-02-22 16:10:18 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 D:\www\gplan\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('users/dashboard...')
+#1 D:\www\gplan\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('users/dashboard...')
+#2 D:\www\gplan\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 16:10:19 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 D:\www\gplan\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('users/dashboard...')
+#1 D:\www\gplan\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('users/dashboard...')
+#2 D:\www\gplan\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 16:17:55 --> Undefined variable: suers
+#0 D:\www\gplan\app\Views\admin\users\dashboard.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 107, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/das...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(378): view('admin/users/das...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-22 16:17:59 --> Undefined variable: suers
+#0 D:\www\gplan\app\Views\admin\users\dashboard.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 107, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/das...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(378): view('admin/users/das...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-22 16:18:04 --> Undefined index: level
+#0 D:\www\gplan\app\Views\admin\users\dashboard.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 107, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/das...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(378): view('admin/users/das...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-22 16:18:06 --> Undefined index: level
+#0 D:\www\gplan\app\Views\admin\users\dashboard.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\www\\gplan\\ap...', 107, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/das...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(378): view('admin/users/das...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

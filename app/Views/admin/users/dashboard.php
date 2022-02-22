@@ -31,9 +31,9 @@
                       <div>
                         <div>Status</div>
                         <div class="text-value-lg">
-                    <?= $users['is_verified'] == 1
-    ? 'Verified'
-    : 'Not verified' ?>
+                        <?= $users['is_verified'] == 1
+                        ? 'Verified'
+                        : 'Not verified' ?>
                         </div>
                       </div>
                       <div class="btn-group">
@@ -55,8 +55,12 @@
                   <div class="card text-white bg-gradient-info">
                     <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
                       <div>
-                        <div class="text-value-lg">9.823</div>
-                        <div>Members online</div>
+                        <div>Family Tree</div>
+                          <div class="text-value-lg">
+                            <a class="btn btn-primary" href="<?= base_url() ?>/users/tree/1">
+                              View Family Tree
+                            </a>
+                          </div>
                       </div>
                       <div class="btn-group">
                         <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,8 +81,8 @@
                   <div class="card text-white bg-gradient-warning">
                     <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
                       <div>
-                        <div class="text-value-lg text-statis">9.823</div>
-                        <div>Members online</div>
+                        <div>Wallet Balance</div>
+                        <div class="text-value-lg text-statis">RM <?= $balance ?></div>
                       </div>
                       <!-- <div class="btn-group">
                         <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -99,8 +103,8 @@
                   <div class="card text-white bg-gradient-danger">
                     <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
                       <div>
-                        <div class="text-value-lg">9.823</div>
-                        <div>Members online</div>
+                        <div>Total Level Of Downline</div>
+                        <div class="text-value-lg"><?= $users['level'] ?></div>
                       </div>
                       <!-- <div class="btn-group">
                         <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -125,20 +129,18 @@
                 <div class="col-sm-3 col-lg-3">
                   <div class="card">
                     <div class="card-header bg-facebook content-center">
-                      <svg class="c-icon c-icon-3xl text-white my-4">
-                        <use xlink:href="node_modules/@coreui/icons/sprites/brand.svg#cib-facebook-f"></use>
-                      </svg>
+                  
+                                    <img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=<?= base_url() ?>/main/add/<?= $family_id ?>&choe=UTF-8" 
+                                    style="margin: auto; border: 3px solid green; padding: 10px;display: block; margin-left: auto; margin-right: auto;">
                     </div>
                     <div class="card-body row text-center">
                       <div class="col">
-                        <div class="text-value-xl">89k</div>
-                        <div class="text-uppercase text-muted small">friends</div>
+                        <div class="text-uppercase text-muted small">Invite downline
+and earn</div>
+                        <div class="text-value-xl">RM10</div>
+                        <div class="text-uppercase text-muted small">On Each User</div>
                       </div>
-                      <div class="c-vr"></div>
-                      <div class="col">
-                        <div class="text-value-xl">459</div>
-                        <div class="text-uppercase text-muted small">feeds</div>
-                      </div>
+                     
                     </div>
                   </div>
                   <div class="card">

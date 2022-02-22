@@ -4,6 +4,7 @@
 
 
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -344,6 +345,16 @@ class Users extends BaseController
 
         // }
 
+        $family_id = 0;
+        
+
+        $family = $this->FamilyModel->getWhere(['family.user_id' => $users_id]);
+        if(!empty($family)){
+            $family_id = $family[0]['family_id'];
+        }
+        $this->pageData['family_id'] = $family_id ;
+        $users['level'] = $this->FamilyModel->user_family($family_id);
+
         $this->pageData['users'] = $users;
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
         $field = $this->UsersModel->get_field([
@@ -363,15 +374,7 @@ class Users extends BaseController
 
         $this->pageData['wallet'] = $users_wallet;
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
-        $family_id = 0;
-        
-
-        $family = $this->FamilyModel->getWhere(['family.user_id' => $users_id]);
-        if(!empty($family)){
-            $family_id = $family[0]['family_id'];
-        }
-        $this->pageData['family_id'] = $family_id ;
-
+     
         echo view('admin/header', $this->pageData);
         echo view('admin/users/dashboard');
         echo view('admin/footer');
