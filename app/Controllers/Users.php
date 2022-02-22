@@ -293,6 +293,92 @@ class Users extends BaseController
     }
 
 
+    
+    public function dashboard($users_id)
+
+    {
+
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $users_id = session()->get('login_id');
+        }
+        // dd($users_id);
+        $where = [
+            'users.users_id' => $users_id,
+        ];
+
+        $users = $this->UsersModel->getWhere($where)[0];
+
+        // foreach($users as $key => $row){
+        $family_name = '';
+
+        $upline_name = '';
+        if($users['family_id'] > 0){
+            $where = [
+                'family.family_id' => $users['family_id']
+            ];
+            $family_user_id = $this->FamilyModel->getWhere($where)[0]['user_id'];
+            $where = [
+
+                'users.users_id' => $family_user_id
+            ];
+            $family_name = $this->UsersModel->getWhere($where)[0];
+            $family_name = $family_name['name'];
+
+            //get upline name
+            $where = [
+                'family.user_id' => $users['users_id']
+            ];
+
+
+
+            $link_family = $this->FamilyModel->getWhere($where);
+            if(!empty($link_family)){
+                $link_family_id = $link_family[0]['link_family_id'];
+                $upline_name = $this->UsersModel->getWhere(['users.users_id' => $link_family_id])[0]['name'];
+            }
+        }
+        $users['family_name'] = $family_name;
+        $users['upline_name'] = $upline_name;
+
+        // }
+
+        $this->pageData['users'] = $users;
+        $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
+        $field = $this->UsersModel->get_field([
+            'created_by',
+
+            'modified_by',
+            'deleted',
+        ]);
+        $this->pageData['detail'] = $this->generate_detail(
+            $field,
+            $users,
+            'banner'
+        );
+        $users_wallet = $this->WalletModel->get_transaction_by_users([
+            'users.users_id' => $users_id,
+        ]);
+
+        $this->pageData['wallet'] = $users_wallet;
+        $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
+        $family_id = 0;
+        
+
+        $family = $this->FamilyModel->getWhere(['family.user_id' => $users_id]);
+        if(!empty($family)){
+            $family_id = $family[0]['family_id'];
+        }
+        $this->pageData['family_id'] = $family_id ;
+
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/dashboard');
+        echo view('admin/footer');
+    }
+
+
+
 
     public function detail($users_id)
 
@@ -496,6 +582,7 @@ class Users extends BaseController
 
         // dd($users_1);
         // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
+
 
 
         // dd($user);  

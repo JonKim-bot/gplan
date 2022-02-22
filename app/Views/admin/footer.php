@@ -19,10 +19,6 @@
            
            <!-- <script src="<?=base_url()?>assets/plugins/chartjs/js/chartjs.js"></script> -->
            <script src="<?=base_url()?>/assets/js/core/utils.js"></script>
-           
-           
-   
-
            <!-- <script src="<?=base_url()?>/assets/js/core/main.js"></script> -->
    
            <script src="<?=base_url()?>/assets/js/core/permission.js"></script>
