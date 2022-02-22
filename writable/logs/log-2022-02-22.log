@@ -22,3 +22,28 @@ CRITICAL - 2022-02-22 10:22:53 --> No connection could be made because the targe
 #7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2022-02-22 14:37:41 --> Access denied for user '****'@'localhost' (using password: NO)
+#0 D:\www\gplan\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\gplan\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\www\gplan\app\Models\WalletWithdrawModel.php(126): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\www\gplan\app\Core\BaseController.php(75): App\Models\WalletWithdrawModel->getCountOfUndone()
+#5 D:\www\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 D:\www\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#7 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 14:39:02 --> Undefined variable: type_id
+#0 D:\www\gplan\app\Controllers\Access.php(173): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 173, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Access->login()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Access))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 14:53:01 --> Undefined variable: type_id
+#0 D:\www\gplan\app\Controllers\Access.php(174): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 174, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Access->login()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Access))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

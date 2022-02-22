@@ -76,6 +76,7 @@ class Access extends BaseController
                 $this->pagedata['error'] = 'This Account has not been VERIFIED yet';
             }
 
+
             // dd($login_data);
             if (!$error) {
                 $login_data['type_id'] = 1;
@@ -158,6 +159,7 @@ class Access extends BaseController
 
 
             }else{
+                $type_id = 99;
                 $error = true;
                 $this->pageData['error'] = 'Invalid Username and Password';
 
