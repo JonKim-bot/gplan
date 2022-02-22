@@ -277,7 +277,22 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="card">
-                    <div class="card-header">Wallet Balance</div>
+                    <div class="card-header">
+                    <p>
+                      <a class="btn btn-primary" href="<?= base_url() ?>/Wallet">
+                          View More 
+                      </a>
+                    </p>  
+
+                    <p>
+                      Wallet Balance
+                    </p>  
+
+                                                                                      
+                    </div>
+
+
+
                     <div class="card-body">
                      
                       <!-- /.row--><br>
