@@ -4,6 +4,7 @@
 
 
 
+
 <html lang="en">
     <head>
         <!-- <base href="./"> -->
@@ -198,11 +199,11 @@ Withdrawal
                     <li class="c-sidebar-nav-title">User</li>
 
 <li class="c-sidebar-nav-item ">
-<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/detail/1'
+<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/dashboard/1'
     ? 'c-active'
-    : null ?>" href="<?= base_url('Users/detail/1') ?>">
+    : null ?>" href="<?= base_url('Users/dashboard/1') ?>">
 <i class="cil-people c-sidebar-nav-icon"></i>
-Personal Detail
+Dashboard
 
 <span class="badge badge-pill badge-warning"></span>
 

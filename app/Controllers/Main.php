@@ -3,6 +3,8 @@
 
 
 
+
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -99,6 +101,7 @@ class Main extends BaseController
                 $input['contact'] = $this->format_contact($input['contact']);
 
                 $data = [
+
                     'name' => $input['name'],
                     'email' => $input['email'],
                     'username' => $input['username'],
@@ -117,8 +120,9 @@ class Main extends BaseController
 
                 $data = $this->upload_image_with_data($data, 'nric_back');
               
-
                 $users_id = $this->UsersModel->insertNew($data);
+                dd($users_id);
+
                 return redirect()->to(base_url('main/success', "refresh"));
 
                 // return redirect()->to('main/success','refresh');
@@ -135,6 +139,74 @@ class Main extends BaseController
 
         echo view('admin/footer');
     }
+
+    // public function add($family_id)
+
+    // {
+
+    //     if ($_POST) {
+    //         $input = $_POST;
+    //         $error = false;
+
+    //         if ($input['password'] != $input['password2']) {
+    //             $error = true;
+    //             $this->page_data['error'] = 'Passwords do not match';
+    //             $this->page_data['input'] = $input;
+    //         }
+
+    //         $existed = $this->checkExists($input['username']);
+    //         if($existed){
+    //             $error = true;
+    //             $this->pageData['error'] = 'Username already existed';
+    //             $this->pageData['input'] = $input;
+    //         }
+
+
+    //         // $family_id = $this->FamilyModel->find_empty_slot($family_id);
+
+
+    //         if (!$error) {
+
+    //             $hash = $this->hash($input['password']);
+    //             $input['contact'] = $this->format_contact($input['contact']);
+
+    //             $data = [
+    //                 'name' => $input['name'],
+    //                 'email' => $input['email'],
+    //                 'username' => $input['username'],
+    //                 'contact' => $input['contact'],
+    //                 'password' => $hash['password'],
+    //                 // 'nric_name' => $input['nric_name'],
+    //                 // 'nric' => $input['nric'],
+    //                 'family_id' => $family_id,
+    //                 // 'ssm_name' => $input['ssm_name'],
+    //                 // 'ssm_number' => $input['ssm_number'],
+    //                 'salt' => $hash['salt'],
+    //                 // 'created_by'    => $this->session->userdata('login_id')
+    //             ];
+    //             $data = $this->upload_image_with_data($data, 'receipt');
+
+
+    //             $data = $this->upload_image_with_data($data, 'nric_back');
+              
+
+    //             $users_id = $this->UsersModel->insertNew($data);
+    //             return redirect()->to(base_url('main/success', "refresh"));
+
+    //             // return redirect()->to('main/success','refresh');
+    //         } else {
+    //             $this->page_data['error'] = 'Failed to add user data';
+    //         }
+    //     }
+    //     $this->pageData['users'] = $this->FamilyModel->getAll();
+
+
+    //     $this->pageData['family_id'] = $family_id;
+
+    //     echo view('admin/main/add', $this->pageData);
+
+    //     echo view('admin/footer');
+    // }
 
 
     //     if ($_POST) {
