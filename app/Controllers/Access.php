@@ -152,7 +152,7 @@ class Access extends BaseController
 
                     $type_id = 1;
                 } else {
-                    $error = true;
+                $error = true;
                     $this->pageData['error'] = 'Invalid Username and Password';
                 }
 
