@@ -145,8 +145,10 @@
                       <div class="col">
                         <div class="text-uppercase text-muted small">Invite downline
                         and earn</div>
-                        <div class="text-value-xl">RM10</div>
+                        <div class="text-value-xl">RM10 </div>
                         <div class="text-uppercase text-muted small">On Each User</div>
+                        <div class="text-uppercase text-muted small">Note : if reach 11 level then system will provide RM30 </div>
+
                       </div>
                      
                     </div>
@@ -253,6 +255,7 @@
                                                                                     <img src="<?= base_url() .
                                                                                         $users[
                                                                                             'receipt'
+
                                                                                         ] ?>" width="200" class="img-fluid d-block m-auto" alt="">
                                                                                 </a></div>
                             </div>

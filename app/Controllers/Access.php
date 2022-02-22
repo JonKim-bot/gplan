@@ -22,6 +22,7 @@ class Access extends BaseController
 
 
     public function loginUser()
+
     {
         $session = session();
 
@@ -85,7 +86,7 @@ class Access extends BaseController
                 $session->set('login_id', $login_id);
 
 
-                return redirect()->to(base_url('users/detail/1', 'refresh'));
+                return redirect()->to(base_url('users/dashboard/1', 'refresh'));
             }
         }
 
@@ -101,6 +102,10 @@ class Access extends BaseController
         $session = session();
 
         if ($_POST) {
+
+            $type_id = 99;
+
+
             $input = $this->request->getPost();
 
             $error = false;
@@ -153,6 +158,7 @@ class Access extends BaseController
 
                     $type_id = 1;
                 } else {
+                    
                 $error = true;
                     $this->pageData['error'] = 'Invalid Username and Password';
                 }
@@ -160,18 +166,14 @@ class Access extends BaseController
 
 
             }else{
-                $type_id = 99;
                 $error = true;
                 $this->pageData['error'] = 'Invalid Username and Password';
-
-                
             }
 
             if (!empty($login_data) and $login_data['deleted'] == 1) {
                 $error = true;
                 $this->pageData['error'] = 'This Account has been DEACTIVATED';
             }
-
 
             if($type_id == 1){
                 if (!empty($login_data) and $login_data['is_verified'] == 0) {
@@ -189,7 +191,7 @@ class Access extends BaseController
                 $session->set('login_id', $login_id);
 
                 if($type_id == 1){
-                    return redirect()->to(base_url('users/detail/1', 'refresh'));
+                    return redirect()->to(base_url('users/dashboard/1', 'refresh'));
 
                 }else{
 
