@@ -343,6 +343,7 @@ class Users extends BaseController
         $users['family_name'] = $family_name;
         $users['upline_name'] = $upline_name;
 
+
         // }
 
         $family_id = 0;
@@ -352,7 +353,7 @@ class Users extends BaseController
         if(!empty($family)){
             $family_id = $family[0]['family_id'];
         }
-        
+
         $this->pageData['family_id'] = $family_id ;
         $users['level'] = $this->FamilyModel->user_family($family_id);
 
@@ -371,7 +372,7 @@ class Users extends BaseController
         );
         $users_wallet = $this->WalletModel->get_transaction_by_users([
             'users.users_id' => $users_id,
-        ]);
+        ] , 10);
 
         $this->pageData['wallet'] = $users_wallet;
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);

@@ -3,6 +3,7 @@
 
 
 
+
 use App\Core\BaseModel;
 // use App\Models\WalletTopupModel;
 
@@ -252,7 +253,7 @@ class WalletModel extends BaseModel
     }
 
 
-    function get_transaction_by_users($where = [])
+    function get_transaction_by_users($where = [],$limit = 0 )
     {
         $this->builder->select(
             'wallet.*, users.name AS users, users.name, users.contact, (wallet_in - wallet_out) AS transaction'
@@ -263,10 +264,15 @@ class WalletModel extends BaseModel
             'wallet.users_id = users.users_id AND users.deleted = 0',
             'left'
         );
-        $this->builder->orderBy('wallet.created_date DESC');
         if (!empty($where)) {
             $this->builder->where($where);
         }
+        if($limit > 0){
+            $this->builder->limit($limit);
+
+        }
+        $this->builder->orderBy('wallet.created_date DESC');
+
 
         $query = $this->builder->get();
         return $query->getResultArray();

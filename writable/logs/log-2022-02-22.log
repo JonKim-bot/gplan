@@ -145,3 +145,10 @@ CRITICAL - 2022-02-22 16:18:06 --> Undefined index: level
 #6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-02-22 17:34:18 --> syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+#0 D:\www\gplan\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('users/dashboard...')
+#1 D:\www\gplan\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('users/dashboard...')
+#2 D:\www\gplan\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
