@@ -352,6 +352,7 @@ class Users extends BaseController
         if(!empty($family)){
             $family_id = $family[0]['family_id'];
         }
+        
         $this->pageData['family_id'] = $family_id ;
         $users['level'] = $this->FamilyModel->user_family($family_id);
 

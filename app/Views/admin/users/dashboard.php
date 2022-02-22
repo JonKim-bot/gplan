@@ -29,6 +29,8 @@
                   <div class="card text-white bg-gradient-primary">
                     <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
                       <div>
+                      <i class="fa fa-bandcamp fa-2x" ></i>
+
                         <div>Status</div>
                         <div class="text-value-lg">
                         <?= $users['is_verified'] == 1
@@ -55,6 +57,8 @@
                   <div class="card text-white bg-gradient-info">
                     <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
                       <div>
+                      <i class="fa fa-users fa-2x" ></i>
+
                         <div>Family Tree</div>
                           <div class="text-value-lg">
                             <a class="btn btn-primary" href="<?= base_url() ?>/users/tree/1">
@@ -81,8 +85,10 @@
                   <div class="card text-white bg-gradient-warning">
                     <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
                       <div>
-                        <div>Wallet Balance</div>
-                        <div class="text-value-lg text-statis">RM <?= $balance ?></div>
+                      <i class="fa fa-user fa-2x" ></i>
+
+                        <div>Referal Name</div>
+                        <div class="text-value-lg text-statis"><?= $users['upline_name'] != "" ? $users['upline_name'] : 'None' ?></div>
                       </div>
                       <!-- <div class="btn-group">
                         <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -103,6 +109,8 @@
                   <div class="card text-white bg-gradient-danger">
                     <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
                       <div>
+                      <i class="fa fa-bath fa-2x" ></i>
+
                         <div>Total Level Of Downline</div>
                         <div class="text-value-lg"><?= $users['level'] ?></div>
                       </div>
@@ -144,18 +152,16 @@ and earn</div>
                     </div>
                   </div>
                   <div class="card">
-                    <div class="card-header bg-facebook content-center">
-                   
+                    <div class="card-header content-center">
+                        <i class="fa fa-money fa-2x" >
+                        </i>
                     </div>
                     <div class="card-body row text-center">
-                      <div class="col">
-                        <div class="text-value-xl">89k</div>
-                        <div class="text-uppercase text-muted small">friends</div>
-                      </div>
+                 
                       <div class="c-vr"></div>
                       <div class="col">
-                        <div class="text-value-xl">459</div>
-                        <div class="text-uppercase text-muted small">feeds</div>
+                        <div class="text-uppercase text-muted small">Your Current Balance</div>
+                        <div class="text-value-xl">RM <?= $balance ?></div>
                       </div>
                     </div>
                   </div>
@@ -168,17 +174,7 @@ and earn</div>
                       <div class="row">
                         <div class="col-sm-6">
                           <div class="row">
-                            <div class="col-6">
-                              <div class="c-callout c-callout-info"><small class="text-muted">New Clients</small>
-                                <div class="text-value-lg">9,123</div>
-                              </div>
-                            </div>
-                            <!-- /.col-->
-                            <div class="col-6">
-                              <div class="c-callout c-callout-danger"><small class="text-muted">Recuring Clients</small>
-                                <div class="text-value-lg">22,643</div>
-                              </div>
-                            </div>
+                           
                             <!-- /.col-->
                           </div>
                           <!-- /.row-->
@@ -190,6 +186,7 @@ and earn</div>
                                 <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 34%" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
                               </div>
                               <div class="progress progress-xs">
+                                
                                 <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
                               </div>
                             </div>
@@ -264,17 +261,7 @@ and earn</div>
                         <!-- /.col-->
                         <div class="col-sm-6">
                           <div class="row">
-                            <div class="col-6">
-                              <div class="c-callout c-callout-warning"><small class="text-muted">Pageviews</small>
-                                <div class="text-value-lg">78,623</div>
-                              </div>
-                            </div>
-                            <!-- /.col-->
-                            <div class="col-6">
-                              <div class="c-callout c-callout-success"><small class="text-muted">Organic</small>
-                                <div class="text-value-lg">49,123</div>
-                              </div>
-                            </div>
+                           
                             <!-- /.col-->
                           </div>
                           <!-- /.row-->
