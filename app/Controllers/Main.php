@@ -105,6 +105,7 @@ class Main extends BaseController
                     'name' => $input['name'],
                     'email' => $input['email'],
                     'username' => $input['username'],
+
                     'contact' => $input['contact'],
                     'password' => $hash['password'],
                     // 'nric_name' => $input['nric_name'],
@@ -121,7 +122,6 @@ class Main extends BaseController
                 $data = $this->upload_image_with_data($data, 'nric_back');
               
                 $users_id = $this->UsersModel->insertNew($data);
-                dd($users_id);
 
                 return redirect()->to(base_url('main/success', "refresh"));
 

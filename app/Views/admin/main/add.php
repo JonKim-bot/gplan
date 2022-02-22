@@ -54,20 +54,20 @@
                                     <div class="input-group-prepend"><span class="input-group-text">
                                             <i class="cil-user c-icon"></i>
                                         </span></div>
-                                    <input class="form-control" type="text" name="username" placeholder="Username">
+                                    <input class="form-control" type="text" required name="username" placeholder="Username">
                                 </div>
                                 <div class="input-group mb-4">
                                     <div class="input-group-prepend"><span class="input-group-text">
                                             <i class="cil-lock-locked c-icon"></i>
                                         </span></div>
-                                    <input class="form-control" type="password" name="password" placeholder="Password">
+                                    <input class="form-control" type="password" required name="password" placeholder="Password">
                                 </div>
 
                                 <div class="input-group mb-4">
                                     <div class="input-group-prepend"><span class="input-group-text">
                                             <i class="cil-lock-locked c-icon"></i>
                                         </span></div>
-                                    <input class="form-control" type="password" name="password2" placeholder="Confirm Password">
+                                    <input class="form-control" type="password" required name="password2" placeholder="Confirm Password">
                                 </div>
 
 
@@ -83,19 +83,19 @@
                                     <div class="input-group-prepend"><span class="input-group-text">
                                             <i class="cil-user c-icon"></i>
                                         </span></div>
-                                    <input class="form-control" type="text" name="name" placeholder="Name">
+                                    <input class="form-control" type="text" required name="name" placeholder="Name">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend"><span class="input-group-text">
                                             <i class="cil-user c-icon"></i>
                                         </span></div>
-                                    <input class="form-control" type="text" name="contact" placeholder="Contact number">
+                                    <input class="form-control" type="text"  required name="contact" placeholder="Contact number">
                                 </div>
                                 <div class="input-group mb-4">
                                     <div class="input-group-prepend"><span class="input-group-text">
                                             <i class="cil-lock-locked c-icon"></i>
                                         </span></div>
-                                    <input class="form-control" type="email" name="email" placeholder="Email">
+                                    <input class="form-control" type="email" name="email" required placeholder="Email">
                                 </div>
 
 
@@ -122,7 +122,7 @@
                                 <div class="input-group mb-4">
                                     <div class="form-group" style="width: 100%;">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="inputGroupFile02" name="receipt">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile02" required name="receipt">
                                             <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Submit Receipt</label>
                                         </div>
                                     </div>

@@ -152,3 +152,10 @@ CRITICAL - 2022-02-22 17:34:18 --> syntax error, unexpected '' (T_ENCAPSED_AND_W
 #3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-02-22 18:59:37 --> Trying to access array offset on value of type null
+#0 D:\www\gplan\app\Controllers\Users.php(573): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\gplan\\ap...', 573, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('1')
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
