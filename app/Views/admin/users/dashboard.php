@@ -148,9 +148,7 @@
                         <div class="text-value-xl">RM10 </div>
                         <div class="text-uppercase text-muted small">On Each User</div>
                         <div class="text-uppercase text-muted small">Note : if reach 11 level then system will provide RM30 </div>
-
                       </div>
-                     
                     </div>
                   </div>
                   
