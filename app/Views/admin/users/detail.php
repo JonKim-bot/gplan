@@ -112,6 +112,9 @@
                                                         <th>
                                                             Status
                                                         </th>
+
+
+
                                                         <td>
 
                                                             <?php if (
@@ -163,6 +166,37 @@
 
 
                                                         </tr>
+
+
+
+
+                                                        <tr>
+                                                        <th>Current Type</th>
+                                                        <th><?= $users['type_id'] == 0 ? 'LEVEL 15 ' : 'LEVEL 11' ?></th>
+                                                        </tr>
+
+                                                        <tr>
+                                                                    <th scope="row">User Type</th>
+                                                                    <td>
+
+                                                                        <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url('/Users/edit_type/' . "/" . $users['users_id']); ?>">
+                                                                            <select name="type_id" class="form-control select2" id="">
+
+                                                                                <option value="0" <?= $users['type_id'] == 0 ? 'selected' : '' ?>>Level 15 User</option>
+                                                                                <option value="1" <?= $users['type_id'] == 1 ? 'selected' : '' ?>>Level 11 User</option>
+
+                                                                            </select>
+                                                                            <div class="form-group">
+                                                                                <button class="btn btn-primary float-right" type="submit"> Save</button>
+                                                                            </div>
+                                                                        </form>
+                                                                    </td>
+                                                                </tr>
+
+
+
+
+
                                                             <tr>
                                                         <th>Last Edited By</th>
                                                         <th><?= $modified_by ?></th>

@@ -51,7 +51,7 @@
                 var $temp = $(node).closest('tr').siblings().removeClass('hidden');
                 var $children = $temp.last().children().find('.node:first');
                 if ($children.length) {
-                $children[0].style.offsetWidth = $children[0].offsetWidth;
+                   $children[0].style.offsetWidth = $children[0].offsetWidth;
                 }
                 $children.removeClass('slide-up');
                 showDescendents(node, depth--);
@@ -59,7 +59,13 @@
             };
 
             $('#chart-container').orgchart({
-            'visibleLevel': 500,
+
+              // visible level added
+            <?php if($user_detail['type_id'] == 0){ ?>
+              'visibleLevel': 15,
+            <?php }else{ ?>
+            'visibleLevel': 11,
+            <?php } ?>
             'data' : $('#ulnext').children(),
 
             // // 'nodeContent': 'title',

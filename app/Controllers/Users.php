@@ -5,6 +5,7 @@
 
 
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -357,6 +358,7 @@ class Users extends BaseController
         $this->pageData['family_id'] = $family_id ;
         $users['level'] = $this->FamilyModel->user_family($family_id);
 
+
         $this->pageData['users'] = $users;
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
         $field = $this->UsersModel->get_field([
@@ -491,6 +493,32 @@ class Users extends BaseController
 
     }
 
+
+    
+    public function edit_type($users_id)
+    {
+        $where = [
+            'users.users_id' => $users_id,
+        ];
+        $this->pageData['users'] = $this->UsersModel->getWhere($where)[0];
+
+        if ($_POST) {
+            $error = false;
+            $input = $_POST;
+       
+            if (!$error) {
+
+                $data = [
+                    'type_id' => $input['type_id'],
+                ];
+                $this->UsersModel->updateWhere($where, $data);
+                return redirect()->to($_SERVER['HTTP_REFERER']);
+            }
+        }
+
+    }
+
+    
     public function edit($users_id)
     {
         $where = [
@@ -577,6 +605,7 @@ class Users extends BaseController
 
 
 
+        $user_detail = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
 
         $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
 
@@ -607,12 +636,14 @@ class Users extends BaseController
         $ulli = $this->createListLi($tree);
         
         $this->pageData["ulli"] = $ulli;
-        
+        $this->pageData["user_detail"] = $user_detail[0];
+
 
         echo view('admin/header', $this->pageData);
         echo view('admin/users/ul_of_tree');
         // echo view('admin/footer');
 
+        
     }
 
 

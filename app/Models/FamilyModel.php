@@ -1,6 +1,7 @@
 <?php namespace App\Models;
 
 
+
 use App\Core\BaseModel;
 use App\Models\WalletModel;
 
@@ -95,7 +96,6 @@ class FamilyModel extends BaseModel
                 $more = $this->db->query("SELECT * FROM family WHERE link_family_id = $family_id")->getResultArray();
                 if(!empty($more)){
                     $stop = false;
-                    
                 }
             }
         }
@@ -157,10 +157,15 @@ class FamilyModel extends BaseModel
         $this->UsersModel = new UsersModel();
 
         $upline = $this->recursive_upline($family_id); // find all upline
+        //get level of upline here 
+
         $commission = 10;
         foreach($upline as $row){
+            //check upline role here 
+
             $result = $this->recursive_users([[$row]]);
-            if(isset($result[11]) && count($result[11]) < 22){ // check if level 11 is full
+            if(isset($result[11]) && count($result[11]) < 22){ 
+                // check if level 11 is full
                 $commission = 30;
             }
             $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];

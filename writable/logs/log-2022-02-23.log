@@ -1,0 +1,20 @@
+CRITICAL - 2022-02-23 13:40:09 --> Undefined variable: users_detail
+#0 D:\www\gplan\app\Views\admin\users\ul_of_tree.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 63, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/ul_...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(643): view('admin/users/ul_...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('11')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-02-23 15:15:39 --> Undefined variable: users_detail
+#0 D:\www\gplan\app\Views\admin\users\ul_of_tree.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\www\\gplan\\ap...', 64, Array)
+#1 D:\www\gplan\system\View\View.php(246): include('D:\\www\\gplan\\ap...')
+#2 D:\www\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/ul_...', Array, true)
+#3 D:\www\gplan\app\Controllers\Users.php(643): view('admin/users/ul_...')
+#4 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('11')
+#5 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
