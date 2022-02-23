@@ -19,6 +19,7 @@
             <!-- Breadcrumb Menu-->
           </ol>
         </div>
+
       </header>
       <div class="c-body">
         <main class="c-main">
@@ -61,9 +62,20 @@
 
                         <div>Family Tree</div>
                           <div class="text-value-lg">
+                            <?php if (
+                                $users[
+                                    'is_verified'
+                                ] == 0
+                            ) { ?>
+                            
+                              <a class="btn btn-primary" >
+                                Don Have Family Yet
+                              </a>
+                            <?php } else { ?>
                             <a class="btn btn-primary" href="<?= base_url() ?>/users/tree/1">
                               View Family Tree
                             </a>
+                          <?php } ?>
                           </div>
                       </div>
                       <div class="btn-group">
