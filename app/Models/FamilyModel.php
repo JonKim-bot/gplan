@@ -152,6 +152,7 @@ class FamilyModel extends BaseModel
         return $slot_family_id;
     }
 
+
     public function insert_commission($family_id){
         $this->WalletModel = new WalletModel();
         $this->UsersModel = new UsersModel();
@@ -161,20 +162,34 @@ class FamilyModel extends BaseModel
 
         $commission = 10;
         foreach($upline as $row){
+            dd($row);
             //check upline role here 
-
+            $full = false;
             $result = $this->recursive_users([[$row]]);
             if(isset($result[11]) && count($result[11]) < 22){ 
-                // check if level 11 is full
                 $commission = 30;
             }
-            $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];
-            $user_id = $user['user_id'];
-            $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
-            if(empty($existed)){
-                $remarks = 'Commision for ' . $this->UsersModel->get_user_name($user_id) . ' With amount of ' . $commission ;
-                $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
-                // $this->db->insert('family_commission', ['user_id' => $user_id, 'commission' => $commission, 'family_id' => $family_id]);
+            if($row['type_id'] == 0){
+                //level 15
+                if(isset($result[15]) && count($result[15]) < 30 ){ 
+                    $full = true;
+                }
+            }else{
+                //level 11 full 
+                if(isset($result[11]) && count($result[11]) < 22 ){ 
+                    // check if level 11 is full
+                    $full = true;
+                }
+            }
+            if($full == false){
+                $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];
+                $user_id = $user['user_id'];
+                $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
+                if(empty($existed)){
+                    $remarks = 'Commision for ' . $this->UsersModel->get_user_name($user_id) . ' With amount of ' . $commission ;
+                    $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
+                    // $this->db->insert('family_commission', ['user_id' => $user_id, 'commission' => $commission, 'family_id' => $family_id]);
+                }
             }
         }
     }
