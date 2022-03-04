@@ -124,17 +124,19 @@
                     users_id: users_id,
                     downline_id : downline_id,
                 };
+                var payment_status = confirm("Are you sure you want to make payment for this downline");
 
-                $.post("<?= base_url('users/make_payment') ?>", postParam, function(data) {
+                if (payment_status === true) {
 
-                    data = JSON.parse(data);
-                    if(data.status){
-                        alert("Payment successful , please wait for admin to verify your account")
-                    }else{
-                        
-                        alert(data.message)
-                    }
-                });
+                    $.post("<?= base_url('users/make_payment') ?>", postParam, function(data) {
+                        data = JSON.parse(data);
+                        if(data.status){
+                            alert("Payment successful , please wait for admin to verify your account")
+                        }else{
+                            alert(data.message)
+                        }
+                    });
+                }
             });
 
 

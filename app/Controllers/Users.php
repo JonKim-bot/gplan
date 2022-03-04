@@ -153,6 +153,11 @@ class Users extends BaseController
                 500,
                 $remarks,
             );
+
+            die(json_encode([
+                'status' => true,
+                'data' => $remarks
+            ]));
         }
     }
     // public function generate_image
