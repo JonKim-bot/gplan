@@ -123,8 +123,19 @@ Withdrawal
 
             </a>
             </li>
-
+            <li class="c-sidebar-nav-item ">
+                        <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+            'Banner'
             
+                ? 'c-active'
+                : null ?>" href="<?= base_url('Banner') ?>">
+            <i class="cil-money c-sidebar-nav-icon"></i>
+            Banner
+
+            </a>
+            </li>
+
+
 <!--                    
                     <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==

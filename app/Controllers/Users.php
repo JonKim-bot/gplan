@@ -211,15 +211,18 @@ class Users extends BaseController
                 $where = [
                     'family.family_id' => $row['family_id']
                 ];
-                $family_user_id = $this->FamilyModel->getWhere($where)[0]['user_id'];
-                $where = [
+                $family_user_id = $this->FamilyModel->getWhere($where);
+                if(!empty($family_user_id)){
+                    $family_user_id= $family_user_id[0]['user_id'];
 
-                    'users.users_id' => $family_user_id
-                ];
-                $family_name = $this->UsersModel->getWhere($where)[0];
-                $family_name = $family_name['name'];
-
-
+                    $where = [
+    
+                        'users.users_id' => $family_user_id
+                    ];
+                    $family_name = $this->UsersModel->getWhere($where)[0];
+                    $family_name = $family_name['name'];
+                }
+                    
                 $where = [
                     'family.user_id' => $row['users_id']
                 ];
@@ -763,6 +766,7 @@ class Users extends BaseController
 
 
         $user_detail = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
+
 
         $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
 

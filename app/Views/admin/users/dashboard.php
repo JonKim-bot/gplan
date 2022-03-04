@@ -155,11 +155,12 @@
                     </div>
                     <div class="card-body row text-center">
                       <div class="col">
-                        <div class="text-uppercase text-muted small">Invite downline
-                        and earn</div>
-                        <div class="text-value-xl">RM10 </div>
-                        <div class="text-uppercase text-muted small">On Each User</div>
-                        <div class="text-uppercase text-muted small">Note : if reach 11 level then system will provide RM30 </div>
+
+                      
+                        <div class="text-uppercase text-muted small">Share your qr code to build your team</div>
+                        <div class="text-value-xl"> </div>
+                        <!-- <div class="text-uppercase text-muted small">On Each User</div>
+                        <div class="text-uppercase text-muted small">Note : if reach 11 level then system will provide RM30 </div> -->
                       </div>
                     </div>
                   </div>
@@ -358,4 +359,3 @@
               <!-- /.row-->
             </div>
        
-            
