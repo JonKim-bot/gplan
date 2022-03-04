@@ -60,6 +60,8 @@ class Users extends BaseController
         $users_count = 0;
         if(!empty($users)){
             $users_count = count($users);
+
+
         }
 
         $this->pageData['users_count'] = $users_count;
@@ -120,6 +122,14 @@ class Users extends BaseController
         echo view('admin/footer');
     }
 
+    public function find_user_id_by_family_id($family_id){
+        $where = [
+            'family.family_id' => $family_id
+        ];
+        $family = $this->FamilyModel->getWhere($where)[0];
+        return $family['user_id'];
+    }
+
     public function add()
     
     {
@@ -156,9 +166,9 @@ class Users extends BaseController
                     'email' => $input['email'],
                     'username' => $input['username'],
                     'contact' => $input['contact'],
-
                     'password' => $hash['password'],
                     // 'nric_name' => $input['nric_name'],
+                    'reference_id' => $this->find_user_id_by_family_id  ($input['family_id']),
                     // 'nric' => $input['nric'],
                     'family_id' => $input['family_id'],
                     // 'ssm_name' => $input['ssm_name'],
@@ -333,8 +343,6 @@ class Users extends BaseController
                 'family.user_id' => $users['users_id']
             ];
 
-
-
             $link_family = $this->FamilyModel->getWhere($where);
             if(!empty($link_family)){
                 $link_family_id = $link_family[0]['link_family_id'];
@@ -343,9 +351,6 @@ class Users extends BaseController
         }
         $users['family_name'] = $family_name;
         $users['upline_name'] = $upline_name;
-
-
-        // }
 
         $family_id = 0;
         
@@ -356,8 +361,13 @@ class Users extends BaseController
         }
 
         $this->pageData['family_id'] = $family_id ;
-        $users['level'] = $this->FamilyModel->user_family($family_id);
 
+        $level = $this->FamilyModel->user_family($family_id);
+        if($family_id == 0){
+            $level = 1;
+        }
+        // dd($level);
+        $users['level']  = $level;
 
         $this->pageData['users'] = $users;
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
@@ -438,6 +448,8 @@ class Users extends BaseController
         // }
 
         $this->pageData['users'] = $users;
+
+
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
         $field = $this->UsersModel->get_field([
             'created_by',

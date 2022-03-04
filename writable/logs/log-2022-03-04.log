@@ -1,0 +1,23 @@
+CRITICAL - 2022-03-04 11:30:49 --> Table 'gplan.wallet_withdraw' doesn't exist
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT COUNT(*)...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletWithdrawModel.php(126): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Core\BaseController.php(75): App\Models\WalletWithdrawModel->getCountOfUndone()
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-03-04 11:47:00 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-04 11:54:41 --> Undefined index: username
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(712): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 712, Array)
+#1 C:\xampp\htdocs\gplan\app\Controllers\Users.php(643): App\Controllers\Users->createListLi(Array)
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('21')
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

@@ -78,6 +78,7 @@ Registration
 </a>
 
 </li>
+
                     <li class="c-sidebar-nav-item ">
 
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
@@ -163,6 +164,9 @@ Admin
                         display: none;
                     }
                 </style>
+                <?php if (session()->get('login_data')['type_id'] == '1') { ?>
+
+                <?php } ?>
                         <li class="c-sidebar-nav-item ">
 
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
