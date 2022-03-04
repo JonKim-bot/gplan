@@ -235,6 +235,7 @@ class FamilyModel extends BaseModel
             if($type_id== 4){
                 //level 11 full 
                 if(isset($result[12]) && count($result[12]) < 24 ){ 
+                    
                     // check if level 11 is full
                     $full = true;
                 }

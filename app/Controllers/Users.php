@@ -373,6 +373,7 @@ class Users extends BaseController
         dd($family_id);
     }
 
+
     public function verify_user($users_id){
 
         $where = [
@@ -739,6 +740,12 @@ class Users extends BaseController
     public function delete($users_id)
     {
         $this->UsersModel->softDelete($users_id);
+
+        $where = [
+            'family.user_id' => $users_id
+        ];
+        $family_id = $this->FamilyModel->getWhereRaw($where)[0]['family_id'];
+        $this->FamilyModel->hardDelete($family_id);
         // dd('asd');
         return redirect()->to($_SERVER['HTTP_REFERER']);
 
