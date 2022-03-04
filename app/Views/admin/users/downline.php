@@ -59,6 +59,8 @@
                                                 <th data-filter="usersname">User Name</th>
                                                 <th data-filter="usersname">Contact</th>
                                                 <th data-filter="email">Email</th>
+                                                <th data-filter="email">Payment Status</th>
+
 
                                                 <th>Verify Status</th>
 
@@ -79,9 +81,14 @@
 
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['contact'] ?></a></td>
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['email'] ?></a></td>
-                                                
+                                                    <?php if($row['is_paid'] == 0){ ?>
+                                                    <td><a id= "<?= $row['users_id'] ?>"  class="text-white make_payment btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_paid'] == 1 ? "Paid" : "Not Paid" ?></a></td>
+                                                    <?php }else{ ?>
+                                                        <td>Paid</td>
+                                                    <?php } ?>
+                                          
                                                     <?php if($row['is_verified'] == 0){ ?>
-                                                    <td><a id= "<?= $row['users_id'] ?>"  class="make_payment btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>
+                                                    <td><a id= "<?= $row['users_id'] ?>"  class="text-white btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>
                                                     <?php }else{ ?>
                                                         <td>Verified</td>
                                                     <?php } ?>
@@ -131,6 +138,7 @@
                     $.post("<?= base_url('users/make_payment') ?>", postParam, function(data) {
                         data = JSON.parse(data);
                         if(data.status){
+                            window.location.reload();
                             alert("Payment successful , please wait for admin to verify your account")
                         }else{
                             alert(data.message)
