@@ -164,20 +164,22 @@ Admin
                         display: none;
                     }
                 </style>
-                <?php if (session()->get('login_data')['type_id'] == '1') { ?>
+                <?php if (session()->get('login_data')['is_verified'] == '1') { ?>
+                    <li class="c-sidebar-nav-item ">
+
+                            <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
+                                ? 'c-active'
+                                : null ?>" href="<?= base_url('Withdraw') ?>">
+                            <i class="cil-storage c-sidebar-nav-icon"></i>
+                            Withdrawal
+                            <span class="badge badge-pill badge-warning"></span>
+
+                            </a>
+                            </li>
+
 
                 <?php } ?>
-                        <li class="c-sidebar-nav-item ">
-
-<a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
-    ? 'c-active'
-    : null ?>" href="<?= base_url('Withdraw') ?>">
-<i class="cil-storage c-sidebar-nav-icon"></i>
-Withdrawal
-<span class="badge badge-pill badge-warning"></span>
-
-</a>
-</li>
+                    
 
 
                  
@@ -227,30 +229,34 @@ QR Code
 </a>
 
 </li> -->
-<li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
-                    'Wallet'
-                    
-                        ? 'c-active'
-                        : null ?>" href="<?= base_url('Wallet') ?>">
-                    <i class="cil-money c-sidebar-nav-icon"></i>
-                    Transaction
-
-                    </a>
-                    </li>
+<?php if (session()->get('login_data')['is_verified'] == '1') { ?>
 
 
-                    <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
-                    'User/Tree/1'
-                    
-                        ? 'c-active'
-                        : null ?>" href="<?= base_url('Users/Tree/1') ?>">
-                    <i class="cil-smile c-sidebar-nav-icon"></i>
-                    Family Tree
-
-                    </a>
-                    </li>
+    <li class="c-sidebar-nav-item ">
+                        <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                        'Wallet'
+                        
+                            ? 'c-active'
+                            : null ?>" href="<?= base_url('Wallet') ?>">
+                        <i class="cil-money c-sidebar-nav-icon"></i>
+                        Transaction
+    
+                        </a>
+                        </li>
+    
+    
+                        <li class="c-sidebar-nav-item ">
+                        <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                        'User/Tree/1'
+                        
+                            ? 'c-active'
+                            : null ?>" href="<?= base_url('Users/Tree/1') ?>">
+                        <i class="cil-smile c-sidebar-nav-icon"></i>
+                        Family Tree
+    
+                        </a>
+                        </li>
+<?php } ?>
 
 
                 <?php } ?>
