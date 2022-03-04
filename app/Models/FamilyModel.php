@@ -71,6 +71,7 @@ class FamilyModel extends BaseModel
             
             return $pagination;
 
+
         }
         $query = $this->builder->get();
         return $query->getResultArray();
@@ -172,12 +173,39 @@ class FamilyModel extends BaseModel
             }
             if($row['type_id'] == 0){
                 //level 15
-                if(isset($result[15]) && count($result[15]) < 30 ){ 
+                if(isset($result[8]) && count($result[8]) < 16){ 
                     $full = true;
                 }
-            }else{
+            }
+            
+            
+            if($row['type_id'] == 1){
+                //level 11 full 
+                if(isset($result[9]) && count($result[9]) < 18 ){ 
+                    // check if level 11 is full
+                    $full = true;
+                }
+            }
+
+            if($row['type_id'] == 2){
+                //level 11 full 
+                if(isset($result[10]) && count($result[10]) < 20 ){ 
+                    // check if level 11 is full
+                    $full = true;
+                }
+            }
+
+            if($row['type_id'] == 3){
                 //level 11 full 
                 if(isset($result[11]) && count($result[11]) < 22 ){ 
+                    // check if level 11 is full
+                    $full = true;
+                }
+            }
+
+            if($row['type_id'] == 4){
+                //level 11 full 
+                if(isset($result[12]) && count($result[12]) < 24 ){ 
                     // check if level 11 is full
                     $full = true;
                 }
