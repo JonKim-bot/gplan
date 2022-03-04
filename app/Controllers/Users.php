@@ -139,6 +139,7 @@ class Users extends BaseController
         $balance = $this->WalletModel->get_balance($users_id);
         if($balance < 500){
             die(json_encode([
+
                 'status' => false,
                 'message' => 'Balance not enought'
             ]));
@@ -242,6 +243,20 @@ class Users extends BaseController
         echo view('admin/users/all');
         echo view('admin/footer');
     }
+
+
+    public function user_with_no_downline()
+    {
+
+        
+        $users = $this->UsersModel->get_user_with_no_downline();
+        $this->pageData['users'] = $users;
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/users_with_no_downline');
+        echo view('admin/footer');
+
+    }
+
 
     public function find_user_id_by_family_id($family_id){
         $where = [
@@ -365,13 +380,14 @@ class Users extends BaseController
         ];
         $users = $this->UsersModel->getWhere($where)[0];
 
+
         if($users['is_verified'] == 0){
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
             // dd($users['family_id']);
-            $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
-    
+            $family_id = $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
+            $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
         }else{
             $is_verified = 0;
 

@@ -119,15 +119,19 @@ class FamilyModel extends BaseModel
 
     public function insert_new_member($new_member, $family_id){
 
+        $new_family_id = 0;
         $existed = $this->db->query("SELECT * FROM family WHERE user_id = $new_member")->getResultArray();
         if(empty($existed)){
             $slot_family_id = $this->find_empty_slot($family_id);
             $new_family_id = $this->insertNew(['link_family_id' => $slot_family_id, 'user_id' => $new_member]);
             // $this->db->insert('family', );
+
             // $new_family_id = $this->db->insertID();
             $this->insert_commission($new_family_id);
         }
         $this->user_family($family_id);
+
+        return $new_family_id;
     }
 
     public function find_empty_slot($family_id){
@@ -154,6 +158,28 @@ class FamilyModel extends BaseModel
         return $slot_family_id;
     }
 
+    public function get_users_info($users_id){
+        
+        $where = [
+            'users.users_id' => $users_id,
+        ];
+        $this->UsersModel = new UsersModel();
+
+        $users = $this->UsersModel->getWhere($where);
+        if(!empty($users)){
+
+            return $users[0];
+        }else{
+            return "-None-";
+        }
+    }
+
+    public function get_upline_info($link_family_id){
+        $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray()[0]['user_id'];
+
+        $user_info = $this->get_users_info($upline_id);
+        return $user_info['type_id'];
+    }
 
     public function insert_commission($family_id){
         $this->WalletModel = new WalletModel();
@@ -163,15 +189,18 @@ class FamilyModel extends BaseModel
         //get level of upline here 
 
         $commission = 10;
+
+        
         foreach($upline as $row){
-            dd($row);
+            $type_id = $this->get_upline_info($row);
             //check upline role here 
             $full = false;
             $result = $this->recursive_users([[$row]]);
             if(isset($result[11]) && count($result[11]) < 22){ 
                 $commission = 30;
             }
-            if($row['type_id'] == 0){
+
+            if($type_id == 0){
                 //level 15
                 if(isset($result[8]) && count($result[8]) < 16){ 
                     $full = true;
@@ -179,7 +208,7 @@ class FamilyModel extends BaseModel
             }
             
             
-            if($row['type_id'] == 1){
+            if($type_id == 1){
                 //level 11 full 
                 if(isset($result[9]) && count($result[9]) < 18 ){ 
                     // check if level 11 is full
@@ -187,7 +216,7 @@ class FamilyModel extends BaseModel
                 }
             }
 
-            if($row['type_id'] == 2){
+            if($type_id == 2){
                 //level 11 full 
                 if(isset($result[10]) && count($result[10]) < 20 ){ 
                     // check if level 11 is full
@@ -195,7 +224,7 @@ class FamilyModel extends BaseModel
                 }
             }
 
-            if($row['type_id'] == 3){
+            if($type_id== 3){
                 //level 11 full 
                 if(isset($result[11]) && count($result[11]) < 22 ){ 
                     // check if level 11 is full
@@ -203,7 +232,7 @@ class FamilyModel extends BaseModel
                 }
             }
 
-            if($row['type_id'] == 4){
+            if($type_id== 4){
                 //level 11 full 
                 if(isset($result[12]) && count($result[12]) < 24 ){ 
                     // check if level 11 is full
@@ -219,6 +248,7 @@ class FamilyModel extends BaseModel
                     $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
                     // $this->db->insert('family_commission', ['user_id' => $user_id, 'commission' => $commission, 'family_id' => $family_id]);
                 }
+
             }
         }
     }
@@ -230,6 +260,7 @@ class FamilyModel extends BaseModel
             array_push($upline, $link_family_id);
             $up_family = $this->db->query("SELECT * FROM family WHERE family_id = $link_family_id")->getResultArray()[0];
             if($up_family['link_family_id'] != 0){
+
                 return $this->recursive_upline($link_family_id, $upline);
             }
         }
@@ -301,6 +332,7 @@ class FamilyModel extends BaseModel
             }
             $users[$key]['children'] = $child;
         }
+
 
         return $users;
 

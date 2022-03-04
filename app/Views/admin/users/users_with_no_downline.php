@@ -18,35 +18,19 @@
         <div class="fade-in">
             <div class="card">
                 <div class="card-header">
-                    User Details
+                    User With No Downline Details
                     <div class="card-header-actions">
                         <a class="card-header-action">
                             <i class="cil-arrow-circle-top c-icon minimize-card"></i>
                         </a>
-                    
+                  
                     </div>
                 </div>
                 <div class="card-body">
                     <div id="" class="dataTables_wrapper dt-bootstrap4 no-footer">
 
-                    <form method="GET" id="filter_form">
-                        <div class="row">
-
-                            <div class="form-group col-sm-12 col-md-3">
-                                <label for="" class="c-label">User Type</label>
-                                <select class="form-control filter" name="is_verified">
-                                    <option value="99">All</option>
-                                    <option value="1"  <?= isset($_GET['is_verified']) && $_GET['is_verified'] == 1 ? 'selected' : ''  ?>>Verified</option>
-                                    <option value="0"  <?= isset($_GET['is_verified']) && $_GET['is_verified'] == 0 ? 'selected' : ''  ?>>Not Verified</option>
-
-                                </select>
-                            </div>
-
-                        </div>
-                    </form>
                         <div class="row">
                             <div class="col-sm-12">
-                                <p>Total Users : <?= $users_count ?></p>
 
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered no-footer datatable" id="users_list_table" data-method="get" data-url="<?= base_url("users") ?>" style="border-collapse: collapse !important">
@@ -57,8 +41,6 @@
                                                 <th data-filter="usersname">User Name</th>
                                                 <th data-filter="usersname">Contact</th>
                                                 <th data-filter="email">Email</th>
-                                                <th data-filter="email">Payment Status</th>
-
 
                                                 <th>Verify Status</th>
 
@@ -79,11 +61,7 @@
 
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['contact'] ?></a></td>
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['email'] ?></a></td>
-                                                    <?php if($row['is_paid'] == 0){ ?>
-                                                    <td><a id= "<?= $row['users_id'] ?>"  class="text-white make_payment btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_paid'] == 1 ? "Paid" : "Not Paid" ?></a></td>
-                                                    <?php }else{ ?>
-                                                        <td>Paid</td>
-                                                    <?php } ?>
+                                                 
                                           
                                                     <?php if($row['is_verified'] == 0){ ?>
                                                     <td><a id= "<?= $row['users_id'] ?>"  class="text-white btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>
@@ -91,7 +69,7 @@
                                                         <td>Verified</td>
                                                     <?php } ?>
                                           
-                                                    <td><a href="<?= base_url() ?>/users/delete/<?= $row['users_id'] ?>" class="btn btn-danger delete-button"><i class="fa fa-trash"></i> Delete</a></td>
+                                                    <td><a href="<?= base_url() ?>/users/delete/<?= $row['users_id'] ?>" class="btn btn-dangere delete-button"><i class="fa fa-trash"></i> Delete</a></td>
                                                 </tr>
                                             <?php
                                                 $i++;
@@ -111,40 +89,3 @@
 
        
             
-        <script>
-            
-            $(document).on("change", ".filter", function (e) {
-            
-            $('#filter_form').submit();
-            });
-            
-
-            
-            $('.make_payment').on('click', function() {
-                let downline_id = $(this).attr('id')
-                
-                let users_id = "<?= $users_id ?>"; 
-          
-                var postParam = {
-                    users_id: users_id,
-                    downline_id : downline_id,
-                };
-                var payment_status = confirm("Are you sure you want to make payment for this downline");
-
-                if (payment_status === true) {
-
-                    $.post("<?= base_url('users/make_payment') ?>", postParam, function(data) {
-                        data = JSON.parse(data);
-                        if(data.status){
-                            window.location.reload();
-                            alert("Payment successful , please wait for admin to verify your account")
-                        }else{
-                            alert(data.message)
-                        }
-                    });
-                }
-            });
-
-
-                    </script>
-                    

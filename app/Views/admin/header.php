@@ -109,6 +109,22 @@ Withdrawal
 
                     </a>
                     </li>
+
+                    
+            
+    <li class="c-sidebar-nav-item ">
+                        <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+            'Users/user_with_no_downline/1'
+            
+                ? 'c-active'
+                : null ?>" href="<?= base_url('Users/user_with_no_downline/1') ?>">
+            <i class="cil-money c-sidebar-nav-icon"></i>
+            User With No Downline
+
+            </a>
+            </li>
+
+            
 <!--                    
                     <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
@@ -243,6 +259,8 @@ QR Code
 
             </a>
             </li>
+
+
 
 
             
