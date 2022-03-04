@@ -4,6 +4,7 @@
 
 
 
+
 namespace App\Core;
 
 /**
@@ -98,6 +99,8 @@ class BaseController extends Controller
         // }
 
     }
+
+
 
 
     
@@ -342,17 +345,20 @@ class BaseController extends Controller
         }
         return $data;
     }
-
-    public function set_customer_session($customer_id)
-    {
+    public function get_users_info($users_id){
+        
         $where = [
-            'customer_id' => $customer_id,
+            'users.users_id' => $users_id,
         ];
-        $customer = $this->CustomerModel->getWhere($where);
-        $login_data = $customer[0];
-        $login_id = $customer[0]['customer_id'];
-        $this->session->set('customer_data', $login_data);
-        $this->session->set('customer_id', $login_id);
+        $this->UsersModel = new UsersModel();
+
+        $users = $this->UsersModel->getWhere($where);
+        if(!empty($users)){
+
+            return $users[0];
+        }else{
+            return "-None-";
+        }
     }
 
     public function validate_contact($contact)
@@ -494,6 +500,21 @@ class BaseController extends Controller
         return $data;
     }
 
+    public function get_customer_info($customer_id){
+        
+        $where = [
+            'customer.customer_id' => $customer_id,
+        ];
+        $this->CustomerModel = new CustomerModel();
+
+        $customer = $this->CustomerModel->getWhere($where);
+        if(!empty($customer)){
+
+            return $customer[0];
+        }else{
+            return "-None-";
+        }
+    }
     public function checkExists($username, $exclude_id = '')
     {
         $where = [

@@ -136,6 +136,24 @@ class Users extends BaseController
         $users_id = $_POST['users_id'];
         $downline_id = $_POST['downline_id'];
         //deduct 500 from users_id
+        $balance = $this->WalletModel->get_balance($users_id);
+        if($balance < 500){
+            die(json_encode([
+                'status' => false,
+                'message' => 'Balance not enought'
+            ]));
+        }else{
+            $user = $this->get_users_info($users_id);
+            $downline = $this->get_users_info($downline_id);
+
+            $remarks = 'Deduct RM 500 From ' . $user['username'] . " , Made by verify account for downline " . $downline['username'];
+
+            $this->WalletModel->wallet_out(
+                $users_id,
+                500,
+                $remarks,
+            );
+        }
     }
     // public function generate_image
     public function index()
@@ -325,6 +343,7 @@ class Users extends BaseController
 
     
     // public function copy($users_id){
+
     //     $users = $this->UsersModel->copy($users_id);
     //     return redirect()->to(base_url('Users', 'refresh'));
     // }
