@@ -81,7 +81,7 @@
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['email'] ?></a></td>
                                                 
                                                     <?php if($row['is_verified'] == 0){ ?>
-                                                    <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>
+                                                    <td><a id= "<?= $row['users_id'] ?>"  class="make_payment btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>
                                                     <?php }else{ ?>
                                                         <td>Verified</td>
                                                     <?php } ?>
@@ -113,5 +113,30 @@
             $('#filter_form').submit();
             });
             
+
+            
+            $('.make_payment').on('click', function() {
+                let downline_id = $(this).attr('id')
+                
+                let users_id = "<?= $users_id ?>"; 
+          
+                var postParam = {
+                    users_id: users_id,
+                    downline_id : downline_id,
+                };
+
+                $.post("<?= base_url('users/make_payment') ?>", postParam, function(data) {
+
+                    data = JSON.parse(data);
+                    if(data.status){
+                        alert("Payment successful , please wait for admin to verify your account")
+                    }else{
+                        
+                        alert(data.message)
+                    }
+                });
+            });
+
+
                     </script>
                     

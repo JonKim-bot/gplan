@@ -124,13 +124,19 @@ class Users extends BaseController
 
 
         }
+        $this->pageData['users_id'] = $users_id;
+
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
         echo view('admin/users/downline');
         echo view('admin/footer');
     }
 
-
+    public function make_payment(){
+        $users_id = $_POST['users_id'];
+        $downline_id = $_POST['downline_id'];
+        //deduct 500 from users_id
+    }
     // public function generate_image
     public function index()
     {
