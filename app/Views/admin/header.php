@@ -234,6 +234,20 @@ QR Code
 
     <li class="c-sidebar-nav-item ">
                         <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+            'Users/downline/1'
+            
+                ? 'c-active'
+                : null ?>" href="<?= base_url('Users/downline/1') ?>">
+            <i class="cil-money c-sidebar-nav-icon"></i>
+            Downline
+
+            </a>
+            </li>
+
+
+            
+    <li class="c-sidebar-nav-item ">
+                        <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
                         'Wallet'
                         
                             ? 'c-active'

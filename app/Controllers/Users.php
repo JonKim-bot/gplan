@@ -39,6 +39,97 @@ class Users extends BaseController
     }
 
 
+    public function downline($users_id)
+    {
+
+        
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $users_id = session()->get('login_id');
+        }
+
+        $where = [
+            'users.reference_id' => $users_id,
+        ];
+        //get user downline
+        $is_verified =
+        ($_GET and isset($_GET['is_verified']))
+            ? $_GET['is_verified']
+            : 99;
+
+        $where['users.contact !='] = '';
+
+        if($is_verified != 99){
+
+            $where['users.is_verified'] = $is_verified;
+        }        
+        $users = $this->UsersModel->getWhere($where);
+        $users_count = 0;
+        if(!empty($users)){
+            $users_count = count($users);
+
+
+        }
+
+        $this->pageData['users_count'] = $users_count;
+        // dd($users);
+
+        $field = $this->UsersModel->get_field([
+            'created_by',
+            'modified_by',
+            'deleted',
+        ]);
+        $this->pageData['table'] = $this->generate_table(
+            $field,
+            $users,
+            'users',
+            'banner'
+        );
+
+
+        foreach($users as $key => $row){
+            $family_name = '';
+            // dd($key);
+            $upline_name = '';
+
+            if($row['family_id'] > 0){
+                $where = [
+                    'family.family_id' => $row['family_id']
+                ];
+                $family_user_id = $this->FamilyModel->getWhere($where)[0]['user_id'];
+                $where = [
+
+                    'users.users_id' => $family_user_id
+                ];
+                $family_name = $this->UsersModel->getWhere($where)[0];
+                $family_name = $family_name['name'];
+
+
+                $where = [
+                    'family.user_id' => $row['users_id']
+                ];
+    
+    
+    
+                $link_family = $this->FamilyModel->getWhere($where);
+                if(!empty($link_family)){
+                    $link_family_id = $link_family[0]['link_family_id'];
+                    $upline_name = $this->UsersModel->getWhere(['users.users_id' => $link_family_id])[0]['name'];
+                }
+
+            }
+            $users[$key]['upline_name'] = $upline_name;
+
+            $users[$key]['family_name'] = $family_name;
+
+
+        }
+        $this->pageData['users'] = $users;
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/downline');
+        echo view('admin/footer');
+    }
+
 
     // public function generate_image
     public function index()
