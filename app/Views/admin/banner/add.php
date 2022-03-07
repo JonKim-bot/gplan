@@ -46,14 +46,7 @@
                                     <input type="file" class="form-control" name="banner" placeholder="Banner" required>
                                 </div>
                                 <!-- <label for=""></label> -->
-                                <div class="form-group">
-                                    <label for="banner">Page</label>
-                                    <select name="type" id="">
-                                        <option value="0">Home</option>
-                                        <option value="1">About Us</option>
-
-                                    </select>
-                                </div>
+                               
                                 <?= $form['title'] ?>
                                 <?= $form['description'] ?>
 

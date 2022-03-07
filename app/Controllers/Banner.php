@@ -2,6 +2,7 @@
 
 
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -15,7 +16,7 @@ class Banner extends BaseController
 
         $this->BannerModel = new BannerModel();
         if (
-            session()->get('admin_data') == null &&
+            session()->get('login_data') == null &&
             uri_string() != 'access/login'
         ) {
             //  redirect()->to(base_url('access/login/'));

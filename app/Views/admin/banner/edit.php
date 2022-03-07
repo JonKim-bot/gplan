@@ -32,14 +32,7 @@
                         <label for="banner">Image</label>
                         <input type="file" class="form-control" name="banner" placeholder="Banner" >
                     </div>
-                    <div class="form-group">
-                        <label for="banner">Page</label>
-                        <select name="type" id="">
-                            <option value="0" <?= $banner['type'] == 0 ? 'selected' : '' ?>>Home</option>
-                            <option value="1" <?= $banner['type'] == 1 ? 'selected' : '' ?>>About Us</option>
-
-                        </select>
-                    </div>
+        
                     <?= $form['title'] ?>
                     <?= $form['description'] ?>
 
