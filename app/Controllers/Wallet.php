@@ -74,6 +74,7 @@ class Wallet extends BaseController
             : 0;
 
         $dateFrom =
+        
 
         ($_GET and isset($_GET['dateFrom']))
             ? $_GET['dateFrom']
@@ -125,8 +126,9 @@ class Wallet extends BaseController
         $this->pageData['wallet'] = $users_wallet;
       
         echo view('admin/header', $this->pageData);
+        echo view('admin/wallet/transaction');
 
-        echo view('admin/wallet/all');
+        // echo view('admin/wallet/all');
         echo view('admin/footer');
         
     }
