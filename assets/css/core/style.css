@@ -28043,4 +28043,9 @@ h3 {
   
 }
 
+.btn_register{
+  border-radius: 20px;
+  padding: 10px 35px;
+  background: black;
+}
 /*# sourceMappingURL=style.css.map */
