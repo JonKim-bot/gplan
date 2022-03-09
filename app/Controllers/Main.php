@@ -136,13 +136,18 @@ class Main extends BaseController
 
 
         $this->pageData['family_id'] = $family_id;
+        echo view('access/header', $this->pageData);
+
 
         echo view('admin/main/add', $this->pageData);
 
     }
 
-    public function register(){
-        
+    public function welcome($family_id){
+        $this->pageData['family_id'] = $family_id;
+
+        echo view('admin/main/welcome', $this->pageData);
+
     }
     // public function add($family_id)
 
@@ -381,6 +386,7 @@ class Main extends BaseController
         $ulli = $this->createListLi($tree);
         // dd($users_1);
         // dd($ulli);
+
 
         // $this->show_404_if_empty($user);
 
