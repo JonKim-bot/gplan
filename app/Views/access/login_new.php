@@ -1,7 +1,7 @@
     
 <style>
 </style>
-<div class="col-md-6 " style="margin:70px 0px 70px 0px">
+<div class="col-md-6 " style="margin-top:70px">
     <!-- <img src="https://carlink.my/static/media/Logo%203D%20Png.8b5ebdda.png" style="margin-bottom:20px" width="100%" alt=""> -->
 <!-- <div class="card-group"> -->
         <div class='text-center text-white'>
@@ -77,9 +77,7 @@
                 <p>Register Your account here</p>
             </div>
             <div class="text-center bank-info text-white">
-                <p style="margin-top:1rem">Register Your account here</p>
-                <p>Register Your account here</p>
-
+                <h3>Register</h3>
                 <p>Register Your account here</p>
             </div>
 
@@ -96,8 +94,8 @@
             
             
             <div class="row">
-                <div class="col-12 text-center">
-                    <button class="btn btn-dark btn_register text-white " type="submit">SIGN IN</button>
+                <div class="col-12">
+                    <button class="btn btn-primary px-4 w-100" type="submit">SIGN IN</button>
                 </div>
             </div>
         </form>

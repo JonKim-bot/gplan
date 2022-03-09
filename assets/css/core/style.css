@@ -62,6 +62,11 @@
   --color: #e1e1e1;
 }
 
+.bg_color{
+  
+  background: linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;
+
+}
 .c-app.c-legacy-theme {
   --primary: #20a8d8;
   --secondary: #c8ced3;
@@ -28026,8 +28031,20 @@ h3 {
   90%, 100% {
     -webkit-transform: perspective(140px) rotateY(180deg);
     transform: perspective(140px) rotateY(180deg);
+
     opacity: 0;
   }
 }
 
+
+.bank-info{
+  border:1px white solid;
+  
+}
+
+.btn_register{
+  border-radius: 20px;
+  padding: 10px 35px;
+  background: black;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,6 @@
 <?php namespace App\Controllers;
 
 
-
-
-
-
 use App\Core\BaseController;
 use App\Models\AdminModel;
 use App\Models\UsersModel;
@@ -97,6 +93,7 @@ class Access extends BaseController
     }
 
 
+
     public function login()
     {
         $session = session();
@@ -175,14 +172,14 @@ class Access extends BaseController
                 $this->pageData['error'] = 'This Account has been DEACTIVATED';
             }
 
-            if($type_id == 1){
-                if (!empty($login_data) and $login_data['is_verified'] == 0) {
+            // if($type_id == 1){
+            //     if (!empty($login_data) and $login_data['is_verified'] == 0) {
                 
-                    $error = true;
-                    $this->pageData['error'] = 'This Account has not been VERIFIED yet';
-                }
+            //         $error = true;
+            //         $this->pageData['error'] = 'This Account has not been VERIFIED yet';
+            //     }
     
-            }
+            // }
             // dd($login_data);
             if (!$error) {
                 $login_data['type_id'] = $type_id;
@@ -219,6 +216,7 @@ class Access extends BaseController
         // }else{
             
         //     return redirect()->to(base_url('access/loginUser', 'refresh'));
+
         // }
 
 

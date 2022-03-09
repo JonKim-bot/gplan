@@ -33,6 +33,7 @@
     }
     function get_buyer_status($status_id){
         if($status_id == 0){
+            
             return "Pending";
         }
         if($status_id == 2){

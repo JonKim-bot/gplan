@@ -27,6 +27,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
            <script src="<?=base_url()?>/assets/js/core/custom.js"></script>
+           
            <script src="<?= base_url() ?>/assets/js/core/customTable.js"></script>
            <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js"></script>
    

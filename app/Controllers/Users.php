@@ -39,12 +39,19 @@ class Users extends BaseController
     }
 
 
-
-    // public function generate_image
-    public function index()
+    public function downline($users_id)
     {
 
         
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $users_id = session()->get('login_id');
+        }
+
+        $where = [
+            'users.reference_id' => $users_id,
+        ];
+        //get user downline
         $is_verified =
         ($_GET and isset($_GET['is_verified']))
             ? $_GET['is_verified']
@@ -60,6 +67,8 @@ class Users extends BaseController
         $users_count = 0;
         if(!empty($users)){
             $users_count = count($users);
+
+
         }
 
         $this->pageData['users_count'] = $users_count;
@@ -113,11 +122,152 @@ class Users extends BaseController
 
             $users[$key]['family_name'] = $family_name;
 
+
+        }
+        $this->pageData['users_id'] = $users_id;
+
+        $this->pageData['users'] = $users;
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/downline');
+        echo view('admin/footer');
+    }
+
+    public function make_payment(){
+        $users_id = $_POST['users_id'];
+        $downline_id = $_POST['downline_id'];
+        //deduct 500 from users_id
+        $balance = $this->WalletModel->get_balance($users_id);
+        if($balance < 500){
+            die(json_encode([
+
+                'status' => false,
+                'message' => 'Balance not enought'
+            ]));
+        }else{
+            $user = $this->get_users_info($users_id);
+            $downline = $this->get_users_info($downline_id);
+            //made the payment already
+            $this->UsersModel->updateWhere(['users.users_id' => $downline_id],['is_paid' => 1]);
+            $remarks = 'Deduct RM 500 From ' . $user['username'] . " , Made by verify account for downline " . $downline['username'];
+
+            $this->WalletModel->wallet_out(
+                $users_id,
+                500,
+                $remarks,
+            );
+
+            die(json_encode([
+                'status' => true,
+                'data' => $remarks
+            ]));
+        }
+    }
+    // public function generate_image
+    public function index()
+    {
+
+        
+        $is_verified =
+        ($_GET and isset($_GET['is_verified']))
+            ? $_GET['is_verified']
+            : 99;
+
+        $where['users.contact !='] = '';
+
+        if($is_verified != 99){
+
+            $where['users.is_verified'] = $is_verified;
+        }        
+        $users = $this->UsersModel->getWhere($where);
+        $users_count = 0;
+        if(!empty($users)){
+            $users_count = count($users);
+
+
+        }
+
+        $this->pageData['users_count'] = $users_count;
+        // dd($users);
+
+        $field = $this->UsersModel->get_field([
+            'created_by',
+            'modified_by',
+            'deleted',
+        ]);
+        $this->pageData['table'] = $this->generate_table(
+            $field,
+            $users,
+            'users',
+            'banner'
+        );
+
+
+        foreach($users as $key => $row){
+            $family_name = '';
+            // dd($key);
+            $upline_name = '';
+
+            if($row['family_id'] > 0){
+                $where = [
+                    'family.family_id' => $row['family_id']
+                ];
+                $family_user_id = $this->FamilyModel->getWhere($where);
+                if(!empty($family_user_id)){
+                    $family_user_id= $family_user_id[0]['user_id'];
+
+                    $where = [
+    
+                        'users.users_id' => $family_user_id
+                    ];
+                    $family_name = $this->UsersModel->getWhere($where)[0];
+                    $family_name = $family_name['name'];
+                }
+                    
+                $where = [
+                    'family.user_id' => $row['users_id']
+                ];
+    
+    
+    
+                $link_family = $this->FamilyModel->getWhere($where);
+                if(!empty($link_family)){
+                    $link_family_id = $link_family[0]['link_family_id'];
+                    $upline_name = $this->UsersModel->getWhere(['users.users_id' => $link_family_id])[0]['name'];
+                }
+
+            }
+            $users[$key]['upline_name'] = $upline_name;
+
+            $users[$key]['family_name'] = $family_name;
+
         }
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
         echo view('admin/users/all');
         echo view('admin/footer');
+    }
+
+
+    public function user_with_no_downline()
+    {
+
+        
+        $users = $this->UsersModel->get_user_with_no_downline();
+        $this->pageData['users'] = $users;
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/users_with_no_downline');
+        echo view('admin/footer');
+
+    }
+
+
+    public function find_user_id_by_family_id($family_id){
+        $where = [
+            'family.family_id' => $family_id
+        ];
+        $family = $this->FamilyModel->getWhere($where)[0];
+        return $family['user_id'];
+        
     }
 
     public function add()
@@ -156,9 +306,9 @@ class Users extends BaseController
                     'email' => $input['email'],
                     'username' => $input['username'],
                     'contact' => $input['contact'],
-
                     'password' => $hash['password'],
                     // 'nric_name' => $input['nric_name'],
+                    'reference_id' => $this->find_user_id_by_family_id  ($input['family_id']),
                     // 'nric' => $input['nric'],
                     'family_id' => $input['family_id'],
                     // 'ssm_name' => $input['ssm_name'],
@@ -218,6 +368,7 @@ class Users extends BaseController
 
     
     // public function copy($users_id){
+
     //     $users = $this->UsersModel->copy($users_id);
     //     return redirect()->to(base_url('Users', 'refresh'));
     // }
@@ -226,6 +377,7 @@ class Users extends BaseController
         dd($family_id);
     }
 
+
     public function verify_user($users_id){
 
         $where = [
@@ -233,13 +385,14 @@ class Users extends BaseController
         ];
         $users = $this->UsersModel->getWhere($where)[0];
 
+
         if($users['is_verified'] == 0){
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
             // dd($users['family_id']);
-            $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
-    
+            $family_id = $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
+            $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
         }else{
             $is_verified = 0;
 
@@ -295,6 +448,16 @@ class Users extends BaseController
     }
 
 
+    public function user_detail($users_id)
+
+    {
+
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/user_detail');
+        echo view('admin/footer');
+    }
+
+
     
     public function dashboard($users_id)
 
@@ -315,6 +478,7 @@ class Users extends BaseController
         // foreach($users as $key => $row){
         $family_name = '';
 
+
         $upline_name = '';
         if($users['family_id'] > 0){
             $where = [
@@ -333,8 +497,6 @@ class Users extends BaseController
                 'family.user_id' => $users['users_id']
             ];
 
-
-
             $link_family = $this->FamilyModel->getWhere($where);
             if(!empty($link_family)){
                 $link_family_id = $link_family[0]['link_family_id'];
@@ -343,9 +505,6 @@ class Users extends BaseController
         }
         $users['family_name'] = $family_name;
         $users['upline_name'] = $upline_name;
-
-
-        // }
 
         $family_id = 0;
         
@@ -356,8 +515,13 @@ class Users extends BaseController
         }
 
         $this->pageData['family_id'] = $family_id ;
-        $users['level'] = $this->FamilyModel->user_family($family_id);
 
+        $level = $this->FamilyModel->user_family($family_id);
+        if($family_id == 0){
+            $level = 1;
+        }
+        // dd($level);
+        $users['level']  = $level;
 
         $this->pageData['users'] = $users;
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
@@ -438,6 +602,8 @@ class Users extends BaseController
         // }
 
         $this->pageData['users'] = $users;
+
+
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
         $field = $this->UsersModel->get_field([
             'created_by',
@@ -589,6 +755,12 @@ class Users extends BaseController
     public function delete($users_id)
     {
         $this->UsersModel->softDelete($users_id);
+
+        $where = [
+            'family.user_id' => $users_id
+        ];
+        $family_id = $this->FamilyModel->getWhereRaw($where)[0]['family_id'];
+        $this->FamilyModel->hardDelete($family_id);
         // dd('asd');
         return redirect()->to($_SERVER['HTTP_REFERER']);
 
@@ -606,6 +778,7 @@ class Users extends BaseController
 
 
         $user_detail = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
+
 
         $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
 

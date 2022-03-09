@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 :root {
   --primary-legacy-theme: #321fdb;
   --secondary-legacy-theme: #ced2d8;
@@ -50,6 +51,13 @@
   -ms-flex-direction: row;
   flex-direction: row;
   min-height: 100vh;
+}
+.bg_color{
+  background: rgb(43,38,128);
+        /* display: flex!important;
+    flex-direction: column!important;
+    justify-content:center!important; */
+background: linear-gradient(90deg, rgba(43,38,128,1) 0%, rgba(40,40,187,1) 100%, rgba(110,168,180,0.3841911764705882) 100%);
 }
 .c-app.c-dark-theme {
   --primary: #4638c2;

@@ -1,0 +1,279 @@
+CRITICAL - 2022-03-04 11:30:49 --> Table 'gplan.wallet_withdraw' doesn't exist
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT COUNT(*)...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Models\WalletWithdrawModel.php(126): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\gplan\app\Core\BaseController.php(75): App\Models\WalletWithdrawModel->getCountOfUndone()
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-03-04 11:47:00 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-04 11:54:41 --> Undefined index: username
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(712): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 712, Array)
+#1 C:\xampp\htdocs\gplan\app\Controllers\Users.php(643): App\Controllers\Users->createListLi(Array)
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->tree('21')
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-04 13:55:46 --> Too few arguments to function App\Core\BaseModel::updateWhere(), 1 passed in C:\xampp\htdocs\gplan\app\Controllers\Users.php on line 149 and exactly 2 expected
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(149): App\Core\BaseModel->updateWhere(Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->make_payment()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 13:55:48 --> Too few arguments to function App\Core\BaseModel::updateWhere(), 1 passed in C:\xampp\htdocs\gplan\app\Controllers\Users.php on line 149 and exactly 2 expected
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(149): App\Core\BaseModel->updateWhere(Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->make_payment()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 13:55:55 --> Too few arguments to function App\Core\BaseModel::updateWhere(), 1 passed in C:\xampp\htdocs\gplan\app\Controllers\Users.php on line 149 and exactly 2 expected
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(149): App\Core\BaseModel->updateWhere(Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->make_payment()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 16:35:05 --> Undefined variable: where
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(252): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 252, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 16:36:05 --> Undefined variable: where
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(252): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 252, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 16:55:54 --> Unknown column 'link_user_id' in 'field list'
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT * FROM u...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 C:\xampp\htdocs\gplan\app\Models\UsersModel.php(136): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 C:\xampp\htdocs\gplan\app\Controllers\Users.php(252): App\Models\UsersModel->get_user_with_no_downline()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-04 16:59:05 --> Undefined variable: users_count
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(254): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 16:59:06 --> Undefined variable: users_count
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(254): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 16:59:17 --> Undefined variable: users
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 57, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(254): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 16:59:18 --> Undefined variable: users
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 57, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(254): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 16:59:31 --> Undefined variable: users
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 57, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(254): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 16:59:32 --> Undefined variable: users_id
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 112, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(255): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 16:59:33 --> Undefined variable: users_id
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 112, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(255): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 16:59:34 --> Undefined variable: users_id
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 112, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(255): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 16:59:43 --> Undefined variable: users_id
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 112, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(255): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 16:59:43 --> Undefined variable: users_id
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\users_with_no_downline.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 112, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/use...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(255): view('admin/users/use...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->user_with_no_downline('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 17:07:31 --> Undefined offset: 0
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(265): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 265, Array)
+#1 C:\xampp\htdocs\gplan\app\Controllers\Users.php(307): App\Controllers\Users->find_user_id_by_family_id('0')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->add()
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-04 17:08:00 --> Illegal string offset 'type_id'
+#0 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 176, Array)
+#1 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(129): App\Models\FamilyModel->insert_commission(21)
+#2 C:\xampp\htdocs\gplan\app\Controllers\Users.php(389): App\Models\FamilyModel->insert_new_member('22', '18')
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('22')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-04 17:16:40 --> Undefined offset: 0
+#0 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(178): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 178, Array)
+#1 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(195): App\Models\FamilyModel->get_upline_info('17')
+#2 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(130): App\Models\FamilyModel->insert_commission(23)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(389): App\Models\FamilyModel->insert_new_member('24', '17')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('24')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-04 17:16:45 --> Undefined index: HTTP_REFERER
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(399): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 399, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('24')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 17:16:47 --> Undefined index: HTTP_REFERER
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(399): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 399, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('24')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 17:16:48 --> Undefined index: HTTP_REFERER
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(399): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 399, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('24')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 17:17:19 --> Illegal string offset 'type_id'
+#0 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 195, Array)
+#1 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(130): App\Models\FamilyModel->insert_commission(24)
+#2 C:\xampp\htdocs\gplan\app\Controllers\Users.php(389): App\Models\FamilyModel->insert_new_member('25', '17')
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('25')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-04 17:18:33 --> Undefined index: HTTP_REFERER
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(399): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 399, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('26')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 17:18:41 --> Illegal string offset 'type_id'
+#0 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 195, Array)
+#1 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(130): App\Models\FamilyModel->insert_commission(26)
+#2 C:\xampp\htdocs\gplan\app\Controllers\Users.php(389): App\Models\FamilyModel->insert_new_member('26', '17')
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('26')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-04 17:19:02 --> Illegal string offset 'type_id'
+#0 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 195, Array)
+#1 C:\xampp\htdocs\gplan\app\Models\FamilyModel.php(130): App\Models\FamilyModel->insert_commission(27)
+#2 C:\xampp\htdocs\gplan\app\Controllers\Users.php(389): App\Models\FamilyModel->insert_new_member('26', '17')
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('26')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-04 17:19:50 --> Undefined index: HTTP_REFERER
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(399): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 399, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->verify_user('26')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 17:32:03 --> Undefined offset: 0
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(214): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 214, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 17:32:11 --> Undefined offset: 0
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(214): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 214, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-04 17:32:12 --> Undefined offset: 0
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(214): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 214, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

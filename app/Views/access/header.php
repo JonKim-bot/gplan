@@ -11,7 +11,7 @@
         <link href="<?= base_url() ?>/assets/css/core/style.css" rel="stylesheet">
 		<link href="<?= base_url() ?>/assets/css/core/custom.css" rel="stylesheet">
     </head>
-    <body class="c-app flex-row align-items-center">
+    <body class="c-app flex-row align-items-center bg_color">
         <div class="container">
             <div class="row justify-content-center">
 			

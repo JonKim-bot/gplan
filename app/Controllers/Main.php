@@ -5,6 +5,7 @@
 
 
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -61,6 +62,7 @@ class Main extends BaseController
             'users',
             'banner'
             );
+
 
 
     
@@ -131,15 +133,23 @@ class Main extends BaseController
             }
         }
         $this->pageData['users'] = $this->FamilyModel->getAll();
+        
 
 
         $this->pageData['family_id'] = $family_id;
+        echo view('access/header', $this->pageData);
+
 
         echo view('admin/main/add', $this->pageData);
 
-        echo view('admin/footer');
     }
 
+    public function welcome($family_id){
+        $this->pageData['family_id'] = $family_id;
+
+        echo view('admin/main/welcome', $this->pageData);
+
+    }
     // public function add($family_id)
 
     // {
@@ -378,6 +388,7 @@ class Main extends BaseController
         // dd($users_1);
         // dd($ulli);
 
+
         // $this->show_404_if_empty($user);
 
         $this->page_data["ulli"] = $ulli;
@@ -388,5 +399,12 @@ class Main extends BaseController
         $this->load->view("admin/footer");
     }
 
+
+
+    public function register_page(){
+        $this->load->view("admin/header", $this->page_data);
+        $this->load->view("admin/main/ul_of_tree");
+        $this->load->view("admin/footer");
+    }
 
 }
