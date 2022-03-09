@@ -1,0 +1,38 @@
+CRITICAL - 2022-02-28 16:41:14 --> MySQL server has gone away
+#0 D:\www\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT COUNT(*)...')
+#1 D:\www\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\www\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\www\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\www\gplan\app\Models\WalletWithdrawModel.php(126): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\www\gplan\app\Core\BaseController.php(75): App\Models\WalletWithdrawModel->getCountOfUndone()
+#6 D:\www\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#7 D:\www\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#8 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-02-28 16:41:21 --> No connection could be made because the target machine actively refused it.
+
+#0 D:\www\gplan\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\www\gplan\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\www\gplan\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\www\gplan\app\Models\WalletWithdrawModel.php(126): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\www\gplan\app\Core\BaseController.php(75): App\Models\WalletWithdrawModel->getCountOfUndone()
+#5 D:\www\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#6 D:\www\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#7 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-28 16:51:08 --> Undefined offset: 0
+#0 D:\www\gplan\app\Controllers\Users.php(313): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 313, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('node_modules', '@coreui', 'icons', 'sprites', 'brand.svg')
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-28 16:51:09 --> Undefined offset: 0
+#0 D:\www\gplan\app\Controllers\Users.php(313): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\www\\gplan\\ap...', 313, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('node_modules', '@coreui', 'icons', 'sprites', 'brand.svg')
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
