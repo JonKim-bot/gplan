@@ -28,67 +28,13 @@
                                     ) ?>">
 
 </head>
-<style>
-    hr{
-        background:white;
-    }
-    body{
-        background: rgb(43,38,128);
-        display: flex!important;
-    flex-direction: column!important;
-    justify-content:center!important;
-background: linear-gradient(90deg, rgba(43,38,128,1) 0%, rgba(40,40,187,1) 100%, rgba(110,168,180,0.3841911764705882) 100%);
-    }
-    .register_div{
-        text-align:center;
-    color: white;
-    }
-    .gift_div{
-        display: flex;
-    justify-content: center;
-    }
-    .gift_div > img{
-        width:80%;
-    }
-    .register_btn{
-        border: none;
-    color: blue;
-    border-radius: 35px;
-    font-size: 5;
-    font-size: 16px;
-    padding: 15px 40px;
-    margin-bottom: 20px;
-    font-weight: 500;
-    }
-    .login_text{
-        color: white;
-    text-decoration: underline;
-    }
-    .main_div{
-        display: flex;
-        height:90vh;
-    flex-direction: column;
-    justify-content: space-evenly;
-    }
 
-</style>
-<body class="c-app ">
-            <div class="col-md-12 main_div" >
-                <div class="register_div">
-                    <h1>Gplan</h1> 
-                    <hr>
-                    <h3>Register & Get Your<br> Welcome Gift Set</h3>
-                </div>
-                <div class='gift_div'>
-                    <img  src="<?= base_url() ?>/assets/img/gifticon.png" alt="">
-                </div>
-                <div class="col-md-12 justify-content-center text-center">
-                    <button class="register_btn">Register Now</button>
-                    <p class="text-white">Already A Member? <a class="login_text" href="<?= base_url() ?>/main/login"> Login Here</a></p>
-                </div>
+<body class="c-app flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
 
-
-            <!-- <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url() . "/main/add/" . $family_id; ?>">
+            <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url() . "/main/add/" . $family_id; ?>">
 
                     <div class="card-group">
                         
@@ -193,10 +139,7 @@ background: linear-gradient(90deg, rgba(43,38,128,1) 0%, rgba(40,40,187,1) 100%,
                         </div>
                     </div>
             </div>
-            </form> -->
+            </form>
         </div>
-        </div>
-        </div>
-
         <!-- CoreUI and necessary plugins-->
         <!--<![endif]-->

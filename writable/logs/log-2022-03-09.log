@@ -1,0 +1,16 @@
+CRITICAL - 2022-03-09 11:03:05 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gplan\app\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 62, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/header', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(245): view('admin/header', Array)
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-09 12:40:01 --> Too few arguments to function App\Controllers\Main::add(), 0 passed in C:\xampp\htdocs\gplan\system\CodeIgniter.php on line 914 and exactly 1 expected
+#0 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Main->add()
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

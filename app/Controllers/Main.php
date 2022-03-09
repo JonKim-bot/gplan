@@ -64,6 +64,7 @@ class Main extends BaseController
             );
 
 
+
     
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
@@ -138,8 +139,8 @@ class Main extends BaseController
 
         echo view('admin/main/add', $this->pageData);
 
-        echo view('admin/footer');
     }
+
 
     // public function add($family_id)
 
@@ -389,5 +390,12 @@ class Main extends BaseController
         $this->load->view("admin/footer");
     }
 
+
+
+    public function register_page(){
+        $this->load->view("admin/header", $this->page_data);
+        $this->load->view("admin/main/ul_of_tree");
+        $this->load->view("admin/footer");
+    }
 
 }
