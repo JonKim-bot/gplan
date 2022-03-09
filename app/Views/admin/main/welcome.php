@@ -37,8 +37,7 @@
         display: flex!important;
     flex-direction: column!important;
     justify-content:center!important;
-background: linear-gradient(90deg, rgba(43,38,128,1) 0%, rgba(40,40,187,1) 100%, rgba(110,168,180,0.3841911764705882) 100%);
-    }
+    background: linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;    }
     .register_div{
         text-align:center;
     color: white;

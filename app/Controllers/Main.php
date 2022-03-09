@@ -133,6 +133,7 @@ class Main extends BaseController
             }
         }
         $this->pageData['users'] = $this->FamilyModel->getAll();
+        
 
 
         $this->pageData['family_id'] = $family_id;

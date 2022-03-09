@@ -448,6 +448,16 @@ class Users extends BaseController
     }
 
 
+    public function user_detail($users_id)
+
+    {
+
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/user_detail');
+        echo view('admin/footer');
+    }
+
+
     
     public function dashboard($users_id)
 
@@ -467,6 +477,7 @@ class Users extends BaseController
 
         // foreach($users as $key => $row){
         $family_name = '';
+
 
         $upline_name = '';
         if($users['family_id'] > 0){
