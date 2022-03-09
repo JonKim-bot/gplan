@@ -267,6 +267,7 @@ class Users extends BaseController
         ];
         $family = $this->FamilyModel->getWhere($where)[0];
         return $family['user_id'];
+        
     }
 
     public function add()
