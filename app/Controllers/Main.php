@@ -141,7 +141,9 @@ class Main extends BaseController
 
     }
 
-
+    public function register(){
+        
+    }
     // public function add($family_id)
 
     // {
