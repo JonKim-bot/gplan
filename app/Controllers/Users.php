@@ -6,6 +6,7 @@
 
 
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -766,6 +767,63 @@ class Users extends BaseController
 
     }
 
+    
+
+    function family_tree($user_id = 1)
+    {
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $user_id = session()->get('login_id');
+        }
+
+
+
+        $user_detail = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
+
+
+        $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
+
+        // dd($users_1);
+
+        $user = $this->FamilyModel->getTree($user_id);
+
+
+        // dd($users_1);
+        // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
+
+
+
+        // dd($user);  
+
+
+        $users = array_merge($users_1,$user);
+        // dd($users);
+        $tree =  $this->buildTree($users,$user_id);
+        // dd($tree);
+
+        $users_1[0]['children'] = $tree;
+
+        $tree = $users_1;
+        
+
+        // dd($tree);
+        $ulli = $this->createListLi($tree);
+        
+        $this->pageData["ulli"] = $ulli;
+        $this->pageData["user_detail"] = $user_detail[0];
+
+
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/family_tree');
+        // echo view('admin/footer');
+        
+    }
+
+
+    
+
+
 
     function tree($user_id = 1)
     {
@@ -818,6 +876,8 @@ class Users extends BaseController
 
         
     }
+
+
 
 
     
