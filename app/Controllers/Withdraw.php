@@ -13,6 +13,39 @@ class Withdraw extends BaseController
         $this->WalletModel = new WalletModel();
         $this->WalletWithdrawModel = new WalletWithdrawModel();
     }
+    
+    public function withdraw()
+    {
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $users_id = session()->get('login_id');
+            $wallet_withdraw = $this->WalletWithdrawModel->getWhere(['wallet_withdraw.users_id' => $users_id]);
+
+        }else{
+            $wallet_withdraw = $this->WalletWithdrawModel->getAll();
+
+        }
+
+        $field = $this->WalletWithdrawModel->get_field([
+            'created_by',
+            'users_id',
+
+            'modified_by',
+            'deleted',
+        ]);
+
+
+        $this->pageData['table'] = $this->generate_table(
+            $field,
+            $wallet_withdraw,
+            'wallet_withdraw',
+            'receipt'
+        );
+        $this->pageData['wallet_withdraw'] = $wallet_withdraw;
+        echo view('admin/header', $this->pageData);
+        echo view('admin/wallet_withdraw/withdraw');
+        echo view('admin/footer');
+    }
 
     public function index()
     {
@@ -64,6 +97,7 @@ class Withdraw extends BaseController
 
 
         $this->WalletWithdrawModel->updateWhere($where, $data);
+
 
         $remarks = 'Withdrawal rejected refund ';
         $this->WalletModel->wallet_in(
