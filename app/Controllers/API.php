@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -487,6 +488,7 @@ class API extends BaseController
             foreach ($car as $key => $row) {
                 $where_image = [
                     'car_id' => $row['car_id'],
+                    
                 ];
                 $image = $this->CarImageModel->getImageWhere($where_image);
                 $car[$key]['image'] = $image;
