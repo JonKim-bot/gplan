@@ -61,3 +61,10 @@ CRITICAL - 2022-03-10 18:18:07 --> Trying to access array offset on value of typ
 #3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-03-10 20:48:52 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(775): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 775, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->family_tree('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

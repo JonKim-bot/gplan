@@ -153,6 +153,7 @@ class Users extends BaseController
 
             $this->WalletModel->wallet_out(
                 $users_id,
+                
                 500,
                 $remarks,
             );
