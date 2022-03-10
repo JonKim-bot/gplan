@@ -44,6 +44,10 @@
     padding: 0px 20px;
     width: 125%;
   }
+  .description_div{
+    padding: 0px 25px;
+
+  }
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -67,73 +71,7 @@
             <div class="card text-white c-shadow" style="border-radius: 20px;">
               <div class="c-QR row text-dark" style="width:90%">
                 <div class="row">
-                    <div class="col-8">
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-
-                            <div class="btn btn-success bg_color">
-                                <p>Permission Date</p>
-                            </div>
-                            <div class="btn btn-success" style="margin-top:75px">
-                                <p>Permission Date</p>
-                            </div>
-                    </div>
-                </div>
-
-                
-                  </div>
-              
-            </div>
-          </div>
-
-
-          <div class="col-sm-12 col-lg-3">
-            <div class="card text-white c-shadow" style="border-radius: 20px;">
-              <div class="c-QR row text-dark" style="width:90%">
-                <div class="row">
-                    <div class="col-8">
+                    <div class="col-8 description_div">
                         <div class="one_row row">
                             <div class="col-6">
                                 <p>asdasd</p>
@@ -187,6 +125,7 @@
                             </div>
                           
                     </div>
+                 
                 </div>
 
                 
@@ -195,12 +134,11 @@
             </div>
           </div>
 
-
           <div class="col-sm-12 col-lg-3">
             <div class="card text-white c-shadow" style="border-radius: 20px;">
               <div class="c-QR row text-dark" style="width:90%">
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-8 description_div">
                         <div class="one_row row">
                             <div class="col-6">
                                 <p>asdasd</p>
@@ -249,11 +187,12 @@
                     <div class="btn btn-success bg_color">
                                 <p>Permission Date</p>
                             </div>
-                           
                             <div class="btn btn-success" style="margin-top:75px">
                                 <p>Permission Date</p>
                             </div>
+                          
                     </div>
+                 
                 </div>
 
                 
@@ -261,9 +200,138 @@
               
             </div>
           </div>
+          <div class="col-sm-12 col-lg-3">
+            <div class="card text-white c-shadow" style="border-radius: 20px;">
+              <div class="c-QR row text-dark" style="width:90%">
+                <div class="row">
+                    <div class="col-8 description_div">
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
 
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
 
-          
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+
+                    <div class="btn btn-success bg_color">
+                                <p>Permission Date</p>
+                            </div>
+                            <div class="btn btn-success" style="margin-top:75px">
+                                <p>Permission Date</p>
+                            </div>
+                          
+                    </div>
+                 
+                </div>
+
+                
+                  </div>
+              
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <div class="card text-white c-shadow" style="border-radius: 20px;">
+              <div class="c-QR row text-dark" style="width:90%">
+                <div class="row">
+                    <div class="col-8 description_div">
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
+
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
+
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                            <div class="col-6">
+                                <p>asdasd</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+
+                    <div class="btn btn-success bg_color">
+                                <p>Permission Date</p>
+                            </div>
+                            <div class="btn btn-success" style="margin-top:75px">
+                                <p>Permission Date</p>
+                            </div>
+                          
+                    </div>
+                 
+                </div>
+
+                
+                  </div>
+              
+            </div>
+          </div>
 
 
           <!-- /.col-->
