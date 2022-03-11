@@ -82,7 +82,7 @@
                     <img  src="<?= base_url() ?>/assets/img/gifticon.png" alt="">
                 </div>
                 <div class="col-md-12 justify-content-center text-center">
-                    <button class="register_btn">Register Now</button>
+                    <a class="register_btn" href="<?= base_url() ?>/main/add/<?= $family_id ?>/<?= $uid ?>">Register Now</a>
                     <p class="text-white">Already A Member? <a class="login_text" href="<?= base_url() ?>/main/login"> Login Here</a></p>
                 </div>
 

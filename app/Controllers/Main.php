@@ -72,7 +72,7 @@ class Main extends BaseController
         echo view('admin/footer');
     }
 
-    public function add($family_id)
+    public function add($family_id,$uid)
 
     {
 
@@ -107,7 +107,7 @@ class Main extends BaseController
                     'name' => $input['name'],
                     'email' => $input['email'],
                     'username' => $input['username'],
-
+                    'reference_id' => $uid,
                     'contact' => $input['contact'],
                     'password' => $hash['password'],
                     // 'nric_name' => $input['nric_name'],
@@ -120,7 +120,6 @@ class Main extends BaseController
                 ];
                 $data = $this->upload_image_with_data($data, 'receipt');
 
-
                 $data = $this->upload_image_with_data($data, 'nric_back');
               
                 $users_id = $this->UsersModel->insertNew($data);
@@ -131,7 +130,7 @@ class Main extends BaseController
             } else {
                 $this->page_data['error'] = 'Failed to add user data';
             }
-            
+
         }
         $this->pageData['users'] = $this->FamilyModel->getAll();
         
@@ -145,8 +144,10 @@ class Main extends BaseController
 
     }
 
-    public function welcome($family_id){
+    public function welcome($family_id,$uid){
         $this->pageData['family_id'] = $family_id;
+        $this->pageData['uid'] = $uid;
+
 
         echo view('admin/main/welcome', $this->pageData);
 

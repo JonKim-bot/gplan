@@ -590,6 +590,8 @@ class Users extends BaseController
         ] , 10);
 
         $this->pageData['wallet'] = $users_wallet;
+        $this->pageData['users_id'] = $users_id;
+
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
         $this->pageData['banner'] = $this->BannerModel->getAll();
         
