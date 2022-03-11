@@ -4,7 +4,7 @@
   }
 
   .card-status {
-    height: 150px
+    height: auto
   }
 
   .c-withButton {
@@ -50,7 +50,7 @@
         <div class="row">
           <div class="col-sm-12 col-lg-3">
             <div class="card text-white bg-gradient-primary" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-              <div class="card-status card-body card-body pb-0" style="height:250px">
+              <div class="card-status card-body card-body" style="">
                 <div>
                   <div> <?= $lang['your_point'] ?></div>
                   <div class="">
@@ -67,40 +67,40 @@
                     <a href="<?= base_url() ?>/Withdraw/withdraw" style="color:white">
 
                       <p class="m-0">
-                        Withdraw
+                        <?= $lang['withdraw'] ?>
                       </p>
                     </a>
                   </div>
                   <div class="py-1 px-3 br-3">
-                  <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
+                    <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
 
-                    <p class="m-0">
-                      Transaction History >
-                    </p>
-</a>
+                      <p class="m-0">
+                        <?= $lang['transaction_history'] ?> >
+                      </p>
+                    </a>
                   </div>
-                  
+
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
-                 
-                  <div class="py-1 ">
-                  <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
 
-                    <p class="m-0">
-                      Total Earn Amount  : <?= $total_earn ?>
-                    </p>
-</a>
+                  <div class="py-1 ">
+                    <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
+
+                      <p class="m-0">
+                        <?= $lang['total_earn_amount'] ?> : <?= $total_earn ?>
+                      </p>
+                    </a>
                   </div>
                   <div class="py-1">
-                  <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
+                    <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
 
-                    <p class="m-0">
-                      Withdraw Amount  : <?= $total_withdraw ?>
-                    </p>
-</a>
+                      <p class="m-0">
+                        <?= $lang['withdraw_amount'] ?> : <?= $total_withdraw ?>
+                      </p>
+                    </a>
                   </div>
 
-                  
+
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center">
@@ -111,12 +111,12 @@
                     <a href="<?= base_url() ?>/Users/my_group" style="color:white">
 
                       <p class="m-0">
-                        My Group
+                        <?= $lang['my_group'] ?>
                       </p>
                     </a>
                   </div>
-                 
-                  
+
+
                 </div>
 
 
@@ -132,54 +132,54 @@
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
                   <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#status_modal">
-                  <div class="icon mb-2">
-                    <i class="fa fa-compass fa-lg"></i>
-                  </div>
+                    <div class="icon mb-2">
+                      <i class="fa fa-compass fa-lg"></i>
+                    </div>
                     <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                      Status
+                      <?= $lang['status'] ?>
                     </p>
-                      </a>
+                  </a>
 
                 </div>
               </div>
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#family_tree">
- 
-                <div class="icon mb-2">
+                  <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#family_tree">
 
-                    <i class="fa fa-diagram-project fa-lg"></i>
-                  </div>
-                  <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                    Reward
-                  </p>
-</a>
+                    <div class="icon mb-2">
+
+                      <i class="fa fa-diagram-project fa-lg"></i>
+                    </div>
+                    <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
+                      <?= $lang['reward'] ?>
+                    </p>
+                  </a>
                 </div>
               </div>
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#referal_modal">
+                  <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#referal_modal">
 
-                <div class="icon mb-2">
-                    <i class="fa fa-user fa-lg"></i>
-                  </div>
-                  <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                    Your Teacher
-                  </p>
+                    <div class="icon mb-2">
+                      <i class="fa fa-user fa-lg"></i>
+                    </div>
+                    <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
+                      <?= $lang['your_teacher'] ?>
+                    </p>
                 </div>
-</a>
+                </a>
               </div>
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#level_modal">
+                  <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#level_modal">
 
 
-                <div class="icon mb-2">
-                    <i class="fa fa-user-group fa-lg"></i>
-                  </div>
-                  <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                    Achievement
-                  </p>
+                    <div class="icon mb-2">
+                      <i class="fa fa-user-group fa-lg"></i>
+                    </div>
+                    <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
+                      <?= $lang['achievement'] ?>
+                    </p>
                   </a>
 
                 </div>
@@ -187,7 +187,7 @@
             </div>
           </div>
           <!-- /.col-->
-          <?php if($users['is_verified'] == 1){ ?>
+          <?php if ($users['is_verified'] == 1) { ?>
 
             <div class="col-sm-12 col-lg-3">
               <div class="card text-white c-shadow" style="border-radius: 20px;">
@@ -198,7 +198,7 @@
                   <div class="row">
                     <div class="col-12">
                       <p style="font-size: 16px; line-height:1; margin:0;">
-                      invite more friends to get more rewards
+                        <?= $lang['invite_more'] ?>
                       </p>
                     </div>
                     <!-- <div class="col-6">
@@ -221,12 +221,12 @@
           <div class="col-sm-12 col-lg-3">
 
             <div class="slick-slider-promo">
-              <?php foreach($banner as $row){ ?>
-              <div class="c-carousel">
-                <div class="c-carouselimg">
-                  <img src="<?= base_url() . $row['banner']?>" alt="">
+              <?php foreach ($banner as $row) { ?>
+                <div class="c-carousel">
+                  <div class="c-carouselimg">
+                    <img src="<?= base_url() . $row['banner'] ?>" alt="">
+                  </div>
                 </div>
-              </div>
               <?php } ?>
               <!-- <div class="c-carousel">
                 <div class="c-carouselimg">
@@ -250,212 +250,215 @@
         </div>
         <!-- /.row-->
       </div>
-      
+
 
       <div class="modal fade" id="status_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+          <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Status</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h5 class="modal-title" id="modalAddLabel"><?= $lang['status'] ?></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                </button>
+              </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url('Users/submit_receipt');?>">
-                <div class="modal-body">
-       
-                <div class="card text-white bg-gradient-primary">
-                    <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
-                      <div>
-                      <i class="fa fa-compass fa-2x" ></i>
+            <form enctype="multipart/form-data" method="POST" action="<?= base_url('Users/submit_receipt'); ?>">
+              <div class="modal-body">
 
-                        <div>Status</div>
+                <div class="card text-white bg-gradient-primary">
+                  <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                      <i class="fa fa-compass fa-2x"></i>
+
+                      <div><?= $lang['status'] ?></div>
+                      <?php if ($users['is_verified'] == 1) { ?>
                         <div class="text-value-lg">
-                        <?= $users['is_verified'] == 1
-                        ? 'Verified'
-                        : 'Not verified' ?>
+                          <?= $lang['verified'] ?>
                         </div>
-                      </div>
-                      <div class="btn-group">
-                        <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                      <?php } else { ?>
+                        <div class="text-value-lg">
+                          <?= $lang['not_verified'] ?>
+                        </div>
+                      <?php } ?>
+                    </div>
+                    <div class="btn-group">
+                      <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <svg class="c-icon">
                             <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
                           </svg>
                         </button> -->
-                        <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
-                      </div>
+                      <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
                     </div>
-                    <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
-                      <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
-                    <!-- </div> -->
                   </div>
-
+                  <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
+                  <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
+                  <!-- </div> -->
                 </div>
-                <?php if($users['is_verified'] == 0){ ?>
+
+              </div>
+              <?php if ($users['is_verified'] == 0) { ?>
 
                 <div class="card-group" style="margin-top: 20px;">
-                        <div class="card">
-                            <div class="card-body">
-                                <h1>Bank Detail</h1>
-                                <p class="text-muted">Please Submit your receipt to bank below</p>
-                                <div class="text-center">
-                                    <img src="https://carlink.my/static/media/tng.f2773066.png" alt="">
-                                </div>
-                                <br>
+                  <div class="card">
+                    <div class="card-body">
+                      <h1>Bank Detail</h1>
+                      <p class="text-muted">Please Submit your receipt to bank below</p>
+                      <div class="text-center">
+                        <img src="https://carlink.my/static/media/tng.f2773066.png" alt="">
+                      </div>
+                      <br>
 
-                                <div class="input-group mb-4">
-                                    <div class="form-group" style="width: 100%;">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="inputGroupFile02" required name="receipt">
-                                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Submit Receipt</label>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
+                      <div class="input-group mb-4">
+                        <div class="form-group" style="width: 100%;">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile02" required name="receipt">
+                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Submit Receipt</label>
+                          </div>
                         </div>
+
+                      </div>
+
                     </div>
-                   
-                  <?php } ?>
+                  </div>
+                </div>
+
+              <?php } ?>
 
 
             </form>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
 
 
-    <div class="modal fade" id="referal_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+      <div class="modal fade" id="referal_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+          <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Your Teacher</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h5 class="modal-title" id="modalAddLabel"> <?= $lang['your_teacher'] ?></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                </button>
+              </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
-                <div class="modal-body">
-       
+            <form enctype="multipart/form-data" method="POST" action="<?= base_url(); ?>">
+              <div class="modal-body">
+
                 <div class="card text-white bg-gradient-warning">
-                <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
-                      <div>
-                      <i class="fa fa-compass fa-2x" ></i>
+                  <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                      <i class="fa fa-compass fa-2x"></i>
 
-                     
-                      <div>Referal Name</div>
-                        <div class="text-value-lg text-statis"><?= $users['upline_name'] != "" ? $users['upline_name'] : 'None' ?></div>
 
-                      </div>
-                      <div class="btn-group">
-                        <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <div><?= $lang['referral_name'] ?></div>
+                      <div class="text-value-lg text-statis"><?= $users['upline_name'] != "" ? $users['upline_name'] : 'None' ?></div>
+
+                    </div>
+                    <div class="btn-group">
+                      <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <svg class="c-icon">
                             <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
                           </svg>
                         </button> -->
-                        <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
-                      </div>
+                      <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
                     </div>
-                    <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
-                      <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
-                    <!-- </div> -->
                   </div>
-                    <input type="hidden" name="asd" value="asd">
-
+                  <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
+                  <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
+                  <!-- </div> -->
                 </div>
-               
+                <input type="hidden" name="asd" value="asd">
+
+              </div>
+
             </form>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
 
-    
-    <div class="modal fade" id="family_tree" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+
+      <div class="modal fade" id="family_tree" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+          <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Reward</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h5 class="modal-title" id="modalAddLabel"> <?= $lang['reward'] ?></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                </button>
+              </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
-                <div class="modal-body">
-       
-                <div class="card text-white bg-gradient-info">
-                    <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
-                      <div>
-                      <i class="fa fa-users fa-2x" ></i>
+            <form enctype="multipart/form-data" method="POST" action="<?= base_url(); ?>">
+              <div class="modal-body">
 
-                        <div>Reward</div>
-                          <div class="text-value-lg">
-                            <?php if (
-                                $users[
-                                    'is_verified'
-                                ] == 0
-                            ) { ?>
-                            
-                              <a class="btn btn-primary" >
-                                Don Have Family Yet
-                              </a>
-                            <?php } else { ?>
-                            <a class="btn btn-primary" href="<?= base_url() ?>/users/family_tree/1">
-                              View Reward
-                            </a>
-                          <?php } ?>
-                          </div>
+                <div class="card text-white bg-gradient-info">
+                  <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                      <i class="fa fa-users fa-2x"></i>
+
+                      <div> <?= $lang['reward'] ?></div>
+                      <div class="text-value-lg">
+                        <?php if (
+                          $users['is_verified'] == 0
+                        ) { ?>
+
+                          <a class="btn btn-primary">
+                            <?= $lang['dont_have_family'] ?>
+                          </a>
+                        <?php } else { ?>
+                          <a class="btn btn-primary" href="<?= base_url() ?>/users/family_tree/1">
+                            <?= $lang['view_reward'] ?>
+                          </a>
+                        <?php } ?>
                       </div>
-                      <div class="btn-group">
-                        <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </div>
+                    <div class="btn-group">
+                      <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <svg class="c-icon">
                             <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
                           </svg>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
-                      </div>
                     </div>
-                    <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
-                      <!-- <canvas class="chart" id="card-chart2" height="70"></canvas> -->
-                    <!-- </div> -->
                   </div>
-                    <input type="hidden" name="asd" value="asd">
-
+                  <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
+                  <!-- <canvas class="chart" id="card-chart2" height="70"></canvas> -->
+                  <!-- </div> -->
                 </div>
-             
+                <input type="hidden" name="asd" value="asd">
+
+              </div>
+
             </form>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
 
-    <div class="modal fade" id="level_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+      <div class="modal fade" id="level_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+          <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Reward</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h5 class="modal-title" id="modalAddLabel"><?= $lang['reward'] ?></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                </button>
+              </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
-                <div class="modal-body">
-       
-                <div class="card text-white bg-gradient-danger">
-                    <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
-                      <div>
-                      <i class="fa fa-users fa-2x" ></i>
+            <form enctype="multipart/form-data" method="POST" action="<?= base_url(); ?>">
+              <div class="modal-body">
 
-                        <div>Total Level Achived</div>
-                        <div class="text-value-lg"><?= get_level($users['level']) ?></div>
-                      </div>
-                      <!-- <div class="btn-group">
+                <div class="card text-white bg-gradient-danger">
+                  <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                      <i class="fa fa-users fa-2x"></i>
+
+                      <div><?= $lang['total_level_achived'] ?></div>
+                      <div class="text-value-lg"><?= get_level($users['level']) ?></div>
+                    </div>
+                    <!-- <div class="btn-group">
                         <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <svg class="c-icon">
                             <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
@@ -463,19 +466,19 @@
                         </button>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
                       </div> -->
-                    </div>
-                    <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
+                  </div>
+                  <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
                       <canvas class="chart" id="card-chart4" height="70"></canvas>
                     </div> -->
-                  </div>
-                    <input type="hidden" name="asd" value="asd">
-
                 </div>
-           
+                <input type="hidden" name="asd" value="asd">
+
+              </div>
+
             </form>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
 
 
@@ -483,7 +486,7 @@
 
 
 
-<!--     
+      <!--     
 
       <div class="modal fade" id="status_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -495,7 +498,7 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
+            <form enctype="multipart/form-data"  method="POST" action="<?= base_url(); ?>">
                 <div class="modal-body">
        
                 <div class="form-group">

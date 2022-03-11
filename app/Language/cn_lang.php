@@ -1,5 +1,27 @@
-<?php 
-    
-    $lang['your_point'] = '你的分数';
-   
-?>
+<?php
+$lang['your_point'] = '你的分数';
+$lang['withdraw'] = '提取';
+$lang['transaction_history'] = '交易记录';
+$lang['total_earn_amount'] = '总赚取金额';
+$lang['withdraw_amount'] = '取款数量';
+$lang['my_group'] = '团体';
+$lang['status'] = '状态';
+$lang['reward'] = '报酬';
+$lang['your_teacher'] = '你的老师';
+$lang['achievement'] = '成就';
+$lang['invite_more'] = '邀请更多朋友获得更多奖励';
+$lang['wallet_withdraw'] = '钱包提取';
+$lang['save'] = '保存';
+$lang['username'] = '用户名';
+$lang['contact'] = '联系';
+$lang['balance'] = '余额';
+$lang['credit'] = '提出';
+$lang['debit'] = '充值';
+$lang['remarks'] = '评论';
+$lang['created_date'] = '创建日期';
+$lang['verified'] = '已验证';
+$lang['not_verified'] = '未验证';
+$lang['dont_have_family'] = '还没有家人';
+$lang['view_reward'] = '查看奖励';
+$lang['referral_name'] = '推荐人姓名';
+$lang['total_level_achived'] = '达到的总水平';

@@ -33,28 +33,31 @@
   .c-QR img {
     width: 100%;
   }
-  .one_row{
+
+  .one_row {
     border-bottom: 1px solid black;
     margin-bottom: 7px;
   }
-  .permission_div{
+
+  .permission_div {
     background: cornflowerblue;
     color: white;
-    margin-top:20px;
+    margin-top: 20px;
     padding: 0px 20px;
     width: 125%;
   }
-  .description_div{
+
+  .description_div {
     padding: 0px 25px;
 
   }
-  .icon_top{
+
+  .icon_top {
     background: white;
     border-radius: 50%;
     color: black;
     padding: 5px;
   }
-  
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -70,90 +73,90 @@
     <div class="container-fluid">
       <div class="fade-in">
         <div class="row">
-        <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;">
-                <!-- <a href="">+</a> -->
-                <div class="icon_top">
-                    <a href="<?= base_url() ?>/users/dashboard/1">
-                        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
-                    </a>
-                </div>
-              
+          <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;">
+            <!-- <a href="">+</a> -->
+            <div class="icon_top">
+              <a href="<?= base_url() ?>/users/dashboard/1">
+                <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+              </a>
             </div>
-          
+
+          </div>
+
           <!-- /.col-->
-          
+
           <!-- /.col-->
-          <?php  foreach($wallet as $row){ ?>
-          <div class="col-sm-12 col-lg-3">
-            <div class="card text-white c-shadow" style="border-radius: 20px;">
-              <div class="c-QR row text-dark" style="width:90%">
-                    <div class="col-12 description_div">
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>User Name</p>
-                            </div>
-                            <div class="col-6">
-                                <p><?= $row['username'] ?></p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>Contact</p>
-                            </div>
-                            <div class="col-6">
-                                <p><?= $row['username'] ?></p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>Balance</p>
-                            </div>
-                            <div class="col-6">
-                                <p><?= $row['balance'] ?></p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>Credit</p>
-                            </div>
-                            <div class="col-6">
-                                <p><?= $row['wallet_in'] ?></p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>Debit</p>
-                            </div>
-                            <div class="col-6">
-                                <p><?=ltrim($row['wallet_out'], '-'); ?></p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>Remarks</p>
-                            </div>
-                            <div class="col-6">
-                                <p><?=($row['remarks']); ?></p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>Created Date</p>
-                            </div>
-                            <div class="col-6">
-                            <p><?=($row['created_date']); ?></p>
-                            </div>
-                        </div>
+          <?php foreach ($wallet as $row) { ?>
+            <div class="col-sm-12 col-lg-3">
+              <div class="card text-white c-shadow" style="border-radius: 20px;">
+                <div class="c-QR row text-dark" style="width:90%">
+                  <div class="col-12 description_div">
+                    <div class="one_row row">
+                      <div class="col-6">
+                        <p><?= $lang['username'] ?></p>
+                      </div>
+                      <div class="col-6">
+                        <p><?= $row['username'] ?></p>
+                      </div>
+                    </div>
+                    <div class="one_row row">
+                      <div class="col-6">
+                        <p><?= $lang['contact'] ?></p>
+                      </div>
+                      <div class="col-6">
+                        <p><?= $row['username'] ?></p>
+                      </div>
+                    </div>
+                    <div class="one_row row">
+                      <div class="col-6">
+                        <p><?= $lang['balance'] ?></p>
+                      </div>
+                      <div class="col-6">
+                        <p><?= $row['balance'] ?></p>
+                      </div>
+                    </div>
+                    <div class="one_row row">
+                      <div class="col-6">
+                        <p><?= $lang['credit'] ?></p>
+                      </div>
+                      <div class="col-6">
+                        <p><?= $row['wallet_in'] ?></p>
+                      </div>
+                    </div>
+                    <div class="one_row row">
+                      <div class="col-6">
+                        <p><?= $lang['debit'] ?></p>
+                      </div>
+                      <div class="col-6">
+                        <p><?= ltrim($row['wallet_out'], '-'); ?></p>
+                      </div>
+                    </div>
+                    <div class="one_row row">
+                      <div class="col-6">
+                        <p><?= $lang['remarks'] ?></p>
+                      </div>
+                      <div class="col-6">
+                        <p><?= ($row['remarks']); ?></p>
+                      </div>
+                    </div>
+                    <div class="one_row row">
+                      <div class="col-6">
+                        <p><?= $lang['created_date'] ?></p>
+                      </div>
+                      <div class="col-6">
+                        <p><?= ($row['created_date']); ?></p>
+                      </div>
                     </div>
                   </div>
-              
+                </div>
+
+              </div>
             </div>
-          </div>
 
           <?php } ?>
           <!-- /.col-->
         </div>
 
-        
+
         <!-- /.row-->
       </div>

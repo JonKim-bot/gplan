@@ -394,6 +394,48 @@ CRITICAL - 2022-03-11 17:07:57 --> Call to undefined method App\Models\UsersMode
 #3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
+CRITICAL - 2022-03-11 17:28:00 --> Undefined index: wallet_withdraw
+#0 D:\xampp\gplan\app\Views\admin\wallet_withdraw\withdraw.php(198): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\gplan\\...', 198, Array)
+#1 D:\xampp\gplan\system\View\View.php(246): include('D:\\xampp\\gplan\\...')
+#2 D:\xampp\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet_wi...', Array, true)
+#3 D:\xampp\gplan\app\Controllers\Withdraw.php(84): view('admin/wallet_wi...')
+#4 D:\xampp\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->withdraw()
+#5 D:\xampp\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\xampp\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-11 17:28:03 --> Undefined index: wallet_withdraw
+#0 D:\xampp\gplan\app\Views\admin\wallet_withdraw\withdraw.php(198): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\gplan\\...', 198, Array)
+#1 D:\xampp\gplan\system\View\View.php(246): include('D:\\xampp\\gplan\\...')
+#2 D:\xampp\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet_wi...', Array, true)
+#3 D:\xampp\gplan\app\Controllers\Withdraw.php(84): view('admin/wallet_wi...')
+#4 D:\xampp\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->withdraw()
+#5 D:\xampp\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\xampp\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-11 17:28:06 --> Undefined index: wallet_withdraw
+#0 D:\xampp\gplan\app\Views\admin\wallet_withdraw\withdraw.php(198): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\gplan\\...', 198, Array)
+#1 D:\xampp\gplan\system\View\View.php(246): include('D:\\xampp\\gplan\\...')
+#2 D:\xampp\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/wallet_wi...', Array, true)
+#3 D:\xampp\gplan\app\Controllers\Withdraw.php(84): view('admin/wallet_wi...')
+#4 D:\xampp\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->withdraw()
+#5 D:\xampp\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#6 D:\xampp\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-11 17:38:36 --> Undefined index: verified
+#0 D:\xampp\gplan\app\Views\admin\users\dashboard.php(273): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\gplan\\...', 273, Array)
+#1 D:\xampp\gplan\system\View\View.php(246): include('D:\\xampp\\gplan\\...')
+#2 D:\xampp\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/das...', Array, true)
+#3 D:\xampp\gplan\app\Controllers\Users.php(596): view('admin/users/das...')
+#4 D:\xampp\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#5 D:\xampp\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 D:\xampp\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+=======
 CRITICAL - 2022-03-11 17:21:47 --> Too few arguments to function App\Controllers\Users::my_group(), 0 passed in C:\xampp\htdocs\gplan\system\CodeIgniter.php on line 914 and exactly 1 expected
 #0 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
 #1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
@@ -485,3 +527,4 @@ CRITICAL - 2022-03-11 17:37:16 --> Illegal string offset 'username'
 #3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+>>>>>>> 14d929ab0424898cc88ddc67a9c5ce1fe1543e9a
