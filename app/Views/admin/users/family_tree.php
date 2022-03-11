@@ -108,18 +108,20 @@ html, body {
     }
 }
 </style>
+<?php 
+  
 
+?>
 <div class="container">
-        <?php for ($x = 1; $x <= $level ; $x++) { ?>
+        <?php foreach($level_arr as $row) { ?>
         <div class="entry">
             <div class="indicator">
                 <span></span>
             </div>
             <p class="content">
-                <span><?= $x ?></span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, pariatur.
+                <span><?= $row['status'] ?></span>
             </p>
-            <div class="time">Level <?= $x ?></div>
+            <div class="time">Level <?= $row['level'] ?></div>
         </div>
         <?php } ?>
        

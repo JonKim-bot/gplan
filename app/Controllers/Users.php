@@ -806,7 +806,68 @@ class Users extends BaseController
 
     }
 
-    
+    function return_level_max($level){
+        if($level == 1){
+            return 2;
+        }
+        if($level == 2){
+            return 4;
+        }
+        if($level == 3){
+            return 8;
+        }
+
+        if($level == 4){
+            return 16;
+        }
+
+        if($level == 5){
+            return 32;
+        }
+
+        if($level == 6){
+            return 64;
+        }
+        if($level == 7){
+            return 128;
+        }
+        if($level == 8){
+            return 256;
+        }
+        if($level == 9){
+            return 512;
+        }
+        if($level == 10){
+            return 1028;
+        }
+        if($level == 11){
+            return 2048;
+        }
+        if($level == 12){
+            return 4096;
+        }
+        if($level == 13){
+            return 8192;
+        }
+        if($level == 14){
+            return 16384;
+        }
+        if($level == 15){
+            return 32768;
+        }
+
+    }
+    function check_if_reached_level($level,$family){
+        $family_level = isset($family[$level + 1]) ? count($family[$level + 1]) : -1;
+        $level_max = $this->return_level_max($level);
+        if($family_level >= $level_max){
+            return 'Success';
+            //reached
+        }else{
+            return 'Not success';
+        }
+
+    }
 
     function family_tree($user_id = 1)
     {
@@ -821,10 +882,24 @@ class Users extends BaseController
             'family.user_id' => $user_id
         ];
         $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
-        $level = $this->FamilyModel->user_family($family_id);
+        $level = $this->FamilyModel->user_family($family_id) - 1;
         $family_tree = $this->FamilyModel->user_family_tree($family_id);
+        $level_arr = [];
+        for ($x = 1; $x <= $level ; $x++) {
+
+            $family_level = $this->check_if_reached_level($x,$family_tree);
+            $data = [
+                'level' => $x,
+                'status' => $family_level
+            ];
+            array_push($level_arr,$data);
+        }
+        $this->pageData['level_arr'] = $level_arr;
+
         $this->pageData['family_tree'] = $family_tree;
         $this->pageData['level'] = $level;
+
+
         echo view('admin/header', $this->pageData);
         echo view('admin/users/family_tree');
         // echo view('admin/footer');
