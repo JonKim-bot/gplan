@@ -528,3 +528,9 @@ CRITICAL - 2022-03-11 17:37:16 --> Illegal string offset 'username'
 #4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
 >>>>>>> 14d929ab0424898cc88ddc67a9c5ce1fe1543e9a
+CRITICAL - 2022-03-11 17:54:36 --> Too few arguments to function App\Controllers\Main::add(), 1 passed in C:\xampp\htdocs\gplan\system\CodeIgniter.php on line 914 and exactly 2 expected
+#0 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Main->add('1')
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

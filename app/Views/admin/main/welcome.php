@@ -57,6 +57,9 @@
     font-size: 16px;
     padding: 15px 40px;
     margin-bottom: 20px;
+    background: black;
+    color: white;
+    margin-bottom: 20px;
     font-weight: 500;
     }
     .login_text{
@@ -83,7 +86,7 @@
                 </div>
                 <div class="col-md-12 justify-content-center text-center">
                     <a class="register_btn" href="<?= base_url() ?>/main/add/<?= $family_id ?>/<?= $uid ?>">Register Now</a>
-                    <p class="text-white">Already A Member? <a class="login_text" href="<?= base_url() ?>/main/login"> Login Here</a></p>
+                    <p class="text-white" style="margin-top:20px">Already A Member? <a class="login_text" href="<?= base_url() ?>/access/login"> Login Here</a></p>
                 </div>
 
 

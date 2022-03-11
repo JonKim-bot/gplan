@@ -13,7 +13,7 @@
             <p>Register Your account here</p>
         </div>
 
-        <form method="POST" action="<?= base_url() . "/main/add/" . $family_id; ?>">
+        <form method="POST" action="<?= base_url() . "/main/add/" . $family_id . '/' . $uid; ?>">
             <?php if (isset($error)) { ?>
                 <div class="alert-message"  role="alert">
                     <?= $error ?>						
@@ -99,7 +99,7 @@
             
             <div class="row">
                 <div class="col-12 text-center">
-                    <button class="btn btn-dark btn_register text-white " type="submit">SIGN IN</button>
+                    <button class="btn btn-dark btn_register text-white " type="submit">SIGN UP</button>
                 </div>
             </div>
         </form>

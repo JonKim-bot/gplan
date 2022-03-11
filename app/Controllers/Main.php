@@ -100,6 +100,7 @@ class Main extends BaseController
             if (!$error) {
 
                 $hash = $this->hash($input['password']);
+
                 $input['contact'] = $this->format_contact($input['contact']);
 
                 $data = [
@@ -134,6 +135,7 @@ class Main extends BaseController
         }
         $this->pageData['users'] = $this->FamilyModel->getAll();
         
+        $this->pageData['uid'] = $uid;
 
 
         $this->pageData['family_id'] = $family_id;
