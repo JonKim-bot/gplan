@@ -22,8 +22,18 @@ class UsersModel extends BaseModel{
         return $users;
 
     }
+    function get_downline($users_id){
 
+        $this->builder = $this->db->table($this->tableName);
+        
+        $this->builder->select('*');
+        $this->builder->where($this->tableName . '.deleted',0);
+        $this->builder->where($this->tableName . '.reference_id',$users_id);
 
+     
+        $query = $this->builder->get();
+        return $query->getResultArray();
+    }
 
 
     function get_family_user($limit = "", $page = 1, $filter = array()){
