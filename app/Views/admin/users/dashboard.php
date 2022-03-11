@@ -112,7 +112,7 @@
                     <i class="fa fa-diagram-project fa-lg"></i>
                   </div>
                   <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                    Family Tree
+                    Reward
                   </p>
 </a>
                 </div>
@@ -134,11 +134,12 @@
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
                 <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#level_modal">
 
+
                 <div class="icon mb-2">
                     <i class="fa fa-user-group fa-lg"></i>
                   </div>
                   <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                    Total Downline
+                    Achievement
                   </p>
                   </a>
 
@@ -337,7 +338,7 @@
             <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Family Tree</h5>
+                <h5 class="modal-title" id="modalAddLabel">Reward</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -350,7 +351,7 @@
                       <div>
                       <i class="fa fa-users fa-2x" ></i>
 
-                        <div>Family Tree</div>
+                        <div>Reward</div>
                           <div class="text-value-lg">
                             <?php if (
                                 $users[
@@ -363,7 +364,7 @@
                               </a>
                             <?php } else { ?>
                             <a class="btn btn-primary" href="<?= base_url() ?>/users/family_tree/1">
-                              View Family Tree
+                              View Reward
                             </a>
                           <?php } ?>
                           </div>
@@ -396,7 +397,7 @@
             <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Family Tree</h5>
+                <h5 class="modal-title" id="modalAddLabel">Reward</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>

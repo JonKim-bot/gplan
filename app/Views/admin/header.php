@@ -324,6 +324,7 @@ QR Code
     </div>
     <div class="c-wrapper c-fixed-components">
         <header class="c-header c-header-light c-header-fixed">
+            <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
             <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show" style="line-height: 1;">
                 <i class="cil-menu c-icon c-icon-lg"></i>
             </button>
@@ -332,6 +333,7 @@ QR Code
                     <use xlink:href="assets/brand/coreui-pro.svg#full"></use>
                 </svg> -->Gplan
             </a>
+            <?php } ?>
             <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true" style="line-height: 1;">
                 <i class="cil-menu c-icon c-icon-lg"></i>
             </button>
