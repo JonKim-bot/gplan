@@ -112,6 +112,17 @@ html, body {
   
 
 ?>
+
+<div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;margin-top:20px;">
+                <!-- <a href="">+</a> -->
+                <div class="icon_top">
+                    <a href="<?= base_url() ?>/users/dashboard/1">
+                        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+              
+            </div>
+            
 <div class="container">
         <?php foreach($level_arr as $row) { ?>
         <div class="entry">
