@@ -64,14 +64,20 @@
                     <div class="icon mr-2">
                       <i class="fa fa-money-bill fa-2x"></i>
                     </div>
-                    <p class="m-0">
-                      Withdraw
-                    </p>
+                    <a href="<?= base_url() ?>/Withdraw/withdraw" style="color:white">
+
+                      <p class="m-0">
+                        Withdraw
+                      </p>
+                    </a>
                   </div>
                   <div class="py-1 px-3 br-3">
+                  <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
+
                     <p class="m-0">
                       Transaction History >
                     </p>
+</a>
                   </div>
                 </div>
 

@@ -58,12 +58,13 @@ class Wallet extends BaseController
 
         $users_wallet = $this->WalletModel->get_transaction('',1,[],$where);
 
+
         // dd($users_wallet);
         $path = $this->exports_to_csv($users_wallet,'transaction');
         return redirect()->to($path);
         // return redirect()->to(base_url('member', "refresh"));
     }
-    public function index()
+    public function transaction()
     {
 
         
@@ -88,6 +89,7 @@ class Wallet extends BaseController
         ($_GET and isset($_GET['users_id']))
             ? $_GET['users_id']
             : 0;
+
 
         if (session()->get('login_data')['type_id'] == '1') { 
             $users_id = session()->get('login_id');
@@ -128,6 +130,77 @@ class Wallet extends BaseController
         echo view('admin/wallet/transaction');
 
         // echo view('admin/wallet/all');
+        echo view('admin/footer');
+        
+    }
+
+
+    public function index()
+    {
+
+        
+        $filter_id =
+        ($_GET and isset($_GET['filter_id']))
+            ? $_GET['filter_id']
+            : 0;
+
+        $dateFrom =
+        
+
+        ($_GET and isset($_GET['dateFrom']))
+            ? $_GET['dateFrom']
+
+            : date('Y-m-d');
+        $dateTo =
+            ($_GET and isset($_GET['dateTo']))
+                ? $_GET['dateTo']
+                : date('Y-m-d');
+        $where = [];
+        $users_id =
+        ($_GET and isset($_GET['users_id']))
+            ? $_GET['users_id']
+            : 0;
+
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $users_id = session()->get('login_id');
+        }
+        $where = [];
+        if($users_id > 0 && ($dateFrom != "" && $dateTo != "")){
+            $where = [
+                'wallet.users_id' => $users_id,
+                               
+                'DATE(wallet.created_date) >=' => $dateFrom,
+                'DATE(wallet.created_date) <=' => $dateTo,
+            ];
+        }else if(($dateFrom != "" && $dateTo != "")){
+
+            $where = [
+                'DATE(wallet.created_date) >=' => $dateFrom,
+                'DATE(wallet.created_date) <=' => $dateTo,
+            ];
+        }
+
+
+  
+        // dd($users_id);
+   
+
+        $this->pageData['users_id'] = $users_id;
+
+        $this->pageData['dateFrom'] = $dateFrom;
+        $this->pageData['dateTo'] = $dateTo;
+
+        $this->pageData['users'] = $this->UsersModel->getAll();
+
+        $users_wallet = $this->WalletModel->get_transaction('',1,[],$where);
+        // dd($users_wallet);
+        $this->pageData['wallet'] = $users_wallet;
+      
+        echo view('admin/header', $this->pageData);
+        // echo view('admin/wallet/transaction');
+
+        echo view('admin/wallet/all');
         echo view('admin/footer');
         
     }

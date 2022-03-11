@@ -74,7 +74,9 @@
             <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;">
                 <!-- <a href="">+</a> -->
                 <div class="icon_top">
-                <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                    <a href="<?= base_url() ?>/users/dashboard/1">
+                        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div class="icon_top"  data-toggle="modal" data-target="#status_modal">
                 <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
