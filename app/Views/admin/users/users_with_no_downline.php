@@ -41,6 +41,7 @@
                                                 <th data-filter="usersname">User Name</th>
                                                 <th data-filter="usersname">Contact</th>
                                                 <th data-filter="email">Email</th>
+                                                <th data-filter="email">Register Date</th>
 
                                                 <th>Verify Status</th>
 
@@ -61,7 +62,8 @@
 
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['contact'] ?></a></td>
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['email'] ?></a></td>
-                                                 
+                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['created_date'] ?></a></td>
+
                                           
                                                     <?php if($row['is_verified'] == 0){ ?>
                                                     <td><a id= "<?= $row['users_id'] ?>"  class="text-white btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>

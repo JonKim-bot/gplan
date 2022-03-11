@@ -368,10 +368,13 @@ QR Code
                         <span class="badge badge-pill badge-info">7</span>
                     </a>
                 </li> -->
+                <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
+
                 <li class="c-header-nav-item dropdown">
                     <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <div class="c-avatar"><img class="c-avatar-img" src="https://media.istockphoto.com/vectors/choose-or-change-language-icon-vector-illustration-on-isolated-vector-id957046406" alt=""></div>
                     </a>
+
                     <div class="dropdown-menu dropdown-menu-right pt-0">
                         <div class="dropdown-header bg-light py-2">
                         </div>
@@ -386,6 +389,7 @@ QR Code
                         </a>
                     </div>
                 </li>
+                <?php } ?>
                 <li class="c-header-nav-item dropdown">
                     <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <div class="c-avatar"><img class="c-avatar-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/2048px-User_icon_2.svg.png" alt=""></div>

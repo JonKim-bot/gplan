@@ -587,6 +587,7 @@ class Users extends BaseController
 
             'modified_by',
             'deleted',
+
         ]);
         $this->pageData['detail'] = $this->generate_detail(
             $field,

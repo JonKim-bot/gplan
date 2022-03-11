@@ -172,7 +172,7 @@
 
                                                         <tr>
                                                         <th>Current Type</th>
-                                                        <th><?= $users['type_id'] == 0 ? 'LEVEL 15 ' : 'LEVEL 11' ?></th>
+                                                        <th>Level <?= $users['type_id'] + 8 ?> User</th>
                                                         </tr>
 
                                                         <tr>
@@ -183,10 +183,10 @@
                                                                             <select name="type_id" class="form-control select2" id="">
 
                                                                                 <option value="0" <?= $users['type_id'] == 0 ? 'selected' : '' ?>>Level 8 User</option>
-                                                                                <option value="0" <?= $users['type_id'] == 1 ? 'selected' : '' ?>>Level 9 User</option>
-                                                                                <option value="0" <?= $users['type_id'] == 2 ? 'selected' : '' ?>>Level 10 User</option>
-                                                                                <option value="0" <?= $users['type_id'] == 3 ? 'selected' : '' ?>>Level 11 User</option>
-                                                                                <option value="1" <?= $users['type_id'] == 4 ? 'selected' : '' ?>>Level 12 User</option>
+                                                                                <option value="1" <?= $users['type_id'] == 1 ? 'selected' : '' ?>>Level 9 User</option>
+                                                                                <option value="2" <?= $users['type_id'] == 2 ? 'selected' : '' ?>>Level 10 User</option>
+                                                                                <option value="3" <?= $users['type_id'] == 3 ? 'selected' : '' ?>>Level 11 User</option>
+                                                                                <option value="4" <?= $users['type_id'] == 4 ? 'selected' : '' ?>>Level 12 User</option>
 
                                                                             </select>
                                                                             <div class="form-group">

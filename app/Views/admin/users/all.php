@@ -101,7 +101,14 @@
                                                     <?php }else{ ?>
                                                         <td>Verified</td>
                                                     <?php } ?>
+                                                    
+                                                    <?php if($row['is_paid'] == 0){ ?>
+                                                    <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_paid'] == 1 ? "success" : "danger" ?>"><?= $row['is_paid'] == 1 ? "Paid" : "Not Paid" ?></a></td>
+                                                    <?php }else{ ?>
+                                                        <td>Paid</td>
+                                                    <?php } ?>
                                           
+
                                                     <td><a href="<?= base_url() ?>/users/delete/<?= $row['users_id'] ?>" class="btn btn-danger delete-button"><i class="fa fa-trash"></i> Delete</a></td>
                                                 </tr>
                                             <?php
