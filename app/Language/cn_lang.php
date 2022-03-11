@@ -23,4 +23,5 @@ $lang['verified'] = '已验证';
 $lang['not_verified'] = '未验证';
 $lang['dont_have_family'] = '还没有家人';
 $lang['view_reward'] = '查看奖励';
-$lang['referral_name'] = 'Referal Name';
+$lang['referral_name'] = '推荐人姓名';
+$lang['total_level_achived'] = '达到的总水平';

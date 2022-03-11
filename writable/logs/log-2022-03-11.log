@@ -394,6 +394,7 @@ CRITICAL - 2022-03-11 17:07:57 --> Call to undefined method App\Models\UsersMode
 #3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
 CRITICAL - 2022-03-11 17:28:00 --> Undefined index: wallet_withdraw
 #0 D:\xampp\gplan\app\Views\admin\wallet_withdraw\withdraw.php(198): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\gplan\\...', 198, Array)
 #1 D:\xampp\gplan\system\View\View.php(246): include('D:\\xampp\\gplan\\...')
@@ -434,3 +435,96 @@ CRITICAL - 2022-03-11 17:38:36 --> Undefined index: verified
 #6 D:\xampp\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 D:\xampp\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+=======
+CRITICAL - 2022-03-11 17:21:47 --> Too few arguments to function App\Controllers\Users::my_group(), 0 passed in C:\xampp\htdocs\gplan\system\CodeIgniter.php on line 914 and exactly 1 expected
+#0 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-11 17:24:59 --> Too few arguments to function App\Controllers\Users::my_group(), 0 passed in C:\xampp\htdocs\gplan\system\CodeIgniter.php on line 914 and exactly 1 expected
+#0 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-11 17:24:59 --> Too few arguments to function App\Controllers\Users::my_group(), 0 passed in C:\xampp\htdocs\gplan\system\CodeIgniter.php on line 914 and exactly 1 expected
+#0 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-11 17:25:06 --> Too few arguments to function App\Controllers\Users::my_group(), 0 passed in C:\xampp\htdocs\gplan\system\CodeIgniter.php on line 914 and exactly 1 expected
+#0 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-11 17:25:07 --> Too few arguments to function App\Models\UsersModel::get_downline(), 0 passed in C:\xampp\htdocs\gplan\app\Controllers\Users.php on line 609 and exactly 1 expected
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(609): App\Models\UsersModel->get_downline()
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 17:25:07 --> Too few arguments to function App\Models\UsersModel::get_downline(), 0 passed in C:\xampp\htdocs\gplan\app\Controllers\Users.php on line 609 and exactly 1 expected
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(609): App\Models\UsersModel->get_downline()
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 17:25:08 --> Too few arguments to function App\Models\UsersModel::get_downline(), 0 passed in C:\xampp\htdocs\gplan\app\Controllers\Users.php on line 609 and exactly 1 expected
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(609): App\Models\UsersModel->get_downline()
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 17:25:14 --> Undefined variable: users
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 609, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 17:25:15 --> Undefined variable: limit
+#0 C:\xampp\htdocs\gplan\app\Models\UsersModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\gplan\app\Controllers\Users.php(609): App\Models\UsersModel->get_downline('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:25:15 --> Undefined variable: limit
+#0 C:\xampp\htdocs\gplan\app\Models\UsersModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\gplan\app\Controllers\Users.php(609): App\Models\UsersModel->get_downline('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:25:16 --> Undefined variable: limit
+#0 C:\xampp\htdocs\gplan\app\Models\UsersModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\gplan\app\Controllers\Users.php(609): App\Models\UsersModel->get_downline('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:25:19 --> Undefined variable: limit
+#0 C:\xampp\htdocs\gplan\app\Models\UsersModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\gplan\app\Controllers\Users.php(609): App\Models\UsersModel->get_downline('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->my_group()
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:37:16 --> Illegal string offset 'username'
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 159, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->make_payment()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+>>>>>>> 14d929ab0424898cc88ddc67a9c5ce1fe1543e9a

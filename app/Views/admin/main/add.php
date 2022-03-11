@@ -13,7 +13,7 @@
             <p>Register Your account here</p>
         </div>
 
-        <form method="POST" action="<?= base_url() ?>/access/login">
+        <form method="POST" action="<?= base_url() . "/main/add/" . $family_id; ?>">
             <?php if (isset($error)) { ?>
                 <div class="alert-message"  role="alert">
                     <?= $error ?>						
@@ -25,27 +25,16 @@
                         <i class="cil-user c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="text" name="username" placeholder="Username">
+                <input class="form-control" type="text" name="name" placeholder="Name">
             </div>
-            <div class="input-group mb-4">
+  
+            <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">
-                        <i class="cil-lock-locked c-icon"></i>
+                        <i class="cil-user c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="password" name="password" placeholder="Password">
-            </div>
-            <div class="input-group mb-4">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="cil-lock-locked c-icon"></i>
-                    </span>
-                </div>
-                <input class="form-control" type="password" name="password" placeholder="Password">
-            </div>
-            <div class="text-center text-white">
-                <h3>Personal Detail</h3>
-                <p>Enter your personal detail here</p>
+                <input class="form-control" type="text" name="contact" placeholder="Contact">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -53,26 +42,39 @@
                         <i class="cil-user c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="text" name="username" placeholder="Username">
-            </div>
-            <div class="input-group mb-4">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="cil-lock-locked c-icon"></i>
-                    </span>
-                </div>
-                <input class="form-control" type="password" name="password" placeholder="Password">
-            </div>
-            <div class="input-group mb-4">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="cil-lock-locked c-icon"></i>
-                    </span>
-                </div>
-                <input class="form-control" type="password" name="password" placeholder="Password">
+                <input class="form-control" type="text" name="email" placeholder="Email">
             </div>
 
             <div class="text-center text-white">
+                <h3>Personal Login Detail</h3>
+                <p>Enter your account detail here</p>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cil-user c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="text" name="username" placeholder="User Name">
+            </div>
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cil-lock-locked c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cil-lock-locked c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="password" name="password2" placeholder="Confirm Password">
+            </div>
+
+            <!-- <div class="text-center text-white">
                 <h3>Register</h3>
                 <p>Register Your account here</p>
             </div>
@@ -81,9 +83,9 @@
                 <p>Register Your account here</p>
 
                 <p>Register Your account here</p>
-            </div>
+            </div> -->
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="">Profile Picture</label>
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="inputGroupFile02">
@@ -91,7 +93,7 @@
                 </div>
             </div>
                        
-            
+             -->
             
             
             

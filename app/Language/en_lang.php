@@ -23,6 +23,8 @@ $lang['verified'] = 'Verified';
 $lang['not_verified'] = 'Not verified';
 $lang['dont_have_family'] = 'Dont Have Family Yet';
 $lang['view_reward'] = 'View Reward';
+$lang['referral_name'] = 'Referral Name';
+$lang['total_level_achived'] = 'Total Level Achived';
 
 
 ?>

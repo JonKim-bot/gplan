@@ -137,7 +137,10 @@ class Users extends BaseController
     }
 
     public function make_payment(){
-        $users_id = $_POST['users_id'];
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $users_id = session()->get('login_id');
+
+        }
         $downline_id = $_POST['downline_id'];
         //deduct 500 from users_id
         $balance = $this->WalletModel->get_balance($users_id);
@@ -151,6 +154,7 @@ class Users extends BaseController
             $user = $this->get_users_info($users_id);
             $downline = $this->get_users_info($downline_id);
             //made the payment already
+
             $this->UsersModel->updateWhere(['users.users_id' => $downline_id],['is_paid' => 1]);
             $remarks = 'Deduct RM 500 From ' . $user['username'] . " , Made by verify account for downline " . $downline['username'];
 
@@ -297,7 +301,10 @@ class Users extends BaseController
             // $input['family_id'] = $this->FamilyModel->find_empty_slot($input['family_id']);
 
             if (!$error) {
-                $data = $this->upload_image_with_data([], 'receipt');
+                $data = [
+                    'is_paid' => 1,
+                ];
+                $data = $this->upload_image_with_data($data, 'receipt');
                 $users_id = $this->UsersModel->updateWhere($where,$data);
                 alert('Receipt submmited');
                 locationhref($_SERVER['HTTP_REFERER']);
@@ -598,6 +605,23 @@ class Users extends BaseController
     }
 
 
+    public function my_group($users_id  = 1){
+             
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $users_id = session()->get('login_id');
+        }
+
+
+        $users_downline = $this->UsersModel->get_downline($users_id);
+        // dd($users_downline);
+
+        $this->pageData['users_downline'] = $users_downline;
+        echo view('admin/header', $this->pageData);
+
+        echo view('admin/users/my_group');
+        echo view('admin/footer');
+    }
 
 
     public function detail($users_id)

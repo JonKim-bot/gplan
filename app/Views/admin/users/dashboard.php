@@ -187,32 +187,35 @@
             </div>
           </div>
           <!-- /.col-->
-          <div class="col-sm-12 col-lg-3">
-            <div class="card text-white c-shadow" style="border-radius: 20px;">
-              <div class="c-QR">
-                <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=<?= base_url() ?>/main/add/<?= $family_id ?>&choe=UTF-8" style="margin: auto; display: block; margin-left: auto; margin-right: auto;">
-              </div>
-              <div class="text-white" style="padding:50px; border-bottom-left-radius: 20px;border-bottom-right-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                <div class="row">
-                  <div class="col-12">
-                    <p style="font-size: 16px; line-height:1; margin:0;">
-                      <?= $lang['invite_more'] ?>
-                    </p>
+          <?php if ($users['is_verified'] == 1) { ?>
+
+            <div class="col-sm-12 col-lg-3">
+              <div class="card text-white c-shadow" style="border-radius: 20px;">
+                <div class="c-QR">
+                  <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=<?= base_url() ?>/main/add/<?= $family_id ?>&choe=UTF-8" style="margin: auto; display: block; margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="text-white" style="padding:50px; border-bottom-left-radius: 20px;border-bottom-right-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
+                  <div class="row">
+                    <div class="col-12">
+                      <p style="font-size: 16px; line-height:1; margin:0;">
+                        <?= $lang['invite_more'] ?>
+                      </p>
+                    </div>
+                    <!-- <div class="col-6">
+                      <h1 style="margin: 0;">
+                        RM10
+                      </h1>
+                    </div>
+                    <div class="col-12 mt-3">
+                      <p style="margin: 0; font-size:8px; line-height:1;">
+                        NOTE: IF EACH LEVEL THEN SYSTEM WILL PROVIDE RM 30
+                      </p>
+                    </div> -->
                   </div>
-                  <!-- <div class="col-6">
-                    <h1 style="margin: 0;">
-                      RM10
-                    </h1>
-                  </div>
-                  <div class="col-12 mt-3">
-                    <p style="margin: 0; font-size:8px; line-height:1;">
-                      NOTE: IF EACH LEVEL THEN SYSTEM WILL PROVIDE RM 30
-                    </p>
-                  </div> -->
                 </div>
               </div>
             </div>
-          </div>
+          <?php } ?>
 
 
           <div class="col-sm-12 col-lg-3">
@@ -439,7 +442,7 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <h5 class="modal-title" id="modalAddLabel">Reward</h5>
+              <h5 class="modal-title" id="modalAddLabel"><?= $lang['reward'] ?></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -452,7 +455,7 @@
                     <div>
                       <i class="fa fa-users fa-2x"></i>
 
-                      <div>Total Level Achived</div>
+                      <div><?= $lang['total_level_achived'] ?></div>
                       <div class="text-value-lg"><?= get_level($users['level']) ?></div>
                     </div>
                     <!-- <div class="btn-group">

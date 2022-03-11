@@ -377,11 +377,11 @@ QR Code
                         </div>
                      
                         <a class="dropdown-item" href="<?= base_url() ?>/admin/set_lang/1">
-                            <i class="cil-account-logout c-icon mfe-2"></i>
+                            <i class="cil-cog c-icon mfe-2"></i>
                             English
                         </a>
                         <a class="dropdown-item" href="<?= base_url() ?>/admin/set_lang/2">
-                            <i class="cil-account-logout c-icon mfe-2"></i>
+                            <i class="cil-cog c-icon mfe-2"></i>
                             Chinese
                         </a>
                     </div>
