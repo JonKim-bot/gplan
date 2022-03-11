@@ -209,9 +209,38 @@
                       <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
                     <!-- </div> -->
                   </div>
-                    <input type="hidden" name="asd" value="asd">
 
                 </div>
+
+                <div class="card-group" style="margin-top: 20px;">
+                        <div class="card">
+                            <div class="card-body">
+                                <h1>Bank Detail</h1>
+                                <p class="text-muted">Please Submit your receipt to bank below</p>
+
+
+                                <div>
+                                    <p style="margin-bottom: 0px;">Bank Name: asd</p>
+                                    <p style="margin-bottom: 0px;">Bank Holder Name: asd</p>
+                                    <p>Bank Account Number: 01664854654</p>
+                                </div>
+                                
+
+                                <div class="input-group mb-4">
+                                    <div class="form-group" style="width: 100%;">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile02" required name="receipt">
+                                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Submit Receipt</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
