@@ -33,6 +33,28 @@
   .c-QR img {
     width: 100%;
   }
+
+  .c-carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .c-carousel .c-carouselimg {
+    position: relative;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    .c-carousel .c-carouselimg {
+      width: 100%;
+    }
+  }
+
+  .c-carousel .c-carouselimg img {
+    width: 100%;
+    object-fit: cover;
+  }
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -72,12 +94,12 @@
                     </a>
                   </div>
                   <div class="py-1 px-3 br-3">
-                  <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
+                    <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
 
-                    <p class="m-0">
-                      Transaction History >
-                    </p>
-</a>
+                      <p class="m-0">
+                        Transaction History >
+                      </p>
+                    </a>
                   </div>
                 </div>
 
@@ -93,13 +115,13 @@
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
                   <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#status_modal">
-                  <div class="icon mb-2">
-                    <i class="fa fa-compass fa-lg"></i>
-                  </div>
+                    <div class="icon mb-2">
+                      <i class="fa fa-compass fa-lg"></i>
+                    </div>
                     <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
                       Status
                     </p>
-                      </a>
+                  </a>
 
                 </div>
               </div>
@@ -115,16 +137,16 @@
               </div>
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#referal_modal">
+                  <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#referal_modal">
 
-                <div class="icon mb-2">
-                    <i class="fa fa-user fa-lg"></i>
-                  </div>
-                  <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                    Referral
-                  </p>
+                    <div class="icon mb-2">
+                      <i class="fa fa-user fa-lg"></i>
+                    </div>
+                    <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
+                      Referral
+                    </p>
                 </div>
-</a>
+                </a>
               </div>
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
@@ -166,113 +188,139 @@
             </div>
           </div>
           <!-- /.col-->
+          <div class="col-sm-12 col-lg-3">
+
+            <div class="slick-slider-promo">
+              <div class="c-carousel">
+                <div class="c-carouselimg">
+                  <img src="<?= base_url() ?>/assets/img/carplateBanner_.jpg" alt="">
+                </div>
+              </div>
+              <div class="c-carousel">
+                <div class="c-carouselimg">
+                  <img src="<?= base_url() ?>/assets/img/carplateBanner_.jpg" alt="">
+                </div>
+              </div>
+              <div class="c-carousel">
+                <div class="c-carouselimg">
+                  <img src="<?= base_url() ?>/assets/img/carplateBanner_.jpg" alt="">
+                </div>
+              </div>
+              <div class="c-carousel">
+                <div class="c-carouselimg">
+                  <img src="<?= base_url() ?>/assets/img/carplateBanner_.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-->
         </div>
         <!-- /.row-->
       </div>
-      
+
 
       <div class="modal fade" id="status_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+          <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Status</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h5 class="modal-title" id="modalAddLabel">Status</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                </button>
+              </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
-                <div class="modal-body">
-       
-                <div class="card text-white bg-gradient-primary">
-                    <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
-                      <div>
-                      <i class="fa fa-compass fa-2x" ></i>
+            <form enctype="multipart/form-data" method="POST" action="<?= base_url(); ?>">
+              <div class="modal-body">
 
-                        <div>Status</div>
-                        <div class="text-value-lg">
+                <div class="card text-white bg-gradient-primary">
+                  <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                      <i class="fa fa-compass fa-2x"></i>
+
+                      <div>Status</div>
+                      <div class="text-value-lg">
                         <?= $users['is_verified'] == 1
-                        ? 'Verified'
-                        : 'Not verified' ?>
-                        </div>
+                          ? 'Verified'
+                          : 'Not verified' ?>
                       </div>
-                      <div class="btn-group">
-                        <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </div>
+                    <div class="btn-group">
+                      <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <svg class="c-icon">
                             <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
                           </svg>
                         </button> -->
-                        <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
-                      </div>
+                      <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
                     </div>
-                    <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
-                      <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
-                    <!-- </div> -->
                   </div>
-                    <input type="hidden" name="asd" value="asd">
+                  <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
+                  <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
+                  <!-- </div> -->
+                </div>
+                <input type="hidden" name="asd" value="asd">
 
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
             </form>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
 
 
-    <div class="modal fade" id="referal_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+      <div class="modal fade" id="referal_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+          <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Referal</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <h5 class="modal-title" id="modalAddLabel">Referal</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                </button>
+              </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
-                <div class="modal-body">
-       
-                <div class="card text-white bg-gradient-primary">
-                    <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
-                      <div>
-                      <i class="fa fa-compass fa-2x" ></i>
+            <form enctype="multipart/form-data" method="POST" action="<?= base_url(); ?>">
+              <div class="modal-body">
 
-                        <div>Status</div>
-                        <div class="text-value-lg">
+                <div class="card text-white bg-gradient-primary">
+                  <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                    <div>
+                      <i class="fa fa-compass fa-2x"></i>
+
+                      <div>Status</div>
+                      <div class="text-value-lg">
                         <?= $users['is_verified'] == 1
-                        ? 'Verified'
-                        : 'Not verified' ?>
-                        </div>
+                          ? 'Verified'
+                          : 'Not verified' ?>
                       </div>
-                      <div class="btn-group">
-                        <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </div>
+                    <div class="btn-group">
+                      <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <svg class="c-icon">
                             <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
                           </svg>
                         </button> -->
-                        <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
-                      </div>
+                      <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
                     </div>
-                    <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
-                      <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
-                    <!-- </div> -->
                   </div>
-                    <input type="hidden" name="asd" value="asd">
+                  <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
+                  <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
+                  <!-- </div> -->
+                </div>
+                <input type="hidden" name="asd" value="asd">
 
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
             </form>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
 
-<!--     
+      <!--     
 
       <div class="modal fade" id="status_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -284,7 +332,7 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
+            <form enctype="multipart/form-data"  method="POST" action="<?= base_url(); ?>">
                 <div class="modal-body">
        
                 <div class="form-group">
@@ -306,4 +354,3 @@
             </div>
         </div>
     </div> -->
-
