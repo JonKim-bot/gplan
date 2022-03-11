@@ -35,3 +35,45 @@ CRITICAL - 2022-03-11 13:49:19 --> Undefined variable: error
 #3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-03-11 15:09:51 --> Undefined variable: family
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(823): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 823, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->family_tree('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 15:09:51 --> Undefined variable: family
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(823): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 823, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->family_tree('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 15:09:51 --> Undefined variable: family
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(823): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 823, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->family_tree('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 15:11:13 --> Undefined variable: level
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(551): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 551, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 15:11:13 --> Undefined variable: level
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(551): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 551, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 15:11:13 --> Undefined variable: level
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(551): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 551, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

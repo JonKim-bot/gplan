@@ -82,6 +82,7 @@ class FamilyModel extends BaseModel
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
         return count($result) - 1;
+        
         // $this->debug($result);
     }
 
@@ -233,6 +234,7 @@ class FamilyModel extends BaseModel
             }
 
             if($type_id== 4){
+
                 //level 11 full 
                 if(isset($result[12]) && count($result[12]) < 24 ){ 
                     
