@@ -78,11 +78,17 @@ class FamilyModel extends BaseModel
 
     }
 
+    public function user_family_tree($family_id){
+        $families = array([$family_id]);
+        $result = $this->recursive_users($families);
+        return $result;
+    }
+
     public function user_family($family_id){
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
         return count($result) - 1;
-        
+
         // $this->debug($result);
     }
 

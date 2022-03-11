@@ -821,9 +821,12 @@ class Users extends BaseController
             'family.user_id' => $user_id
         ];
         $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
-        $family = $this->FamilyModel->user_family($family_id);
-        dd($family);
-        $this->pageData['family'] = $family;
+        $level = $this->FamilyModel->user_family($family_id);
+        $family_tree = $this->FamilyModel->user_family_tree($family_id);
+        dd($family_tree);
+        $this->pageData['family_tree'] = $family_tree;
+
+        $this->pageData['level'] = $level;
         echo view('admin/header', $this->pageData);
         echo view('admin/users/family_tree');
         // echo view('admin/footer');
