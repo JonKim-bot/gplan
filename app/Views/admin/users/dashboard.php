@@ -50,7 +50,7 @@
         <div class="row">
           <div class="col-sm-12 col-lg-3">
             <div class="card text-white bg-gradient-primary" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-              <div class="card-status card-body card-body pb-0">
+              <div class="card-status card-body card-body pb-0" style="height:200px">
                 <div>
                   <div> <?= $lang['your_point'] ?></div>
                   <div class="">
@@ -79,6 +79,28 @@
                     </p>
 </a>
                   </div>
+                  
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                 
+                  <div class="py-1 ">
+                  <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
+
+                    <p class="m-0">
+                      Total Earn Amount  : <?= $total_earn ?>
+                    </p>
+</a>
+                  </div>
+                  <div class="py-1">
+                  <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
+
+                    <p class="m-0">
+                      Withdraw Amount  : <?= $total_withdraw ?>
+                    </p>
+</a>
+                  </div>
+
+                  
                 </div>
 
               </div>

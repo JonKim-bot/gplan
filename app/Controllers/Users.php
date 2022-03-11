@@ -586,6 +586,11 @@ class Users extends BaseController
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
         $this->pageData['banner'] = $this->BannerModel->getAll();
         
+        $this->pageData['total_earn'] = $this->WalletModel->get_total_earn($users_id);
+        $this->pageData['total_withdraw'] = $this->WalletModel->get_total_withdraw($users_id);
+
+
+        
         echo view('admin/header', $this->pageData);
 
         echo view('admin/users/dashboard');
@@ -713,6 +718,7 @@ class Users extends BaseController
         $this->pageData['users'] = $this->UsersModel->getWhere($where)[0];
 
         if ($_POST) {
+
             $error = false;
             $input = $_POST;
        

@@ -19,6 +19,7 @@ class Admin extends BaseController
         $this->UsersModel = new UsersModel();
 
     }
+    
     public function set_lang($language_id)
     {
 

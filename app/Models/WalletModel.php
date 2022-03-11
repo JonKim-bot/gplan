@@ -47,6 +47,36 @@ class WalletModel extends BaseModel
         $query = $this->builder->get();
         return $query->getResultArray();
     }
+    function get_total_earn($users_id)
+    {
+        $balance = 0;
+        $this->builder->select('SUM(wallet_in) as total_earn_amount');
+        $this->builder->from($this->table_name);
+        $this->builder->where('users_id', $users_id);
+        $this->builder->orderBy('wallet_id', 'DESC');
+        $query = $this->builder->get()->getResultArray();
+        if (!empty($query)) {
+            $balance = $query[0]['total_earn_amount'];
+        }
+        return $balance;
+    }
+
+    function get_total_withdraw($users_id)
+    {
+        $balance = 0;
+        $this->builder->select('SUM(wallet_out) as total_withdraw');
+        $this->builder->from($this->table_name);
+        $this->builder->where('users_id', $users_id);
+        $this->builder->where('wallet_withdraw_id', 0);
+
+        $this->builder->orderBy('wallet_id', 'DESC');
+        $query = $this->builder->get()->getResultArray();
+        if (!empty($query)) {
+            $balance = $query[0]['total_withdraw'];
+        }
+        return $balance;
+    }
+
     function get_balance($users_id)
     {
         $balance = 0;

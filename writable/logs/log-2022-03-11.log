@@ -366,3 +366,31 @@ CRITICAL - 2022-03-11 17:03:48 --> Undefined index: your_point
 #6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-03-11 17:07:50 --> Call to undefined method App\Models\UsersModel::get_total_earn
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(589): CodeIgniter\Model->__call('get_total_earn', Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 17:07:51 --> Call to undefined method App\Models\UsersModel::get_total_earn
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(589): CodeIgniter\Model->__call('get_total_earn', Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 17:07:51 --> Call to undefined method App\Models\UsersModel::get_total_earn
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(589): CodeIgniter\Model->__call('get_total_earn', Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 17:07:57 --> Call to undefined method App\Models\UsersModel::get_total_earn
+#0 C:\xampp\htdocs\gplan\app\Controllers\Users.php(589): CodeIgniter\Model->__call('get_total_earn', Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
