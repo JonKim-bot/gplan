@@ -131,6 +131,7 @@ class Main extends BaseController
             } else {
                 $this->page_data['error'] = 'Failed to add user data';
             }
+            
         }
         $this->pageData['users'] = $this->FamilyModel->getAll();
         
