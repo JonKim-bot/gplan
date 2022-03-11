@@ -160,6 +160,7 @@ class Users extends BaseController
                     'status' => false,
                     'message' => 'User already made the payment'
                 ]));
+            }
 
             $this->UsersModel->updateWhere(['users.users_id' => $downline_id],['is_paid' => 1]);
             $remarks = 'Deduct RM 500 From ' . $user['username'] . " , Made by verify account for downline " . $downline['username'];
