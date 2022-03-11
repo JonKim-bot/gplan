@@ -69,6 +69,17 @@
 
 
                 <li class="c-sidebar-nav-title">Operation</li>
+                <li class="c-sidebar-nav-item ">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Qrcode'
+                                                        ? 'c-active'
+                                                        : null ?>" href="<?= base_url('Banner/qrcode') ?>">
+                        <i class="cil-people c-sidebar-nav-icon"></i>
+                        Qrcode
+                        <span class="badge badge-pill badge-warning"></span>
+
+                    </a>
+
+                </li>
 
                 <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users'
@@ -368,7 +379,7 @@ QR Code
                         <span class="badge badge-pill badge-info">7</span>
                     </a>
                 </li> -->
-                <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
+                <?php   if (session()->get('login_data')['type_id'] == '1') { ?>
 
                 <li class="c-header-nav-item dropdown">
                     <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">

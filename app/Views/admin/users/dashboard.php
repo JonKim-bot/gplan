@@ -224,7 +224,7 @@
               <?php foreach ($banner as $row) { ?>
                 <div class="c-carousel">
                   <div class="c-carouselimg">
-                    <img src="<?= base_url() . $row['banner'] ?>" alt="">
+                    <img style="width:100%" src="<?= base_url() . $row['banner'] ?>" alt="">
                   </div>
                 </div>
               <?php } ?>
@@ -297,7 +297,7 @@
                 </div>
 
               </div>
-              <?php if ($users['is_verified'] == 0) { ?>
+              <?php if ($users['receipt'] == "") { ?>
 
                 <div class="card-group" style="margin-top: 20px;">
                   <div class="card">
@@ -305,7 +305,7 @@
                       <h1>Bank Detail</h1>
                       <p class="text-muted">Please Submit your receipt to bank below</p>
                       <div class="text-center">
-                        <img src="https://carlink.my/static/media/tng.f2773066.png" alt="">
+                        <img src="<?= base_url() .  $qr_code?>" alt="">
                       </div>
                       <br>
 
@@ -319,6 +319,24 @@
 
                       </div>
 
+                      <div class="form-group">
+                                    <button class="btn btn-primary float-right" type="submit"> Submit</button>
+                                </div>
+                    </div>
+                  </div>
+                </div>
+
+              <?php }else{ ?>
+                <div class="card-group" style="margin-top: 20px;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h1>Receipt</h1>
+                      <p class="text-muted">Your Receipt already submmited</p>
+                      <div class="text-center">
+                        <img style="width:100%" src="<?= base_url() .  $users['receipt'] ?>" alt="">
+                      </div>
+                      <br>
+                  
                     </div>
                   </div>
                 </div>

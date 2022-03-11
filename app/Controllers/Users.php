@@ -153,6 +153,7 @@ class Users extends BaseController
         }else{
             $user = $this->get_users_info($users_id);
             $downline = $this->get_users_info($downline_id);
+
             //made the payment already
             if($downline['is_paid'] == 1){
                 die(json_encode([
@@ -602,7 +603,12 @@ class Users extends BaseController
         $this->pageData['users_id'] = $users_id;
 
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
-        $this->pageData['banner'] = $this->BannerModel->getAll();
+        $this->pageData['banner'] = $this->BannerModel->getWhere(['type_id' => 0]);
+        $qrcode = $this->BannerModel->getWhere(['type_id' => 1]);
+        if(!empty($qrcode)){
+            $qrcode = $qrcode[0]['banner'];
+        }
+        $this->pageData['qrcode'] = $qrcode;
         
         $this->pageData['total_earn'] = $this->WalletModel->get_total_earn($users_id);
         $this->pageData['total_withdraw'] = $this->WalletModel->get_total_withdraw($users_id);

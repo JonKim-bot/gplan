@@ -577,3 +577,61 @@ CRITICAL - 2022-03-11 18:09:11 --> syntax error, unexpected end of file
 #4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2022-03-11 20:25:42 --> Undefined variable: banner_id
+#0 C:\xampp\htdocs\gplan\app\Controllers\Banner.php(118): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 118, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Banner->qrcode()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Banner))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 20:25:44 --> Undefined variable: banner_id
+#0 C:\xampp\htdocs\gplan\app\Controllers\Banner.php(118): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 118, Array)
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Banner->qrcode()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Banner))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 20:26:15 --> Unknown column 'asd' in 'field list'
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `banner`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `banner`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `banner`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(2441): CodeIgniter\Database\BaseConnection->query('UPDATE `banner`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Core\BaseModel.php(1284): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\gplan\app\Controllers\Banner.php(140): App\Core\BaseModel->updateWhere(Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Banner->edit('1')
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Banner))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-03-11 20:26:53 --> Unknown column 'asd' in 'field list'
+#0 C:\xampp\htdocs\gplan\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `banner`...')
+#1 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `banner`...')
+#2 C:\xampp\htdocs\gplan\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `banner`...')
+#3 C:\xampp\htdocs\gplan\system\Database\BaseBuilder.php(2441): CodeIgniter\Database\BaseConnection->query('UPDATE `banner`...', Array, false)
+#4 C:\xampp\htdocs\gplan\app\Core\BaseModel.php(1284): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\gplan\app\Controllers\Banner.php(140): App\Core\BaseModel->updateWhere(Array, Array)
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Banner->edit('1')
+#7 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Banner))
+#8 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-03-11 20:28:01 --> Undefined index: qrcode
+#0 C:\xampp\htdocs\gplan\app\Views\admin\banner\edit_qr.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/banner/ed...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Banner.php(122): view('admin/banner/ed...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Banner->qrcode()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Banner))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-11 20:28:04 --> Undefined index: qrcode
+#0 C:\xampp\htdocs\gplan\app\Views\admin\banner\edit_qr.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/banner/ed...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Banner.php(122): view('admin/banner/ed...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Banner->qrcode()
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Banner))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
