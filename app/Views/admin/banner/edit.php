@@ -34,7 +34,6 @@
                     </div>
         
                     <?= $form['title'] ?>
-                    <?= $form['description'] ?>
 
                     <div class="form-group">
                         <button class="btn btn-primary float-right" type="submit"> Submit</button>

@@ -16,6 +16,7 @@ class Banner extends BaseController
 
         $this->BannerModel = new BannerModel();
         if (
+
             session()->get('login_data') == null &&
             uri_string() != 'access/login'
         ) {
@@ -34,7 +35,7 @@ class Banner extends BaseController
 
         $banner = $this->BannerModel->getWhere(['type_id' => 0]);
         // dd($banner);
-        $field = $this->BannerModel->get_field(['created_by','modified_by','type','deleted','link']);
+        $field = $this->BannerModel->get_field(['created_by','modified_by','type_id','type','deleted','link']);
         $this->pageData['table'] = $this->generate_table($field,$banner,'banner','banner');
         $this->pageData['banner'] = $banner;
         echo view('admin/header', $this->pageData);
