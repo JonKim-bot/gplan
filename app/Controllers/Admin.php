@@ -19,6 +19,16 @@ class Admin extends BaseController
         $this->UsersModel = new UsersModel();
 
     }
+    public function set_lang($language_id)
+    {
+
+
+        session()->set("language_id", $language_id);
+        return redirect()->to($_SERVER['HTTP_REFERER']);
+
+            
+    }
+    
 
     public function index()
     {

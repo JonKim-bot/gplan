@@ -77,7 +77,7 @@ class BaseController extends Controller
         $this->pageData['undone_topup'] = $this->WalletTopupModel->getCountOfUndone();
 
         $this->pageData['undone_user'] = $this->UsersModel->getCountUndone();
-
+        $this->load_lang();
 
         // if($_POST) {
         //     $data = array(
@@ -98,6 +98,28 @@ class BaseController extends Controller
         //     $this->Panel_activity_model->insert($data);
         // }
 
+    }
+
+    
+    public function load_lang()
+    {
+
+        $this->session = session();
+        // set system language EN for default
+
+        if ($this->session->get('language_id') == null) {
+            $language_id = 1;
+        } else {
+            $language_id = $this->session->get('language_id');
+        }
+        // Get Language data based on language ID
+        if ($language_id == 1) {
+            require_once APPPATH . "/Language/en_lang.php";
+        } else {
+            require_once APPPATH . "/Language/cn_lang.php";
+        }
+
+        $this->pageData['lang'] = $lang;
     }
 
 

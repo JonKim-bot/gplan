@@ -236,3 +236,133 @@ CRITICAL - 2022-03-11 16:47:10 --> syntax error, unexpected end of file
 #4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2022-03-11 16:59:46 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 16:59:47 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 16:59:48 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 16:59:52 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 16:59:52 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 16:59:53 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 16:59:54 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 16:59:55 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 16:59:56 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:00:01 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:00:01 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:00:02 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:00:02 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:00:03 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:00:04 --> Undefined variable: shop
+#0 C:\xampp\htdocs\gplan\app\Core\BaseController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\gplan\app\Core\BaseController.php(80): App\Core\BaseController->load_lang()
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(887): App\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-11 17:03:48 --> Undefined index: your_point
+#0 C:\xampp\htdocs\gplan\app\Views\admin\users\dashboard.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 55, Array)
+#1 C:\xampp\htdocs\gplan\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gplan\system\Common.php(1087): CodeIgniter\View\View->render('admin/users/das...', Array, true)
+#3 C:\xampp\htdocs\gplan\app\Controllers\Users.php(591): view('admin/users/das...')
+#4 C:\xampp\htdocs\gplan\system\CodeIgniter.php(914): App\Controllers\Users->dashboard('1')
+#5 C:\xampp\htdocs\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

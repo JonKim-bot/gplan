@@ -4,7 +4,7 @@
                         </main>
                         </div>
                         <footer class="c-footer">
-                            <div><a href="#">Gplan.</a> &copy; 2020 Creative Labs.</div>
+                            <!-- <div><a href="#">Gplan.</a> &copy; 2020 Creative Labs.</div> -->
                             <!-- <div class="ml-auto">Powered by&nbsp;<a href="#">wynndarrien</a></div> -->
                         </footer>
 
@@ -176,6 +176,7 @@
 
                             $('.custom-file input').change(function() {
                                 files = $(this)[0].files,
+
                                     label = files[0].name;
                                 if (files.length > 1) {
                                     label = String(files.length) + " files selected"

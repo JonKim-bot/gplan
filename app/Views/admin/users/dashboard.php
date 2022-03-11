@@ -52,7 +52,7 @@
             <div class="card text-white bg-gradient-primary" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
               <div class="card-status card-body card-body pb-0">
                 <div>
-                  <div>Your Point</div>
+                  <div> <?= $lang['your_point'] ?></div>
                   <div class="">
                     <h1>
                       MYR <?= $balance ?>

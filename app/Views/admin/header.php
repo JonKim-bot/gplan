@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 
-
-
-
-
-
 <html lang="en">
 
 <head>
@@ -340,8 +335,9 @@ QR Code
             <ul class="c-header-nav d-md-down-none">
                 <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="<?= base_url() ?>/dashboard">Dashboard</a></li>
             </ul>
-
+            
             <ul class="c-header-nav mfs-auto">
+                <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
                 <li class="c-header-nav-item px-3 c-d-legacy-none">
                     <button class="c-class-toggler c-header-nav-btn" type="button" id="headertooltip" data-target="body" data-class="c-dark-theme" data-toggle="c-tooltip" data-placement="bottom" title="" data-original-title="Toggle Light/Dark Mode" aria-describedby="">
                         <i class="cil-moon c-icon c-d-dark-none"></i>
@@ -349,6 +345,7 @@ QR Code
                     </button>
 
                 </li>
+                <?php  } ?>
             </ul>
             <ul class="c-header-nav">
                 <!-- <li class="c-header-nav-item dropdown d-md-down-none mx-2">
@@ -364,13 +361,31 @@ QR Code
                     </a>
 
                 </li>
+
                 <li class="c-header-nav-item dropdown d-md-down-none mx-2">
                     <a class="c-header-nav-link">
                         <i class="cil-envelope-open c-icon"></i>
                         <span class="badge badge-pill badge-info">7</span>
                     </a>
                 </li> -->
-
+                <li class="c-header-nav-item dropdown">
+                    <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <div class="c-avatar"><img class="c-avatar-img" src="https://media.istockphoto.com/vectors/choose-or-change-language-icon-vector-illustration-on-isolated-vector-id957046406" alt=""></div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right pt-0">
+                        <div class="dropdown-header bg-light py-2">
+                        </div>
+                     
+                        <a class="dropdown-item" href="<?= base_url() ?>/admin/set_lang/1">
+                            <i class="cil-account-logout c-icon mfe-2"></i>
+                            English
+                        </a>
+                        <a class="dropdown-item" href="<?= base_url() ?>/admin/set_lang/2">
+                            <i class="cil-account-logout c-icon mfe-2"></i>
+                            Chinese
+                        </a>
+                    </div>
+                </li>
                 <li class="c-header-nav-item dropdown">
                     <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <div class="c-avatar"><img class="c-avatar-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/2048px-User_icon_2.svg.png" alt=""></div>
