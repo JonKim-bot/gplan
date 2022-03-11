@@ -50,7 +50,7 @@
         <div class="row">
           <div class="col-sm-12 col-lg-3">
             <div class="card text-white bg-gradient-primary" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-              <div class="card-status card-body card-body pb-0" style="height:200px">
+              <div class="card-status card-body card-body pb-0" style="height:250px">
                 <div>
                   <div> <?= $lang['your_point'] ?></div>
                   <div class="">
@@ -102,6 +102,23 @@
 
                   
                 </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="c-withButton d-flex justify-content-center align-items-center py-1 px-3 br-3">
+                    <div class="icon mr-2">
+                      <i class="fa fa-users fa-2x"></i>
+                    </div>
+                    <a href="<?= base_url() ?>/Users/my_group" style="color:white">
+
+                      <p class="m-0">
+                        My Group
+                      </p>
+                    </a>
+                  </div>
+                 
+                  
+                </div>
+
 
               </div>
               <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
