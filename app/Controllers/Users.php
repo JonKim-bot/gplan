@@ -12,6 +12,7 @@ namespace App\Controllers;
 use App\Core\BaseController;
 use App\Models\UsersModel;
 use App\Models\FamilyModel;
+use App\Models\BannerModel;
 
 use App\Models\WalletModel;
 use App\Models\CompanyProfitModel;
@@ -23,6 +24,7 @@ class Users extends BaseController
     {
         $this->WalletModel = new WalletModel();
         $this->FamilyModel = new FamilyModel();
+        $this->BannerModel = new BannerModel();
 
         $this->CompanyProfitModel = new CompanyProfitModel();
 
@@ -126,6 +128,7 @@ class Users extends BaseController
 
         }
         $this->pageData['users_id'] = $users_id;
+
 
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
@@ -581,7 +584,8 @@ class Users extends BaseController
 
         $this->pageData['wallet'] = $users_wallet;
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
-     
+        $this->pageData['banner'] = $this->BannerModel->getAll();
+        
         echo view('admin/header', $this->pageData);
 
         echo view('admin/users/dashboard');

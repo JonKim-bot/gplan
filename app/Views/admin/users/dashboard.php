@@ -178,7 +178,14 @@
           <div class="col-sm-12 col-lg-3">
 
             <div class="slick-slider-promo">
+              <?php foreach($banner as $row){ ?>
               <div class="c-carousel">
+                <div class="c-carouselimg">
+                  <img src="<?= base_url() . $row['banner']?>" alt="">
+                </div>
+              </div>
+              <?php } ?>
+              <!-- <div class="c-carousel">
                 <div class="c-carouselimg">
                   <img src="<?= base_url() ?>/assets/img/carplateBanner_.jpg" alt="">
                 </div>
@@ -192,15 +199,10 @@
                 <div class="c-carouselimg">
                   <img src="<?= base_url() ?>/assets/img/carplateBanner_.jpg" alt="">
                 </div>
-              </div>
-              <div class="c-carousel">
-                <div class="c-carouselimg">
-                  <img src="<?= base_url() ?>/assets/img/carplateBanner_.jpg" alt="">
-                </div>
-              </div>
+              </div> -->
             </div>
           </div>
-          
+
           <!-- /.col-->
         </div>
         <!-- /.row-->
