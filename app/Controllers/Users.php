@@ -153,7 +153,7 @@ class Users extends BaseController
 
             $this->WalletModel->wallet_out(
                 $users_id,
-                
+
                 500,
                 $remarks,
             );
@@ -546,6 +546,7 @@ class Users extends BaseController
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
      
         echo view('admin/header', $this->pageData);
+        
         echo view('admin/users/dashboard');
         echo view('admin/footer');
     }

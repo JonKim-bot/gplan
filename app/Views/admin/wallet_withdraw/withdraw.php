@@ -48,6 +48,12 @@
     padding: 0px 25px;
 
   }
+  .icon_top{
+    background: white;
+    border-radius: 50%;
+    color: black;
+    padding: 5px;
+  }
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -65,7 +71,15 @@
         <div class="row">
           
           <!-- /.col-->
-          
+            <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;">
+                <!-- <a href="">+</a> -->
+                <div class="icon_top">
+                <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="icon_top">
+                <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
           <!-- /.col-->
           <div class="col-sm-12 col-lg-3">
             <div class="card text-white c-shadow" style="border-radius: 20px;">

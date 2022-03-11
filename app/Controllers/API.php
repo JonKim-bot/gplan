@@ -761,6 +761,7 @@ class API extends BaseController
 
     // public function insert_inspection_dummy_data_entry(){
 
+
     //     $data = [
     //         [ 1, 19 ],
     //         [ 2, 4 ],
@@ -1765,7 +1766,7 @@ class API extends BaseController
     {
         $input = $this->getRequestInput($this->request);
 
-        $valid = $this->check_auction_entry(
+        $valid = $this->check_auction_entry_masuk(
             $input['auction_id'],
             $input['users_id']
         );
@@ -1893,6 +1894,29 @@ class API extends BaseController
             }
         }
     }
+
+    function check_auction_entry_masuk($auction_id, $users_id)
+    {
+        $auction = $this->AuctionModel->getWhere([
+            'auction_id' => $auction_id,
+        ])[0];
+        $deposit_amount = $auction['deposit_amount'];
+        $balance = $this->WalletModel->get_balance($users_id);
+
+        $existed = $this->WalletModel->getWhere([
+            'wallet.users_id' => $users_id,
+            'wallet.auction_id' => $auction_id,
+        ]);
+
+        if (empty($existed)) {
+            if ($deposit_amount > $balance) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 
     function check_auction_entry($auction_id, $users_id)
     {
