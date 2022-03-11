@@ -181,7 +181,7 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
+            <form enctype="multipart/form-data"  method="POST" action="<?=base_url('Users/submit_receipt');?>">
                 <div class="modal-body">
        
                 <div class="card text-white bg-gradient-primary">
@@ -211,20 +211,17 @@
                   </div>
 
                 </div>
+                <?php if($users['is_verified'] == 0){ ?>
 
                 <div class="card-group" style="margin-top: 20px;">
                         <div class="card">
                             <div class="card-body">
                                 <h1>Bank Detail</h1>
                                 <p class="text-muted">Please Submit your receipt to bank below</p>
-
-
-                                <div>
-                                    <p style="margin-bottom: 0px;">Bank Name: asd</p>
-                                    <p style="margin-bottom: 0px;">Bank Holder Name: asd</p>
-                                    <p>Bank Account Number: 01664854654</p>
+                                <div class="text-center">
+                                    <img src="https://carlink.my/static/media/tng.f2773066.png" alt="">
                                 </div>
-                                
+                                <br>
 
                                 <div class="input-group mb-4">
                                     <div class="form-group" style="width: 100%;">
@@ -239,11 +236,12 @@
                             </div>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Save</button>
+                  </div>
+                  <?php } ?>
 
 
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
             </form>
             </div>
         </div>

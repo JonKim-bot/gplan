@@ -272,6 +272,39 @@ class Users extends BaseController
         
     }
 
+    public function submit_receipt()
+    
+    {
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $users_id = session()->get('login_id');
+
+        }
+        $where = [
+            'users.users_id' => $users_id
+        ];
+
+        $error = false;
+        if ($_FILES) {
+            $input = $_POST;
+
+            // $input['family_id'] = $this->FamilyModel->find_empty_slot($input['family_id']);
+
+            if (!$error) {
+                $data = $this->upload_image_with_data([], 'receipt');
+                $users_id = $this->UsersModel->updateWhere($where,$data);
+                alert('Receipt submmited');
+                locationhref($_SERVER['HTTP_REFERER']);
+                
+                // return redirect()->to(base_url('users/detail/' . $users_id, 'refresh'));
+                // return redirect()->to($_SERVER['HTTP_REFERER']);
+            } else {
+                $this->page_data['error'] = 'Failed to add user data';
+            }
+        }
+    }
+
+
     public function add()
     
     {
@@ -546,7 +579,7 @@ class Users extends BaseController
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
      
         echo view('admin/header', $this->pageData);
-        
+
         echo view('admin/users/dashboard');
         echo view('admin/footer');
     }
