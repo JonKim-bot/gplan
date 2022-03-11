@@ -76,7 +76,7 @@
                 <div class="icon_top">
                 <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
                 </div>
-                <div class="icon_top">
+                <div class="icon_top"  data-toggle="modal" data-target="#status_modal">
                 <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
                 </div>
             </div>
@@ -355,3 +355,39 @@
         
         <!-- /.row-->
       </div>
+
+
+      
+
+      <div class="modal fade" id="status_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAddLabel">Add Detail</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
+                <div class="modal-body">
+       
+                <div class="form-group">
+                                <label for="">Name</label>
+                                <input type="text" class="form-control" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                            </div>
+
+                    <input type="hidden" name="asd" value="asd">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div> 
