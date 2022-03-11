@@ -105,12 +105,16 @@
               </div>
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                  <div class="icon mb-2">
+                <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#family_tree">
+ 
+                <div class="icon mb-2">
+
                     <i class="fa fa-diagram-project fa-lg"></i>
                   </div>
                   <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
                     Family Tree
                   </p>
+</a>
                 </div>
               </div>
               <div class="col-3 d-flex justify-content-center">
@@ -121,19 +125,23 @@
                     <i class="fa fa-user fa-lg"></i>
                   </div>
                   <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                    Referral
+                    Your Teacher
                   </p>
                 </div>
 </a>
               </div>
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                  <div class="icon mb-2">
+                <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#level_modal">
+
+                <div class="icon mb-2">
                     <i class="fa fa-user-group fa-lg"></i>
                   </div>
                   <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
                     Total Downline
                   </p>
+                  </a>
+
                 </div>
               </div>
             </div>
@@ -142,16 +150,16 @@
           <div class="col-sm-12 col-lg-3">
             <div class="card text-white c-shadow" style="border-radius: 20px;">
               <div class="c-QR">
-                <img src="<?= base_url() ?>/assets/img/qr.png" alt="">
-              </div>
+              <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=<?= base_url() ?>/main/add/<?= $family_id ?>&choe=UTF-8" 
+                                    style="margin: auto; display: block; margin-left: auto; margin-right: auto;">              </div>
               <div class="text-white" style="padding:50px; border-bottom-left-radius: 20px;border-bottom-right-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-12">
                     <p style="font-size: 16px; line-height:1; margin:0;">
-                      Invite friends and earn
+                    invite more friends to get more rewards
                     </p>
                   </div>
-                  <div class="col-6">
+                  <!-- <div class="col-6">
                     <h1 style="margin: 0;">
                       RM10
                     </h1>
@@ -160,7 +168,7 @@
                     <p style="margin: 0; font-size:8px; line-height:1;">
                       NOTE: IF EACH LEVEL THEN SYSTEM WILL PROVIDE RM 30
                     </p>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -236,9 +244,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary">Save</button>
-                  </div>
+                   
                   <?php } ?>
 
 
@@ -254,7 +260,7 @@
             <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Referal</h5>
+                <h5 class="modal-title" id="modalAddLabel">Your Teacher</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -262,17 +268,15 @@
             <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
                 <div class="modal-body">
        
-                <div class="card text-white bg-gradient-primary">
-                    <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                <div class="card text-white bg-gradient-warning">
+                <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
                       <div>
                       <i class="fa fa-compass fa-2x" ></i>
 
-                        <div>Status</div>
-                        <div class="text-value-lg">
-                        <?= $users['is_verified'] == 1
-                        ? 'Verified'
-                        : 'Not verified' ?>
-                        </div>
+                     
+                      <div>Referal Name</div>
+                        <div class="text-value-lg text-statis"><?= $users['upline_name'] != "" ? $users['upline_name'] : 'None' ?></div>
+
                       </div>
                       <div class="btn-group">
                         <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -290,13 +294,120 @@
                     <input type="hidden" name="asd" value="asd">
 
                 </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
+               
             </form>
             </div>
         </div>
     </div>
+
+
+    
+    <div class="modal fade" id="family_tree" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAddLabel">Family Tree</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
+                <div class="modal-body">
+       
+                <div class="card text-white bg-gradient-info">
+                    <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                      <div>
+                      <i class="fa fa-users fa-2x" ></i>
+
+                        <div>Family Tree</div>
+                          <div class="text-value-lg">
+                            <?php if (
+                                $users[
+                                    'is_verified'
+                                ] == 0
+                            ) { ?>
+                            
+                              <a class="btn btn-primary" >
+                                Don Have Family Yet
+                              </a>
+                            <?php } else { ?>
+                            <a class="btn btn-primary" href="<?= base_url() ?>/users/family_tree/1">
+                              View Family Tree
+                            </a>
+                          <?php } ?>
+                          </div>
+                      </div>
+                      <div class="btn-group">
+                        <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg class="c-icon">
+                            <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
+                          </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
+                      </div>
+                    </div>
+                    <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
+                      <!-- <canvas class="chart" id="card-chart2" height="70"></canvas> -->
+                    <!-- </div> -->
+                  </div>
+                    <input type="hidden" name="asd" value="asd">
+
+                </div>
+             
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="level_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAddLabel">Family Tree</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
+                <div class="modal-body">
+       
+                <div class="card text-white bg-gradient-danger">
+                    <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                      <div>
+                      <i class="fa fa-users fa-2x" ></i>
+
+                        <div>Total Level Achived</div>
+                        <div class="text-value-lg"><?= get_level($users['level']) ?></div>
+                      </div>
+                      <!-- <div class="btn-group">
+                        <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <svg class="c-icon">
+                            <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
+                          </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+                      </div> -->
+                    </div>
+                    <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
+                      <canvas class="chart" id="card-chart4" height="70"></canvas>
+                    </div> -->
+                  </div>
+                    <input type="hidden" name="asd" value="asd">
+
+                </div>
+           
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
 
 
 <!--     

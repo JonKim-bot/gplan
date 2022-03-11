@@ -283,8 +283,10 @@ class Users extends BaseController
         $where = [
             'users.users_id' => $users_id
         ];
+        
 
         $error = false;
+
         if ($_FILES) {
             $input = $_POST;
 

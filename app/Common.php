@@ -53,6 +53,20 @@
 
     }
 
+    function get_level($level){
+        if($level <= 2){
+            return "member";
+        }
+        else if($level <= 3){
+            return "supervisor";
+        }else if($level <= 6){
+            return "manager";
+        }else 
+        {
+            return "director";
+        }
+    }
+
 
     function getip() { 
         $ip=false;
