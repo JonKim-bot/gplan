@@ -94,6 +94,7 @@ class Withdraw extends BaseController
 
         }else{
             $wallet_withdraw = $this->WalletWithdrawModel->getAll();
+            
 
         }
 

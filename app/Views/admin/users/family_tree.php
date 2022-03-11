@@ -110,66 +110,17 @@ html, body {
 </style>
 
 <div class="container">
+        <?php for ($x = 1; $x <= $level ; $x++) { ?>
         <div class="entry">
             <div class="indicator">
                 <span></span>
             </div>
             <p class="content">
-                <span>Header</span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, pariatur.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, pariatur.
-            </p>
-            <div class="time">2022</div>
-        </div>
-        <div class="entry">
-            <div class="indicator">
-                <span></span>
-            </div>
-            <p class="content">
-                <span>Header</span>
+                <span><?= $x ?></span>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, pariatur.
             </p>
-            <div class="time">2021</div>
+            <div class="time">Level <?= $x ?></div>
         </div>
-        <div class="entry">
-            <div class="indicator">
-                <span></span>
-            </div>
-            <p class="content">
-                <span>Header</span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, pariatur.
-            </p>
-            <div class="time">2020</div>
-        </div>
-        <div class="entry">
-            <div class="indicator">
-                <span></span>
-            </div>
-            <p class="content">
-                <span>Header</span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, pariatur.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, pariatur.
-            </p>
-            <div class="time">2019</div>
-        </div>
-        <div class="entry">
-            <div class="indicator">
-                <span></span>
-            </div>
-            <p class="content">
-                <span>Header</span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, pariatur.
-            </p>
-            <div class="time">2018</div>
-        </div>
-        <div class="entry">
-            <div class="indicator">
-                <span></span>
-            </div>
-            <p class="content">
-                <span>Header</span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, pariatur.
-            </p>
-            <div class="time">2017</div>
-        </div>
+        <?php } ?>
+       
     </div>

@@ -224,6 +224,7 @@ class Users extends BaseController
                     $family_name = $this->UsersModel->getWhere($where)[0];
                     $family_name = $family_name['name'];
                 }
+
                     
                 $where = [
                     'family.user_id' => $row['users_id']
@@ -271,6 +272,41 @@ class Users extends BaseController
         return $family['user_id'];
         
     }
+
+    public function submit_receipt()
+    
+    {
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $users_id = session()->get('login_id');
+
+        }
+        $where = [
+            'users.users_id' => $users_id
+        ];
+
+
+        $error = false;
+
+        if ($_FILES) {
+            $input = $_POST;
+
+            // $input['family_id'] = $this->FamilyModel->find_empty_slot($input['family_id']);
+
+            if (!$error) {
+                $data = $this->upload_image_with_data([], 'receipt');
+                $users_id = $this->UsersModel->updateWhere($where,$data);
+                alert('Receipt submmited');
+                locationhref($_SERVER['HTTP_REFERER']);
+                
+                // return redirect()->to(base_url('users/detail/' . $users_id, 'refresh'));
+                // return redirect()->to($_SERVER['HTTP_REFERER']);
+            } else {
+                $this->page_data['error'] = 'Failed to add user data';
+            }
+        }
+    }
+
 
     public function add()
     
@@ -511,7 +547,8 @@ class Users extends BaseController
         $family_id = 0;
         
 
-        $family = $this->FamilyModel->getWhere(['family.user_id' => $users_id]);
+        $family = $this->FamilyModel->getWhereRaw(['family.user_id' => $users_id]);
+     
         if(!empty($family)){
             $family_id = $family[0]['family_id'];
         }
@@ -519,10 +556,10 @@ class Users extends BaseController
         $this->pageData['family_id'] = $family_id ;
 
         $level = $this->FamilyModel->user_family($family_id);
+
         if($family_id == 0){
             $level = 1;
         }
-        // dd($level);
         $users['level']  = $level;
 
         $this->pageData['users'] = $users;
@@ -546,7 +583,7 @@ class Users extends BaseController
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
      
         echo view('admin/header', $this->pageData);
-        
+
         echo view('admin/users/dashboard');
         echo view('admin/footer');
     }
@@ -780,42 +817,16 @@ class Users extends BaseController
         }
 
 
+        $where = [
+            'family.user_id' => $user_id
+        ];
+        $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
+        $level = $this->FamilyModel->user_family($family_id);
+        $family_tree = $this->FamilyModel->user_family_tree($family_id);
+        dd($family_tree);
+        $this->pageData['family_tree'] = $family_tree;
 
-        $user_detail = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
-
-
-        $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
-
-        // dd($users_1);
-
-        $user = $this->FamilyModel->getTree($user_id);
-
-
-        // dd($users_1);
-        // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
-
-
-
-        // dd($user);  
-
-
-        $users = array_merge($users_1,$user);
-        // dd($users);
-        $tree =  $this->buildTree($users,$user_id);
-        // dd($tree);
-
-        $users_1[0]['children'] = $tree;
-
-        $tree = $users_1;
-        
-
-        // dd($tree);
-        $ulli = $this->createListLi($tree);
-        
-        $this->pageData["ulli"] = $ulli;
-        $this->pageData["user_detail"] = $user_detail[0];
-
-
+        $this->pageData['level'] = $level;
         echo view('admin/header', $this->pageData);
         echo view('admin/users/family_tree');
         // echo view('admin/footer');
@@ -824,6 +835,7 @@ class Users extends BaseController
 
 
     
+
 
 
 
@@ -954,6 +966,7 @@ class Users extends BaseController
         $branch = array();
         // dd($elements);
         
+
         foreach ($elements as $element) {
             // dd($element);   
             // $element['downline_count']=  $this->CustomerModel->recursive_get_downline_count($element['customer_id']);;
