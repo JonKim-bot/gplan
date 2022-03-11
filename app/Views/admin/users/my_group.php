@@ -140,6 +140,7 @@
                     data = JSON.parse(data);
                     if(data.status){
                         alert("Payment success")
+                        location.reload();
                     }else{
                         alert(data.message);
                     }

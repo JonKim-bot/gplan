@@ -534,3 +534,24 @@ CRITICAL - 2022-03-11 17:54:36 --> Too few arguments to function App\Controllers
 #2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #3 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #4 {main}
+CRITICAL - 2022-03-11 17:57:02 --> syntax error, unexpected '}', expecting ']'
+#0 C:\xampp\htdocs\gplan\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Users/my_group')
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Users/my_group')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 17:57:03 --> syntax error, unexpected '}', expecting ']'
+#0 C:\xampp\htdocs\gplan\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Users/my_group')
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Users/my_group')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 17:57:03 --> syntax error, unexpected '}', expecting ']'
+#0 C:\xampp\htdocs\gplan\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('Users/my_group')
+#1 C:\xampp\htdocs\gplan\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('Users/my_group')
+#2 C:\xampp\htdocs\gplan\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
