@@ -43,6 +43,43 @@ class Withdraw extends BaseController
             'receipt'
         );
         $this->pageData['wallet_withdraw'] = $wallet_withdraw;
+
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+            $this->pageData[
+                'final_form'
+            ] = $this->WalletWithdrawModel->get_final_form_add([
+                'created_by',
+                'modified_by',
+                'deleted',
+                'users_id',
+                'modified_date',
+                'is_approved',
+                'is_rejected',
+                'receipt',
+                'is_paid',
+                'created_date',
+            ]);
+        }else{
+            $this->pageData[
+                'final_form'
+            ] = $this->WalletWithdrawModel->get_final_form_add([
+                'created_by',
+                'modified_by',
+                'deleted',
+                'modified_date',
+                'is_approved',
+                'is_rejected',
+                'receipt',
+                'is_paid',
+                'created_date',
+            ]);
+        }
+
+
+ 
+
+
         echo view('admin/header', $this->pageData);
         echo view('admin/wallet_withdraw/withdraw');
         echo view('admin/footer');
@@ -63,6 +100,7 @@ class Withdraw extends BaseController
         $field = $this->WalletWithdrawModel->get_field([
             'created_by',
             'users_id',
+
 
             'modified_by',
             'deleted',
@@ -277,10 +315,10 @@ class Withdraw extends BaseController
                         $_POST['remarks'],
                     );
                     $wallet_withdraw_id = $this->WalletWithdrawModel->insertNew($data);
-                    return redirect()->to(base_url('withdraw/detail/' . $wallet_withdraw_id, 'refresh'));
+                    return redirect()->to($_SERVER['HTTP_REFERER'], 'refresh');
                 }else{
                     alert('Balance not enought');
-                    locationhref(base_url().'/withdraw');
+                    locationhref($_SERVER['HTTP_REFERER']);
                     // return redirect()->to($_SERVER['HTTP_REFERER']);
                 }
             }

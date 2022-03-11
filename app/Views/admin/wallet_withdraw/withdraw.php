@@ -81,6 +81,7 @@
                 </div>
             </div>
           <!-- /.col-->
+          <?php foreach ($wallet_withdraw as $row) {?>
           <div class="col-sm-12 col-lg-3">
             <div class="card text-white c-shadow" style="border-radius: 20px;">
               <div class="c-QR row text-dark" style="width:90%">
@@ -88,54 +89,74 @@
                     <div class="col-8 description_div">
                         <div class="one_row row">
                             <div class="col-6">
-                                <p>asdasd</p>
+                                <p>User Name</p>
                             </div>
                             <div class="col-6">
-                                <p>asdasd</p>
+                                <p><?= $row['users'] ?></p>
                             </div>
                         </div>
                         <div class="one_row row">
                             <div class="col-6">
-                                <p>asdasd</p>
+                                <p>Amount Withdraw</p>
                             </div>
                             <div class="col-6">
-                                <p>asdasd</p>
+                                <p>RM <?= $row['amount'] ?></p>
+                            </div>
+                        </div>
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>Bank Account</p>
+                            </div>
+                            <div class="col-6">
+                                <p><?= $row['bank_acc'] ?></p>
+                            </div>
+                        </div>
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>Bank Name</p>
+                            </div>
+                            <div class="col-6">
+                                <p><?= $row['bank_name'] ?></p>
+                            </div>
+                        </div>
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>Account Name</p>
+                            </div>
+                            <div class="col-6">
+                                <p><?= $row['acc_name'] ?></p>
+                            </div>
+                        </div>
+                        <div class="one_row row">
+                            <div class="col-6">
+                                <p>Created Date</p>
+                            </div>
+                            <div class="col-6">
+                                <p><?= $row['created_date'] ?></p>
                             </div>
                         </div>
 
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-4">
 
-                    <div class="btn btn-success bg_color">
-                                <p>Permission Date</p>
+                    <div class="btn btn-success bg_color w-100">
+                                <p> <?php if ($row['is_approved'] == 1) { ?>
+                                    Approved
+                                <?php } ?>
+
+                                <?php if ($row['is_rejected'] == 1) { ?>
+                                    Rejected
+                                <?php } ?>
+                            
+                                <?php if ($row['is_rejected'] == 0 || $row['is_approved'] == 0) { ?>
+                                    Pending
+                                <?php } ?>
+                            
+                            </p>
                             </div>
-                            <div class="btn btn-success" style="margin-top:75px">
-                                <p>Permission Date</p>
+                            <div class="btn btn-success w-100" style="margin-top:75px">
+                                    <p>Permmision <br> Date</p>
+                            <p><?= $row['created_date'] ?></p>
                             </div>
                           
                     </div>
@@ -147,205 +168,9 @@
               
             </div>
           </div>
+          <?php } ?>
 
-          <div class="col-sm-12 col-lg-3">
-            <div class="card text-white c-shadow" style="border-radius: 20px;">
-              <div class="c-QR row text-dark" style="width:90%">
-                <div class="row">
-                    <div class="col-8 description_div">
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-
-                    <div class="btn btn-success bg_color">
-                                <p>Permission Date</p>
-                            </div>
-                            <div class="btn btn-success" style="margin-top:75px">
-                                <p>Permission Date</p>
-                            </div>
-                          
-                    </div>
-                 
-                </div>
-
-                
-                  </div>
-              
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-3">
-            <div class="card text-white c-shadow" style="border-radius: 20px;">
-              <div class="c-QR row text-dark" style="width:90%">
-                <div class="row">
-                    <div class="col-8 description_div">
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-
-                    <div class="btn btn-success bg_color">
-                                <p>Permission Date</p>
-                            </div>
-                            <div class="btn btn-success" style="margin-top:75px">
-                                <p>Permission Date</p>
-                            </div>
-                          
-                    </div>
-                 
-                </div>
-
-                
-                  </div>
-              
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-3">
-            <div class="card text-white c-shadow" style="border-radius: 20px;">
-              <div class="c-QR row text-dark" style="width:90%">
-                <div class="row">
-                    <div class="col-8 description_div">
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                        <div class="one_row row">
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                            <div class="col-6">
-                                <p>asdasd</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-
-                    <div class="btn btn-success bg_color">
-                                <p>Permission Date</p>
-                            </div>
-                            <div class="btn btn-success" style="margin-top:75px">
-                                <p>Permission Date</p>
-                            </div>
-                          
-                    </div>
-                 
-                </div>
-
-                
-                  </div>
-              
-            </div>
-          </div>
+         
 
 
           <!-- /.col-->
@@ -364,25 +189,14 @@
             <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="modalAddLabel">Add Detail</h5>
+                <h5 class="modal-title" id="modalAddLabel">WalletWithdraw</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form enctype="multipart/form-data"  method="POST" action="<?=base_url();?>">
+            <form enctype="multipart/form-data"  method="POST" action="<?= base_url('/Withdraw/add'); ?>">
                 <div class="modal-body">
-       
-                <div class="form-group">
-                                <label for="">Name</label>
-                                <input type="text" class="form-control" name="name" placeholder="Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Password</label>
-                                <input type="password" class="form-control" name="password" placeholder="Password" required>
-                            </div>
-
-                    <input type="hidden" name="asd" value="asd">
-
+                    <?= $final_form ?>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Save</button>

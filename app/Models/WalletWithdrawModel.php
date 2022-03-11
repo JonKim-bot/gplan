@@ -67,6 +67,7 @@ class WalletWithdrawModel extends BaseModel
             '
         );
         $this->builder->from($this->table_name);
+        
         $this->builder->join(
             'users',
             'wallet_withdraw.users_id = users.users_id AND users.deleted = 0',
