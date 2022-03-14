@@ -67,6 +67,7 @@
 
 
                                                 <th>Verify Status</th>
+                                                <th></th>
 
                                                 <th></th>
                                             </tr>

@@ -188,6 +188,9 @@ class FamilyModel extends BaseModel
         return $user_info['type_id'];
     }
 
+    public function get_user_upline(){
+
+    }
     public function insert_commission($family_id){
         $this->WalletModel = new WalletModel();
         $this->UsersModel = new UsersModel();
@@ -206,7 +209,7 @@ class FamilyModel extends BaseModel
             if(isset($result[11]) && count($result[11]) < 22){ 
                 $commission = 30;
             }
-            
+
 
             if($type_id == 0){
                 //level 15
