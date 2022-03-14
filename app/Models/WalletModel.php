@@ -120,7 +120,8 @@ class WalletModel extends BaseModel
         return $top_up_id;
     }
 
-    function wallet_in($users_id, $amount, $remarks,$family_id = 0 ,$wallet_withdrawal_id = 0,$wallet_topup_id = 0 )
+
+    function wallet_in($users_id, $amount, $remarks,$family_id = 0 ,$wallet_withdrawal_id = 0,$wallet_topup_id = 0 , $downline_that_exceed_level = 0 )
     {
 
         $balance = $this->get_balance($users_id);
@@ -129,6 +130,7 @@ class WalletModel extends BaseModel
             'users_id' => $users_id,
             'wallet_in' => $amount,
             'family_id' => $family_id,
+            'downline_that_exceed_level' => $downline_that_exceed_level,
             'wallet_withdraw_id' => $wallet_withdrawal_id,
             'wallet_topup_id' => $wallet_topup_id,
             'balance' => $balance + $amount,
