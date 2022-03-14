@@ -608,6 +608,8 @@ class Users extends BaseController
         $qrcode = $this->BannerModel->getWhere(['type_id' => 1]);
         if(!empty($qrcode)){
             $qrcode = $qrcode[0]['banner'];
+        }else{
+            $qrcode = 0;
         }
         $this->pageData['qrcode'] = $qrcode;
         
@@ -957,6 +959,7 @@ class Users extends BaseController
         echo view('admin/users/family_tree');
         // echo view('admin/footer');
         
+
     }
 
     public function get_total_com($level_user,$level_upline){
