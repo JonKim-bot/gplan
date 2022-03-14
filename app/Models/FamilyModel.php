@@ -195,10 +195,12 @@ class FamilyModel extends BaseModel
             $upline_info = $this->db->query("SELECT * FROM users WHERE users_id = $user_reference_id")->getResultArray()[0];
 
 
+            $level_user = $users['type_id'] + 8;
+            $level_upline = $users['type_id'] + 8;
+            if($level_user < $level_upline ){
 
-            // if($users['type_id'] > ){
 
-            // }
+            }
 
 
             return $upline_info;
