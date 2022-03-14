@@ -316,7 +316,7 @@ class Users extends BaseController
                 ];
                 $data = $this->upload_image_with_data($data, 'receipt');
                 $users_id = $this->UsersModel->updateWhere($where,$data);
-                alert('Receipt submmited');
+                alert('Receipt submitted');
                 locationhref($_SERVER['HTTP_REFERER']);
                 
                 // return redirect()->to(base_url('users/detail/' . $users_id, 'refresh'));
@@ -325,6 +325,7 @@ class Users extends BaseController
                 $this->page_data['error'] = 'Failed to add user data';
             }
         }
+        
     }
 
 
@@ -444,6 +445,7 @@ class Users extends BaseController
         $users = $this->UsersModel->getWhere($where)[0];
 
 
+
         if($users['is_verified'] == 0){
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
@@ -551,15 +553,15 @@ class Users extends BaseController
             $family_name = $family_name['name'];
 
             //get upline name
-            $where = [
-                'family.user_id' => $users['users_id']
-            ];
+            // $where = [
+            //     'family.user_id' => $users['users_id']
+            // ];
 
-            $link_family = $this->FamilyModel->getWhere($where);
-            if(!empty($link_family)){
-                $link_family_id = $link_family[0]['link_family_id'];
-                $upline_name = $this->UsersModel->getWhere(['users.users_id' => $link_family_id])[0]['name'];
-            }
+            // $link_family = $this->FamilyModel->getWhere($where);
+            // if(!empty($link_family)){
+            //     $link_family_id = $link_family[0]['link_family_id'];
+            $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
+            // }
         }
         $users['family_name'] = $family_name;
         $users['upline_name'] = $upline_name;
@@ -842,7 +844,7 @@ class Users extends BaseController
         ]);
 
 
-        
+
         echo view('admin/header', $this->pageData);
         echo view('admin/users/edit');
         echo view('admin/footer');
@@ -859,7 +861,6 @@ class Users extends BaseController
             $family_id = $family_id[0]['family_id'];
             $this->FamilyModel->hardDelete($family_id);
         }
-        // dd('asd');
         return redirect()->to($_SERVER['HTTP_REFERER']);
 
     }
@@ -1170,6 +1171,7 @@ class Users extends BaseController
         foreach ($elements as $element) {
             // dd($element);   
             // $element['downline_count']=  $this->CustomerModel->recursive_get_downline_count($element['customer_id']);;
+
             if ($element['link_family_id'] == $parentId) {
                 $children = $this->buildTree($elements, $element['user_id']);
                 if (!empty($children)) {

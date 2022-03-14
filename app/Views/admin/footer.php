@@ -48,6 +48,7 @@
         
         <script src="<?= base_url('assets/js/core/icons.js') ?>"></script>
         
+
         <!-- <script src="<?= base_url() ?>assets/plugins/chartjs/js/chartjs.js"></script> -->
                         <!-- <script src="<?= base_url('assets/js/core/utils.js') ?>"></script> -->
 
@@ -128,16 +129,16 @@
 
 
 
-                            $(document).on("click", ".delete-button", function(e) {
-                                e.preventDefault();
+                            // $(document).on("click", ".delete-button", function(e) {
+                            //     e.preventDefault();
 
-                                var delete_record = confirm("Are you sure you want to delete this record?");
-                                var path = $(this).attr("href");
+                            //     var delete_record = confirm("Are you sure you want to delete this record?");
+                            //     var path = $(this).attr("href");
 
-                                if (delete_record === true) {
-                                    window.location.replace(path);
-                                }
-                            });
+                            //     if (delete_record === true) {
+                            //         window.location.replace(path);
+                            //     }
+                            // });
                         </script>
 
 

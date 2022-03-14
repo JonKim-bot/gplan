@@ -59,6 +59,8 @@
                     </h1>
                   </div>
                 </div>
+                <?php if ($users['is_verified'] == 1) { ?>
+
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="c-withButton d-flex justify-content-center align-items-center py-1 px-3 br-3">
                     <div class="icon mr-2">
@@ -81,6 +83,8 @@
                   </div>
 
                 </div>
+                <?php } ?>
+                
                 <div class="d-flex justify-content-between align-items-center">
 
                   <div class="py-1 ">
@@ -103,6 +107,8 @@
 
                 </div>
 
+                <?php if ($users['is_verified'] == 1) { ?>
+
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="c-withButton d-flex justify-content-center align-items-center py-1 px-3 br-3">
                     <div class="icon mr-2">
@@ -118,7 +124,7 @@
 
 
                 </div>
-
+                <?php } ?>
 
               </div>
               <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
