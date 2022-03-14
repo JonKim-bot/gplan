@@ -111,6 +111,7 @@ class WalletModel extends BaseModel
     function record_top_up($users_id, $amount)
     {
         $data = [
+            
             'users_id' => $users_id,
             'amount' => $amount,
         ];

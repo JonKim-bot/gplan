@@ -134,7 +134,9 @@ class FamilyModel extends BaseModel
             // $this->db->insert('family', );
 
             // $new_family_id = $this->db->insertID();
+
             $this->insert_commission($new_family_id);
+
         }
         $this->user_family($family_id);
 
@@ -198,11 +200,11 @@ class FamilyModel extends BaseModel
                     $commission = 10;
                 }
                 $total_commision = $commission  + $total_commision;
-                // echo '<br>Commision for level ' . $x . "  = " . $commission;
+                echo '<br>Commision for level ' . $x . "  = " . $commission;
             }
             // $total_commision = $level_diffrence * 10;
         }
-        // echo "<br>The number is: $total_commision <br>";
+        echo "<br>The number is: $total_commision <br>";
         return $total_commision;
     }
     public function give_over_commision_to_upline($user_id){
@@ -214,8 +216,11 @@ class FamilyModel extends BaseModel
 
             $level_user = $users['type_id'] + 8;
             $level_upline = $users['type_id'] + 8;
-            $total_commision = $this->get_total_com($level_user,$level_upline);
+
+            $total_commision = 10;
+
             $remarks = 'Commision for ' . $this->UsersModel->get_user_name($upline_info['users_id']) . ' With amount of ' . $total_commision ;
+          
             $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
             
         }
@@ -223,6 +228,134 @@ class FamilyModel extends BaseModel
         
 
     }
+
+    public function insert_extra_commission($family_id){
+        $this->WalletModel = new WalletModel();
+        $this->UsersModel = new UsersModel();
+
+        $upline = $this->recursive_upline($family_id); // find all upline
+        //get level of upline here 
+
+        $commission = 10;
+
+        
+        foreach($upline as $row){
+            $type_id = $this->get_upline_info($row);
+            //check upline role here 
+            $full = false;
+            $result = $this->recursive_users([[$row]]);
+            if(isset($result[11]) && count($result[11]) < 22){ 
+                $commission = 30;
+            }
+
+            $user_id = $row;
+            $direct = $this->db->query("SELECT * FROM user WHERE user_id = (SELECT reference_id FROM user WHERE user_id = $user_id)")->result_array()[0];
+            $direct_level = $direct['type_id'] + 8;
+
+            if($type_id == 0){
+                //level 8
+                //find upline level 8
+                if(isset($result[9])){
+                  
+                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                        $extra_commision = 10;
+                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                        $this->WalletModel->wallet_in($user_id,$extra_commision,$remarks,$family_id);
+                    }
+                }
+            }
+            
+            
+            if($type_id == 1){
+                //level 9
+                if(isset($result[10])){
+                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                        $extra_commision = 10;
+                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                        $this->WalletModel->wallet_in($user_id,$extra_commision,$remarks,$family_id);
+                                          
+                    }
+                }
+            }
+
+            if($type_id == 2){
+                //level 10 full 
+                if(isset($result[11])){
+                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                        $extra_commision = 30;
+                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                        $this->WalletModel->wallet_in($user_id,$extra_commision,$remarks,$family_id);
+                    }
+                }
+            }
+
+            if($type_id== 3){
+                //level 11 full 
+                if(isset($result[12])){
+                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                        $extra_commision = 30;
+                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                        $this->WalletModel->wallet_in($user_id,$extra_commision,$remarks,$family_id);
+                    }
+                }
+            }
+
+            if($type_id== 4){
+
+                //level 12 full 
+                if(isset($result[13])){
+                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                        $extra_commision = 30;
+                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                        $this->WalletModel->wallet_in($user_id,$extra_commision,$remarks,$family_id);
+                    }
+                }
+            }
+            if($type_id== 5){
+
+                //level 13 full 
+                if(isset($result[14])){
+                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                        $extra_commision = 30;
+                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                        $this->WalletModel->wallet_in($user_id,$extra_commision,$remarks,$family_id);
+                    }
+                }
+            }
+            if($type_id== 6){
+
+                if(isset($result[15])){
+                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                        $extra_commision = 30;
+                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                        $this->WalletModel->wallet_in($user_id,$extra_commision,$remarks,$family_id);
+                    }
+                }
+            }
+            // if($type_id== 7){
+
+            //     //level 15 full 
+            //     if(isset($result[15]) && count($result[15]) < 30 ){ 
+                    
+            //         $full = true;
+            //     }
+            // }
+            // if($full == false){
+            //     $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];
+            //     $user_id = $user['user_id'];
+            //     $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
+            //     if(empty($existed)){
+            //         $remarks = 'Commision for ' . $this->UsersModel->get_user_name($user_id) . ' With amount of ' . $commission ;
+            //         $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
+            //         // $this->db->insert('family_commission', ['user_id' => $user_id, 'commission' => $commission, 'family_id' => $family_id]);
+            //     }
+
+            // }
+        }
+    }
+
+
+    
     public function insert_commission($family_id){
         $this->WalletModel = new WalletModel();
         $this->UsersModel = new UsersModel();
@@ -315,6 +448,52 @@ class FamilyModel extends BaseModel
             }
         }
     }
+
+    
+    public function get_recursive_upline_referal($upline, $child = [],$level = 0 ,$level_to_reach = 0 )
+    {
+        // $this->debug($upline);
+        $got_child = false;
+
+        $parent = $child;
+
+        if (empty($parent)) {
+            $parent = $upline;
+            
+
+        }
+
+        $child = [];
+
+    
+        foreach ($parent as $row) {
+
+            $where = [
+                'customer.customer_id' => $row['referal_id'],
+            ];
+            $customers = $this->getWhereDownlineCount($where);
+
+            if (!empty($customers)) {
+                $got_child = true;
+                foreach ($customers as $customer) {
+                    $customer['level'] = $level;
+                    array_push($upline, $customer);
+                    array_push($child, $customer);
+
+                }
+            }
+        }
+        // $this->debug($upline);
+        if ($got_child) {
+        
+            return $this->get_recursive_upline_referal($upline, $child,$level+1);
+            // }
+        } else {
+            return $upline;
+        }
+    }
+
+
 
     public function recursive_upline($family_id, $upline = array()){
         $family = $this->db->query("SELECT * FROM family WHERE family_id = $family_id")->getResultArray()[0];
