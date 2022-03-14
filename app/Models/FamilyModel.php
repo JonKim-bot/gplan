@@ -205,7 +205,7 @@ class FamilyModel extends BaseModel
         // echo "<br>The number is: $total_commision <br>";
         return $total_commision;
     }
-    public function get_user_direct_upline($user_id){
+    public function give_over_commision_to_upline($user_id){
        
         $users = $this->db->query("SELECT reference_id FROM users WHERE users_id = $user_id")->getResultArray()[0];
         if($users['reference_id'] != 0){
