@@ -70,11 +70,23 @@
 
                 <li class="c-sidebar-nav-title">Operation</li>
                 <li class="c-sidebar-nav-item ">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
+                                                        'Banner'
+
+                                                        ? 'c-active'
+                                                        : null ?>" href="<?= base_url('Banner') ?>">
+                        <i class="cil-money c-sidebar-nav-icon"></i>
+                        Advertisement
+
+                    </a>
+                </li>
+
+                <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Qrcode'
                                                         ? 'c-active'
                                                         : null ?>" href="<?= base_url('Banner/qrcode') ?>">
                         <i class="cil-people c-sidebar-nav-icon"></i>
-                        Qrcode
+                        Tng QrCode
                         <span class="badge badge-pill badge-warning"></span>
 
                     </a>
@@ -137,17 +149,7 @@
 
                     </a>
                 </li>
-                <li class="c-sidebar-nav-item ">
-                    <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
-                                                        'Banner'
-
-                                                        ? 'c-active'
-                                                        : null ?>" href="<?= base_url('Banner') ?>">
-                        <i class="cil-money c-sidebar-nav-icon"></i>
-                        Banner
-
-                    </a>
-                </li>
+             
 
 
                 <!--                    
@@ -206,7 +208,7 @@
             }
         </style>
         <?php if (session()->get('login_data')['is_verified'] == '1') { ?>
-            <li class="c-sidebar-nav-item ">
+            <!-- <li class="c-sidebar-nav-item ">
 
                 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
                                                     ? 'c-active'
@@ -216,7 +218,7 @@
                     <span class="badge badge-pill badge-warning"></span>
 
                 </a>
-            </li>
+            </li> -->
 
 
         <?php } ?>
@@ -273,7 +275,7 @@ QR Code
         <?php if (session()->get('login_data')['is_verified'] == '1') { ?>
 
 
-            <li class="c-sidebar-nav-item ">
+            <!-- <li class="c-sidebar-nav-item ">
                 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
                                                     'Users/downline/1'
 
@@ -312,7 +314,7 @@ QR Code
                     Family Tree
 
                 </a>
-            </li>
+            </li> -->
         <?php } ?>
 
 
