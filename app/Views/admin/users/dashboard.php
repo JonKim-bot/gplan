@@ -305,7 +305,7 @@
                       <h1>Bank Detail</h1>
                       <p class="text-muted">Please Submit your receipt to bank below</p>
                       <div class="text-center">
-                        <img src="<?= base_url() .  isset($qr_code) ? $qrcode  : ''?>" alt="">
+                        <img src="<?= base_url() .  ($qrcode)?>" alt="">
                       </div>
                       <br>
 

@@ -612,11 +612,8 @@ class Users extends BaseController
             $qrcode = 0;
         }
         $this->pageData['qrcode'] = $qrcode;
-        
         $this->pageData['total_earn'] = $this->WalletModel->get_total_earn($users_id);
         $this->pageData['total_withdraw'] = $this->WalletModel->get_total_withdraw($users_id);
-
-
         
         echo view('admin/header', $this->pageData);
 

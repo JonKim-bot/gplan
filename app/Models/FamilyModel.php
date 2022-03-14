@@ -198,11 +198,11 @@ class FamilyModel extends BaseModel
                     $commission = 10;
                 }
                 $total_commision = $commission  + $total_commision;
-                echo '<br>Commision for level ' . $x . "  = " . $commission;
+                // echo '<br>Commision for level ' . $x . "  = " . $commission;
             }
             // $total_commision = $level_diffrence * 10;
         }
-        echo "<br>The number is: $total_commision <br>";
+        // echo "<br>The number is: $total_commision <br>";
         return $total_commision;
     }
     public function get_user_direct_upline($user_id){
@@ -214,23 +214,10 @@ class FamilyModel extends BaseModel
 
             $level_user = $users['type_id'] + 8;
             $level_upline = $users['type_id'] + 8;
-
-            if($level_user < $level_upline ){
-                for ($x = $level_user; $x <= $level_upline; $x++) {
-                    echo "The number is: $x <br>";
-                }
-                if($level_user){
-
-
-                }
-                // $level_diffrence = $level_upline - $level_user;
-
-                // $total_commision = $level_diffrence * 10;
-
-            }
-
-
-            return $upline_info;
+            $total_commision = $this->get_total_com($level_user,$level_upline);
+            $remarks = 'Commision for ' . $this->UsersModel->get_user_name($upline_info['users_id']) . ' With amount of ' . $total_commision ;
+            $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
+            
         }
         
         

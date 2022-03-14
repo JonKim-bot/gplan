@@ -97,10 +97,13 @@
                               
                                 <?= $row['is_verified'] == 1 ? 'Verified' : 'Not Verified' ?>
                              </div>
-                             <div id="<?= $row['users_id'] ?>" class="btn  <?= $row['is_paid'] == 1  ? 'Paid' : 'btn_paid' ?> btn-<?= $row['is_paid'] == 1 ? 'success' : 'danger' ?> w-100">
-                              
-                              <?= $row['is_paid'] == 1  ? 'Paid' : 'Not Paid (Click to make paidment for your member)' ?>
-                           </div>
+                             <?php if($row['is_verified'] == 0){ ?>
+
+                                <div id="<?= $row['users_id'] ?>" class="btn  <?= $row['is_paid'] == 1  ? 'Paid' : 'btn_paid' ?> btn-<?= $row['is_paid'] == 1 ? 'success' : 'danger' ?> w-100">
+                                
+                                <?= $row['is_paid'] == 1  ? 'Paid' : 'Not Paid (Click to make paidment for your member)' ?>
+                              </div>
+                              <?php }  ?>
                             </div>
                         </div>
                         
