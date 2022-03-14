@@ -71,7 +71,7 @@
                                                         <td>Verified</td>
                                                     <?php } ?>
                                           
-                                                    <td><a href="<?= base_url() ?>/users/delete/<?= $row['users_id'] ?>" class="btn btn-dangere delete-button"><i class="fa fa-trash"></i> Delete</a></td>
+                                                    <td><a href="<?= base_url() ?>/users/delete/<?= $row['users_id'] ?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
                                                 </tr>
                                             <?php
                                                 $i++;

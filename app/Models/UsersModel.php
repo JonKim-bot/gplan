@@ -132,6 +132,7 @@ class UsersModel extends BaseModel{
             return $pagination;
 
         }
+
         $query = $this->builder->get();
         return $query->getResultArray();
 
@@ -141,7 +142,7 @@ class UsersModel extends BaseModel{
     
     public function get_user_with_no_downline(){
         
-        $sql = "SELECT * FROM users WHERE self_family_id NOT IN (select link_family_id from family) AND users.is_verified = 1";
+        $sql = "SELECT * FROM users WHERE self_family_id NOT IN (select link_family_id from family) AND users.is_verified = 1 AND users.deleted = 0 ";
 
         $result = $this->db->query($sql)->getResultArray();
 
@@ -149,6 +150,7 @@ class UsersModel extends BaseModel{
 
     }
 
+    
 
     public function getTree($user_id)
     {

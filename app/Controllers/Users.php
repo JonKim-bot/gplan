@@ -267,6 +267,7 @@ class Users extends BaseController
 
 
     public function user_with_no_downline()
+
     {
 
         
@@ -634,6 +635,7 @@ class Users extends BaseController
         $users_downline = $this->UsersModel->get_downline($users_id);
         // dd($users_downline);
 
+
         $this->pageData['users_downline'] = $users_downline;
         echo view('admin/header', $this->pageData);
 
@@ -840,6 +842,7 @@ class Users extends BaseController
         ]);
 
 
+        
         echo view('admin/header', $this->pageData);
         echo view('admin/users/edit');
         echo view('admin/footer');
@@ -848,12 +851,14 @@ class Users extends BaseController
     public function delete($users_id)
     {
         $this->UsersModel->softDelete($users_id);
-
         $where = [
             'family.user_id' => $users_id
         ];
-        $family_id = $this->FamilyModel->getWhereRaw($where)[0]['family_id'];
-        $this->FamilyModel->hardDelete($family_id);
+        $family_id = $this->FamilyModel->getWhereRaw($where);
+        if(!empty($family_id)){
+            $family_id = $family_id[0]['family_id'];
+            $this->FamilyModel->hardDelete($family_id);
+        }
         // dd('asd');
         return redirect()->to($_SERVER['HTTP_REFERER']);
 
@@ -1050,6 +1055,7 @@ class Users extends BaseController
         // dd($tree);
         $ulli = $this->createListLi($tree);
         
+
         $this->pageData["ulli"] = $ulli;
         $this->pageData["user_detail"] = $user_detail[0];
 
