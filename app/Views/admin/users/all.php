@@ -63,6 +63,7 @@
                                                 <th data-filter="email">Upline Name</th>
 
                                                 <th data-filter="email">Family Tree</th>
+                                                <th data-filter="email">Direct Tree</th>
 
 
                                                 <th>Verify Status</th>
@@ -96,6 +97,18 @@
 
                                                     <?php } ?>
                                                     </td>
+
+                                                    <td>
+                                                    <?php if($row['is_verified'] == 0){ ?>
+                                                        <a>Don Have Tree Yet</a>
+
+                                                        <?php }else{ ?>
+                                                            <a class="btn btn-primary" target="_blank" href="<?= base_url() ?>/users/direct_tree/<?= $row['users_id'] ?>">View Direct Sponsor Tree</a>
+
+                                                    <?php } ?>
+                                                    </td>
+
+
                                                     <?php if($row['is_verified'] == 0){ ?>
                                                     <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>
                                                     <?php }else{ ?>

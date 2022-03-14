@@ -604,6 +604,7 @@ class Users extends BaseController
 
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
         $this->pageData['banner'] = $this->BannerModel->getWhere(['type_id' => 0]);
+
         $qrcode = $this->BannerModel->getWhere(['type_id' => 1]);
         if(!empty($qrcode)){
             $qrcode = $qrcode[0]['banner'];
@@ -746,6 +747,7 @@ class Users extends BaseController
                 return redirect()->to($_SERVER['HTTP_REFERER']);
             }
         }
+
 
     }
 
@@ -961,6 +963,44 @@ class Users extends BaseController
     
 
 
+    function direct_tree($user_id = 1)
+    {
+
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $user_id = session()->get('login_id');
+        }
+
+
+
+        $user_detail = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
+        $users_1 = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
+
+        $user = $this->UsersModel->getTree($user_id);
+        // $users = $this->UsersModel->getTree($user_id);
+
+        $users = array_merge($users_1,$user);
+
+        $tree =  $this->buildTreeDirect($users,$user_id);
+        
+        $users_1[0]['children'] = $tree;
+        
+        $tree = $users_1;
+        
+
+        $ulli = $this->createListLi($tree);
+        
+        $this->pageData["ulli"] = $ulli;
+        $this->pageData["user_detail"] = $user_detail[0];
+
+
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/ul_of_tree');
+        // echo view('admin/footer');
+
+        
+    }
+
 
 
     function tree($user_id = 1)
@@ -1064,6 +1104,7 @@ class Users extends BaseController
     {
         if($main_topics == null || sizeof($main_topics) <= 0)
         {
+            
             return '';
 
         }
@@ -1082,6 +1123,28 @@ class Users extends BaseController
 
         return $list;
 
+    }
+
+    public function buildTreeDirect(array $elements, $parentId = 0) {
+        $branch = array();
+        // dd($elements);
+        
+
+        foreach ($elements as $element) {
+            // dd($element);   
+            // $element['downline_count']=  $this->CustomerModel->recursive_get_downline_count($element['customer_id']);;
+            // dd($parentId);
+            if ($element['reference_id'] == $parentId) {
+                $children = $this->buildTreeDirect($elements, $element['users_id']);
+                if (!empty($children)) {
+                    $element['children'] = $children;
+                    // dd($element);
+                }
+                $branch[] = $element;
+
+            }
+        }
+        return $branch;
     }
 
 

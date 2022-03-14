@@ -206,6 +206,7 @@ class FamilyModel extends BaseModel
             if(isset($result[11]) && count($result[11]) < 22){ 
                 $commission = 30;
             }
+            
 
             if($type_id == 0){
                 //level 15
