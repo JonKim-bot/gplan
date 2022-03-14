@@ -262,6 +262,30 @@ class FamilyModel extends BaseModel
                     $full = true;
                 }
             }
+            if($type_id== 5){
+
+                //level 13 full 
+                if(isset($result[13]) && count($result[13]) < 26 ){ 
+                    
+                    $full = true;
+                }
+            }
+            if($type_id== 6){
+
+                //level 14 full 
+                if(isset($result[14]) && count($result[14]) < 28 ){ 
+                    
+                    $full = true;
+                }
+            }
+            if($type_id== 7){
+
+                //level 15 full 
+                if(isset($result[15]) && count($result[15]) < 30 ){ 
+                    
+                    $full = true;
+                }
+            }
             if($full == false){
                 $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];
                 $user_id = $user['user_id'];

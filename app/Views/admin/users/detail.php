@@ -187,6 +187,9 @@
                                                                                 <option value="2" <?= $users['type_id'] == 2 ? 'selected' : '' ?>>Level 10 User</option>
                                                                                 <option value="3" <?= $users['type_id'] == 3 ? 'selected' : '' ?>>Level 11 User</option>
                                                                                 <option value="4" <?= $users['type_id'] == 4 ? 'selected' : '' ?>>Level 12 User</option>
+                                                                                <option value="5" <?= $users['type_id'] == 5 ? 'selected' : '' ?>>Level 13 User</option>
+                                                                                <option value="6" <?= $users['type_id'] == 6 ? 'selected' : '' ?>>Level 14 User</option>
+                                                                                <option value="7" <?= $users['type_id'] == 7 ? 'selected' : '' ?>>Level 15 User</option>
 
                                                                             </select>
                                                                             <div class="form-group">
