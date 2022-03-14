@@ -136,6 +136,7 @@ class FamilyModel extends BaseModel
             // $new_family_id = $this->db->insertID();
 
             $this->insert_commission($new_family_id);
+            $this->insert_extra_commission($new_family_id);
 
         }
         $this->user_family($family_id);
