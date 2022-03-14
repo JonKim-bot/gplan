@@ -124,6 +124,9 @@ class FamilyModel extends BaseModel
     }
 
 
+
+
+
     public function insert_new_member($new_member, $family_id){
 
         $new_family_id = 0;
@@ -132,7 +135,6 @@ class FamilyModel extends BaseModel
             $slot_family_id = $this->find_empty_slot($family_id);
             $new_family_id = $this->insertNew(['link_family_id' => $slot_family_id, 'user_id' => $new_member]);
             // $this->db->insert('family', );
-
             // $new_family_id = $this->db->insertID();
 
             $this->insert_commission($new_family_id);
@@ -238,8 +240,6 @@ class FamilyModel extends BaseModel
         $upline = $this->recursive_upline($family_id); // find all upline
         //get level of upline here 
 
-        $commission = 10;
-
         
         foreach($upline as $row){
             $type_id = $this->get_upline_info($row);
@@ -248,85 +248,92 @@ class FamilyModel extends BaseModel
             $result = $this->recursive_users([[$row]]);
   
             $user_id = $row;
-            $direct = $this->db->query("SELECT * FROM user WHERE user_id = (SELECT reference_id FROM user WHERE user_id = $user_id)")->result_array()[0];
-            $direct_level = $direct['type_id'] + 8;
-            if($type_id == 0){
-                //level 8
-                //find upline level 8
-                if(isset($result[9])){
-                  
-                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
-                        $extra_commission = isset($result[11]) ? 30 : 10;
-                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
-                        $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+            $user_info = $this->get_users_info($user_id);
+
+            $direct_id = $user_info['reference_id'];
+    
+            $direct = $this->db->query("SELECT * FROM users WHERE users_id = $direct_id")->getResultArray();
+            if(!empty($direct)){
+                $direct = $direct[0];
+                $direct_level = $direct['type_id'] + 8;
+                if($type_id == 0){
+                    //level 8
+                    //find upline level 8
+                    if(isset($result[1])){
+                        if(isset($result[$direct_level]) && count($result[$direct_level]) < ($direct_level * 2)){
+                      
+                            $extra_commission = isset($result[11]) ? 30 : 10;
+                            $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                            $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+                        }
                     }
                 }
-            }
-            
-            
-            if($type_id == 1){
-                //level 9
-                if(isset($result[10])){
-                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
-                        $extra_commission = isset($result[11]) ? 30 : 10;
-                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
-                        $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
-                                          
+                
+                
+                if($type_id == 1){
+                    //level 9
+                    if(isset($result[10])){
+                        if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                            $extra_commission = isset($result[11]) ? 30 : 10;
+                            $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                            $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+                                              
+                        }
                     }
                 }
-            }
-
-            if($type_id == 2){
-                //level 10 full 
-                if(isset($result[11])){
-                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
-                        $extra_commission = isset($result[11]) ? 30 : 10;
-                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
-                        $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+    
+                if($type_id == 2){
+                    //level 10 full 
+                    if(isset($result[11])){
+                        if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                            $extra_commission = isset($result[11]) ? 30 : 10;
+                            $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                            $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+                        }
                     }
                 }
-            }
-
-            if($type_id== 3){
-                //level 11 full 
-                if(isset($result[12])){
-                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
-                        $extra_commission = isset($result[11]) ? 30 : 10;
-                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
-                        $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+    
+                if($type_id== 3){
+                    //level 11 full 
+                    if(isset($result[12])){
+                        if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                            $extra_commission = isset($result[11]) ? 30 : 10;
+                            $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                            $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+                        }
                     }
                 }
-            }
-
-            if($type_id== 4){
-
-                //level 12 full 
-                if(isset($result[13])){
-                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
-                        $extra_commission = isset($result[11]) ? 30 : 10;
-                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
-                        $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+    
+                if($type_id== 4){
+    
+                    //level 12 full 
+                    if(isset($result[13])){
+                        if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                            $extra_commission = isset($result[11]) ? 30 : 10;
+                            $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                            $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+                        }
                     }
                 }
-            }
-            if($type_id== 5){
-
-                //level 13 full 
-                if(isset($result[14])){
-                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
-                        $extra_commission = isset($result[11]) ? 30 : 10;
-                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
-                        $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+                if($type_id== 5){
+    
+                    //level 13 full 
+                    if(isset($result[14])){
+                        if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                            $extra_commission = isset($result[11]) ? 30 : 10;
+                            $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                            $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+                        }
                     }
                 }
-            }
-            if($type_id== 6){
-
-                if(isset($result[15])){
-                    if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
-                        $extra_commission = isset($result[11]) ? 30 : 10;
-                        $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
-                        $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+                if($type_id== 6){
+    
+                    if(isset($result[15])){
+                        if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
+                            $extra_commission = isset($result[11]) ? 30 : 10;
+                            $remarks = 'Commision for ' . $direct['username'] . ' With amount of ' . $extra_commision ;
+                            $this->WalletModel->wallet_in($user_id,$extra_commission,$remarks,$family_id);
+                        }
                     }
                 }
             }
