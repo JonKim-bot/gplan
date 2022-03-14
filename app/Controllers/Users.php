@@ -959,6 +959,11 @@ class Users extends BaseController
         
     }
 
+    public function get_total_com($level_user,$level_upline){
+
+        $total_com = $this->FamilyModel->get_total_com($level_user,$level_upline);
+        
+    }
 
     
 

@@ -188,6 +188,23 @@ class FamilyModel extends BaseModel
         return $user_info['type_id'];
     }
 
+    public function get_total_com($level_user,$level_upline){
+        $total_commision = 0;
+        if($level_user < $level_upline ){
+            for ($x = $level_user + 1; $x <= $level_upline; $x++) {
+                if($x >= 11){
+                    $commission = 30;
+                }else{
+                    $commission = 10;
+                }
+                $total_commision = $commission  + $total_commision;
+                echo '<br>Commision for level ' . $x . "  = " . $commission;
+            }
+            // $total_commision = $level_diffrence * 10;
+        }
+        echo "<br>The number is: $total_commision <br>";
+        return $total_commision;
+    }
     public function get_user_direct_upline($user_id){
        
         $users = $this->db->query("SELECT reference_id FROM users WHERE users_id = $user_id")->getResultArray()[0];
@@ -197,8 +214,18 @@ class FamilyModel extends BaseModel
 
             $level_user = $users['type_id'] + 8;
             $level_upline = $users['type_id'] + 8;
-            if($level_user < $level_upline ){
 
+            if($level_user < $level_upline ){
+                for ($x = $level_user; $x <= $level_upline; $x++) {
+                    echo "The number is: $x <br>";
+                }
+                if($level_user){
+
+
+                }
+                // $level_diffrence = $level_upline - $level_user;
+
+                // $total_commision = $level_diffrence * 10;
 
             }
 
