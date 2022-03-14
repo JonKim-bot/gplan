@@ -188,7 +188,23 @@ class FamilyModel extends BaseModel
         return $user_info['type_id'];
     }
 
-    public function get_user_upline(){
+    public function get_user_direct_upline($user_id){
+       
+        $users = $this->db->query("SELECT reference_id FROM users WHERE users_id = $user_id")->getResultArray()[0];
+        if($users['reference_id'] != 0){
+            $upline_info = $this->db->query("SELECT * FROM users WHERE users_id = $user_reference_id")->getResultArray()[0];
+
+
+
+            // if($users['type_id'] > ){
+
+            // }
+
+
+            return $upline_info;
+        }
+        
+        
 
     }
     public function insert_commission($family_id){
@@ -209,10 +225,8 @@ class FamilyModel extends BaseModel
             if(isset($result[11]) && count($result[11]) < 22){ 
                 $commission = 30;
             }
-
-
             if($type_id == 0){
-                //level 15
+                //level 8
                 if(isset($result[8]) && count($result[8]) < 16){ 
                     $full = true;
                 }
@@ -220,17 +234,15 @@ class FamilyModel extends BaseModel
             
             
             if($type_id == 1){
-                //level 11 full 
+                //level 9
                 if(isset($result[9]) && count($result[9]) < 18 ){ 
-                    // check if level 11 is full
                     $full = true;
                 }
             }
 
             if($type_id == 2){
-                //level 11 full 
+                //level 10 full 
                 if(isset($result[10]) && count($result[10]) < 20 ){ 
-                    // check if level 11 is full
                     $full = true;
                 }
             }
@@ -238,17 +250,15 @@ class FamilyModel extends BaseModel
             if($type_id== 3){
                 //level 11 full 
                 if(isset($result[11]) && count($result[11]) < 22 ){ 
-                    // check if level 11 is full
                     $full = true;
                 }
             }
 
             if($type_id== 4){
 
-                //level 11 full 
+                //level 12 full 
                 if(isset($result[12]) && count($result[12]) < 24 ){ 
                     
-                    // check if level 11 is full
                     $full = true;
                 }
             }
