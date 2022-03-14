@@ -261,7 +261,6 @@ class FamilyModel extends BaseModel
                     //find upline level 8
                     if(isset($result[9])){
                         if(isset($result[$direct_level]) && count($result[$direct_level]) < ($direct_level * 2)){
-                      
                             
                             $extra_commission = isset($result[11]) ? 30 : 10;
                             $remarks = 'Commision for ' . $direct['username'] . ' With amount of extra ' . $extra_commission ;

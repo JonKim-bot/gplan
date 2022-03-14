@@ -120,6 +120,9 @@ html, body {
                         <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
                     </a>
                 </div>
+                <div class="icon_top" data-toggle="modal" data-target="#status_modal">
+                    <a href="<?= base_url() ?>/users/tree/1">View Tree</a>
+            </div>
               
             </div>
             
