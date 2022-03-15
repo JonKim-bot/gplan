@@ -58,6 +58,18 @@
     color: black;
     padding: 5px;
   }
+  .c-body{
+    position: relative;
+    max-width: 500px;
+    min-height: 787px;
+    margin: 0 auto;
+    background-color: #fff;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .bold{
+    font-weight:bold;
+  }
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -87,13 +99,13 @@
 
           <!-- /.col-->
           <?php foreach ($wallet as $row) { ?>
-            <div class="col-sm-12 col-lg-3">
+            <div class="col-sm-12 col-lg-12">
               <div class="card text-white c-shadow" style="border-radius: 20px;">
                 <div class="c-QR row text-dark" style="width:90%">
                   <div class="col-12 description_div">
                     <div class="one_row row">
                       <div class="col-6">
-                        <p><?= $lang['username'] ?></p>
+                        <p class="bold"><?= $lang['username'] ?></p>
                       </div>
                       <div class="col-6">
                         <p><?= $row['username'] ?></p>
@@ -101,7 +113,7 @@
                     </div>
                     <div class="one_row row">
                       <div class="col-6">
-                        <p><?= $lang['contact'] ?></p>
+                        <p class="bold"><?= $lang['contact'] ?></p>
                       </div>
                       <div class="col-6">
                         <p><?= $row['username'] ?></p>
@@ -109,7 +121,7 @@
                     </div>
                     <div class="one_row row">
                       <div class="col-6">
-                        <p><?= $lang['balance'] ?></p>
+                        <p class="bold"><?= $lang['balance'] ?></p>
                       </div>
                       <div class="col-6">
                         <p><?= $row['balance'] ?></p>
@@ -117,7 +129,7 @@
                     </div>
                     <div class="one_row row">
                       <div class="col-6">
-                        <p><?= $lang['credit'] ?></p>
+                        <p class="bold"> <?= $lang['credit'] ?></p>
                       </div>
                       <div class="col-6">
                         <p><?= $row['wallet_in'] ?></p>
@@ -125,7 +137,7 @@
                     </div>
                     <div class="one_row row">
                       <div class="col-6">
-                        <p><?= $lang['debit'] ?></p>
+                        <p class="bold"><?= $lang['debit'] ?></p>
                       </div>
                       <div class="col-6">
                         <p><?= ltrim($row['wallet_out'], '-'); ?></p>
@@ -133,7 +145,7 @@
                     </div>
                     <div class="one_row row">
                       <div class="col-6">
-                        <p><?= $lang['remarks'] ?></p>
+                        <p class="bold"><?= $lang['remarks'] ?></p>
                       </div>
                       <div class="col-6">
                         <p><?= ($row['remarks']); ?></p>
@@ -141,7 +153,7 @@
                     </div>
                     <div class="one_row row">
                       <div class="col-6">
-                        <p><?= $lang['created_date'] ?></p>
+                        <p class="bold"><?= $lang['created_date'] ?></p>
                       </div>
                       <div class="col-6">
                         <p><?= ($row['created_date']); ?></p>
