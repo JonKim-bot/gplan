@@ -245,13 +245,14 @@ class Users extends BaseController
                     'family.user_id' => $row['users_id']
                 ];
     
+                $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']])[0]['name'];
+
     
-    
-                $link_family = $this->FamilyModel->getWhere($where);
-                if(!empty($link_family)){
-                    $link_family_id = $link_family[0]['link_family_id'];
-                    $upline_name = $this->UsersModel->getWhere(['users.users_id' => $link_family_id])[0]['name'];
-                }
+                // $link_family = $this->FamilyModel->getWhere($where);
+                // if(!empty($link_family)){
+                //     $link_family_id = $link_family[0]['link_family_id'];
+                //     $upline_name = $this->UsersModel->getWhere(['users.users_id' => $link_family_id])[0]['name'];
+                // }
 
             }
             $users[$key]['upline_name'] = $upline_name;
@@ -552,6 +553,7 @@ class Users extends BaseController
             $family_name = $this->UsersModel->getWhere($where)[0];
             $family_name = $family_name['name'];
 
+
             //get upline name
             // $where = [
             //     'family.user_id' => $users['users_id']
@@ -685,12 +687,10 @@ class Users extends BaseController
 
 
 
-            $link_family = $this->FamilyModel->getWhere($where);
-            if(!empty($link_family)){
-                $link_family_id = $link_family[0]['link_family_id'];
-                $upline_name = $this->UsersModel->getWhere(['users.users_id' => $link_family_id])[0]['name'];
-            }
+            $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
+
         }
+
         $users['family_name'] = $family_name;
         $users['upline_name'] = $upline_name;
 
@@ -853,6 +853,7 @@ class Users extends BaseController
     public function delete($users_id)
     {
         $this->UsersModel->softDelete($users_id);
+
         $where = [
             'family.user_id' => $users_id
         ];

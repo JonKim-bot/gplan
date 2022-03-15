@@ -50,7 +50,7 @@
                                                                                 <th>
                     
                                                                                 <div class="c-cardbody">
-                                    <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?= base_url() ?>/main/add/<?= $family_id ?>&choe=UTF-8" 
+                                    <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?= base_url() ?>/main/welcome/<?= $family_id ?>/<?= $users['users_id'] ?>&choe=UTF-8" 
                                     style="margin: auto; border: 3px solid green; padding: 10px;display: block; margin-left: auto; margin-right: auto;">
                                     </div>
                     
