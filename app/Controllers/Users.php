@@ -426,19 +426,17 @@ class Users extends BaseController
         ];
         $users = $this->UsersModel->getWhere($where)[0];
 
-        if($users['is_verified'] == 0){
-            $is_verified = 1;
-            $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
-            $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
-            
-            // dd($users['family_id']);
-            $family_id = $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
-            $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
+        if($users['is_paid'] == 1){
+            $is_paid = 0;
+        }else{
+            $is_paid = 1;
         }
-        
-        $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
-
-        return redirect()->to($_SERVER['HTTP_REFERER']);
+        $this->UsersModel->updateWhere($where,['is_paid' => $is_paid]);
+        if(isset($_SERVER['HTTP_REFERER'])){
+            return redirect()->to($_SERVER['HTTP_REFERER']);
+        }else{
+             return redirect()->to(base_url('users'));
+        }
 
     }
 
@@ -458,6 +456,7 @@ class Users extends BaseController
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
             // dd($users['family_id']);
+
             $family_id = $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
             $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
             $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
