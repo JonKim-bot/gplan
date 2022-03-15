@@ -332,6 +332,8 @@ QR Code
     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-unfoldable"></button>
     </div>
     <div class="c-wrapper c-fixed-components">
+         <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
+
         <header class="c-header c-header-light c-header-fixed">
             <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
             <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show" style="line-height: 1;">
@@ -412,7 +414,7 @@ QR Code
                         <div class="dropdown-header bg-light py-2">
                             <strong> <?= session()->get('login_data')['name'] ?></strong>
                         </div>
-                        <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
+                        <a class="dropdown-item" href="<?= base_url() ?>/users/user_detail/1">
                         <i class="cil-user c-icon mfe-2"></i>
                             Profile
                         </a>
@@ -431,4 +433,5 @@ QR Code
             </ul>
 
         </header>
+        <?php } ?>
         <div class="c-body">

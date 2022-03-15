@@ -449,6 +449,7 @@ class Users extends BaseController
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
+            
             // dd($users['family_id']);
             $family_id = $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
             $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
@@ -579,6 +580,7 @@ class Users extends BaseController
             //     'family.user_id' => $users['users_id']
             // ];
 
+            
             // $link_family = $this->FamilyModel->getWhere($where);
             // if(!empty($link_family)){
             //     $link_family_id = $link_family[0]['link_family_id'];
