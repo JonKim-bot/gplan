@@ -37,7 +37,7 @@
 <script type="text/javascript">
     $(function() {
     
-      <?php if(empty($user_upline)){ ?>
+      <?php if(empty($user_upline) || session()->get('login_data')['type_id'] == '1'){ ?>
         var datascource = 
           
      <?php foreach ($users as $parent) { ?>
@@ -65,8 +65,7 @@
           
           {
 
-            'username': "<?= $user_upline['username'] ?>",
-            'username': "<?= $user_upline['username'] ?>",
+            'username': "<?= $user_upline['username'] ?> (upline)",
           'users_id': '<?= $user_upline['users_id'] ?>',
           'children': [
 
