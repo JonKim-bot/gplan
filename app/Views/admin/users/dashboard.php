@@ -33,6 +33,17 @@
   .c-QR img {
     width: 100%;
   }
+  
+  .c-body{
+    position: relative;
+    max-width: 500px;
+    min-height: 787px;
+    margin: 0 auto;
+    background-color: #fff;
+    justify-content: center;
+    overflow: hidden;
+  }
+
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -54,8 +65,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12 col-lg-3">
-            <div class="card text-white bg-gradient-primary" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
+          <div class="col-sm-12 col-lg-12">
+            <div class="card text-white bg_color" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
               <div class="card-status card-body card-body" style="">
                 <div>
                   <div> <?= $lang['your_point'] ?></div>
@@ -140,7 +151,7 @@
             </div>
           </div>
           <!-- /.col-->
-          <div class="col-sm-12 col-lg-3">
+          <div class="col-sm-12 col-lg-12">
             <div class="row no-gutters mb-3">
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
@@ -157,7 +168,8 @@
               </div>
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                  <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#family_tree">
+                  <?php if($users['is_verified'] == 0){ ?>
+                <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#family_tree">
 
                     <div class="icon mb-2">
 
@@ -167,6 +179,20 @@
                       <?= $lang['reward'] ?>
                     </p>
                   </a>
+                  <?php  }else{ ?>
+                    <a class="card-header-action text-white" class="btn btn-primary " href="<?= base_url() ?>/users/family_tree/1">
+
+<div class="icon mb-2">
+
+  <i class="fa fa-diagram-project fa-lg"></i>
+</div>
+<p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
+  <?= $lang['reward'] ?>
+</p>
+</a>
+
+
+                  <?php } ?>
                 </div>
               </div>
               <div class="col-3 d-flex justify-content-center">
@@ -202,7 +228,7 @@
           <!-- /.col-->
           <?php if ($users['is_verified'] == 1) { ?>
 
-            <div class="col-sm-12 col-lg-3">
+            <div class="col-sm-12 col-lg-12">
               <div class="card text-white c-shadow" style="border-radius: 20px;">
                 <div class="c-QR">
                   <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=<?= base_url() ?>/main/welcome/<?= $family_id ?>/<?= $users_id ?>&choe=UTF-8" style="margin: auto; display: block; margin-left: auto; margin-right: auto;">
@@ -231,7 +257,7 @@
           <?php } ?>
 
 
-          <div class="col-sm-12 col-lg-3">
+          <div class="col-sm-12 col-lg-12">
 
             <div class="slick-slider-promo">
               <?php foreach ($banner as $row) { ?>
@@ -270,52 +296,35 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <h5 class="modal-title" id="modalAddLabel"><?= $lang['status'] ?></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <form enctype="multipart/form-data" method="POST" action="<?= base_url('Users/submit_receipt'); ?>">
-              <div class="modal-body">
+              <div class="modal-body text-center">
 
-                <div class="card text-white bg-gradient-primary">
-                  <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
-                    <div>
-                      <i class="fa fa-compass fa-2x"></i>
-
-                      <div><?= $lang['status'] ?></div>
-                      <?php if ($users['is_verified'] == 1) { ?>
+                    <div><?= $lang['status'] ?></div>
+                    <hr>  
+                    <?php if ($users['is_verified'] == 1) { ?>
                         <div class="text-value-lg">
                           <?= $lang['verified'] ?>
                         </div>
+                        
 
                       <?php } else { ?>
-                        <div class="text-value-lg">
+                        <div class="text-value-lg text-danger">
                           <?= $lang['not_verified'] ?>
                         </div>
                       <?php } ?>
                     </div>
-                    <div class="btn-group">
-                      <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <svg class="c-icon">
-                            <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
-                          </svg>
-                        </button> -->
-                      <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
-                    </div>
-                  </div>
-                  <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
-                  <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
-                  <!-- </div> -->
-                </div>
-
-              </div>
               <?php if ($users['receipt'] == "") { ?>
 
-                <div class="card-group" style="margin-top: 20px;">
+                <div class="card-group text-center" style="margin-top: 20px;">
                   <div class="card">
                     <div class="card-body">
                       <h1>Bank Detail</h1>
+                      <hr>  
+
                       <p class="text-muted">Please Submit your receipt to bank below</p>
                       <div class="text-center">
                         <img src="<?= base_url() .  ($qrcode) ?>" alt="">
@@ -552,3 +561,18 @@
             </div>
         </div>
     </div> -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="<?= base_url() ?>/assets/js/bootstrap.min"></script>
+    <script src="<?= base_url() ?>/assets/js/bjs.js"></script>
+
+    <?php if($users['receipt'] == ""){ ?>
+      <script>
+                $('#status_modal').modal('show');
+
+      </script>
+
+    <?php } ?>

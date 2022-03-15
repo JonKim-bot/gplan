@@ -107,22 +107,41 @@ html, body {
         transform: translate(-130%, -48%);
     }
 }
+.c-body{
+    position: relative;
+    max-width: 500px;
+    min-height: 787px;
+    margin: 0 auto;
+    background-color: #fff;
+    justify-content: center;
+    overflow: hidden;
+    background: rgb(49, 27, 110);
+  background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%);
+
+  }
+
 </style>
 <?php 
   
 
 ?>
 
-<div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;margin-top:20px;">
+<div class="col-sm-12 d-flex" style="width: 100vw;justify-content: space-between;margin-bottom:20px;margin-top:20px;">
                 <!-- <a href="">+</a> -->
                 <div class="icon_top">
                     <a href="<?= base_url() ?>/users/dashboard/1">
-                        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-arrow-left fa-2x text-white" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="icon_top" data-toggle="modal" data-target="#status_modal">
-                    <a href="<?= base_url() ?>/users/tree/1">View Tree</a>
+                <div>
+              <h5 class="text-white font-weight-bold">Family Tree</h5>
             </div>
+            <div>
+
+            </div>
+                <!-- <div class="icon_top" data-toggle="modal" data-target="#status_modal">
+                    <a href="<?= base_url() ?>/users/tree/1" class="text-white">View Tree</a>
+            </div> -->
               
             </div>
             
@@ -133,10 +152,56 @@ html, body {
                 <span></span>
             </div>
             <p class="content">
-                <span><?= $row['status'] ?></span>
+                <span class="text-white"><?= $row['status'] ?></span>
             </p>
-            <div class="time">Level <?= $row['level'] ?></div>
+            <div class="time">
+                <a class="view_level" id="<?= $row['level'] ?>">Level <?= $row['level'] ?></a>
+            </div>
         </div>
         <?php } ?>
        
     </div>
+
+
+    <div class="modal fade" id="status_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center" id="users_list">
+               
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="<?= base_url() ?>/assets/js/bootstrap.min"></script>
+    <script src="<?= base_url() ?>/assets/js/bjs.js"></script>
+
+
+
+      <script>
+
+          
+    $('.view_level').on('click', function() {
+        var level = $(this).attr('id');
+
+
+        $.post("<?= base_url('users/get_user_level') ?>", { level : level}, function(html) {
+            //pass the user html here
+            $('#users_list').html(html);
+
+            $('#status_modal').modal('show');
+        });
+
+    });
+    </script>

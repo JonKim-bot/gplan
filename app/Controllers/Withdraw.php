@@ -96,6 +96,7 @@ class Withdraw extends BaseController
             $wallet_withdraw = $this->WalletWithdrawModel->getAll();
             
 
+
         }
 
         $field = $this->WalletWithdrawModel->get_field([
@@ -134,11 +135,7 @@ class Withdraw extends BaseController
         $data['modified_date'] =date('Y-m-d');
 
         $data['modified_by'] = session()->get('login_id');
-
-
         $this->WalletWithdrawModel->updateWhere($where, $data);
-
-
         $remarks = 'Withdrawal rejected refund ';
         $this->WalletModel->wallet_in(
             $wallet_withdraw['users_id'],
@@ -310,15 +307,16 @@ class Withdraw extends BaseController
                 // dd($data);
                 $balance = $this->WalletModel->get_balance($_POST['users_id']);
                 if(floatval($balance) >= floatval($_POST['amount'])){
+
                     $this->WalletModel->wallet_out(
                         $_POST['users_id'],
                         $_POST['amount'],
                         $_POST['remarks'],
                     );
                     $wallet_withdraw_id = $this->WalletWithdrawModel->insertNew($data);
-                    return redirect()->to($_SERVER['HTTP_REFERER'], 'refresh');
+                    return redirect()->to($_SERVER['HTTP_REFERER']);
                 }else{
-                    alert('Balance not enought');
+                    alert('Balance not enough');
                     locationhref($_SERVER['HTTP_REFERER']);
                     // return redirect()->to($_SERVER['HTTP_REFERER']);
                 }

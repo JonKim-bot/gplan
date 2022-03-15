@@ -21,7 +21,7 @@
                         <i class="cil-user c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="text" name="name">
+                <input class="form-control" type="text" require name="name">
             </div>
 
             <p class="formLabel">Contact</p>
@@ -31,7 +31,7 @@
                         <i class="cil-phone c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="text" name="contact">
+                <input class="form-control" type="text" require name="contact">
             </div>
 
             <p class="formLabel">Email</p>
@@ -41,7 +41,7 @@
                         <i class="cib-gmail c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="text" name="email">
+                <input class="form-control" type="text" require name="email">
             </div>
 
             <div class="text-center text-white register_personal">
@@ -56,7 +56,7 @@
                         <i class="cil-user c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="text" name="username">
+                <input class="form-control" type="text" require name="username">
             </div>
 
             <p class="formLabel">Password</p>
@@ -66,7 +66,7 @@
                         <i class="cil-lock-locked c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="password" name="password">
+                <input class="form-control" type="password" require name="password">
             </div>
 
             <p class="formLabel">Confirm Password</p>
@@ -76,7 +76,7 @@
                         <i class="cil-lock-locked c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="password" name="password2">
+                <input class="form-control" require type="password" name="password2">
             </div>
         </div>
 

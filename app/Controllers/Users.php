@@ -30,6 +30,8 @@ class Users extends BaseController
 
 
         $this->UsersModel = new UsersModel();
+        $this->database = db_connect();
+
         if (
             session()->get('login_data') == null &&
             uri_string() != 'access/login'
@@ -701,17 +703,19 @@ class Users extends BaseController
         $this->pageData['qrcode'] = $qrcode;
         $this->pageData['total_earn'] = $this->WalletModel->get_total_earn($users_id);
         $this->pageData['total_withdraw'] = $this->WalletModel->get_total_withdraw($users_id);
+
         
         echo view('admin/header', $this->pageData);
 
         echo view('admin/users/dashboard');
+        
         echo view('admin/footer');
     }
 
 
 
     public function my_group($users_id  = 1){
-        $this->FamilyModel->insert_extra_commission(30);
+        // $this->FamilyModel->insert_extra_commission(30);
         if (session()->get('login_data')['type_id'] == '1') { 
 
             $users_id = session()->get('login_id');
@@ -892,6 +896,7 @@ class Users extends BaseController
                 // $data = $this->upload_image_with_data($data, 'ssm_cert');
                 if(!empty($input['password'])){
 
+
                     if ($input['password'] != '') {
                         $hash = $this->hash($input['password']);
                         $data['password'] = $hash['password'];
@@ -905,6 +910,7 @@ class Users extends BaseController
                 return redirect()->to($_SERVER['HTTP_REFERER']);
             }
         }
+
 
 
         // $this->pageData['form'] = $this->UsersModel->generate_edit_input($users_id);
@@ -1035,9 +1041,8 @@ class Users extends BaseController
             'family.user_id' => $user_id
         ];
         $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
-        $level = $this->FamilyModel->user_family($family_id) - 1;
+        $level = $this->FamilyModel->user_family($family_id);
         $family_tree = $this->FamilyModel->user_family_tree($family_id);
-
         // dd($family_tree);
         $level_arr = [];
         for ($x = 1; $x <= $level ; $x++) {
@@ -1108,6 +1113,37 @@ class Users extends BaseController
         // echo view('admin/footer');
 
         
+    }
+
+    function get_user_level(){
+        
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $user_id = session()->get('login_id');
+        }
+        
+        $where = [
+            'family.user_id' => $user_id
+        ];
+        $level = $_POST['level'];
+        $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
+        $family_tree = $this->FamilyModel->user_family_tree($family_id);
+        $family_level_user = [];
+        if(isset($family_tree[$level])){
+            $users_id = implode(",", $family_tree[$level]);
+            if($users_id != ''){
+                $sql = "SELECT users.*,
+                (SELECT COUNT(*) FROM family WHERE link_family_id = users.self_family_id) as total_downline
+                FROM users WHERE users.users_id IN ($users_id)";
+                $family_level_user = $this->database->query($sql)->getResultArray();
+            }
+
+
+        }
+
+        $this->pageData['family_level_user'] = $family_level_user;
+        echo view('admin/users/users_list', $this->pageData);
+
     }
 
 
