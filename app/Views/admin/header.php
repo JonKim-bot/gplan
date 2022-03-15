@@ -103,9 +103,7 @@
                         <span class="badge badge-pill badge-warning"><?= $undone_user ?></span>
 
                     </a>
-
                 </li>
-
                 
                 <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'paid_user'
@@ -457,6 +455,7 @@ QR Code
 
         </header>
         <?php } ?>
+        
         <?php if (session()->get('login_data')['type_id'] == '1') { ?>
 
         <div class="c-body">

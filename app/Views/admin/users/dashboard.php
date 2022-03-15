@@ -548,3 +548,18 @@
             </div>
         </div>
     </div> -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="<?= base_url() ?>/assets/js/bootstrap.min"></script>
+    <script src="<?= base_url() ?>/assets/js/bjs.js"></script>
+
+    <?php if($users['receipt'] == ""){ ?>
+      <script>
+                $('#status_modal').modal('show');
+
+      </script>
+
+    <?php } ?>

@@ -28048,3 +28048,6 @@ h3 {
   background: black;
 }
 /*# sourceMappingURL=style.css.map */
+.modal-content{
+  border-radius: 35px;
+}
