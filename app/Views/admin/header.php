@@ -46,7 +46,7 @@
 </head>
 
 <body class="c-app">
-    <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+    <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show <?=(session()->get('login_data')['type_id'] == '1') ? 'd-none' : '' ?>"  id="sidebar">
         <div class="c-sidebar-brand d-md-down-none">
             <!-- <svg class="c-sidebar-brand-full" width="118" height="46" alt="GplanUI Logo">
                     <use xlink:href="assets/brand/coreui-pro.svg#full"></use>
@@ -261,7 +261,7 @@
                     </li>
                     -->
 
-        <li class="c-sidebar-nav-title">User</li>
+        <!-- <li class="c-sidebar-nav-title">User</li>
 
         <li class="c-sidebar-nav-item ">
             <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/dashboard/1'
@@ -274,7 +274,7 @@
 
             </a>
 
-        </li>
+        </li> -->
 
         <!-- <li class="c-sidebar-nav-item ">
 <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users/qrcode/1'
