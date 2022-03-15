@@ -354,6 +354,7 @@ class BaseController extends Controller
         return $html;
     }
 
+    
     public function get_insert_data($data, $filter = [])
     {
         $data['modified_by'] = session()->get('login_id');

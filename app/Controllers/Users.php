@@ -224,37 +224,17 @@ class Users extends BaseController
             // dd($key);
             $upline_name = '';
 
-            if($row['family_id'] > 0){
+            if($row['self_family_id'] > 0){
                 $where = [
-                    'family.family_id' => $row['family_id']
+                    'family.family_id' => $row['self_family_id']
                 ];
-                $family_user_id = $this->FamilyModel->getWhere($where);
-                if(!empty($family_user_id)){
-                    $family_user_id= $family_user_id[0]['user_id'];
-
-                    $where = [
+                $user_in_family = $this->FamilyModel->getWhere($where);
     
-                        'users.users_id' => $family_user_id
-                    ];
-                    $family_name = $this->UsersModel->getWhere($where)[0];
-                    $family_name = $family_name['name'];
+                if(!empty($user_in_family)){
+                    $link_family_id = $user_in_family[0]['link_family_id'];
+                    $family_name = $this->FamilyModel->get_upline_info($link_family_id);
                 }
-
-                    
-                $where = [
-                    'family.user_id' => $row['users_id']
-                ];
-    
                 $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']])[0]['name'];
-
-    
-                // $link_family = $this->FamilyModel->getWhere($where);
-                // if(!empty($link_family)){
-                //     $link_family_id = $link_family[0]['link_family_id'];
-                //     $upline_name = $this->UsersModel->getWhere(['users.users_id' => $link_family_id])[0]['name'];
-                // }
-
-
             }
             $users[$key]['upline_name'] = $upline_name;
 
@@ -483,6 +463,7 @@ class Users extends BaseController
         }
 
 
+
         return redirect()->to($_SERVER['HTTP_REFERER']);
 
     }
@@ -532,6 +513,8 @@ class Users extends BaseController
 
     public function user_detail($users_id)
 
+
+
     {
 
         echo view('admin/header', $this->pageData);
@@ -562,30 +545,18 @@ class Users extends BaseController
 
 
         $upline_name = '';
-        if($users['family_id'] > 0){
+        if($users['self_family_id'] > 0){
             $where = [
-                'family.family_id' => $users['family_id']
+                'family.family_id' => $users['self_family_id']
             ];
-            $family_user_id = $this->FamilyModel->getWhere($where)[0]['user_id'];
-            $where = [
+            $user_in_family = $this->FamilyModel->getWhere($where);
 
-                'users.users_id' => $family_user_id
-            ];
-            $family_name = $this->UsersModel->getWhere($where)[0];
-            $family_name = $family_name['name'];
+            if(!empty($user_in_family)){
+                $link_family_id = $user_in_family[0]['link_family_id'];
 
-
-            //get upline name
-            // $where = [
-            //     'family.user_id' => $users['users_id']
-            // ];
-
-            
-            // $link_family = $this->FamilyModel->getWhere($where);
-            // if(!empty($link_family)){
-            //     $link_family_id = $link_family[0]['link_family_id'];
+                $family_name = $this->FamilyModel->get_upline_info($link_family_id);
+            }
             $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
-            // }
         }
         $users['family_name'] = $family_name;
         $users['upline_name'] = $upline_name;
@@ -690,26 +661,18 @@ class Users extends BaseController
         $family_name = '';
 
         $upline_name = '';
-        if($users['family_id'] > 0){
+         if($users['self_family_id'] > 0){
             $where = [
-                'family.family_id' => $users['family_id']
+                'family.family_id' => $users['self_family_id']
             ];
-            $family_user_id = $this->FamilyModel->getWhere($where)[0]['user_id'];
-            $where = [
+            $user_in_family = $this->FamilyModel->getWhere($where);
 
-                'users.users_id' => $family_user_id
-            ];
-            $family_name = $this->UsersModel->getWhere($where)[0];
-            $family_name = $family_name['name'];
-
-            //get upline name
-            $where = [
-                'family.user_id' => $users['users_id']
-            ];
-
-
+            if(!empty($user_in_family)){
+                $link_family_id = $user_in_family[0]['link_family_id'];
+                
+                $family_name = $this->FamilyModel->get_upline_info($link_family_id);
+            }
             $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
-
         }
 
         $users['family_name'] = $family_name;
@@ -943,6 +906,7 @@ class Users extends BaseController
         $family_level = isset($family[$level + 1]) ? count($family[$level + 1]) : -1;
         $level_max = $this->return_level_max($level);
         if($family_level >= $level_max){
+
             return 'Success';
             //reached
         }else{

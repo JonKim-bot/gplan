@@ -184,12 +184,14 @@ class FamilyModel extends BaseModel
 
             return $users[0];
         }else{
+            
             return "-None-";
         }
     }
 
     public function get_upline_info($link_family_id){
         $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray()[0]['user_id'];
+
         $user_info = $this->get_users_info($upline_id);
         return $user_info['type_id'];
     }

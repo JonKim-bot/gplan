@@ -59,8 +59,8 @@
                                                 <th data-filter="usersname">User Name</th>
                                                 <th data-filter="usersname">Contact</th>
                                                 <th data-filter="email">Email</th>
-                                                <th data-filter="email">Referral Name</th>
-                                                <th data-filter="email">Upline Name</th>
+                                                <th data-filter="email">Family Name</th>
+                                                <th data-filter="email">Teacher Name</th>
 
                                                 <th data-filter="email">Family Tree</th>
                                                 <th data-filter="email">Direct Tree</th>
