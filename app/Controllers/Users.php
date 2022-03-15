@@ -180,6 +180,77 @@ class Users extends BaseController
         }
     }
     // public function generate_image
+
+    public function paid_user()
+    {
+        
+        $where = [
+            'users.is_paid' => 1,
+        ];
+        $is_verified =
+        ($_GET and isset($_GET['is_verified']))
+            ? $_GET['is_verified']
+            : 99;
+
+        $where['users.contact !='] = '';
+
+        if($is_verified != 99){
+
+            $where['users.is_verified'] = $is_verified;
+        }        
+        $users = $this->UsersModel->getWhere($where);
+        $users_count = 0;
+        if(!empty($users)){
+            $users_count = count($users);
+        }
+
+        $this->pageData['users_count'] = $users_count;
+        // dd($users);
+
+        $field = $this->UsersModel->get_field([
+            'created_by',
+            'modified_by',
+            'deleted',
+        ]);
+        $this->pageData['table'] = $this->generate_table(
+            $field,
+            $users,
+            'users',
+            'banner'
+        );
+
+
+        foreach($users as $key => $row){
+            $family_name = '';
+            // dd($key);
+            $upline_name = '';
+
+            if($row['self_family_id'] > 0){
+                $where = [
+
+                    'family.family_id' => $row['self_family_id']
+                ];
+                $user_in_family = $this->FamilyModel->getWhere($where);
+    
+                if(!empty($user_in_family)){
+                    $link_family_id = $user_in_family[0]['link_family_id'];
+                    $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
+                }
+                $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']])[0]['name'];
+            }
+            $users[$key]['upline_name'] = $upline_name;
+
+            $users[$key]['family_name'] = $family_name;
+
+        }
+        $this->pageData['users'] = $users;
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/all');
+        echo view('admin/footer');
+    }
+
+
+
     public function index()
     {
 
@@ -554,6 +625,8 @@ class Users extends BaseController
 
             if(!empty($user_in_family)){
                 $link_family_id = $user_in_family[0]['link_family_id'];
+
+
 
                 $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
             }
@@ -995,6 +1068,7 @@ class Users extends BaseController
         $users_1 = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
 
         $user = $this->UsersModel->getTree($user_id);
+
         // $users = $this->UsersModel->getTree($user_id);
 
         $users = array_merge($users_1,$user);
@@ -1020,7 +1094,6 @@ class Users extends BaseController
     }
 
 
-
     function tree($user_id = 1)
     {
 
@@ -1031,48 +1104,82 @@ class Users extends BaseController
 
 
 
-        $user_detail = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
+        $users = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
+        $where = [
+            'family.family_id' => $users[0]['self_family_id']
+        ];
+        $user_in_family = $this->FamilyModel->getWhere($where);
+
+        $user_upline = [];
+        if(!empty($user_in_family)){
+            $link_family_id = $user_in_family[0]['link_family_id'];
 
 
-        $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
+            $user_upline = $this->FamilyModel->get_upline_infomation($link_family_id);
 
-        // dd($users_1);
+        }
 
-        $user = $this->FamilyModel->getTree($user_id);
+        for($i = 0; $i < count($users); $i++){
+            $users[$i]['family'] = $this->FamilyModel->getTree($users[$i]['users_id']);
+        }
+        $this->pageData['user_upline'] = $user_upline;
 
-
-        // dd($users_1);
-        // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
-
-
-
-        // dd($user);  
-
-
-        $users = array_merge($users_1,$user);
-        // dd($users);
-        $tree =  $this->buildTree($users,$user_id);
-        // dd($tree);
-
-        $users_1[0]['children'] = $tree;
-
-        $tree = $users_1;
-        
-
-        dd($tree);
-        $ulli = $this->createListLi($tree);
-        
-
-        $this->pageData["ulli"] = $ulli;
-        $this->pageData["user_detail"] = $user_detail[0];
-
+        $this->pageData['users'] = $users;
 
         echo view('admin/header', $this->pageData);
-        echo view('admin/users/ul_of_tree');
+        echo view('admin/users/tree');
         // echo view('admin/footer');
 
         
     }
+
+    // function tree($user_id = 1)
+    // {
+
+    //     if (session()->get('login_data')['type_id'] == '1') { 
+
+    //         $user_id = session()->get('login_id');
+    //     }
+
+
+
+    //     $user_detail = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
+
+
+    //     $users_1 = $this->FamilyModel->getWhere(['family.user_id' => $user_id]);
+
+    //     // dd($users_1);
+
+    //     $user = $this->FamilyModel->getTree($user_id);
+    //     // dd($users_1);
+    //     // $user = $this->FamilyModel->user_family($users_1[0]['family_id']);
+
+
+
+    //     // dd($user);  
+
+
+    //     $users = array_merge($users_1,$user);
+    //     $tree =  $this->buildTree($users,$user_id);
+
+    //     $users_1[0]['children'] = $tree;
+
+    //     $tree = $users_1;
+        
+
+    //     $ulli = $this->createListLi($tree);
+        
+
+    //     $this->pageData["ulli"] = $ulli;
+    //     $this->pageData["user_detail"] = $user_detail[0];
+
+
+    //     echo view('admin/header', $this->pageData);
+    //     echo view('admin/users/ul_of_tree');
+    //     // echo view('admin/footer');
+
+        
+    // }
 
 
 
@@ -1140,6 +1247,7 @@ class Users extends BaseController
 
         $list .= '</ul>';
 
+
         return $list;
 
     }
@@ -1172,15 +1280,12 @@ class Users extends BaseController
     public function buildTree(array $elements, $parentId = 0) {
         $branch = array();
         // dd($elements);
-        
-
         foreach ($elements as $element) {
-            // dd($element);   
-            // $element['downline_count']=  $this->CustomerModel->recursive_get_downline_count($element['customer_id']);;
-
+   
             if ($element['link_family_id'] == $parentId) {
-                $children = $this->buildTree($elements, $element['user_id']);
+                $children = $this->buildTree($elements, $element['family_id']);
                 if (!empty($children)) {
+
                     $element['children'] = $children;
                     // dd($element);
                 }

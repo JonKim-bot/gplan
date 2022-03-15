@@ -17,19 +17,19 @@
   font-size: 3em;
 }
 </style>
-<?php   if (session()->get('login_data')['type_id'] == '0') { ?>
+<?php   if (session()->get('login_data')['type_id'] == '1') { ?>
 
 <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;margin-top:20px;">
-                <!-- <a href="">+</a> -->
-                <div class="icon_top">
-                    <a href="<?= base_url() ?>/users/dashboard/1">
-                        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
-                    </a>
-                </div>
-          
-              
-            </div>
-            <?php } ?>
+          <!-- <a href="">+</a> -->
+          <div class="icon_top">
+              <a href="<?= base_url() ?>/users/dashboard/1">
+                  <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+              </a>
+          </div>
+    
+        
+      </div>
+    <?php } ?>
 
 <div id="ulnext" style="display:none">
 
