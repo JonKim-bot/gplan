@@ -45,9 +45,10 @@
                                     <label for="banner">Image</label>
                                     <input type="file" class="form-control" name="banner" placeholder="Banner" required>
                                 </div>
+                                <!-- <input type="hidden" value="1" name="1"> -->
                                 <!-- <label for=""></label> -->
                                
-                                <?= $form['title'] ?>
+                                <!-- <?= $form['title'] ?> -->
 
                                 <div class="form-group">
                                     <button class="btn btn-primary float-right" type="submit"> Submit</button>

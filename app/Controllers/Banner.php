@@ -25,6 +25,7 @@ class Banner extends BaseController
                 base_url() .
                 "/access/login';</script>";
 
+
         }
 
 
@@ -35,7 +36,8 @@ class Banner extends BaseController
 
         $banner = $this->BannerModel->getWhere(['type_id' => 0]);
         // dd($banner);
-        $field = $this->BannerModel->get_field(['created_by','modified_by','type_id','type','deleted','link']);
+        $field = $this->BannerModel->get_field(['created_by','modified_by','type_id','type','title','deleted','link']);
+
         $this->pageData['table'] = $this->generate_table($field,$banner,'banner','banner');
         $this->pageData['banner'] = $banner;
         echo view('admin/header', $this->pageData);
@@ -46,7 +48,7 @@ class Banner extends BaseController
 
     public function add()
     {
-        if ($_POST) {
+        if ($_FILES) {
 
             $error = false;
 
@@ -87,7 +89,7 @@ class Banner extends BaseController
         ];
         $banner = $this->BannerModel->getWhere($where)[0];
         $this->pageData['banner'] = $banner;
-        $field = $this->BannerModel->get_field(['created_by','modified_by','deleted']);
+        $field = $this->BannerModel->get_field(['created_by','modified_by','type_id','title','deleted']);
         $this->pageData['detail'] = $this->generate_detail($field,$banner,'banner');
 
         echo view('admin/header', $this->pageData);
@@ -131,7 +133,7 @@ class Banner extends BaseController
         ];
         $this->pageData['banner'] = $this->BannerModel->getWhere($where)[0];
       
-        if ($_POST) {
+        if ($_FILES) {
             $error = false;
 
             if (!$error) {
@@ -146,6 +148,7 @@ class Banner extends BaseController
                 );
             }
         }
+
         $this->pageData['form'] = $this->BannerModel->generate_edit_input($banner_id);
 
         echo view('admin/header', $this->pageData);

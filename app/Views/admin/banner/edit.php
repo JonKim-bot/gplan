@@ -33,7 +33,7 @@
                         <input type="file" class="form-control" name="banner" placeholder="Banner" >
                     </div>
         
-                    <?= $form['title'] ?>
+                    <!-- <?= $form['title'] ?>   -->
 
                     <div class="form-group">
                         <button class="btn btn-primary float-right" type="submit"> Submit</button>
