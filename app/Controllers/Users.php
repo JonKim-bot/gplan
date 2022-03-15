@@ -1049,9 +1049,8 @@ class Users extends BaseController
             $users[$i]['family'] = $this->FamilyModel->getTree($users[$i]['users_id']);
         }
         $this->pageData['user_upline'] = $user_upline;
-
+        
         $this->pageData['users'] = $users;
-        dd($users);
 
         echo view('admin/header', $this->pageData);
         echo view('admin/users/tree');
