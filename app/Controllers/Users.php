@@ -180,6 +180,77 @@ class Users extends BaseController
         }
     }
     // public function generate_image
+
+    public function paid_user()
+    {
+        
+        $where = [
+            'users.is_paid' => 1,
+        ];
+        $is_verified =
+        ($_GET and isset($_GET['is_verified']))
+            ? $_GET['is_verified']
+            : 99;
+
+        $where['users.contact !='] = '';
+
+        if($is_verified != 99){
+
+            $where['users.is_verified'] = $is_verified;
+        }        
+        $users = $this->UsersModel->getWhere($where);
+        $users_count = 0;
+        if(!empty($users)){
+            $users_count = count($users);
+        }
+
+        $this->pageData['users_count'] = $users_count;
+        // dd($users);
+
+        $field = $this->UsersModel->get_field([
+            'created_by',
+            'modified_by',
+            'deleted',
+        ]);
+        $this->pageData['table'] = $this->generate_table(
+            $field,
+            $users,
+            'users',
+            'banner'
+        );
+
+
+        foreach($users as $key => $row){
+            $family_name = '';
+            // dd($key);
+            $upline_name = '';
+
+            if($row['self_family_id'] > 0){
+                $where = [
+
+                    'family.family_id' => $row['self_family_id']
+                ];
+                $user_in_family = $this->FamilyModel->getWhere($where);
+    
+                if(!empty($user_in_family)){
+                    $link_family_id = $user_in_family[0]['link_family_id'];
+                    $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
+                }
+                $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']])[0]['name'];
+            }
+            $users[$key]['upline_name'] = $upline_name;
+
+            $users[$key]['family_name'] = $family_name;
+
+        }
+        $this->pageData['users'] = $users;
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/all');
+        echo view('admin/footer');
+    }
+
+
+
     public function index()
     {
 
@@ -554,6 +625,7 @@ class Users extends BaseController
 
             if(!empty($user_in_family)){
                 $link_family_id = $user_in_family[0]['link_family_id'];
+
 
 
                 $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
@@ -996,6 +1068,7 @@ class Users extends BaseController
         $users_1 = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
 
         $user = $this->UsersModel->getTree($user_id);
+
         // $users = $this->UsersModel->getTree($user_id);
 
         $users = array_merge($users_1,$user);
@@ -1043,13 +1116,14 @@ class Users extends BaseController
 
 
             $user_upline = $this->FamilyModel->get_upline_infomation($link_family_id);
+
         }
 
         for($i = 0; $i < count($users); $i++){
             $users[$i]['family'] = $this->FamilyModel->getTree($users[$i]['users_id']);
         }
         $this->pageData['user_upline'] = $user_upline;
-        
+
         $this->pageData['users'] = $users;
 
         echo view('admin/header', $this->pageData);

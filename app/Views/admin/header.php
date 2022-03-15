@@ -105,6 +105,21 @@
 
                 </li>
 
+                
+                <li class="c-sidebar-nav-item ">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'paid_user'
+                                                        ? 'c-active'
+                                                        : null ?>" href="<?= base_url('Users') ?>/paid_user">
+                        <i class="cil-people c-sidebar-nav-icon"></i>
+                        Paid User
+                        <span class="badge badge-pill badge-warning"></span>
+
+                    </a>
+
+                </li>
+
+
+
                 <li class="c-sidebar-nav-item ">
 
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Withdraw'
@@ -335,6 +350,7 @@ QR Code
          <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
 
         <header class="c-header c-header-light c-header-fixed">
+
             <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
             <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show" style="line-height: 1;">
                 <i class="cil-menu c-icon c-icon-lg"></i>
