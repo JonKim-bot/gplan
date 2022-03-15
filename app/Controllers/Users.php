@@ -706,6 +706,7 @@ class Users extends BaseController
         echo view('admin/header', $this->pageData);
 
         echo view('admin/users/dashboard');
+        
         echo view('admin/footer');
     }
 
@@ -893,6 +894,7 @@ class Users extends BaseController
                 // $data = $this->upload_image_with_data($data, 'ssm_cert');
                 if(!empty($input['password'])){
 
+
                     if ($input['password'] != '') {
                         $hash = $this->hash($input['password']);
                         $data['password'] = $hash['password'];
@@ -1037,9 +1039,8 @@ class Users extends BaseController
             'family.user_id' => $user_id
         ];
         $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
-        $level = $this->FamilyModel->user_family($family_id) - 1;
+        $level = $this->FamilyModel->user_family($family_id);
         $family_tree = $this->FamilyModel->user_family_tree($family_id);
-
         // dd($family_tree);
         $level_arr = [];
         for ($x = 1; $x <= $level ; $x++) {
@@ -1110,6 +1111,25 @@ class Users extends BaseController
         // echo view('admin/footer');
 
         
+    }
+
+    function get_user_level(){
+        
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $user_id = session()->get('login_id');
+        }
+        
+        $where = [
+            'family.user_id' => $user_id
+        ];
+        $level = $_POST['level'];
+        $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
+        $family_tree = $this->FamilyModel->user_family_tree($family_id);
+
+        if(isset($family_tree[$level])){
+            dd($family_tree[$level]);
+        }
     }
 
 

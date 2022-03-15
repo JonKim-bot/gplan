@@ -136,9 +136,12 @@ html, body {
                 <div>
               <h5 class="text-white font-weight-bold">Family Tree</h5>
             </div>
-                <div class="icon_top" data-toggle="modal" data-target="#status_modal">
-                    <a href="<?= base_url() ?>/users/tree/1" class="text-white">View Tree</a>
+            <div>
+
             </div>
+                <!-- <div class="icon_top" data-toggle="modal" data-target="#status_modal">
+                    <a href="<?= base_url() ?>/users/tree/1" class="text-white">View Tree</a>
+            </div> -->
               
             </div>
             
@@ -149,10 +152,64 @@ html, body {
                 <span></span>
             </div>
             <p class="content">
-                <span><?= $row['status'] ?></span>
+                <span class="text-white"><?= $row['status'] ?></span>
             </p>
-            <div class="time">Level <?= $row['level'] ?></div>
+            <div class="time">
+                <a class="view_level" id="<?= $row['level'] ?>">Level <?= $row['level'] ?></a>
+            </div>
         </div>
         <?php } ?>
        
     </div>
+
+
+    <div class="modal fade" id="status_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center" id="users">
+                <ul>
+                    <li>2</li>
+                    <li>2</li>
+                    <li>2</li>
+                    <li>2</li>
+                    <li>2</li>
+                    <li>2</li>
+
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="<?= base_url() ?>/assets/js/bootstrap.min"></script>
+    <script src="<?= base_url() ?>/assets/js/bjs.js"></script>
+
+
+
+      <script>
+
+          
+    $('.view_level').on('click', function() {
+        var level = $(this).attr('id');
+
+
+        $.post("<?= base_url('users/get_user_level') ?>", { level : level}, function(html) {
+
+
+
+            $('#status_modal').modal('show');
+        });
+
+    });
+    </script>

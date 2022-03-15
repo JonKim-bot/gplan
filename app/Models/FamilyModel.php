@@ -186,6 +186,7 @@ class FamilyModel extends BaseModel
         }else{
 
             return "-None-";
+            
         }
     }
 
@@ -606,7 +607,7 @@ class FamilyModel extends BaseModel
             
                     $gchild[$gkey]['children'] = $ggchild;
 
-                    
+
                 }
                 $child[$ckey]['children'] = $gchild;
             }
