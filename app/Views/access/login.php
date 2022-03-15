@@ -7,7 +7,7 @@
         </div>
         <form method="POST" action="<?= base_url() ?>/access/login">
             <?php if (isset($error)) { ?>
-                <div class="alert-message" role="alert">
+                <div class="alert-message text-center" role="alert">
                     <?= $error ?>
                 </div>
             <?php } ?>
@@ -22,7 +22,7 @@
                     <input class="form-control" type="text" name="username" placeholder="Username">
                 </div>
 
-                <p class="formLabel">Username</p>
+                <p class="formLabel">Password</p>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">
@@ -31,14 +31,14 @@
                     </div>
                     <input class="form-control" type="password" name="password" placeholder="Password">
                 </div>
-                <div class="theForgot">
+                <!-- <div class="theForgot">
                     <p>Forget Password ?</p>
-                </div>
+                </div> -->
             </div>
 
             <div class="login_divbtn">
                 <button class="login_btn" type="submit">Sign In</button>
-                <p class="text-white">Not a member? <a class="login_text" href="<?= base_url() ?>/access/login"> Register Here</a></p>
+                <!-- <p class="text-white">Not a member? <a class="login_text" href="<?= base_url() ?>/access/login"> Register Here</a></p> -->
             </div>
         </form>
         <!-- <div class="card-group">
