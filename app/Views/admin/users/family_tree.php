@@ -115,6 +115,9 @@ html, body {
     background-color: #fff;
     justify-content: center;
     overflow: hidden;
+    background: rgb(49, 27, 110);
+  background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%);
+
   }
 
 </style>
@@ -127,11 +130,14 @@ html, body {
                 <!-- <a href="">+</a> -->
                 <div class="icon_top">
                     <a href="<?= base_url() ?>/users/dashboard/1">
-                        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-arrow-left fa-2x text-white" aria-hidden="true"></i>
                     </a>
                 </div>
+                <div>
+              <h5 class="text-white font-weight-bold">Family Tree</h5>
+            </div>
                 <div class="icon_top" data-toggle="modal" data-target="#status_modal">
-                    <a href="<?= base_url() ?>/users/tree/1">View Tree</a>
+                    <a href="<?= base_url() ?>/users/tree/1" class="text-white">View Tree</a>
             </div>
               
             </div>

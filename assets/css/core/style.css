@@ -21233,6 +21233,7 @@ button.bg-dark:focus {
 }
 
 .c-dark-theme .bg-gradient-primary {
+  
   background: #2d2587 !important;
   background: linear-gradient(45deg, #4638c2 0%, #2d2587 100%) !important;
   border-color: #2d2587 !important;
