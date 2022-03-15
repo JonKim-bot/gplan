@@ -434,4 +434,10 @@ QR Code
 
         </header>
         <?php } ?>
+        <?php if (session()->get('login_data')['type_id'] == '1') { ?>
+
         <div class="c-body">
+        <?php }else{ ?>
+            <div class="c-body">
+
+        <?php } ?>
