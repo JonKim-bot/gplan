@@ -172,16 +172,8 @@ html, body {
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body text-center" id="users">
-                <ul>
-                    <li>2</li>
-                    <li>2</li>
-                    <li>2</li>
-                    <li>2</li>
-                    <li>2</li>
-                    <li>2</li>
-
-                </ul>
+            <div class="modal-body text-center" id="users_list">
+               
             </div>
           </div>
         </div>
@@ -205,8 +197,8 @@ html, body {
 
 
         $.post("<?= base_url('users/get_user_level') ?>", { level : level}, function(html) {
-
-
+            //pass the user html here
+            $('#users_list').html(html);
 
             $('#status_modal').modal('show');
         });

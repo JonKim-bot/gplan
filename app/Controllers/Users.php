@@ -30,6 +30,8 @@ class Users extends BaseController
 
 
         $this->UsersModel = new UsersModel();
+        $this->database = db_connect();
+
         if (
             session()->get('login_data') == null &&
             uri_string() != 'access/login'
@@ -1126,10 +1128,22 @@ class Users extends BaseController
         $level = $_POST['level'];
         $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
         $family_tree = $this->FamilyModel->user_family_tree($family_id);
-
+        $family_level_user = [];
         if(isset($family_tree[$level])){
-            dd($family_tree[$level]);
+            $users_id = implode(",", $family_tree[$level]);
+            if($users_id != ''){
+                $sql = "SELECT users.*,
+                (SELECT COUNT(*) FROM family WHERE link_family_id = users.self_family_id) as total_downline
+                FROM users WHERE users.users_id IN ($users_id)";
+                $family_level_user = $this->database->query($sql)->getResultArray();
+            }
+
+
         }
+
+        $this->pageData['family_level_user'] = $family_level_user;
+        echo view('admin/users/users_list', $this->pageData);
+
     }
 
 

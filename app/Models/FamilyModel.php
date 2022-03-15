@@ -84,6 +84,7 @@ class FamilyModel extends BaseModel
         return $result;
     }
 
+    
     public function user_family($family_id){
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
@@ -186,7 +187,7 @@ class FamilyModel extends BaseModel
         }else{
 
             return "-None-";
-            
+
         }
     }
 
