@@ -11,6 +11,8 @@
 
 
 
+
+                        </div>
                         </div>
 
                         <script src="<?= base_url() ?>/assets/js/core/bundle.js"></script>
