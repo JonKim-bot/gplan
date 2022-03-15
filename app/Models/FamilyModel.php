@@ -173,6 +173,7 @@ class FamilyModel extends BaseModel
 
     public function get_users_info($users_id){
         
+
         $where = [
             'users.users_id' => $users_id,
         ];
@@ -189,9 +190,13 @@ class FamilyModel extends BaseModel
 
     public function get_upline_info($link_family_id){
         $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray()[0]['user_id'];
-
         $user_info = $this->get_users_info($upline_id);
         return $user_info['type_id'];
+    }
+    public function get_upline_infomation($link_family_id){
+        $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray()[0]['user_id'];
+        $user_info = $this->get_users_info($upline_id);
+        return $user_info;
     }
 
     public function get_total_com($level_user,$level_upline){
@@ -239,8 +244,6 @@ class FamilyModel extends BaseModel
 
         $upline = $this->recursive_upline($family_id); // find all upline
         //get level of upline here 
-
-        
         foreach($upline as $row){
             $type_id = $this->get_upline_info($row);
             //check upline role here 
@@ -248,10 +251,8 @@ class FamilyModel extends BaseModel
             $result = $this->recursive_users([[$row]]);
   
             $user_id = $row;
-            $user_info = $this->get_users_info($user_id);
-
+            $user_info = $this->get_upline_infomation($user_id);
             $direct_id = $user_info['reference_id'];
-    
             $direct = $this->db->query("SELECT * FROM users WHERE users_id = $direct_id")->getResultArray();
             if(!empty($direct)){
                 $direct = $direct[0];
@@ -262,6 +263,7 @@ class FamilyModel extends BaseModel
                     if(isset($result[9])){
                         if(isset($result[$direct_level]) && count($result[$direct_level]) < ($direct_level * 2)){
                             
+
                             $extra_commission = isset($result[11]) ? 30 : 10;
                             $remarks = 'Commision for ' . $direct['username'] . ' With amount of extra ' . $extra_commission ;
                             $this->WalletModel->wallet_in($direct['users_id'],$extra_commission,$remarks,$family_id,0,0,$row);
@@ -507,6 +509,7 @@ class FamilyModel extends BaseModel
             return $upline;
         }
     }
+
 
 
 

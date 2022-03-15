@@ -6,6 +6,7 @@
 
 
 
+
 namespace App\Core;
 
 use CodeIgniter\Model;
@@ -1371,7 +1372,7 @@ class BaseModel extends Model
         $this->builder = $this->db->table($this->tableName);
 
         $this->builder->where($where);
-        $this->insert_where_log('hard_delete_where', $where);
+        // $this->insert_where_log('hard_delete_where', $where);
         $this->builder->delete();
     }
 

@@ -949,6 +949,23 @@ class Users extends BaseController
 
     }
 
+    function reset_user($user_id){
+        $where = [
+            'users.users_id' => $user_id
+        ];
+
+        $data = [
+            'is_verified' => 0,
+        ];
+
+        $this->UsersModel->updateWhere($where,$data);
+
+        $where = [
+            'family.user_id' => $user_id
+        ];
+        $this->FamilyModel->hardDeleteWhere($where);
+    }
+
     function family_tree($user_id = 1)
     {
 
