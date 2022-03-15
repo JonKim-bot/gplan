@@ -33,6 +33,15 @@
   .c-QR img {
     width: 100%;
   }
+  .c-body{
+    position: relative;
+    max-width: 500px;
+    min-height: 787px;
+    margin: 0 auto;
+    background-color: #fff;
+    justify-content: center;
+    overflow: auto;
+  }
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">

@@ -241,10 +241,17 @@
                                                                     ] ?></td>
                                                                 </tr>
 
+                                                                
+                                                                <tr>
+                                                                    <th scope="row">Family Upline Name</th>
+                                                                    <td><?= $users[
+                                                                        'family_name'
+                                                                    ] ?></td>
+                                                                </tr>
                                                                 <tr>
                                                                     <th scope="row">Referral Name</th>
                                                                     <td><?= $users[
-                                                                        'family_name'
+                                                                        'upline_name'
                                                                     ] ?></td>
                                                                 </tr>
 
