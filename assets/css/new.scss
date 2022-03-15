@@ -13,10 +13,25 @@
     src: url("../../assets/css/fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+    font-family: PublicSans-SemiBold;
+    src: url("../../assets/css/fonts/PublicSans-SemiBold.otf");
+}
+
+.c-maxContainter {
+    max-width: 425px;
+    background: #000;
+    margin: 0 auto;
+}
 
 .register_div {
     width: 80%;
     margin: 0 auto 4rem;
+    text-align: center;
+    color: white;
+    hr {
+        background: white;
+    }
     h1 {
         font-family: "OpenSans-Semibold";
         font-size: 38px;
@@ -50,5 +65,80 @@
         margin-top: 2rem;
         font-size: 11px;
         font-family: "OpenSans-Regular";
+    }
+}
+
+.loginHeader_div {
+    width: 80%;
+    margin: 0 auto 4rem;
+    text-align: center;
+    color: white;
+    hr {
+        background: white;
+    }
+    h1 {
+        font-family: "OpenSans-Semibold";
+        font-size: 38px;
+    }
+    h3 {
+        font-family: "OpenSans-Light";
+        font-size: 18px;
+    }
+}
+
+.loginForm_div {
+    width: 80%;
+    margin: 0 auto 4rem;
+    .input-group-text {
+        border-radius: 8px;
+        padding: 0.375rem 1rem;
+        i {
+            color: #33126b;
+            font-weight: bold;
+        }
+    }
+    .form-control {
+        border-radius: 8px;
+    }
+    .formLabel {
+        margin-bottom: 0;
+        color: #fff;
+        font-family: "PublicSans-SemiBold";
+        font-size: 12px;
+    }
+    .theForgot {
+        text-align: end;
+        p {
+            color: #fff;
+            font-size: 11px;
+            font-family: "OpenSans-Regular";
+            text-decoration: underline;
+        }
+    }
+}
+
+.login_divbtn {
+    // display: flex;
+    justify-content: center;
+    text-align: center;
+    .login_btn {
+        border: 1px solid #0069e8;
+        color: #0069e8;
+        border-radius: 36px;
+        font-size: 14px;
+        font-family: "OpenSans-Semibold";
+        padding: 15px 70px;
+        background: #fff;
+    }
+    p {
+        margin-top: 1.5rem;
+        font-size: 11px;
+        font-family: "OpenSans-Regular";
+        color: #fff !important;
+    }
+
+    .login_text {
+        color: white;
+        text-decoration: underline;
     }
 }
