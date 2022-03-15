@@ -135,4 +135,78 @@
   text-decoration: underline;
 }
 
+.register_title {
+  width: 80%;
+  margin: 0 auto 1rem;
+  text-align: center;
+  color: white;
+}
+.register_title h1 {
+  font-family: "OpenSans-Semibold";
+  font-size: 27px;
+  margin-bottom: 2rem;
+}
+.register_title h3 {
+  font-family: "OpenSans-Semibold";
+  font-size: 20px;
+}
+.register_title p {
+  font-family: "OpenSans-Regular";
+  font-size: 11px;
+}
+
+.registerForm_div {
+  width: 80%;
+  margin: 0 auto 4rem;
+}
+.registerForm_div .input-group-text {
+  border-radius: 8px;
+  padding: 0.375rem 1rem;
+}
+.registerForm_div .input-group-text i {
+  color: #33126b;
+  font-weight: bold;
+}
+.registerForm_div .form-control {
+  border-radius: 8px;
+}
+.registerForm_div .formLabel {
+  margin-bottom: 0;
+  color: #fff;
+  font-family: "PublicSans-SemiBold";
+  font-size: 12px;
+}
+.registerForm_div .theForgot {
+  text-align: end;
+}
+.registerForm_div .theForgot p {
+  color: #fff;
+  font-size: 11px;
+  font-family: "OpenSans-Regular";
+  text-decoration: underline;
+}
+.registerForm_div .register_personal {
+  width: 80%;
+  margin: 1.5rem auto;
+  text-align: center;
+  color: white;
+}
+.registerForm_div .register_personal h3 {
+  font-family: "OpenSans-Semibold";
+  font-size: 20px;
+  margin-bottom: 0rem;
+}
+.registerForm_div .register_personal p {
+  font-family: "OpenSans-Regular";
+  font-size: 11px;
+}
+
+.theBtn_register {
+  border-radius: 36px;
+  padding: 10px 35px;
+  background: #5f05c7;
+  font-family: "OpenSans-Semibold";
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=new.css.map */

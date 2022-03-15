@@ -64,9 +64,8 @@
 }
 
 .bg_color{
-  
-  background: linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;
-
+  background: rgb(49, 27, 110);
+  background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%);
 }
 .c-app.c-legacy-theme {
   --primary: #20a8d8;

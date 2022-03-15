@@ -1,11 +1,8 @@
-<div class="col-md-6 " style="margin:70px 0px 70px 0px">
+<div class="col-md-12 ">
     <!-- <img src="https://carlink.my/static/media/Logo%203D%20Png.8b5ebdda.png" style="margin-bottom:20px" width="100%" alt=""> -->
     <!-- <div class="card-group"> -->
-    <div class='text-center text-white'>
+    <div class='text-center text-white register_title'>
         <h1>Gplan</h1>
-    </div>
-
-    <div class="text-center text-white">
         <h3>Register</h3>
         <p>Register Your account here</p>
     </div>
@@ -16,60 +13,74 @@
                 <?= $error ?>
             </div>
         <?php } ?>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">
-                    <i class="cil-user c-icon"></i>
-                </span>
+        <div class="registerForm_div">
+            <p class="formLabel">Name</p>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cil-user c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="text" name="name">
             </div>
-            <input class="form-control" type="text" name="name" placeholder="Name">
+
+            <p class="formLabel">Contact</p>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cil-phone c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="text" name="contact">
+            </div>
+
+            <p class="formLabel">Email</p>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cib-gmail c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="text" name="email">
+            </div>
+
+            <div class="text-center text-white register_personal">
+                <h3>Personal Login Detail</h3>
+                <p>Enter your account detail here</p>
+            </div>
+
+            <p class="formLabel">Username</p>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cil-user c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="text" name="username">
+            </div>
+
+            <p class="formLabel">Password</p>
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cil-lock-locked c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="password" name="password">
+            </div>
+
+            <p class="formLabel">Confirm Password</p>
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cil-lock-locked c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="password" name="password2">
+            </div>
         </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">
-                    <i class="cil-user c-icon"></i>
-                </span>
-            </div>
-            <input class="form-control" type="text" name="contact" placeholder="Contact">
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">
-                    <i class="cil-user c-icon"></i>
-                </span>
-            </div>
-            <input class="form-control" type="text" name="email" placeholder="Email">
-        </div>
 
-        <div class="text-center text-white">
-            <h3>Personal Login Detail</h3>
-            <p>Enter your account detail here</p>
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">
-                    <i class="cil-user c-icon"></i>
-                </span>
-            </div>
-            <input class="form-control" type="text" name="username" placeholder="User Name">
-        </div>
-        <div class="input-group mb-4">
-            <div class="input-group-prepend">
-                <span class="input-group-text">
-                    <i class="cil-lock-locked c-icon"></i>
-                </span>
-            </div>
-            <input class="form-control" type="password" name="password" placeholder="Password">
-        </div>
-        <div class="input-group mb-4">
-            <div class="input-group-prepend">
-                <span class="input-group-text">
-                    <i class="cil-lock-locked c-icon"></i>
-                </span>
-            </div>
-            <input class="form-control" type="password" name="password2" placeholder="Confirm Password">
-        </div>
 
         <!-- <div class="text-center text-white">
                 <h3>Register</h3>
@@ -96,7 +107,7 @@
 
         <div class="row">
             <div class="col-12 text-center">
-                <button class="btn btn-dark btn_register text-white " type="submit">SIGN UP</button>
+                <button class="btn btn-dark theBtn_register text-white " type="submit">SIGN UP</button>
             </div>
         </div>
     </form>
