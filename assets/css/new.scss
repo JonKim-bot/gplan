@@ -1,0 +1,54 @@
+@font-face {
+    font-family: OpenSans-Semibold;
+    src: url("../../assets/css/fonts/OpenSans-Semibold.ttf");
+}
+
+@font-face {
+    font-family: OpenSans-Light;
+    src: url("../../assets/css/fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url("../../assets/css/fonts/OpenSans-Regular.ttf");
+}
+
+
+.register_div {
+    width: 80%;
+    margin: 0 auto 4rem;
+    h1 {
+        font-family: "OpenSans-Semibold";
+        font-size: 38px;
+    }
+    h3 {
+        font-family: "OpenSans-Light";
+        font-size: 18px;
+    }
+}
+
+.gift_div {
+    width: 60%;
+    margin: 0 auto 4rem;
+    img {
+        width: 100%;
+    }
+}
+
+.register_divbtn {
+    .register_btn {
+        border: 1px solid #0069e8;
+        color: #0069e8;
+        border-radius: 36px;
+        font-size: 14px;
+        font-family: "OpenSans-Semibold";
+        padding: 15px 40px;
+        margin-bottom: 1rem;
+        background: #fff;
+    }
+    p {
+        margin-top: 2rem;
+        font-size: 11px;
+        font-family: "OpenSans-Regular";
+    }
+}

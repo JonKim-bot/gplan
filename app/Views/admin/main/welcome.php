@@ -16,6 +16,7 @@
                     'assets/css/core/style.css'
                 ) ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/core/custom.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/new.css') ?>" rel="stylesheet">
     <link href="<?= base_url(
                     'assets/plugins/chartjs/css/chartjs.css'
                 ) ?>" rel="stylesheet">
@@ -29,65 +30,58 @@
 
 </head>
 <style>
-    hr{
-        background:white;
-    }
-    body{
-        background: rgb(43,38,128);
-        display: flex!important;
-    flex-direction: column!important;
-    justify-content:center!important;
-    background: linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;    }
-    .register_div{
-        text-align:center;
-    color: white;
-    }
-    .gift_div{
-        display: flex;
-    justify-content: center;
-    }
-    .gift_div > img{
-        width:80%;
-    }
-    .register_btn{
-        border: none;
-    color: blue;
-    border-radius: 35px;
-    font-size: 5;
-    font-size: 16px;
-    padding: 15px 40px;
-    margin-bottom: 20px;
-    background: black;
-    color: white;
-    margin-bottom: 20px;
-    font-weight: 500;
-    }
-    .login_text{
-        color: white;
-    text-decoration: underline;
-    }
-    .main_div{
-        display: flex;
-        height:90vh;
-    flex-direction: column;
-    justify-content: space-evenly;
+    hr {
+        background: white;
     }
 
+    body {
+        max-width: 425px;
+        background: #000;
+        margin: 0 auto;
+
+    }
+
+    .c-app {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        background: rgb(49, 27, 110);
+        background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%);
+    }
+
+    .register_div {
+        text-align: center;
+        color: white;
+    }
+
+    .login_text {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .main_div {
+        display: flex;
+        height: 90vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 </style>
-<body class="c-app ">
-            <div class="col-md-12 main_div" >
-                <div class="register_div">
-                    <h1>Gplan</h1> 
-                    <hr>
-                    <h3>Register & Get Your<br> Welcome Gift Set</h3>
-                </div>
-                <div class='gift_div'>
-                    <img  src="<?= base_url() ?>/assets/img/gifticon.png" alt="">
-                </div>
-                <div class="col-md-12 justify-content-center text-center">
-                    <a class="register_btn" href="<?= base_url() ?>/main/add/<?= $family_id ?>/<?= $uid ?>">Register Now</a>
-                    <p class="text-white" style="margin-top:20px">Already A Member? <a class="login_text" href="<?= base_url() ?>/access/login"> Login Here</a></p>
-                </div>
+
+<body>
+    <div class="c-app ">
+        <div class=" col-md-12 main_div">
+            <div class="register_div">
+                <h1>Gplan</h1>
+                <hr>
+                <h3>Register & Get Your<br> Welcome Gift Set</h3>
+            </div>
+            <div class='gift_div'>
+                <img src="<?= base_url() ?>/assets/img/gifticon.png" alt="">
+            </div>
+            <div class="col-md-12 justify-content-center text-center register_divbtn">
+                <a class="register_btn" href="<?= base_url() ?>/main/add/<?= $family_id ?>/<?= $uid ?>">Register Now</a>
+                <p class="text-white" >Already A Member? <a class="login_text" href="<?= base_url() ?>/access/login"> Login Here</a></p>
+            </div>
 
 
             <!-- <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url() . "/main/add/" . $family_id; ?>">
@@ -196,8 +190,6 @@
                     </div>
             </div>
             </form> -->
-        </div>
-        </div>
         </div>
 
         <!-- CoreUI and necessary plugins-->
