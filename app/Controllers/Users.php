@@ -185,6 +185,7 @@ class Users extends BaseController
     {
         
         $where = [
+
             'users.is_paid' => 1,
         ];
         $is_verified =
@@ -557,6 +558,7 @@ class Users extends BaseController
         $this->pageData['users'] = $users;
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
         $field = $this->UsersModel->get_field([
+            
             'created_by',
 
             'modified_by',
@@ -585,9 +587,21 @@ class Users extends BaseController
 
     public function user_detail($users_id)
 
-
-
     {
+        if (session()->get('login_data')['type_id'] == '1') { 
+
+            $users_id = session()->get('login_id');
+        }
+        // dd($users_id);
+        
+        $where = [
+            'users.users_id' => $users_id,
+        ];
+
+        $users = $this->UsersModel->getWhere($where)[0];
+
+        $this->pageData['users'] = $users;
+
 
         echo view('admin/header', $this->pageData);
         echo view('admin/users/user_detail');
@@ -657,6 +671,7 @@ class Users extends BaseController
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
         $field = $this->UsersModel->get_field([
             'created_by',
+
 
             'modified_by',
             'deleted',
@@ -875,12 +890,14 @@ class Users extends BaseController
                 $data = $this->upload_image_with_data($data, 'nric_back');
 
                 // $data = $this->upload_image_with_data($data, 'ssm_cert');
+                if(!empty($input['password'])){
 
-                if ($input['password'] != '') {
-                    $hash = $this->hash($input['password']);
-                    $data['password'] = $hash['password'];
-
-                    $data['salt'] = $hash['salt'];
+                    if ($input['password'] != '') {
+                        $hash = $this->hash($input['password']);
+                        $data['password'] = $hash['password'];
+    
+                        $data['salt'] = $hash['salt'];
+                    }
                 }
                 $this->UsersModel->updateWhere($where, $data);
 

@@ -53,11 +53,14 @@
   min-height: 100vh;
 }
 .bg_color{
-  background: rgb(43,38,128);
+  background: rgb(49,27,110);
+background: linear-gradient(180deg, rgba(49,27,110,1) 0%, rgba(46,195,201,1) 100%);
+
+  /* background: rgb(43,38,128); */
         /* display: flex!important;
     flex-direction: column!important;
     justify-content:center!important; */
-background: linear-gradient(90deg, rgba(43,38,128,1) 0%, rgba(40,40,187,1) 100%, rgba(110,168,180,0.3841911764705882) 100%);
+/* background: linear-gradient(90deg, rgba(43,38,128,1) 0%, rgba(40,40,187,1) 100%, rgba(110,168,180,0.3841911764705882) 100%); */
 }
 .c-app.c-dark-theme {
   --primary: #4638c2;
@@ -83,6 +86,7 @@ background: linear-gradient(90deg, rgba(43,38,128,1) 0%, rgba(40,40,187,1) 100%,
   --dark: #2f353a;
   color: #23282c;
   background-color: #e4e5e6;
+
   --color: #23282c;
 }
 

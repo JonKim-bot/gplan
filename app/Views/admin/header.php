@@ -45,6 +45,7 @@
 
 </head>
 
+
 <body class="c-app">
     <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show <?=(session()->get('login_data')['type_id'] == '1') ? 'd-none' : '' ?>"  id="sidebar">
         <div class="c-sidebar-brand d-md-down-none">
@@ -346,7 +347,13 @@ QR Code
     </ul>
     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-unfoldable"></button>
     </div>
+    <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
+
     <div class="c-wrapper c-fixed-components">
+        <?php }else{ ?>
+            <div class="c-wrapper c-fixed-components" style="margin:0px;">
+
+        <?php } ?>
          <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
 
         <header class="c-header c-header-light c-header-fixed">
