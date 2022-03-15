@@ -92,6 +92,12 @@
                 <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
               </a>
             </div>
+            <div>
+              <h5 class="text-white font-weight-bold">Transaction</h5>
+            </div>
+            <div>
+
+            </div>
 
           </div>
 

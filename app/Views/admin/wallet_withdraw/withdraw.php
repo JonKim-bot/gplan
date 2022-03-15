@@ -94,6 +94,9 @@
                 <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
               </a>
             </div>
+            <div>
+              <h5 class="text-white font-weight-bold">Withdraw</h5>
+            </div>
             <div class="icon_top" data-toggle="modal" data-target="#status_modal">
               <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
             </div>

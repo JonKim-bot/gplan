@@ -1,6 +1,7 @@
 <?php
 
 
+
 /**
  * The goal of this file is to allow developers a location
  * where they can overwrite core procedural functions and
@@ -55,15 +56,15 @@
 
     function get_level($level){
         if($level <= 2){
-            return "member";
+            return "Member";
         }
         else if($level <= 3){
-            return "supervisor";
+            return "Supervisor";
         }else if($level <= 6){
-            return "manager";
+            return "Manager";
         }else 
         {
-            return "director";
+            return "Director";
         }
     }
 

@@ -107,13 +107,23 @@ html, body {
         transform: translate(-130%, -48%);
     }
 }
+.c-body{
+    position: relative;
+    max-width: 500px;
+    min-height: 787px;
+    margin: 0 auto;
+    background-color: #fff;
+    justify-content: center;
+    overflow: hidden;
+  }
+
 </style>
 <?php 
   
 
 ?>
 
-<div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;margin-top:20px;">
+<div class="col-sm-12 d-flex" style="width: 100vw;justify-content: space-between;margin-bottom:20px;margin-top:20px;">
                 <!-- <a href="">+</a> -->
                 <div class="icon_top">
                     <a href="<?= base_url() ?>/users/dashboard/1">
