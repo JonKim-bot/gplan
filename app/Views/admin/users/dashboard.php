@@ -33,7 +33,6 @@
   .c-QR img {
     width: 100%;
   }
-  
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -46,9 +45,14 @@
 </header>
 
 <div class="c-body">
-  <main class="c-main">
+  <main class="c-main c-dashboard">
     <div class="container-fluid">
       <div class="fade-in">
+        <div class="d-flex ">
+          <div>
+
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-12 col-lg-3">
             <div class="card text-white bg-gradient-primary" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
@@ -63,30 +67,30 @@
                 </div>
                 <?php if ($users['is_verified'] == 1) { ?>
 
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="c-withButton d-flex justify-content-center align-items-center py-1 px-3 br-3">
-                    <div class="icon mr-2">
-                      <i class="fa fa-money-bill fa-2x"></i>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="c-withButton d-flex justify-content-center align-items-center py-1 px-3 br-3">
+                      <div class="icon mr-2">
+                        <i class="fa fa-money-bill fa-2x"></i>
+                      </div>
+                      <a href="<?= base_url() ?>/Withdraw/withdraw" style="color:white">
+
+                        <p class="m-0">
+                          <?= $lang['withdraw'] ?>
+                        </p>
+                      </a>
                     </div>
-                    <a href="<?= base_url() ?>/Withdraw/withdraw" style="color:white">
+                    <div class="py-1 px-3 br-3">
+                      <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
 
-                      <p class="m-0">
-                        <?= $lang['withdraw'] ?>
-                      </p>
-                    </a>
+                        <p class="m-0">
+                          <?= $lang['transaction_history'] ?> >
+                        </p>
+                      </a>
+                    </div>
+
                   </div>
-                  <div class="py-1 px-3 br-3">
-                    <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
-
-                      <p class="m-0">
-                        <?= $lang['transaction_history'] ?> >
-                      </p>
-                    </a>
-                  </div>
-
-                </div>
                 <?php } ?>
-                
+
                 <div class="d-flex justify-content-between align-items-center">
 
                   <div class="py-1 ">
@@ -111,22 +115,22 @@
 
                 <?php if ($users['is_verified'] == 1) { ?>
 
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="c-withButton d-flex justify-content-center align-items-center py-1 px-3 br-3">
-                    <div class="icon mr-2">
-                      <i class="fa fa-users fa-2x"></i>
-                    </div>
-                    <a href="<?= base_url() ?>/Users/my_group" style="color:white">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="c-withButton d-flex justify-content-center align-items-center py-1 px-3 br-3">
+                      <div class="icon mr-2">
+                        <i class="fa fa-users fa-2x"></i>
+                      </div>
+                      <a href="<?= base_url() ?>/Users/my_group" style="color:white">
 
-                      <p class="m-0">
-                        <?= $lang['my_group'] ?>
-                      </p>
-                    </a>
+                        <p class="m-0">
+                          <?= $lang['my_group'] ?>
+                        </p>
+                      </a>
+                    </div>
+
+
                   </div>
 
-
-                </div>
-                
                 <?php } ?>
 
               </div>
@@ -201,8 +205,8 @@
             <div class="col-sm-12 col-lg-3">
               <div class="card text-white c-shadow" style="border-radius: 20px;">
                 <div class="c-QR">
-                <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=<?= base_url() ?>/main/welcome/<?= $family_id ?>/<?= $users_id ?>&choe=UTF-8" 
-                                      style="margin: auto; display: block; margin-left: auto; margin-right: auto;">              </div>
+                  <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=<?= base_url() ?>/main/welcome/<?= $family_id ?>/<?= $users_id ?>&choe=UTF-8" style="margin: auto; display: block; margin-left: auto; margin-right: auto;">
+                </div>
                 <div class="text-white" style="padding:50px; border-bottom-left-radius: 20px;border-bottom-right-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
                   <div class="row">
                     <div class="col-12">
@@ -314,7 +318,7 @@
                       <h1>Bank Detail</h1>
                       <p class="text-muted">Please Submit your receipt to bank below</p>
                       <div class="text-center">
-                        <img src="<?= base_url() .  ($qrcode)?>" alt="">
+                        <img src="<?= base_url() .  ($qrcode) ?>" alt="">
                       </div>
                       <br>
 
@@ -329,13 +333,13 @@
                       </div>
 
                       <div class="form-group">
-                                    <button class="btn btn-primary float-right" type="submit"> Submit</button>
-                                </div>
+                        <button class="btn btn-primary float-right" type="submit"> Submit</button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-              <?php }else{ ?>
+              <?php } else { ?>
                 <div class="card-group" style="margin-top: 20px;">
                   <div class="card">
                     <div class="card-body">
@@ -345,7 +349,7 @@
                         <img style="width:100%" src="<?= base_url() .  $users['receipt'] ?>" alt="">
                       </div>
                       <br>
-                  
+
                     </div>
                   </div>
                 </div>
