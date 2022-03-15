@@ -132,13 +132,9 @@
             
                                                                         <a href="<?= base_url() ?>/Users/verify_user/<?= $users[
     'users_id'
-] ?>" class="btn btn-<?= $users['is_verified'] == 1
-    ? 'success'
-    : 'asd' ?>"><?= $users['is_verified'] == 1
-    ? 'Verified'
-    : 'Not verified' ?></a>
+] ?>" class="btn btn-danger'">Not Verified</a>
                                                                     <?php } else { ?>
-                                                                        <a  class="btn btn-primary text-white">Verified</a>
+                                                                        <a  class="btn btn-success text-white">Verified</a>
             
                                                                     <?php } ?>
                                                             <?php } ?>
@@ -185,6 +181,7 @@
                                                                                 <option value="0" <?= $users['type_id'] == 0 ? 'selected' : '' ?>>Level 8 User</option>
                                                                                 <option value="1" <?= $users['type_id'] == 1 ? 'selected' : '' ?>>Level 9 User</option>
                                                                                 <option value="2" <?= $users['type_id'] == 2 ? 'selected' : '' ?>>Level 10 User</option>
+                                                                                
                                                                                 <option value="3" <?= $users['type_id'] == 3 ? 'selected' : '' ?>>Level 11 User</option>
                                                                                 <option value="4" <?= $users['type_id'] == 4 ? 'selected' : '' ?>>Level 12 User</option>
                                                                                 <option value="5" <?= $users['type_id'] == 5 ? 'selected' : '' ?>>Level 13 User</option>

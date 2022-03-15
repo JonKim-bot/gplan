@@ -226,13 +226,14 @@ class Users extends BaseController
 
             if($row['self_family_id'] > 0){
                 $where = [
+
                     'family.family_id' => $row['self_family_id']
                 ];
                 $user_in_family = $this->FamilyModel->getWhere($where);
     
                 if(!empty($user_in_family)){
                     $link_family_id = $user_in_family[0]['link_family_id'];
-                    $family_name = $this->FamilyModel->get_upline_info($link_family_id);
+                    $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
                 }
                 $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']])[0]['name'];
             }
@@ -554,7 +555,7 @@ class Users extends BaseController
             if(!empty($user_in_family)){
                 $link_family_id = $user_in_family[0]['link_family_id'];
 
-                $family_name = $this->FamilyModel->get_upline_info($link_family_id);
+                $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
             }
             $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
         }
@@ -645,9 +646,8 @@ class Users extends BaseController
 
     {
 
-
         if (session()->get('login_data')['type_id'] == '1') { 
-
+            
             $users_id = session()->get('login_id');
         }
         // dd($users_id);
@@ -670,7 +670,8 @@ class Users extends BaseController
             if(!empty($user_in_family)){
                 $link_family_id = $user_in_family[0]['link_family_id'];
                 
-                $family_name = $this->FamilyModel->get_upline_info($link_family_id);
+                $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
+          
             }
             $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
         }
@@ -679,7 +680,6 @@ class Users extends BaseController
         $users['upline_name'] = $upline_name;
 
         // }
-
         $this->pageData['users'] = $users;
 
 

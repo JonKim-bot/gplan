@@ -184,7 +184,7 @@ class FamilyModel extends BaseModel
 
             return $users[0];
         }else{
-            
+
             return "-None-";
         }
     }
@@ -198,6 +198,7 @@ class FamilyModel extends BaseModel
     public function get_upline_infomation($link_family_id){
         $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray()[0]['user_id'];
         $user_info = $this->get_users_info($upline_id);
+
         return $user_info;
     }
 
@@ -217,6 +218,7 @@ class FamilyModel extends BaseModel
         }
         echo "<br>The number is: $total_commision <br>";
         return $total_commision;
+        
     }
     public function give_over_commision_to_upline($user_id){
        
