@@ -701,6 +701,7 @@ class Users extends BaseController
         $this->pageData['qrcode'] = $qrcode;
         $this->pageData['total_earn'] = $this->WalletModel->get_total_earn($users_id);
         $this->pageData['total_withdraw'] = $this->WalletModel->get_total_withdraw($users_id);
+
         
         echo view('admin/header', $this->pageData);
 
@@ -711,7 +712,7 @@ class Users extends BaseController
 
 
     public function my_group($users_id  = 1){
-        $this->FamilyModel->insert_extra_commission(30);
+        // $this->FamilyModel->insert_extra_commission(30);
         if (session()->get('login_data')['type_id'] == '1') { 
 
             $users_id = session()->get('login_id');
@@ -906,7 +907,7 @@ class Users extends BaseController
             }
         }
 
-        
+
 
         // $this->pageData['form'] = $this->UsersModel->generate_edit_input($users_id);
         $this->pageData[
