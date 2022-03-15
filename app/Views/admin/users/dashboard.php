@@ -34,6 +34,16 @@
     width: 100%;
   }
   
+  .c-body{
+    position: relative;
+    max-width: 500px;
+    min-height: 787px;
+    margin: 0 auto;
+    background-color: #fff;
+    justify-content: center;
+    overflow: hidden;
+  }
+
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -50,7 +60,7 @@
     <div class="container-fluid">
       <div class="fade-in">
         <div class="row">
-          <div class="col-sm-12 col-lg-3">
+          <div class="col-sm-12 col-lg-12">
             <div class="card text-white bg_color" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
               <div class="card-status card-body card-body" style="">
                 <div>
@@ -136,7 +146,7 @@
             </div>
           </div>
           <!-- /.col-->
-          <div class="col-sm-12 col-lg-3">
+          <div class="col-sm-12 col-lg-12">
             <div class="row no-gutters mb-3">
               <div class="col-3 d-flex justify-content-center">
                 <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
@@ -213,7 +223,7 @@
           <!-- /.col-->
           <?php if ($users['is_verified'] == 1) { ?>
 
-            <div class="col-sm-12 col-lg-3">
+            <div class="col-sm-12 col-lg-12">
               <div class="card text-white c-shadow" style="border-radius: 20px;">
                 <div class="c-QR">
                 <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=<?= base_url() ?>/main/welcome/<?= $family_id ?>/<?= $users_id ?>&choe=UTF-8" 
@@ -242,7 +252,7 @@
           <?php } ?>
 
 
-          <div class="col-sm-12 col-lg-3">
+          <div class="col-sm-12 col-lg-12">
 
             <div class="slick-slider-promo">
               <?php foreach ($banner as $row) { ?>
