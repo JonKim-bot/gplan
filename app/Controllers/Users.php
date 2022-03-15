@@ -426,6 +426,7 @@ class Users extends BaseController
         ];
         $users = $this->UsersModel->getWhere($where)[0];
 
+
         if($users['is_paid'] == 1){
             $is_paid = 0;
         }else{
@@ -1058,7 +1059,7 @@ class Users extends BaseController
         $tree = $users_1;
         
 
-        // dd($tree);
+        dd($tree);
         $ulli = $this->createListLi($tree);
         
 

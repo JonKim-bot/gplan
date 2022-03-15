@@ -1,8 +1,7 @@
 <div class="c-subheader justify-content-between px-3">
 	<ol class="breadcrumb border-0 m-0 px-0 px-md-3">
-		<li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item"><a href="<?= base_url() ?>/Banner">Banner</a></li>
-        <li class="breadcrumb-item active"><a href="<?= base_url() ?>/banner/edit/<?= $banner['banner_id']?>">Edit Banner Details</a></li>
+		<li class="breadcrumb-item">Tng Qr Code</li>
+        <!-- <li class="breadcrumb-item active"><a href="<?= base_url() ?>/banner/edit/<?= $banner['banner_id']?>">Edit Banner Details</a></li> -->
 	</ol>
 	<!-- <div class="c-subheader-nav d-md-down-none mfe-2">
 		<a class="c-subheader-nav-link" href="#">
