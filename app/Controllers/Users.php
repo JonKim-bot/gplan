@@ -254,6 +254,7 @@ class Users extends BaseController
                 //     $upline_name = $this->UsersModel->getWhere(['users.users_id' => $link_family_id])[0]['name'];
                 // }
 
+
             }
             $users[$key]['upline_name'] = $upline_name;
 
@@ -437,6 +438,29 @@ class Users extends BaseController
         dd($family_id);
     }
 
+    public function set_paid($users_id){
+
+        $where = [
+            'users.users_id' => $users_id
+        ];
+        $users = $this->UsersModel->getWhere($where)[0];
+
+        if($users['is_verified'] == 0){
+            $is_verified = 1;
+            $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
+            $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
+            // dd($users['family_id']);
+            $family_id = $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
+            $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
+        }
+        
+        $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
+
+        return redirect()->to($_SERVER['HTTP_REFERER']);
+
+    }
+
+
 
     public function verify_user($users_id){
 
@@ -454,12 +478,8 @@ class Users extends BaseController
             // dd($users['family_id']);
             $family_id = $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
             $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
-        }else{
-            $is_verified = 0;
-
-
+            $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
         }
-        $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
 
 
         return redirect()->to($_SERVER['HTTP_REFERER']);
@@ -685,7 +705,7 @@ class Users extends BaseController
                 'family.user_id' => $users['users_id']
             ];
 
-            
+
             $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
 
         }
@@ -718,6 +738,7 @@ class Users extends BaseController
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
         $family_id = 0;
         
+
 
         $family = $this->FamilyModel->getWhere(['family.user_id' => $users_id]);
         if(!empty($family)){
@@ -943,6 +964,8 @@ class Users extends BaseController
         $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
         $level = $this->FamilyModel->user_family($family_id) - 1;
         $family_tree = $this->FamilyModel->user_family_tree($family_id);
+
+        // dd($family_tree);
         $level_arr = [];
         for ($x = 1; $x <= $level ; $x++) {
 

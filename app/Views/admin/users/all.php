@@ -111,13 +111,13 @@
 
 
                                                     <?php if($row['is_verified'] == 0){ ?>
-                                                    <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Not verified" ?></a></td>
+                                                    <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_verified'] == 1 ? "success" : "danger" ?>"><?= $row['is_verified'] == 1 ? "Verified" : "Mark as verify" ?></a></td>
                                                     <?php }else{ ?>
                                                         <td>Verified</td>
                                                     <?php } ?>
                                                     
                                                     <?php if($row['is_paid'] == 0){ ?>
-                                                    <td><a href="<?= base_url() ?>/Users/verify_user/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_paid'] == 1 ? "success" : "danger" ?>"><?= $row['is_paid'] == 1 ? "Paid" : "Not Paid" ?></a></td>
+                                                    <td><a href="<?= base_url() ?>/Users/set_paid/<?= $row['users_id'] ?>" class="btn btn-<?= $row['is_paid'] == 1 ? "success" : "danger" ?>"><?= $row['is_paid'] == 1 ? "Paid" : "Mark as paid" ?></a></td>
                                                     <?php }else{ ?>
                                                         <td>Paid</td>
                                                     <?php } ?>

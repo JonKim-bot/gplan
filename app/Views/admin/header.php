@@ -412,6 +412,10 @@ QR Code
                         <div class="dropdown-header bg-light py-2">
                             <strong> <?= session()->get('login_data')['name'] ?></strong>
                         </div>
+                        <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
+                        <i class="cil-user c-icon mfe-2"></i>
+                            Profile
+                        </a>
                         <!-- <a class="dropdown-item" href="#">
                             <i class="cil-user c-icon mfe-2"></i>
                             Profile
