@@ -51,7 +51,7 @@
       <div class="fade-in">
         <div class="row">
           <div class="col-sm-12 col-lg-3">
-            <div class="card text-white bg-gradient-primary" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
+            <div class="card text-white bg_color" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
               <div class="card-status card-body card-body" style="">
                 <div>
                   <div> <?= $lang['your_point'] ?></div>
@@ -266,52 +266,35 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <h5 class="modal-title" id="modalAddLabel"><?= $lang['status'] ?></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <form enctype="multipart/form-data" method="POST" action="<?= base_url('Users/submit_receipt'); ?>">
-              <div class="modal-body">
+              <div class="modal-body text-center">
 
-                <div class="card text-white bg-gradient-primary">
-                  <div class="card-status card-body card-body pb-0 d-flex justify-content-between align-items-start">
-                    <div>
-                      <i class="fa fa-compass fa-2x"></i>
-
-                      <div><?= $lang['status'] ?></div>
-                      <?php if ($users['is_verified'] == 1) { ?>
+                    <div><?= $lang['status'] ?></div>
+                    <hr>  
+                    <?php if ($users['is_verified'] == 1) { ?>
                         <div class="text-value-lg">
                           <?= $lang['verified'] ?>
                         </div>
+                        
 
                       <?php } else { ?>
-                        <div class="text-value-lg">
+                        <div class="text-value-lg text-danger">
                           <?= $lang['not_verified'] ?>
                         </div>
                       <?php } ?>
                     </div>
-                    <div class="btn-group">
-                      <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <svg class="c-icon">
-                            <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
-                          </svg>
-                        </button> -->
-                      <!-- <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div> -->
-                    </div>
-                  </div>
-                  <!-- <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"> -->
-                  <!-- <canvas class="chart" id="card-chart1" height="70"></canvas> -->
-                  <!-- </div> -->
-                </div>
-
-              </div>
               <?php if ($users['receipt'] == "") { ?>
 
-                <div class="card-group" style="margin-top: 20px;">
+                <div class="card-group text-center" style="margin-top: 20px;">
                   <div class="card">
                     <div class="card-body">
                       <h1>Bank Detail</h1>
+                      <hr>  
+
                       <p class="text-muted">Please Submit your receipt to bank below</p>
                       <div class="text-center">
                         <img src="<?= base_url() .  ($qrcode)?>" alt="">
