@@ -218,7 +218,7 @@ class FamilyModel extends BaseModel
         }
         echo "<br>The number is: $total_commision <br>";
         return $total_commision;
-        
+
     }
     public function give_over_commision_to_upline($user_id){
        
@@ -250,6 +250,7 @@ class FamilyModel extends BaseModel
         //get level of upline here 
         foreach($upline as $row){
             $type_id = $this->get_upline_info($row);
+
             //check upline role here 
             $full = false;
             $result = $this->recursive_users([[$row]]);
@@ -533,54 +534,68 @@ class FamilyModel extends BaseModel
 
 
    
+    public function user_family_id($user_id){
+        $where = [
+            'family.user_id' => $user_id,
+        ];
 
+        $family_users_id = $this->getWhereRaw($where)[0]['family_id'];
+        return $family_users_id;
+    }
     public function getTree($user_id)
     {
-        $this->builder->select("*");
-        $this->builder->where("link_family_id", $user_id);
-        $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
-        $this->builder->where("family.deleted", 0);
+        
+        // $this->builder->select("family.*,users.username");
+        // $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
+        // $this->builder->where("family.link_family_id", $this->user_family_id($user_id));
+        // $this->builder->where("family.deleted", 0);
+        // die($this->builder->getCompiledSelect(false));
 
-        $users = $this->builder->get()->getResultArray();
+        // $users = $this->builder->get()->getResultArray();
+        $sql = "SELECT family.*,users.username,users.users_id FROM family 
+        INNER JOIN users
+        ON users.users_id = family.user_id
+        WHERE family.link_family_id = ".$this->user_family_id($user_id)."
+        AND family.deleted = 0";
+        $users = $this->db->query($sql)->getResultArray();
         foreach ($users as $key => $row) {
             // $users[$key]['self_sales'] = $this->getSelfSales($row['user_id']);
             // $users[$key]['total_received_point'] = $this->PointModel->get_total_received_point($row['user_id']);
             // $users[$key]['group_sales'] = $this->getGroupTotalSales($row['user_id']);
             // $users[$key]['downline_count'] = $this->recursive_get_downline_count($row['user_id']);
             // //included own sales
-            $this->builder->select("*");
-            $this->builder->where("link_family_id", $row['user_id']);
-            $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
+            $sql = "SELECT family.*,users.username,users.users_id FROM family 
+            INNER JOIN users
+            ON users.users_id = family.user_id
+            WHERE family.link_family_id = ".$this->user_family_id($row['users_id'])."
+            AND family.deleted = 0";
+            $child = $this->db->query($sql)->getResultArray();
 
-            $this->builder->where("family.deleted", 0);
-
-            $child = $this->builder->get()->getResultArray();
             foreach ($child as $ckey => $crow) {
                 // $child[$ckey]['self_sales'] = $this->getSelfSales($crow['user_id']);
                 // $child[$ckey]['total_received_point'] = $this->PointModel->get_total_received_point($crow['user_id']);
                 // $child[$ckey]['group_sales'] = $this->getGroupTotalSales($crow['user_id']);
                 // $child[$ckey]['downline_count'] = $this->recursive_get_downline_count($crow['user_id']);
 
-                $this->builder->select("*");
-                $this->builder->where("link_family_id", $crow['user_id']);
-                $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
+                $sql = "SELECT family.*,users.username,users.users_id FROM family 
+                INNER JOIN users
+                ON users.users_id = family.user_id
+                WHERE family.link_family_id = ".$this->user_family_id($crow['users_id'])."
+                AND family.deleted = 0";
+                $gchild = $this->db->query($sql)->getResultArray();
 
-                $this->builder->where("family.deleted", 0);
-
-                $gchild = $this->builder->get()->getResultArray();
                 foreach ($gchild as $gkey => $grow) {
                     // $gchild[$gkey]['self_sales'] = $this->getSelfSales($grow['user_id']);
                     // $gchild[$gkey]['total_received_point'] = $this->PointModel->get_total_received_point($grow['user_id']);
                     // $gchild[$gkey]['group_sales'] = $this->getGroupTotalSales($grow['user_id']);
                     // $gchild[$gkey]['downline_count'] = $this->recursive_get_downline_count($grow['user_id']);
-
-                    $this->builder->select("*");
-                    $this->builder->where("link_family_id", $grow['user_id']);
-                    $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
-
-                    $this->builder->where("family.deleted", 0);
-    
-                    $ggchild = $this->builder->get()->getResultArray();
+                    $sql = "SELECT family.*,users.username,users.users_id FROM family 
+                    INNER JOIN users
+                    ON users.users_id = family.user_id
+                    WHERE family.link_family_id = ".$this->user_family_id($grow['users_id'])."
+                    AND family.deleted = 0";
+                    $ggchild = $this->db->query($sql)->getResultArray();
+                    
                     foreach ($ggchild as $ggkey => $ggrow) {
                         // $ggchild[$ggkey]['self_sales'] = $this->getSelfSales($ggrow['user_id']);
                         // $ggchild[$ggkey]['total_received_point'] = $this->PointModel->get_total_received_point($ggrow['user_id']);
@@ -591,6 +606,7 @@ class FamilyModel extends BaseModel
             
                     $gchild[$gkey]['children'] = $ggchild;
 
+                    
                 }
                 $child[$ckey]['children'] = $gchild;
             }
