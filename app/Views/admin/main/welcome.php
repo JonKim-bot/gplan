@@ -30,9 +30,6 @@
 
 </head>
 <style>
-    hr {
-        background: white;
-    }
 
     body {
         max-width: 425px;
@@ -47,11 +44,6 @@
         justify-content: center !important;
         background: rgb(49, 27, 110);
         background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%);
-    }
-
-    .register_div {
-        text-align: center;
-        color: white;
     }
 
     .login_text {
