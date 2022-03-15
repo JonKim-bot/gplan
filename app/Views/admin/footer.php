@@ -3,11 +3,14 @@
                         </div>
                         </main>
                         </div>
+                        <?php   if (session()->get('login_data')['type_id'] == '0') { ?>
+
                         <footer class="c-footer">
                             <!-- <div><a href="#">Gplan.</a> &copy; 2020 Creative Labs.</div> -->
                             <!-- <div class="ml-auto">Powered by&nbsp;<a href="#">wynndarrien</a></div> -->
                         </footer>
 
+                        <?php } ?>
 
 
 

@@ -40,8 +40,23 @@
     margin: 0 auto;
     background-color: #fff;
     justify-content: center;
-    overflow: auto;
+    overflow: hidden;
   }
+  .card-top{
+    display: flex;
+    height: 170px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon_top {
+    border-radius: 50%;
+    color: white !important;
+    padding: 5px;
+  }
+ .bold{
+   font-weight:bold;
+ }
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -53,17 +68,24 @@
 
 </header>
 <div class="c-body">
-  <main class="c-main">
-    <div class="container-fluid">
-      <div class="fade-in">
         <div class="row">
-          <div class="col-sm-12 col-lg-3">
-            <div class="card text-white bg-gradient-primary" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-              <div class="card-status card-body card-body pb-0">
+       
+          <div class="col-sm-12 col-lg-12">
+            <div class="card text-white bg_color" style="">
+            <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-top:20px;">
+            <!-- <a href="">+</a> -->
+            <div class="icon_top">
+              <a href="<?= base_url() ?>/users/dashboard/1">
+                <i class="fa fa-arrow-left fa-2x text-white" aria-hidden="true"></i>
+              </a>
+            </div>
+       
+          </div>
+              <div class="card-stats card-top pb-0">
                 <div>
                   <div class="text-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/2048px-User_icon_2.svg.png" width="21%" alt="">
-                    <p>Welcome Jon</p>
+                    <img src="<?= base_url() ?>/assets/img/Group 170.png" width="80px" alt="">
+                    <p>Jon</p>
                   </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
@@ -78,41 +100,81 @@
           <!-- /.col-->
           
           <!-- /.col-->
-          <div class="col-sm-12 col-lg-3">
-            <div class="card text-white c-shadow" style="border-radius: 20px;">
-              <div class="c-QR row text-dark" style="width:90%">
+          <div class="col-sm-12 col-lg-12">
+              <div class="c-QR row text-dark" style="width:80%">
                 <div class="col-6">
-                    <p>asdasd</p>
+                    <p>Email</p>
                 </div>
                 <div class="col-6">
-                    <p>asdasd</p>
+                    <p class="bold"><?= $users['email'] ?></p>
                 </div>
                 <div class="col-12">
                 <hr>
                 </div>
                 <div class="col-6">
-                    <p>asdasd</p>
+                    <p>Contact</p>
                 </div>
                 <div class="col-6">
-                    <p>asdasd</p>
+                    <p class="bold"><?= $users['contact'] ?></p>
                 </div>
+
                 <div class="col-12">
                 <hr>
                 </div>
                 <div class="col-6">
-                    <p>asdasd</p>
+                  <p>Proof of receipt</p>
                 </div>
                 <div class="col-6">
-                    <p>asdasd</p>
                 </div>
                 <div class="col-12">
-                <hr>
+                <div class="col-12">
+                  <img src="<?= base_url()  . $users['receipt']?>" witdh="100%" alt="">
                 </div>
+                
+              </div>
+              <div class="col-12 text-center">
+                  <a data-toggle="modal" class="btn btn-primary text-white mt-5" data-target="#status_modal">Edit</a>
+              </div>
               </div>
               
-            </div>
           </div>
           <!-- /.col-->
-        </div>
         <!-- /.row-->
+
+
+        
+      <div class="modal fade" id="status_modal" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAddLabel">Edit</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url()?>/users/edit/<?=$users["users_id"]?>">
+              <div class="modal-body">
+ 
+
+                  <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" value="<?=  $users['name'] ?>" name="name" placeholder="Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="">Contact Number</label>
+                        <input type="text" class="form-control" name="contact" value="<?=  $users['contact'] ?>" placeholder="Contact Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" name="email" value="<?=  $users['email'] ?>" placeholder="Email" required>
+                    </div>
+                  </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary"><?= $lang['save'] ?></button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>

@@ -33,6 +33,7 @@
   .c-QR img {
     width: 100%;
   }
+  
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
