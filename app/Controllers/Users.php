@@ -685,8 +685,7 @@ class Users extends BaseController
                 'family.user_id' => $users['users_id']
             ];
 
-
-
+            
             $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
 
         }
