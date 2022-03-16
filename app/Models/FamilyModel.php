@@ -131,6 +131,7 @@ class FamilyModel extends BaseModel
 
 
 
+
     public function insert_new_member($new_member, $family_id){
 
         $new_family_id = 0;
@@ -605,6 +606,7 @@ class FamilyModel extends BaseModel
 
             foreach ($child as $ckey => $crow) {
                 // $child[$ckey]['self_sales'] = $this->getSelfSales($crow['user_id']);
+
                 // $child[$ckey]['total_received_point'] = $this->PointModel->get_total_received_point($crow['user_id']);
                 // $child[$ckey]['group_sales'] = $this->getGroupTotalSales($crow['user_id']);
                 $child[$ckey]['balance'] = $this->WalletModel->get_balance($crow['user_id']);
