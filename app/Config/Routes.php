@@ -30,7 +30,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Access::login');
+$routes->get('/', 'Access::loginAdmin');
 
 //Dashboard Routes
 // $routes->match(['get','post','put','delete'], '/', 'Dashboard::index', ['filter' => 'auth']);
