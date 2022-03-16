@@ -253,7 +253,14 @@ class Users extends BaseController
         echo view('admin/footer');
     }
 
+    public function verify_all_user(){
 
+        $users = $this->UsersModel->getAllRaw();
+        foreach($users as $row){
+            $this->verify_user_func($row['users_id']);
+        }
+        
+    }
 
     public function index()
     {
@@ -295,6 +302,7 @@ class Users extends BaseController
 
 
         foreach($users as $key => $row){
+
             $family_name = '';
             // dd($key);
             $upline_name = '';
@@ -391,8 +399,8 @@ class Users extends BaseController
             }
         }
         
-    }
 
+    }
 
     public function add()
     
@@ -428,7 +436,7 @@ class Users extends BaseController
                 $data = [
                     'name' => $input['name'],
                     'email' => $input['email'],
-                    
+
                     'username' => $input['username'],
                     'contact' => $input['contact'],
                     'password' => $hash['password'],
@@ -521,6 +529,30 @@ class Users extends BaseController
         }else{
              return redirect()->to(base_url('users'));
         }
+
+    }
+
+    
+    public function verify_user_func($users_id){
+
+        $where = [
+            'users.users_id' => $users_id
+        ];
+        $users = $this->UsersModel->getWhere($where)[0];
+
+
+
+        if($users['is_verified'] == 0){
+            $is_verified = 1;
+            $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
+            $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
+            // dd($users['family_id']);
+
+            $family_id = $this->FamilyModel->insert_new_member($users_id,$users['family_id']);
+            $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
+            $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
+        }
+
 
     }
 

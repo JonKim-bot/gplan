@@ -205,10 +205,15 @@ class FamilyModel extends BaseModel
         }
     }
     public function get_upline_infomation($link_family_id){
-        $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray()[0]['user_id'];
+        $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray();
         if(!empty($upline_id)){
+            $upline_id = $upline_id[0];
             $user_info = $this->get_users_info($upline_id);
             return $user_info;
+        }else{
+            $user_info = [];
+            $user_info['username'] = 'None';
+            return $user_info ;
         }
     }
 
@@ -391,6 +396,7 @@ class FamilyModel extends BaseModel
     public function insert_commission($family_id){
         $this->WalletModel = new WalletModel();
         $this->UsersModel = new UsersModel();
+
 
         $upline = $this->recursive_upline($family_id); // find all upline
         //get level of upline here 

@@ -90,6 +90,60 @@ class BaseModel extends Model
             $this->primaryKey = strtolower($this->primaryKey);
         }
     }
+    public function getAllRaw($limit = '', $page = 1, $filter = [])
+    {
+        // $this->builder = $this->db->table($this->tableName);
+        // $this->builder->select('*');
+
+        // $query = $this->builder->get();
+        // return $query->getResultArray();
+
+        // $fields = $this->db->getFieldNames($this->tableName);
+
+        $deleted = false;
+        // foreach ($fields as $row) {
+        //     if ($row == "deleted") {
+        //         $deleted = true;
+        //     }
+        // }
+
+        $this->setRunningNo();
+
+        $this->builder->select('*');
+        // if ($deleted) {
+        $this->builder->where($this->tableName . '.deleted', 0);
+        // }
+
+        $this->builder->where($this->tableName . '.deleted', 0);
+
+        // die($this->builder->getCompiledSelect(false));
+
+        if ($limit != '') {
+            $count = $this->getCount($filter);
+            $offset = ($page - 1) * $limit;
+            $pages = $count / $limit;
+            $pages = ceil($pages);
+
+            $pagination = $this->getPaging(
+                $limit,
+                $offset,
+                $page,
+
+                $pages,
+                $filter
+            );
+
+            return $pagination;
+
+            // intval($limit);
+            // $this->db->limit($limit, $offset);
+        }
+
+        $query = $this->builder->get();
+        return $query->getResultArray();
+    }
+
+
 
     public function getAll($limit = '', $page = 1, $filter = [])
     {
@@ -1451,6 +1505,7 @@ class BaseModel extends Model
                 $pagination .=
                     '<a class="page-link previos" href=' .
                     strtok($_SERVER['REQUEST_URI'], '?') .
+
                     '?page=' .
                     ($page - 1) .
                     '  data-page="' .
