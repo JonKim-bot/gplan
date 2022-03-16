@@ -97,6 +97,7 @@ class FamilyModel extends BaseModel
 
     
     public function recursive_users($families){
+
         $key = array_key_last($families);
         $next = array();
         $stop = true;
@@ -204,6 +205,17 @@ class FamilyModel extends BaseModel
             return $user_info['type_id'];
         }
     }
+    public function get_upline_infomation_tree($link_family_id){
+        $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray();
+        if(!empty($upline_id)){
+            $upline_id = $upline_id[0];
+
+            $user_info = $this->get_users_info($upline_id);
+            return $user_info;
+        }
+    }
+
+
     public function get_upline_infomation($link_family_id){
         $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray();
         if(!empty($upline_id)){
@@ -555,12 +567,16 @@ class FamilyModel extends BaseModel
             'family.user_id' => $user_id,
         ];
 
-        $family_users_id = $this->getWhereRaw($where)[0]['family_id'];
+        $family_users_id = $this->getWhereRaw($where);
+        if(!empty($family_users_id)){
+            $family_users_id = $family_users_id[0]['family_id'];
+        }
         return $family_users_id;
     }
     public function getTree($user_id)
     {
-        
+        $this->WalletModel = new WalletModel();
+
         // $this->builder->select("family.*,users.username");
         // $this->builder->join('users', 'users.users_id = '.$this->tableName.'.user_id');
         // $this->builder->where("family.link_family_id", $this->user_family_id($user_id));
@@ -578,7 +594,7 @@ class FamilyModel extends BaseModel
             // $users[$key]['self_sales'] = $this->getSelfSales($row['user_id']);
             // $users[$key]['total_received_point'] = $this->PointModel->get_total_received_point($row['user_id']);
             // $users[$key]['group_sales'] = $this->getGroupTotalSales($row['user_id']);
-            // $users[$key]['downline_count'] = $this->recursive_get_downline_count($row['user_id']);
+            $users[$key]['balance'] = $this->WalletModel->get_balance($row['user_id']);
             // //included own sales
             $sql = "SELECT family.*,users.username,users.users_id FROM family 
             INNER JOIN users
@@ -591,7 +607,7 @@ class FamilyModel extends BaseModel
                 // $child[$ckey]['self_sales'] = $this->getSelfSales($crow['user_id']);
                 // $child[$ckey]['total_received_point'] = $this->PointModel->get_total_received_point($crow['user_id']);
                 // $child[$ckey]['group_sales'] = $this->getGroupTotalSales($crow['user_id']);
-                // $child[$ckey]['downline_count'] = $this->recursive_get_downline_count($crow['user_id']);
+                $child[$ckey]['balance'] = $this->WalletModel->get_balance($crow['user_id']);
 
                 $sql = "SELECT family.*,users.username,users.users_id FROM family 
                 INNER JOIN users
@@ -601,7 +617,8 @@ class FamilyModel extends BaseModel
                 $gchild = $this->db->query($sql)->getResultArray();
 
                 foreach ($gchild as $gkey => $grow) {
-                    // $gchild[$gkey]['self_sales'] = $this->getSelfSales($grow['user_id']);
+
+                    $gchild[$gkey]['balance'] = $this->WalletModel->get_balance($grow['user_id']);
                     // $gchild[$gkey]['total_received_point'] = $this->PointModel->get_total_received_point($grow['user_id']);
                     // $gchild[$gkey]['group_sales'] = $this->getGroupTotalSales($grow['user_id']);
                     // $gchild[$gkey]['downline_count'] = $this->recursive_get_downline_count($grow['user_id']);

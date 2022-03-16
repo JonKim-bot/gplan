@@ -259,7 +259,7 @@ class Users extends BaseController
         foreach($users as $row){
             $this->verify_user_func($row['users_id']);
         }
-        
+
     }
 
     public function index()
@@ -317,6 +317,7 @@ class Users extends BaseController
     
                 if(!empty($user_in_family)){
                     $link_family_id = $user_in_family[0]['link_family_id'];
+
                     $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
                 }
             }
@@ -843,13 +844,14 @@ class Users extends BaseController
             'users.users_id' => $users_id,
         ]);
 
+
         $this->pageData['wallet'] = $users_wallet;
         $this->pageData['balance'] = $this->WalletModel->get_balance($users_id);
         $family_id = 0;
         
 
 
-        $family = $this->FamilyModel->getWhere(['family.user_id' => $users_id]);
+        $family = $this->FamilyModel->getWhereRaw(['family.user_id' => $users_id]);
         if(!empty($family)){
             $family_id = $family[0]['family_id'];
         }
@@ -1071,6 +1073,7 @@ class Users extends BaseController
 
         $data = [
             'is_verified' => 0,
+
         ];
 
         $this->UsersModel->updateWhere($where,$data);
@@ -1230,13 +1233,19 @@ class Users extends BaseController
         $user_upline = [];
         if(!empty($user_in_family)){
             $link_family_id = $user_in_family[0]['link_family_id'];
+            $user_upline = $this->FamilyModel->get_upline_infomation_tree($link_family_id);
+            if(!empty($user_upline)){
 
-            $user_upline = $this->FamilyModel->get_upline_infomation($link_family_id);
-
+                $user_upline['balance'] = $this->WalletModel->get_balance($user_upline['users_id']);
+            }
         }
 
         for($i = 0; $i < count($users); $i++){
             $users[$i]['family'] = $this->FamilyModel->getTree($users[$i]['users_id']);
+
+            $users[$i]['balance'] = $this->WalletModel->get_balance($users[$i]['users_id']);
+
+
         }
         $this->pageData['user_upline'] = $user_upline;
 

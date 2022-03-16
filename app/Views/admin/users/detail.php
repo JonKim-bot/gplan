@@ -237,6 +237,7 @@
                                                                 <tr>
                                                                     <th scope="row">email</th>
                                                                     <td><?= $users[
+                                                                        
                                                                         'email'
                                                                     ] ?></td>
                                                                 </tr>

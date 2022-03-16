@@ -138,8 +138,9 @@ class Main extends BaseController
         $this->pageData['uid'] = $uid;
 
 
+
         $this->pageData['family_id'] = $family_id;
-        
+
         echo view('access/header', $this->pageData);
 
 
@@ -148,6 +149,7 @@ class Main extends BaseController
     }
 
     public function welcome($family_id,$uid){
+        
         $this->pageData['family_id'] = $family_id;
         $this->pageData['uid'] = $uid;
 

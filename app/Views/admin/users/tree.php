@@ -54,13 +54,13 @@
           
      <?php foreach ($users as $parent) { ?>
 
-              { 'username': "<?= $parent['username']; ?>",'users_id' : "<?= $parent['users_id'] ?>",'username' : "<?= $parent['username'] ?>",'link': "https://balkangraph.com",
+              { 'username': "<?= $parent['username']; ?>",'balance' : "<?= $parent['balance'] ?>",'users_id' : "<?= $parent['users_id'] ?>",'username' : "<?= $parent['username'] ?>",'link': "https://balkangraph.com",
                 'children': [
                   <?php foreach ($parent['family'] as $tier_1) { ?>
-                  { 'username': "<?= $tier_1['username']; ?>",'users_id' : "<?= $tier_1['users_id'] ?>",'username' : "<?= $tier_1['username'] ?>",'link': "https://balkangraph.com" ,
+                  { 'username': "<?= $tier_1['username']; ?>",'balance' : "<?= $tier_1['balance'] ?>",'users_id' : "<?= $tier_1['users_id'] ?>",'username' : "<?= $tier_1['username'] ?>",'link': "https://balkangraph.com" ,
                     'children': [
                       <?php foreach ($tier_1['children'] as $tier_2) { ?>
-                          { 'username': "<?= $tier_2['username']; ?>",'users_id' : "<?= $tier_2['users_id'] ?>",'username' : "<?= $tier_2['username'] ?>",'link': "https://balkangraph.com"
+                          { 'username': "<?= $tier_2['username']; ?>",'balance' : "<?= $tier_2['balance'] ?>",'users_id' : "<?= $tier_2['users_id'] ?>",'username' : "<?= $tier_2['username'] ?>",'link': "https://balkangraph.com"
                        
                       },
                       <?php } ?>
@@ -79,18 +79,19 @@
 
             'username': "<?= $user_upline['username'] ?> (upline)",
           'users_id': '<?= $user_upline['users_id'] ?>',
+          'balance' : '<?= $user_upline['balance'] ?>',
           'children': [
 
           
             <?php foreach ($users as $parent) { ?>
 
-{ 'username': "<?= $parent['username']; ?>",'users_id' : "<?= $parent['users_id'] ?>",'username' : "<?= $parent['username'] ?>",'link': "https://balkangraph.com",
+{ 'username': "<?= $parent['username']; ?>",'balance' : "<?= $parent['balance'] ?>",'users_id' : "<?= $parent['users_id'] ?>",'username' : "<?= $parent['username'] ?>",'link': "https://balkangraph.com",
   'children': [
     <?php foreach ($parent['family'] as $tier_1) { ?>
-    { 'username': "<?= $tier_1['username']; ?>",'users_id' : "<?= $tier_1['users_id'] ?>",'username' : "<?= $tier_1['username'] ?>",'link': "https://balkangraph.com" ,
+    { 'username': "<?= $tier_1['username']; ?>",'balance' : "<?= $tier_1['balance'] ?>",'users_id' : "<?= $tier_1['users_id'] ?>",'username' : "<?= $tier_1['username'] ?>",'link': "https://balkangraph.com" ,
       'children': [
         <?php foreach ($tier_1['children'] as $tier_2) { ?>
-            { 'username': "<?= $tier_2['username']; ?>",'users_id' : "<?= $tier_2['users_id'] ?>",'username' : "<?= $tier_2['username'] ?>",'link': "https://balkangraph.com"
+            { 'username': "<?= $tier_2['username']; ?>",'balance' : "<?= $tier_2['balance'] ?>",'users_id' : "<?= $tier_2['users_id'] ?>",'username' : "<?= $tier_2['username'] ?>",'link': "https://balkangraph.com"
          
         },
         <?php } ?>
@@ -118,6 +119,8 @@
             </span>
 
             <div class="title">${data.username}</div>
+            <div class="title">Balance ${data.balance}</div>
+
             <br>
             <a target="_blank" href="<?= base_url() ?>/users/tree/${data.users_id}">
             <i class="fa fa-external-link-alt orange"></i>
