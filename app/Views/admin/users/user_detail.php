@@ -85,7 +85,7 @@
                 <div>
                   <div class="text-center">
                     <img src="<?= base_url() ?>/assets/img/Group 170.png" width="80px" alt="">
-                    <p>Jon</p>
+                    <p><?= $users['name'] ?></p>
                   </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
@@ -102,6 +102,15 @@
           <!-- /.col-->
           <div class="col-sm-12 col-lg-12">
               <div class="c-QR row text-dark" style="width:80%">
+              <div class="col-6">
+                    <p>Name</p>
+                </div>
+                <div class="col-6">
+                    <p class="bold"><?= $users['name'] ?></p>
+                </div>
+                <div class="col-12">
+                <hr>
+                </div>
                 <div class="col-6">
                     <p>Email</p>
                 </div>

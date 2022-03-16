@@ -114,6 +114,7 @@
                     </h1>
                   </div>
                 </div>
+                <?php if ($users['is_verified'] == 1) { ?>
 
                 <div class="d-flex justify-content-between align-items-center">
 
@@ -136,6 +137,7 @@
 
 
                 </div>
+                <?php } ?>
                 <?php if ($users['is_verified'] == 1) { ?>
 
                   <div class="d-flex justify-content-between align-items-center mb-2">
@@ -563,6 +565,7 @@
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </form>
+
             </div>
         </div>
     </div> -->
