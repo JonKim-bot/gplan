@@ -38,6 +38,28 @@
     justify-content: center;
     overflow: hidden;
   }
+
+  .c-carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .c-carousel .c-carouselimg {
+    position: relative;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    .c-carousel .c-carouselimg {
+      width: 100%;
+    }
+  }
+
+  .c-carousel .c-carouselimg img {
+    width: 100%;
+    object-fit: cover;
+  }
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -55,9 +77,9 @@
       <div class="fade-in">
         <div class="theHeader">
           <div style="width: 10%;">
-          <a href="<?= base_url() ?>/access/logout">
-            <i class="fa fa-arrow-left fa-2x text-dark" aria-hidden="true"></i>
-          </a>
+            <a href="<?= base_url() ?>/access/logout">
+              <i class="fa fa-arrow-left fa-2x text-dark" aria-hidden="true"></i>
+            </a>
           </div>
           <div class="theHeaderName">
             <h3>
@@ -245,7 +267,7 @@
               <?php foreach ($banner as $row) { ?>
                 <div class="c-carousel">
                   <div class="c-carouselimg">
-                    <img style="width:100%" src="<?= base_url() . $row['banner'] ?>" alt="">
+                    <img src="<?= base_url() . $row['banner'] ?>" alt="">
                   </div>
                 </div>
               <?php } ?>
