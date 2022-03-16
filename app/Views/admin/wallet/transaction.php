@@ -100,6 +100,9 @@
             <div>
               <h5 class="text-white OpenSansSemiBold" style="font-size: 15px;">Transaction</h5>
             </div>
+            <div>
+              
+            </div>
       
           </div>
           <!-- /.col-->
