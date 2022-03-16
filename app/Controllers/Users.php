@@ -304,6 +304,7 @@ class Users extends BaseController
 
                     'family.family_id' => $row['self_family_id']
                 ];
+
                 $user_in_family = $this->FamilyModel->getWhere($where);
     
                 if(!empty($user_in_family)){
@@ -427,11 +428,12 @@ class Users extends BaseController
                 $data = [
                     'name' => $input['name'],
                     'email' => $input['email'],
+                    
                     'username' => $input['username'],
                     'contact' => $input['contact'],
                     'password' => $hash['password'],
                     // 'nric_name' => $input['nric_name'],
-                    'reference_id' => $this->find_user_id_by_family_id  ($input['family_id']),
+                    'reference_id' => $this->find_user_id_by_family_id($input['family_id']),
                     // 'nric' => $input['nric'],
                     'family_id' => $input['family_id'],
                     // 'ssm_name' => $input['ssm_name'],

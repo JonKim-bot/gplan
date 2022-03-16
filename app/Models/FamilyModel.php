@@ -22,6 +22,7 @@ class FamilyModel extends BaseModel
     }
 
 
+
         
     function getAll($limit = "", $page = 1, $filter = array()){
         $this->builder = $this->db->table($this->tableName);
@@ -86,6 +87,7 @@ class FamilyModel extends BaseModel
 
 
     public function user_family($family_id){
+
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
         return count($result) - 1;

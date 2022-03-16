@@ -139,6 +139,7 @@ class Main extends BaseController
 
 
         $this->pageData['family_id'] = $family_id;
+        
         echo view('access/header', $this->pageData);
 
 

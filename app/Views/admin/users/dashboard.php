@@ -123,6 +123,7 @@
 
                       <p class="m-0 thLabel">
                         <?= $lang['total_earn_amount'] ?> : <br>RM <?= $total_earn ?>
+                        
                       </p>
 
                     </a>

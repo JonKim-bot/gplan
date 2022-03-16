@@ -4,6 +4,7 @@ $lang['withdraw'] = 'Withdraw';
 $lang['transaction'] = 'Transaction';
 $lang['transaction_history'] = 'Transaction History';
 $lang['total_earn_amount'] = 'Total Earn Amount';
+
 $lang['withdraw_amount'] = 'Withdraw Amount';
 $lang['my_group'] = 'My Group';
 $lang['status'] = 'Status';
@@ -24,7 +25,7 @@ $lang['verified'] = 'Verified';
 $lang['not_verified'] = 'Not verified';
 $lang['dont_have_family'] = 'Dont Have Family Yet';
 $lang['view_reward'] = 'View Reward';
-$lang['referral_name'] = 'Referral Name';
+$lang['referral_name'] = 'Teacher Name';
 $lang['total_level_achived'] = 'Total Level Achived';
 $lang['notransaction'] = 'You Dont Have Any Transaction.';
 $lang['maketransaction'] = 'Make a Transaction.';
