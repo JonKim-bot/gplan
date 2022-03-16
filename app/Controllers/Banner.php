@@ -23,7 +23,7 @@ class Banner extends BaseController
             //  redirect()->to(base_url('access/login/'));
             echo "<script>location.href='" .
                 base_url() .
-                "/access/login';</script>";
+                "/access/loginAdmin';</script>";
 
 
         }

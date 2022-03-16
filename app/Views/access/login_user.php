@@ -18,7 +18,7 @@
                     </ul>
                 </div>
                 <br>
-                <form method="POST" action="<?= base_url() ?>/access/loginUser">
+                <form method="POST" action="<?= base_url() ?>/access/loginAdmin">
                     <?php if (isset($error)) { ?>
                         <div class="alert-message"  role="alert">
                             <?= $error ?>						

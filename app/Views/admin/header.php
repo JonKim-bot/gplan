@@ -453,11 +453,12 @@ QR Code
                                     <!-- <a class="dropdown-item" href="#">
                             <i class="cil-user c-icon mfe-2"></i>
                             Profile
+
                         </a> -->
                                   <!-- <div class="dropdown-divider">
                                       
                                 </div> -->
-                                <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
+                                <a class="dropdown-item" href="<?= base_url() ?>/access/logout_admin">
                                     <i class="cil-account-logout c-icon mfe-2"></i>
                                     Logout
                                 </a>
