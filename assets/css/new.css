@@ -398,5 +398,13 @@
   color: #fff;
   text-decoration: none;
 }
+.theEmptyBox .theEmpty .theIcon {
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+}
+.theEmptyBox .theEmpty .theIcon img {
+  width: 100%;
+}
 
 /*# sourceMappingURL=new.css.map */
