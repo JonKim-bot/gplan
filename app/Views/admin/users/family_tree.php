@@ -152,11 +152,13 @@ html, body {
                 <span></span>
             </div>
             <p class="content">
-                <span class="text-white"><?= $row['status'] ?></span>
+                <span class="text-white">
+                Level (<?= $row['level'] ?>)
+                <?= $row['status'] ?></span>
             </p>
             <div class="time">
                 <a class="view_level" id="<?= $row['level'] ?>">
-                <img src="<?= base_url() ?>/assets/img/Group 170.png" alt="">
+                <img src="<?= base_url() ?>/assets/img/Group 83.png" alt="">
                 
                 <!-- Level <?= $row['level'] ?> -->
             
