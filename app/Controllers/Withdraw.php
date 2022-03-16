@@ -18,6 +18,7 @@ class Withdraw extends BaseController
     public function withdraw()
     {
 
+
         if (session()->get('login_data')['type_id'] == '1') { 
             $users_id = session()->get('login_id');
             $wallet_withdraw = $this->WalletWithdrawModel->getWhere(['wallet_withdraw.users_id' => $users_id]);

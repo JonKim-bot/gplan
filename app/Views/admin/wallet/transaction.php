@@ -53,23 +53,28 @@
   }
 
   .icon_top {
-    background: white;
-    border-radius: 50%;
-    color: black;
-    padding: 5px;
+    width: 25px;
+    height: 25px;
   }
-  .c-body{
+
+  .c-body {
+    width:100vw;
     position: relative;
     max-width: 500px;
     min-height: 787px;
     margin: 0 auto;
-    background-color: #fff;
     justify-content: center;
     overflow: hidden;
   }
-  .bold{
-    font-weight:bold;
+
+  .bold {
+    font-weight: bold;
   }
+  .bg_color{
+  background: rgb(49, 27, 110) !important;
+
+  background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%)!important;
+}
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -80,101 +85,106 @@
 </div> -->
 
 </header>
-<div class="c-body bg_color">
+<div class="c-body bg_color h-100">
   <main class="c-main">
     <div class="container-fluid">
       <div class="fade-in">
         <div class="row">
-          <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;">
-            <!-- <a href="">+</a> -->
-            <div class="icon_top">
-              <a href="<?= base_url() ?>/users/dashboard/1">
-                <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-white font-weight-bold">Transaction</h5>
-            </div>
-            <div>
-
-            </div>
-
-          </div>
 
           <!-- /.col-->
-
+          <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;">
+            <!-- <a href="">+</a> -->
+            <a class="icon_top" href="<?= base_url() ?>/users/dashboard/1">
+              <img src="<?= base_url() ?>/assets/img/XMLID_223_.png">
+            </a>
+            <div>
+              <h5 class="text-white OpenSansSemiBold" style="font-size: 15px;">Transaction</h5>
+            </div>
+      
+          </div>
           <!-- /.col-->
           <?php foreach ($wallet as $row) { ?>
             <div class="col-sm-12 col-lg-12">
               <div class="card text-white c-shadow" style="border-radius: 20px;">
                 <div class="c-QR row text-dark" style="width:90%">
-                  <div class="col-12 description_div">
-                    <div class="one_row row">
-                      <div class="col-6">
-                        <p class="bold"><?= $lang['username'] ?></p>
+                  <div class="row">
+                    <div class="col-7 description_div">
+                      <div class="one_row row">
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">User Name</p>
+                        </div>
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['username'] ?></p>
+                        </div>
                       </div>
-                      <div class="col-6">
-                        <p><?= $row['username'] ?></p>
+                      <div class="one_row row">
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">Contact</p>
+                        </div>
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['contact'] ?></p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="one_row row">
-                      <div class="col-6">
-                        <p class="bold"><?= $lang['contact'] ?></p>
+                      <div class="one_row row">
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $lang['balance'] ?></p>
+                        </div>
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['balance'] ?></p>
+                        </div>
                       </div>
-                      <div class="col-6">
-                        <p><?= $row['username'] ?></p>
+                      <div class="one_row row">
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $lang['credit'] ?></p>
+                        </div>
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['wallet_in'] ?></p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="one_row row">
-                      <div class="col-6">
-                        <p class="bold"><?= $lang['balance'] ?></p>
+                      <div class="one_row row">
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $lang['debit'] ?></p>
+                        </div>
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= ltrim($row['wallet_out'], '-'); ?></p>
+                        </div>
                       </div>
-                      <div class="col-6">
-                        <p><?= $row['balance'] ?></p>
+                      <div class="one_row row">
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $lang['remarks'] ?></p>
+                        </div>
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['remarks'] ?></p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="one_row row">
-                      <div class="col-6">
-                        <p class="bold"> <?= $lang['credit'] ?></p>
+                      <div class="one_row row">
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">Created Date</p>
+                        </div>
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['created_date'] ?></p>
+                        </div>
                       </div>
-                      <div class="col-6">
-                        <p><?= $row['wallet_in'] ?></p>
-                      </div>
-                    </div>
-                    <div class="one_row row">
-                      <div class="col-6">
-                        <p class="bold"><?= $lang['debit'] ?></p>
-                      </div>
-                      <div class="col-6">
-                        <p><?= ltrim($row['wallet_out'], '-'); ?></p>
-                      </div>
-                    </div>
-                    <div class="one_row row">
-                      <div class="col-6">
-                        <p class="bold"><?= $lang['remarks'] ?></p>
-                      </div>
-                      <div class="col-6">
-                        <p><?= ($row['remarks']); ?></p>
-                      </div>
-                    </div>
-                    <div class="one_row row">
-                      <div class="col-6">
-                        <p class="bold"><?= $lang['created_date'] ?></p>
-                      </div>
-                      <div class="col-6">
-                        <p><?= ($row['created_date']); ?></p>
-                      </div>
+
                     </div>
                   </div>
+
                 </div>
 
-              </div>
-            </div>
 
+              </div>
+
+            </div>
           <?php } ?>
+
+
+
+
           <!-- /.col-->
         </div>
 
 
+
         <!-- /.row-->
       </div>
+

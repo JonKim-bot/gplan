@@ -4,6 +4,7 @@
 
 
 
+
 use App\Core\BaseController;
 use App\Models\WalletModel;
 use App\Models\UsersModel;
@@ -127,7 +128,8 @@ class Wallet extends BaseController
         $this->pageData['wallet'] = $users_wallet;
       
         echo view('admin/header', $this->pageData);
-        echo view('admin/wallet/transaction');
+        echo view('admin/wallet/transaction', $this->pageData);
+
 
         // echo view('admin/wallet/all');
         echo view('admin/footer');

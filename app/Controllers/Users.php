@@ -822,6 +822,7 @@ class Users extends BaseController
             $input = $_POST;
        
             if (!$error) {
+
                 $data = [
                     'remarks' => $input['remarks'],
                 ];
@@ -1172,7 +1173,6 @@ class Users extends BaseController
         $user_upline = [];
         if(!empty($user_in_family)){
             $link_family_id = $user_in_family[0]['link_family_id'];
-
 
             $user_upline = $this->FamilyModel->get_upline_infomation($link_family_id);
 

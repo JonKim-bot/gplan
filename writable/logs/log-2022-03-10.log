@@ -68,3 +68,10 @@ CRITICAL - 2022-03-10 20:48:52 --> Trying to access array offset on value of typ
 #3 C:\xampp\htdocs\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-03-10 22:03:42 --> Trying to access array offset on value of type null
+#0 D:\www\gplan\app\Controllers\Withdraw.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\www\\gplan\\ap...', 21, Array)
+#1 D:\www\gplan\system\CodeIgniter.php(914): App\Controllers\Withdraw->withdraw()
+#2 D:\www\gplan\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Withdraw))
+#3 D:\www\gplan\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\www\gplan\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

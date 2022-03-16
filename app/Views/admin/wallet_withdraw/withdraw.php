@@ -58,11 +58,12 @@
   }
 
   .c-body {
+    width:100vw;
+
     position: relative;
     max-width: 500px;
     min-height: 787px;
     margin: 0 auto;
-    background-color: #fff;
     justify-content: center;
     overflow: hidden;
   }
@@ -70,6 +71,11 @@
   .bold {
     font-weight: bold;
   }
+  .bg_color{
+  background: rgb(49, 27, 110) !important;
+
+  background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%)!important;
+}
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">

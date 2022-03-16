@@ -183,6 +183,7 @@ class FamilyModel extends BaseModel
         $users = $this->UsersModel->getWhere($where);
         if(!empty($users)){
 
+
             return $users[0];
         }else{
 
@@ -193,16 +194,20 @@ class FamilyModel extends BaseModel
     
 
     public function get_upline_info($link_family_id){
-        $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray()[0]['user_id'];
+        $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray();
 
-        $user_info = $this->get_users_info($upline_id);
-        return $user_info['type_id'];
+        if(!empty($upline_id)){
+            $upline_id = $upline_id[0]['user_id'];
+            $user_info = $this->get_users_info($upline_id);
+            return $user_info['type_id'];
+        }
     }
     public function get_upline_infomation($link_family_id){
         $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray()[0]['user_id'];
-        $user_info = $this->get_users_info($upline_id);
-
-        return $user_info;
+        if(!empty($upline_id)){
+            $user_info = $this->get_users_info($upline_id);
+            return $user_info;
+        }
     }
 
     public function get_total_com($level_user,$level_upline){
