@@ -139,6 +139,7 @@ class Users extends BaseController
     }
 
     public function make_payment(){
+
         if (session()->get('login_data')['type_id'] == '1') { 
             $users_id = session()->get('login_id');
 
@@ -1040,10 +1041,9 @@ class Users extends BaseController
         $where = [
             'family.user_id' => $user_id
         ];
-        $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
+        $family_id = $this->FamilyModel->getWhereRaw($where)[0]['family_id'];
         $level = $this->FamilyModel->user_family($family_id);
         $family_tree = $this->FamilyModel->user_family_tree($family_id);
-        // dd($family_tree);
         $level_arr = [];
         for ($x = 1; $x <= $level ; $x++) {
 
@@ -1126,16 +1126,22 @@ class Users extends BaseController
             'family.user_id' => $user_id
         ];
         $level = $_POST['level'];
-        $family_id = $this->FamilyModel->getWhere($where)[0]['family_id'];
+        $family_id = $this->FamilyModel->getWhereRaw($where)[0]['family_id'];
         $family_tree = $this->FamilyModel->user_family_tree($family_id);
         $family_level_user = [];
+
+
         if(isset($family_tree[$level])){
-            $users_id = implode(",", $family_tree[$level]);
-            if($users_id != ''){
-                $sql = "SELECT users.*,
-                (SELECT COUNT(*) FROM family WHERE link_family_id = users.self_family_id) as total_downline
-                FROM users WHERE users.users_id IN ($users_id)";
+
+            $familys_id = implode(",", $family_tree[$level]);
+            if($familys_id != ''){
+                $sql = "SELECT family.*,family.family_id as fid,users.username,
+                (SELECT COUNT(*) FROM family WHERE link_family_id = fid) as total_downline
+                FROM family 
+                INNER JOIN users ON users.users_id = family.user_id
+                WHERE family.family_id IN ($familys_id)";
                 $family_level_user = $this->database->query($sql)->getResultArray();
+
             }
 
 
