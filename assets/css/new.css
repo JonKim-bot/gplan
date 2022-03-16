@@ -22,6 +22,30 @@
   font-family: PublicSans-Regular;
   src: url("../../assets/css/fonts/PublicSans-Regular.otf");
 }
+.OpenSansBold {
+  font-family: "OpenSans-bold";
+}
+
+.OpenSansSemiBold {
+  font-family: "OpenSans-Semibold";
+}
+
+.OpenSansLight {
+  font-family: "OpenSans-Light";
+}
+
+.OpenSansRegular {
+  font-family: "OpenSans-Regular";
+}
+
+.PublicSansSemiBold {
+  font-family: "PublicSans-SemiBold";
+}
+
+.PublicSansRegular {
+  font-family: "PublicSans-Regular";
+}
+
 .c-maxContainter {
   max-width: 425px;
   background: #000;
@@ -332,6 +356,12 @@
   font-family: "OpenSans-regular";
   font-size: 8px;
   color: #fff;
+}
+
+.theWFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=new.css.map */

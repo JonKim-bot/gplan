@@ -53,12 +53,11 @@
   }
 
   .icon_top {
-    background: white;
-    border-radius: 50%;
-    color: black;
-    padding: 5px;
+    width: 25px;
+    height: 25px;
   }
-  .c-body{
+
+  .c-body {
     position: relative;
     max-width: 500px;
     min-height: 787px;
@@ -67,8 +66,9 @@
     justify-content: center;
     overflow: hidden;
   }
-  .bold{
-    font-weight:bold;
+
+  .bold {
+    font-weight: bold;
   }
 </style>
 <!-- <div class="c-subheader px-3">
@@ -89,16 +89,14 @@
           <!-- /.col-->
           <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;">
             <!-- <a href="">+</a> -->
-            <div class="icon_top">
-              <a href="<?= base_url() ?>/users/dashboard/1">
-                <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
-              </a>
-            </div>
+            <a class="icon_top" href="<?= base_url() ?>/users/dashboard/1">
+              <img src="<?= base_url() ?>/assets/img/XMLID_223_.png">
+            </a>
             <div>
-              <h5 class="text-white font-weight-bold">Withdraw</h5>
+              <h5 class="text-white OpenSansSemiBold" style="font-size: 15px;">Withdraw</h5>
             </div>
             <div class="icon_top" data-toggle="modal" data-target="#status_modal">
-              <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+              <img src="<?= base_url() ?>/assets/img/Path 17.png">
             </div>
           </div>
           <!-- /.col-->
@@ -107,105 +105,105 @@
               <div class="card text-white c-shadow" style="border-radius: 20px;">
                 <div class="c-QR row text-dark" style="width:90%">
                   <div class="row">
-                    <div class="col-12 description_div">
+                    <div class="col-7 description_div">
                       <div class="one_row row">
                         <div class="col-6">
-                          <p class="bold">User Name</p>
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">User Name</p>
                         </div>
                         <div class="col-6">
-                          <p><?= $row['users'] ?></p>
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['users'] ?></p>
                         </div>
                       </div>
                       <div class="one_row row">
                         <div class="col-6">
-                          <p  class="bold">Amount Withdraw</p>
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">Amount Withdraw</p>
                         </div>
                         <div class="col-6">
-                          <p>RM <?= $row['amount'] ?></p>
-                        </div>
-                      </div>
-                      <div class="one_row row">
-                        <div class="col-6">
-                          <p  class="bold">Bank Account</p>
-                        </div>
-                        <div class="col-6">
-                          <p ><?= $row['bank_acc'] ?></p>
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">RM <?= $row['amount'] ?></p>
                         </div>
                       </div>
                       <div class="one_row row">
                         <div class="col-6">
-                          <p  class="bold">Bank Name</p>
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">Bank Account</p>
                         </div>
                         <div class="col-6">
-                          <p><?= $row['bank_name'] ?></p>
-                        </div>
-                      </div>
-                      <div class="one_row row">
-                        <div class="col-6">
-                          <p  class="bold">Account Name</p>
-                        </div>
-                        <div class="col-6">
-                          <p><?= $row['acc_name'] ?></p>
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['bank_acc'] ?></p>
                         </div>
                       </div>
                       <div class="one_row row">
                         <div class="col-6">
-                          <p  class="bold">Created Date</p>
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">Bank Name</p>
                         </div>
                         <div class="col-6">
-                          <p><?= $row['created_date'] ?></p>
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['bank_name'] ?></p>
+                        </div>
+                      </div>
+                      <div class="one_row row">
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">Account Name</p>
+                        </div>
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['acc_name'] ?></p>
+                        </div>
+                      </div>
+                      <div class="one_row row">
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">Created Date</p>
+                        </div>
+                        <div class="col-6">
+                          <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;"><?= $row['created_date'] ?></p>
                         </div>
                       </div>
 
                     </div>
-                    <div class="col-12">
+                    <div class="col-5 theWFlex">
 
 
-                       <?php if ($row['is_approved'] == 1) { ?>
-                        <div class="btn btn-success w-100" >
+                      <?php if ($row['is_approved'] == 1) { ?>
+                        <div class="btn btn-success w-100">
 
-                        <p style="margin-bottom:0px">  
+                          <p class="OpenSansRegular" style="font-size: 9px; margin-bottom:0px">
                             Approved
-                        </p>
-                       </div>
-                        <?php } ?>
-
-                        <?php if ($row['is_rejected'] == 1) { ?>
-                      
-                        <div class="btn btn-danger text-white  w-100" >
-
-<p style="margin-bottom:0px">  
-Rejected
-</p>
-</div>
-                        <?php } ?>
-
-                        <?php if ($row['is_rejected'] == 0 && $row['is_approved'] == 0) { ?>
-                     
-                        <div class="btn btn-secondary text-white  w-100" >
-
-                  <p style="margin-bottom:0px">  
-                  Pending
-                  </p>
-                  </div>
-                        <?php } ?>
-
-                        <div class="btn btn-success w-100" style="margin-top:5px">
-                          <p>Permission Date</p>
-                          <?php if ($row['is_rejected'] == 1 || $row['is_approved'] == 1) { ?>
-                              <p><?= $row['created_date'] ?></p>
-                          <?php }else{ ?>
-                              <p>Pending</p>
-                          <?php } ?>
+                          </p>
                         </div>
-                      </div>
+                      <?php } ?>
 
+                      <?php if ($row['is_rejected'] == 1) { ?>
+
+                        <div class="btn btn-danger text-white  w-100">
+
+                          <p class="OpenSansRegular" style="font-size: 9px; margin-bottom:0px">
+                            Rejected
+                          </p>
+                        </div>
+                      <?php } ?>
+
+                      <?php if ($row['is_rejected'] == 0 && $row['is_approved'] == 0) { ?>
+
+                        <div class="btn btn-secondary text-white  w-100">
+
+                          <p class="OpenSansRegular" style="font-size: 9px; margin-bottom:0px">
+                            Pending
+                          </p>
+                        </div>
+                      <?php } ?>
+
+                      <div class="btn btn-success w-100" style="margin-top:5px">
+                        <p class="OpenSansRegular" style="font-size: 9px; margin-bottom:0px">Permission Date</p>
+                        <?php if ($row['is_rejected'] == 1 || $row['is_approved'] == 1) { ?>
+                          <p class="OpenSansRegular" style="font-size: 9px; margin-bottom:0px"><?= $row['created_date'] ?></p>
+                        <?php } else { ?>
+                          <p class="OpenSansRegular" style="font-size: 9px; margin-bottom:0px">Pending</p>
+                        <?php } ?>
+                      </div>
                     </div>
 
                   </div>
-
 
                 </div>
+
+
+              </div>
 
             </div>
           <?php } ?>
