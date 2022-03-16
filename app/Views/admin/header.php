@@ -104,16 +104,16 @@
                             Registration
                             <span class="badge badge-pill badge-warning"><?= $undone_user ?></span>
 
-                        </a>
-                    </li>
-
-                    <li class="c-sidebar-nav-item ">
-                        <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'paid_user'
-                                                            ? 'c-active'
-                                                            : null ?>" href="<?= base_url('Users') ?>/paid_user">
-                            <i class="cil-people c-sidebar-nav-icon"></i>
-                            Paid User
-                            <span class="badge badge-pill badge-warning"></span>
+                    </a>
+                </li>
+                
+                <li class="c-sidebar-nav-item ">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'paid_user'
+                                                        ? 'c-active'
+                                                        : null ?>" href="<?= base_url('Users') ?>/paid_user">
+                        <i class="cil-people c-sidebar-nav-icon"></i>
+                        Paid User
+                        <span class="badge badge-pill badge-warning"></span>
 
                     <li class="c-sidebar-nav-item ">
                         <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'paid_user'
@@ -453,39 +453,23 @@ QR Code
                             <i class="cil-user c-icon mfe-2"></i>
                             Profile
                         </a> -->
-                                    <<<<<<< HEAD <!-- <div class="dropdown-divider">
-                                </div> -->
-                                <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
-                                    <i class="cil-account-logout c-icon mfe-2"></i>
-                                    Logout
-                                </a>
-                </div>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
+                            <i class="cil-account-logout c-icon mfe-2"></i>
+                            Logout
+                        </a>
+                    </div>
                 </li>
                 <li class="c-header-nav-item px-2 c-d-legacy-none"></li>
-                </ul>
-
-                </header>
-            <?php } ?>
-            <?php if (session()->get('login_data')['type_id'] == '1') { ?>
-                =======
-                <!-- <div class="dropdown-divider"></div> -->
-                <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
-                    <i class="cil-account-logout c-icon mfe-2"></i>
-                    Logout
-                </a>
-            </div>
-            </li>
-            <li class="c-header-nav-item px-2 c-d-legacy-none"></li>
             </ul>
 
-            </header>
+        </header>
         <?php } ?>
-
+        
         <?php if (session()->get('login_data')['type_id'] == '1') { ?>
-            >>>>>>> 9aedf1aca3cad68ca3fac627c2d29fe35f2ac9d0
 
-            <div class="c-body">
-            <?php } else { ?>
-                <div class="c-body">
+                    <div class="c-body">
+                    <?php } else { ?>
+                        <div class="c-body">
 
-                <?php } ?>
+                        <?php } ?>

@@ -10,18 +10,13 @@
   .c-withButton {
     background-color: #000;
     border-radius: 5px;
-  }
-
-  .c-Circle {
-    width: 80px;
-    height: 80px;
-    /* padding: 10px; */
-    text-align: center;
+    width: 127px;
+    height: 37px;
   }
 
   .c-shadow {
-    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.6) !important;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.6) !important;
+    -webkit-box-shadow: 0px 3px 18px #0000004D !important;
+    box-shadow: 0px 3px 18px #0000004D !important;
   }
 
   .c-QR {
@@ -33,17 +28,16 @@
   .c-QR img {
     width: 100%;
   }
-  
-  .c-body{
+
+  .c-body {
     position: relative;
-    max-width: 500px;
-    min-height: 787px;
+    max-width: 100%;
+    /* min-height: 787px; */
     margin: 0 auto;
     background-color: #fff;
     justify-content: center;
     overflow: hidden;
   }
-
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -55,45 +49,84 @@
 
 </header>
 
-<div class="c-body">
+<div class="">
   <main class="c-main c-dashboard">
     <div class="container-fluid">
       <div class="fade-in">
-        <div class="d-flex ">
-          <div>
+        <div class="theHeader">
+          <div style="width: 10%;">
 
+          </div>
+          <div class="theHeaderName">
+            <h3>
+              Hello John
+            </h3>
+            <div class="theIcon">
+              <img src="<?= base_url() ?>/assets/img/Octicons.png">
+            </div>
+          </div>
+          <div class="theHeaderDrop">
+            <div class="theIcon">
+              <img src="<?= base_url() ?>/assets/img/Group 170.png">
+            </div>
+
+            <div class="theHeaderDrop-content">
+              <a href="">Logout</a>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 col-lg-12">
-            <div class="card text-white bg_color" style="border-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-              <div class="card-status card-body card-body" style="">
+            <div class="card text-white theGradient">
+              <div class="card-status card-body card-body">
                 <div>
-                  <div> <?= $lang['your_point'] ?></div>
-                  <div class="">
+                  <div class="thLabel"> <?= $lang['your_point'] ?></div>
+                  <div class="thBalance">
                     <h1>
                       MYR <?= $balance ?>
                     </h1>
                   </div>
                 </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+
+                  <div class="py-1 ">
+                    <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
+
+                      <p class="m-0 thLabel">
+                        <?= $lang['total_earn_amount'] ?> : <?= $total_earn ?>
+                      </p>
+                    </a>
+                  </div>
+                  <div class="py-1">
+                    <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
+
+                      <p class="m-0 thLabel">
+                        <?= $lang['withdraw_amount'] ?> : <?= $total_withdraw ?>
+                      </p>
+                    </a>
+                  </div>
+
+
+                </div>
                 <?php if ($users['is_verified'] == 1) { ?>
 
-                  <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
                     <div class="c-withButton d-flex justify-content-center align-items-center py-1 px-3 br-3">
-                      <div class="icon mr-2">
-                        <i class="fa fa-money-bill fa-2x"></i>
+                      <div class="theBIcon mr-2">
+                        <img src="<?= base_url() ?>/assets/img/Layer 25.png">
                       </div>
                       <a href="<?= base_url() ?>/Withdraw/withdraw" style="color:white">
 
-                        <p class="m-0">
+                        <p class="m-0 theBLabel">
                           <?= $lang['withdraw'] ?>
                         </p>
                       </a>
                     </div>
-                    <div class="py-1 px-3 br-3">
+                    <div class="py-1 px-3 br-3 ">
                       <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
 
-                        <p class="m-0">
+                        <p class="m-0 thLabel">
                           <?= $lang['transaction_history'] ?> >
                         </p>
                       </a>
@@ -102,38 +135,16 @@
                   </div>
                 <?php } ?>
 
-                <div class="d-flex justify-content-between align-items-center">
-
-                  <div class="py-1 ">
-                    <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
-
-                      <p class="m-0">
-                        <?= $lang['total_earn_amount'] ?> : <?= $total_earn ?>
-                      </p>
-                    </a>
-                  </div>
-                  <div class="py-1">
-                    <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
-
-                      <p class="m-0">
-                        <?= $lang['withdraw_amount'] ?> : <?= $total_withdraw ?>
-                      </p>
-                    </a>
-                  </div>
-
-
-                </div>
-
                 <?php if ($users['is_verified'] == 1) { ?>
 
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="c-withButton d-flex justify-content-center align-items-center py-1 px-3 br-3">
-                      <div class="icon mr-2">
-                        <i class="fa fa-users fa-2x"></i>
+                      <div class="theBIcon mr-2">
+                        <img src="<?= base_url() ?>/assets/img/Path 26.png">
                       </div>
                       <a href="<?= base_url() ?>/Users/my_group" style="color:white">
 
-                        <p class="m-0">
+                        <p class="m-0 theBLabel">
                           <?= $lang['my_group'] ?>
                         </p>
                       </a>
@@ -151,78 +162,44 @@
             </div>
           </div>
           <!-- /.col-->
-          <div class="col-sm-12 col-lg-12">
-            <div class="row no-gutters mb-3">
-              <div class="col-3 d-flex justify-content-center">
-                <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                  <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#status_modal">
-                    <div class="icon mb-2">
-                      <i class="fa fa-compass fa-lg"></i>
-                    </div>
-                    <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                      <?= $lang['status'] ?>
-                    </p>
-                  </a>
-
+          <div class="col-sm-12 col-lg-12 mb-4 ">
+            <div class="theCFlex">
+              <a class="c-Circle card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#status_modal">
+                <div class="theBIcon">
+                  <img src="<?= base_url() ?>/assets/img/Artboard.png">
                 </div>
-              </div>
-              <div class="col-3 d-flex justify-content-center">
-                <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                  <?php if($users['is_verified'] == 0){ ?>
-                <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#family_tree">
-
-                    <div class="icon mb-2">
-
-                      <i class="fa fa-diagram-project fa-lg"></i>
-                    </div>
-                    <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-                      <?= $lang['reward'] ?>
-                    </p>
-                  </a>
-                  <?php  }else{ ?>
-                    <a class="card-header-action text-white" class="btn btn-primary " href="<?= base_url() ?>/users/family_tree/1">
-
-<div class="icon mb-2">
-
-  <i class="fa fa-diagram-project fa-lg"></i>
-</div>
-<p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
-  <?= $lang['reward'] ?>
-</p>
-</a>
-
-
+                <p class="m-0">
+                  <?= $lang['status'] ?>
+                </p>
+              </a>
+              <?php if ($users['is_verified'] == 0) { ?>
+                <a class="c-Circle card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#family_tree">
+                <?php  } else { ?>
+                  <a class="c-Circle card-header-action" class="btn btn-primary" href="<?= base_url() ?>/users/family_tree/1">
                   <?php } ?>
-                </div>
-              </div>
-              <div class="col-3 d-flex justify-content-center">
-                <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                  <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#referal_modal">
-
-                    <div class="icon mb-2">
-                      <i class="fa fa-user fa-lg"></i>
+                  <div class="theBIcon">
+                    <img src="<?= base_url() ?>/assets/img/Layer_1.png">
+                  </div>
+                  <p class="m-0">
+                    <?= $lang['reward'] ?>
+                  </p>
+                  </a>
+                  <a class="c-Circle card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#referal_modal">
+                    <div class="theBIcon">
+                      <img src="<?= base_url() ?>/assets/img/Group 130.png">
                     </div>
-                    <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
+                    <p class="m-0">
                       <?= $lang['your_teacher'] ?>
                     </p>
-                </div>
-                </a>
-              </div>
-              <div class="col-3 d-flex justify-content-center">
-                <div class="c-Circle text-white rounded-circle d-flex flex-column justify-content-center align-items-center " style="background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
-                  <a class="card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#level_modal">
-
-
-                    <div class="icon mb-2">
-                      <i class="fa fa-user-group fa-lg"></i>
+                  </a>
+                  <a class="c-Circle card-header-action" class="btn btn-primary" data-toggle="modal" data-target="#level_modal">
+                    <div class="theBIcon">
+                      <img src="<?= base_url() ?>/assets/img/Path 26.png">
                     </div>
-                    <p class="m-0" style="font-size: 12px; line-height:1; padding:0 5px">
+                    <p class="m-0">
                       <?= $lang['achievement'] ?>
                     </p>
                   </a>
-
-                </div>
-              </div>
             </div>
           </div>
           <!-- /.col-->
@@ -303,27 +280,27 @@
             <form enctype="multipart/form-data" method="POST" action="<?= base_url('Users/submit_receipt'); ?>">
               <div class="modal-body text-center">
 
-                    <div><?= $lang['status'] ?></div>
-                    <hr>  
-                    <?php if ($users['is_verified'] == 1) { ?>
-                        <div class="text-value-lg">
-                          <?= $lang['verified'] ?>
-                        </div>
-                        
+                <div><?= $lang['status'] ?></div>
+                <hr>
+                <?php if ($users['is_verified'] == 1) { ?>
+                  <div class="text-value-lg">
+                    <?= $lang['verified'] ?>
+                  </div>
 
-                      <?php } else { ?>
-                        <div class="text-value-lg text-danger">
-                          <?= $lang['not_verified'] ?>
-                        </div>
-                      <?php } ?>
-                    </div>
+
+                <?php } else { ?>
+                  <div class="text-value-lg text-danger">
+                    <?= $lang['not_verified'] ?>
+                  </div>
+                <?php } ?>
+              </div>
               <?php if ($users['receipt'] == "") { ?>
 
                 <div class="card-group text-center" style="margin-top: 20px;">
                   <div class="card">
                     <div class="card-body">
                       <h1>Bank Detail</h1>
-                      <hr>  
+                      <hr>
 
                       <p class="text-muted">Please Submit your receipt to bank below</p>
                       <div class="text-center">
@@ -564,15 +541,14 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script src="<?= base_url() ?>/assets/js/bootstrap.min"></script>
-    <script src="<?= base_url() ?>/assets/js/bjs.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+      <script src="<?= base_url() ?>/assets/js/bootstrap.min"></script>
+      <script src="<?= base_url() ?>/assets/js/bjs.js"></script>
 
-    <?php if($users['receipt'] == ""){ ?>
-      <script>
-                $('#status_modal').modal('show');
+      <?php if ($users['receipt'] == "") { ?>
+        <script>
+          $('#status_modal').modal('show');
+        </script>
 
-      </script>
-
-    <?php } ?>
+      <?php } ?>
