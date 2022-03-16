@@ -154,6 +154,7 @@ html, body {
             <p class="content">
                 <span class="text-white">
                 Level (<?= $row['level'] ?>)
+                <br>
                 <?= $row['status'] ?></span>
             </p>
             <div class="time">
