@@ -1068,7 +1068,7 @@ class Users extends BaseController
 
         for ($x = 1; $x <= $level ; $x++) {
 
-            if($x < $user['type_id'] + 8){
+            if($x <= $user['type_id'] + 8){
                 $family_level = $this->check_if_reached_level($x,$family_tree);
                 $data = [
                     'level' => $x,
