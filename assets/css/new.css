@@ -407,4 +407,30 @@
   width: 100%;
 }
 
+.theGroupCard {
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 3px 6px #00000029 !important;
+  box-shadow: 0px 3px 6px #00000029 !important;
+  padding: 1rem;
+}
+.theGroupCard p {
+  font-family: "OpenSans-Semibold";
+  font-size: 15px;
+  margin: 0;
+}
+.theGroupCard .theName {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.theGroupCard .theName .theBIcon img {
+  width: 100%;
+}
+.theGroupCard .theStatus {
+  margin-top: 1rem;
+}
+.theGroupCard .thePaid {
+  margin-top: 1rem;
+}
+
 /*# sourceMappingURL=new.css.map */
