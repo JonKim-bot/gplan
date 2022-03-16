@@ -105,6 +105,7 @@
 
           </div>
           <!-- /.col-->
+          <?php if(!empty($wallet)){ ?>
           <?php foreach ($wallet as $row) { ?>
             <div class="col-sm-12 col-lg-12">
               <div class="card text-white c-shadow" style="border-radius: 20px;">
@@ -178,19 +179,23 @@
 
             </div>
           <?php } ?>
+          <?php }else{ ?>
 
-          <div class="theEmptyBox">
-            <div class="theEmpty">
-              <h3>
-                <?= $lang['notransaction'] ?>
-              </h3>
-              <div class="theTButton">
-                <a href="">
-                  <?= $lang['maketransaction'] ?>
-                </a>
+
+            <div class="theEmptyBox">
+              <div class="theEmpty">
+                <h3>
+                  <?= $lang['notransaction'] ?>
+                </h3>
+                <div class="theTButton">
+                  <a href="">
+                    <?= $lang['maketransaction'] ?>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          <?php } ?>
+
 
 
           <!-- /.col-->
