@@ -100,7 +100,8 @@
             <div>
               <h5 class="text-white OpenSansSemiBold" style="font-size: 15px; margin-bottom: 0px;"><?= $lang['transaction'] ?></h5>
             </div>
-            <div></div>
+            <div>
+            </div>
 
           </div>
           <!-- /.col-->
