@@ -358,9 +358,9 @@ QR Code
         <?php if (session()->get('login_data')['type_id'] == '0') { ?>
 
             <div class="c-wrapper c-fixed-components">
+                
             <?php } else { ?>
                 <div class="c-wrapper c-fixed-components" style="margin:0px;">
-
                 <?php } ?>
                 <?php if (session()->get('login_data')['type_id'] == '0') { ?>
 
@@ -454,6 +454,7 @@ QR Code
                             Profile
                         </a> -->
                                   <!-- <div class="dropdown-divider">
+                                      
                                 </div> -->
                                 <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
                                     <i class="cil-account-logout c-icon mfe-2"></i>
