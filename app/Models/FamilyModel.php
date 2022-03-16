@@ -84,7 +84,7 @@ class FamilyModel extends BaseModel
         return $result;
     }
 
-    
+
     public function user_family($family_id){
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
@@ -190,6 +190,7 @@ class FamilyModel extends BaseModel
 
         }
     }
+    
 
     public function get_upline_info($link_family_id){
         $upline_id = $this->db->query("SELECT user_id FROM family WHERE family_id = $link_family_id")->getResultArray()[0]['user_id'];

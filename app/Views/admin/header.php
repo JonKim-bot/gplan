@@ -26,6 +26,7 @@
 
     <link rel="stylesheet" href="<?= base_url(
                                         'assets/plugins/select2/select2.css'
+
                                     ) ?>">
 
 
@@ -47,7 +48,13 @@
 </head>
 
 
+<?php if (session()->get('login_data')['type_id'] == '1') { ?>
+
 <body class="c-maxContainter">
+<?php }else{ ?>
+    <body >
+
+<?php } ?>
     <div class="c-app">
         <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show <?= (session()->get('login_data')['type_id'] == '1') ? 'd-none' : '' ?>" id="sidebar">
             <div class="c-sidebar-brand d-md-down-none">
@@ -115,14 +122,6 @@
                         Paid User
                         <span class="badge badge-pill badge-warning"></span>
 
-                    <li class="c-sidebar-nav-item ">
-                        <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'paid_user'
-                                                            ? 'c-active'
-                                                            : null ?>" href="<?= base_url('Users') ?>/paid_user">
-                            <i class="cil-people c-sidebar-nav-icon"></i>
-                            Paid User
-                            <span class="badge badge-pill badge-warning"></span>
-
                         </a>
 
                     </li>
@@ -152,6 +151,7 @@
                     <li class="c-sidebar-nav-item ">
                         <a class="c-sidebar-nav-link <?= $uri->getSegment(1) ==
                                                             'Wallet'
+
                                                             ? 'c-active'
                                                             : null ?>" href="<?= base_url('Wallet') ?>">
                             <i class="cil-money  c-sidebar-nav-icon"></i>
@@ -453,14 +453,30 @@ QR Code
                             <i class="cil-user c-icon mfe-2"></i>
                             Profile
                         </a> -->
-                        <!-- <div class="dropdown-divider"></div> -->
-                        <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
-                            <i class="cil-account-logout c-icon mfe-2"></i>
-                            Logout
-                        </a>
-                    </div>
+                                  <!-- <div class="dropdown-divider">
+                                </div> -->
+                                <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
+                                    <i class="cil-account-logout c-icon mfe-2"></i>
+                                    Logout
+                                </a>
+                </div>
                 </li>
                 <li class="c-header-nav-item px-2 c-d-legacy-none"></li>
+
+                </ul>
+
+                </header>
+
+            <?php } ?>
+            <?php if (session()->get('login_data')['type_id'] == '1') { ?>
+                <!-- <div class="dropdown-divider"></div> -->
+                <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
+                    <i class="cil-account-logout c-icon mfe-2"></i>
+                    Logout
+                </a>
+            </div>
+            </li>
+            <!-- <li class="c-header-nav-item px-2 c-d-legacy-none"></li> -->
             </ul>
 
         </header>
