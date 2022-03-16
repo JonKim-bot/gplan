@@ -36,7 +36,7 @@ class Database extends \CodeIgniter\Database\Config
 		'password' => '',
 		// 'username' => 'root',
 		// 'password' => 'cyyang_basketball',
-		'database' => 'gplan',
+		'database' => 'gplan_',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,

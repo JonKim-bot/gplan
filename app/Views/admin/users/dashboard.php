@@ -55,24 +55,28 @@
       <div class="fade-in">
         <div class="theHeader">
           <div style="width: 10%;">
-
+          <a href="<?= base_url() ?>/access/logout">
+            <i class="fa fa-arrow-left fa-2x text-dark" aria-hidden="true"></i>
+          </a>
           </div>
           <div class="theHeaderName">
             <h3>
-              Hello John
+              Hello <?= $users['username'] ?>
             </h3>
             <div class="theIcon">
               <img src="<?= base_url() ?>/assets/img/Octicons.png">
             </div>
           </div>
           <div class="theHeaderDrop">
-            <div class="theIcon">
-              <img src="<?= base_url() ?>/assets/img/Group 170.png">
-            </div>
+            <a href="<?= base_url() ?>/users/user_detail/1">
+              <div class="theIcon">
+                <img src="<?= base_url() ?>/assets/img/Group 170.png">
+              </div>
+            </a>
 
-            <div class="theHeaderDrop-content">
-              <a href="">Logout</a>
-            </div>
+            <!-- <div class="theHeaderDrop-content">
+              <a href="<?= base_url() ?>/access/logout">Logout</a>
+            </div> -->
           </div>
         </div>
         <div class="row">
@@ -150,7 +154,7 @@
                       </a>
                     </div>
 
-                    
+
 
                   </div>
 
@@ -544,8 +548,9 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-      <script src="<?= base_url() ?>/assets/js/bootstrap.min"></script>
+      <script src="<?= base_url() ?>/assets/js/bootstrap.min.js"></script>
       <script src="<?= base_url() ?>/assets/js/bjs.js"></script>
+
 
       <?php if ($users['receipt'] == "") { ?>
         <script>
