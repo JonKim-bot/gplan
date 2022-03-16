@@ -126,6 +126,18 @@
                         </a>
 
                     </li>
+                    <li class="c-sidebar-nav-item ">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'unpaid_user'
+                                                        ? 'c-active'
+                                                        : null ?>" href="<?= base_url('Users') ?>/unpaid_user">
+                        <i class="cil-people c-sidebar-nav-icon"></i>
+                        Unpaid User
+                        <span class="badge badge-pill badge-warning"></span>
+
+                        </a>
+
+                    </li>
+
 
 
 
@@ -459,6 +471,7 @@ QR Code
                                       
                                 </div> -->
                                 <a class="dropdown-item" href="<?= base_url() ?>/access/logout_admin">
+
                                     <i class="cil-account-logout c-icon mfe-2"></i>
                                     Logout
                                 </a>

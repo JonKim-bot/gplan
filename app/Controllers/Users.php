@@ -184,6 +184,82 @@ class Users extends BaseController
     }
     // public function generate_image
 
+    public function unpaid_user()
+    {
+        
+        $where = [
+
+            'users.is_paid' => 0,
+        ];
+        $is_verified =
+        ($_GET and isset($_GET['is_verified']))
+            ? $_GET['is_verified']
+            : 99;
+
+        $where['users.contact !='] = '';
+
+        if($is_verified != 99){
+
+            $where['users.is_verified'] = $is_verified;
+        }        
+        $users = $this->UsersModel->getWhere($where);
+        $users_count = 0;
+        if(!empty($users)){
+            $users_count = count($users);
+        }
+
+        $this->pageData['users_count'] = $users_count;
+        // dd($users);
+
+        $field = $this->UsersModel->get_field([
+            'created_by',
+            'modified_by',
+            'deleted',
+        ]);
+        $this->pageData['table'] = $this->generate_table(
+            $field,
+            $users,
+            'users',
+            'banner'
+        );
+
+
+        foreach($users as $key => $row){
+            $family_name = '';
+            // dd($key);
+            $upline_name = '';
+
+            if($row['self_family_id'] > 0){
+                $where = [
+
+                    'family.family_id' => $row['self_family_id']
+                ];
+                $user_in_family = $this->FamilyModel->getWhere($where);
+    
+                if(!empty($user_in_family)){
+                    $link_family_id = $user_in_family[0]['link_family_id'];
+                    $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
+                }
+            }
+            $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']]);
+            if(!empty($upline_name)){
+                $upline_name = $upline_name[0]['name'];
+            }else{
+                $upline_name = '';
+            }
+
+            $users[$key]['upline_name'] = $upline_name;
+
+            $users[$key]['family_name'] = $family_name;
+
+        }
+        $this->pageData['users'] = $users;
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/all');
+        echo view('admin/footer');
+    }
+
+
     public function paid_user()
     {
         
@@ -240,8 +316,15 @@ class Users extends BaseController
                     $link_family_id = $user_in_family[0]['link_family_id'];
                     $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
                 }
-                $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']])[0]['name'];
+                
             }
+            $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']]);
+            if(!empty($upline_name)){
+                $upline_name = $upline_name[0]['name'];
+            }else{
+                $upline_name = '';
+            }
+
             $users[$key]['upline_name'] = $upline_name;
 
             $users[$key]['family_name'] = $family_name;
@@ -331,6 +414,7 @@ class Users extends BaseController
             $users[$key]['upline_name'] = $upline_name;
 
             $users[$key]['family_name'] = $family_name;
+
 
         }
         $this->pageData['users'] = $users;
@@ -525,6 +609,8 @@ class Users extends BaseController
             $is_paid = 1;
         }
         $this->UsersModel->updateWhere($where,['is_paid' => $is_paid]);
+
+
         if(isset($_SERVER['HTTP_REFERER'])){
             return redirect()->to($_SERVER['HTTP_REFERER']);
         }else{
@@ -539,6 +625,7 @@ class Users extends BaseController
         $where = [
             'users.users_id' => $users_id
         ];
+
         $users = $this->UsersModel->getWhere($where)[0];
 
 
@@ -570,6 +657,7 @@ class Users extends BaseController
 
         if($users['is_verified'] == 0){
             $is_verified = 1;
+
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
             $this->CompanyProfitModel->company_profit_in($users_id,500,$remarks);
             // dd($users['family_id']);
