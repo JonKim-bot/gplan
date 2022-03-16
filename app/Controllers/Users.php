@@ -311,7 +311,13 @@ class Users extends BaseController
                     $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
                 }
             }
-            $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']])[0]['name'];
+            $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']]);
+            if(!empty($upline_name)){
+                $upline_name = $upline_name[0]['name'];
+            }else{
+                $upline_name = '';
+            }
+    
             $users[$key]['upline_name'] = $upline_name;
 
             $users[$key]['family_name'] = $family_name;
@@ -649,7 +655,12 @@ class Users extends BaseController
             }
            
         }
-        $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
+        $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']]);
+        if(!empty($upline_name)){
+            $upline_name = $upline_name[0]['name'];
+        }else{
+            $upline_name = '';
+        }
         $users['family_name'] = $family_name;
         $users['upline_name'] = $upline_name;
 
@@ -768,7 +779,12 @@ class Users extends BaseController
           
             }
         }
-        $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']])[0]['name'];
+        $upline_name = $this->UsersModel->getWhere(['users.users_id' => $users['reference_id']]);
+        if(!empty($upline_name)){
+            $upline_name = $upline_name[0]['name'];
+        }else{
+            $upline_name = '';
+        }
 
         $users['family_name'] = $family_name;
         $users['upline_name'] = $upline_name;

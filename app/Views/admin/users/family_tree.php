@@ -80,11 +80,11 @@ html, body {
     left: 50%;
     transform: translate(-130%, -48%);
     font-size: 14px;
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     border-radius: 25px;
-    background: linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;
+    /* background: linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important; */
 
-    box-shadow: 0 3px 6px 0 rgba(250, 113, 49, 0.658);
+    /* box-shadow: 0 3px 6px 0 rgba(250, 113, 49, 0.658); */
     color: white;
     display: inline-block;
 }
@@ -155,7 +155,12 @@ html, body {
                 <span class="text-white"><?= $row['status'] ?></span>
             </p>
             <div class="time">
-                <a class="view_level" id="<?= $row['level'] ?>">Level <?= $row['level'] ?></a>
+                <a class="view_level" id="<?= $row['level'] ?>">
+                <img src="<?= base_url() ?>/assets/img/Group 170.png" alt="">
+                
+                <!-- Level <?= $row['level'] ?> -->
+            
+            </a>
             </div>
         </div>
         <?php } ?>
