@@ -84,11 +84,13 @@ class Access extends BaseController
 
                 return redirect()->to(base_url('users/dashboard/1', 'refresh'));
             }
+            
         }
 
 
         echo view('access/header', $this->pageData);
         echo view('access/login_user');
+        
         echo view('access/footer');
     }
 

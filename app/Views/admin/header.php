@@ -111,16 +111,16 @@
                             Registration
                             <span class="badge badge-pill badge-warning"><?= $undone_user ?></span>
 
-                        </a>
-                    </li>
-
-                    <li class="c-sidebar-nav-item ">
-                        <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'paid_user'
-                                                            ? 'c-active'
-                                                            : null ?>" href="<?= base_url('Users') ?>/paid_user">
-                            <i class="cil-people c-sidebar-nav-icon"></i>
-                            Paid User
-                            <span class="badge badge-pill badge-warning"></span>
+                    </a>
+                </li>
+                
+                <li class="c-sidebar-nav-item ">
+                    <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'paid_user'
+                                                        ? 'c-active'
+                                                        : null ?>" href="<?= base_url('Users') ?>/paid_user">
+                        <i class="cil-people c-sidebar-nav-icon"></i>
+                        Paid User
+                        <span class="badge badge-pill badge-warning"></span>
 
                         </a>
 
@@ -445,10 +445,10 @@ QR Code
                                     <div class="dropdown-header bg-light py-2">
                                         <strong> <?= session()->get('login_data')['name'] ?></strong>
                                     </div>
-                                    <a class="dropdown-item" href="<?= base_url() ?>/users/user_detail/1">
+                                    <!-- <a class="dropdown-item" href="<?= base_url() ?>/users/user_detail/1">
                                         <i class="cil-user c-icon mfe-2"></i>
                                         Profile
-                                    </a>
+                                    </a> -->
                                     <!-- <a class="dropdown-item" href="#">
                             <i class="cil-user c-icon mfe-2"></i>
                             Profile
@@ -480,13 +480,14 @@ QR Code
             <!-- <li class="c-header-nav-item px-2 c-d-legacy-none"></li> -->
             </ul>
 
-            </header>
+        </header>
         <?php } ?>
+        
 
         <?php if (session()->get('login_data')['type_id'] == '1') { ?>
 
-            <div class="c-body">
-            <?php } else { ?>
-                <div class="c-body">
+                    <div class="c-body">
+                    <?php } else { ?>
+                        <div class="c-body">
 
-                <?php } ?>
+                        <?php } ?>
