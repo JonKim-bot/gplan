@@ -7,7 +7,7 @@
             </div>
             <div>
                 <p>Name : <?= $row['username'] ?></p>
-                <p>Total Downline : <?= $row['total_downline'] ?></p>
+                <p>Total Student : <?= $row['total_downline'] ?></p>
             </div>
 
         </div>
