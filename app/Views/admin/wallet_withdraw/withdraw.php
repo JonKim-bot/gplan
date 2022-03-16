@@ -58,11 +58,10 @@
   }
 
   .c-body {
-    width:100vw;
-
     position: relative;
-    max-width: 500px;
-    min-height: 787px;
+    max-width: 100%;
+    /* min-height: 787px; */
+    width: 100%;
     margin: 0 auto;
     justify-content: center;
     overflow: hidden;
@@ -71,11 +70,12 @@
   .bold {
     font-weight: bold;
   }
-  .bg_color{
-  background: rgb(49, 27, 110) !important;
 
-  background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%)!important;
-}
+  .bg_color {
+    background: rgb(49, 27, 110) !important;
+
+    background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%) !important;
+  }
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -214,6 +214,19 @@
             </div>
           <?php } ?>
 
+
+          <div class="theEmptyBox">
+            <div class="theEmpty">
+              <h3>
+                <?= $lang['withdraw_now'] ?>
+              </h3>
+              <a href="">
+                <div class="theIcon">
+                  <img src="<?= base_url() ?>/assets/img/Group 156.png">
+                </div>
+              </a>
+            </div>
+          </div>
 
 
 
