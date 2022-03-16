@@ -106,6 +106,7 @@
             </div>
           </div>
           <!-- /.col-->
+          <?php if(!empty($wallet_withdraw)) { ?>
           <?php foreach ($wallet_withdraw as $row) { ?>
             <div class="col-sm-12 col-lg-12">
               <div class="card text-white c-shadow" style="border-radius: 20px;">
@@ -213,20 +214,23 @@
 
             </div>
           <?php } ?>
+          <?php }else{ ?>
 
-
-          <div class="theEmptyBox">
-            <div class="theEmpty">
-              <h3>
-                <?= $lang['withdraw_now'] ?>
-              </h3>
-              <a href="">
-                <div class="theIcon">
-                  <img src="<?= base_url() ?>/assets/img/Group 156.png">
-                </div>
-              </a>
+            <div class="theEmptyBox">
+              <div class="theEmpty">
+                <h3>
+                  <?= $lang['withdraw_now'] ?>
+                </h3>
+                <a data-toggle="modal" data-target="#status_modal">
+                  <div class="theIcon" >
+                    <img src="<?= base_url() ?>/assets/img/Group 156.png">
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
+          <?php } ?>
+
+
 
 
 

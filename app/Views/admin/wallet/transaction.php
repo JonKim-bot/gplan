@@ -108,9 +108,9 @@
           <?php foreach ($wallet as $row) { ?>
             <div class="col-sm-12 col-lg-12">
               <div class="card text-white c-shadow" style="border-radius: 20px;">
-                <div class="c-QR row text-dark" style="width:90%">
+                <div class="c-QR row text-dark" >
                   <div class="row">
-                    <div class="col-7 description_div">
+                    <div class="col-12 description_div">
                       <div class="one_row row">
                         <div class="col-6">
                           <p class="OpenSansRegular mb-1" style="font-size: 10px; color:#000;">User Name</p>

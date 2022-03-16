@@ -75,9 +75,9 @@
             <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-top:20px;">
             <!-- <a href="">+</a> -->
             <div class="icon_top">
-              <a href="<?= base_url() ?>/users/dashboard/1">
-                <i class="fa fa-arrow-left fa-2x text-white" aria-hidden="true"></i>
-              </a>
+            <a class="icon_top" href="<?= base_url() ?>/users/dashboard/1">
+              <img src="<?= base_url() ?>/assets/img/XMLID_223_.png">
+            </a>
             </div>
        
           </div>

@@ -122,15 +122,16 @@
                     <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
 
                       <p class="m-0 thLabel">
-                        <?= $lang['total_earn_amount'] ?> : <?= $total_earn ?>
+                        <?= $lang['total_earn_amount'] ?> : <br>RM <?= $total_earn ?>
                       </p>
+
                     </a>
                   </div>
                   <div class="py-1">
                     <a href="<?= base_url() ?>/Wallet/transaction" style="color:white">
 
                       <p class="m-0 thLabel">
-                        <?= $lang['withdraw_amount'] ?> : <?= $total_withdraw ?>
+                        <?= $lang['withdraw_amount'] ?> : <br>RM <?= $total_withdraw ?>
                       </p>
                     </a>
                   </div>
