@@ -1,6 +1,7 @@
 <?php
 $lang['your_point'] = '你的分数';
 $lang['withdraw'] = '提取';
+$lang['transaction'] = '交易';
 $lang['transaction_history'] = '交易记录';
 $lang['total_earn_amount'] = '总赚取金额';
 $lang['withdraw_amount'] = '取款数量';
@@ -25,3 +26,6 @@ $lang['dont_have_family'] = '还没有家人';
 $lang['view_reward'] = '查看奖励';
 $lang['referral_name'] = '推荐人姓名';
 $lang['total_level_achived'] = '达到的总水平';
+$lang['notransaction'] = '您没有任何交易。';
+$lang['maketransaction'] = '进行交易。';
+$lang['withdraw_now'] = '立即提取';

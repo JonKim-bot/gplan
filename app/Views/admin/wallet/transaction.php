@@ -58,10 +58,9 @@
   }
 
   .c-body {
-    width:100vw;
     position: relative;
-    max-width: 500px;
-    min-height: 787px;
+    max-width: 100%;
+    /* min-height: 787px; */
     margin: 0 auto;
     justify-content: center;
     overflow: hidden;
@@ -70,11 +69,12 @@
   .bold {
     font-weight: bold;
   }
-  .bg_color{
-  background: rgb(49, 27, 110) !important;
 
-  background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%)!important;
-}
+  .bg_color {
+    background: rgb(49, 27, 110) !important;
+
+    background: linear-gradient(180deg, rgba(49, 27, 110, 1) 0%, rgba(46, 195, 201, 1) 100%) !important;
+  }
 </style>
 <!-- <div class="c-subheader px-3">
   <ol class="breadcrumb border-0 m-0">
@@ -92,15 +92,16 @@
         <div class="row">
 
           <!-- /.col-->
-          <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;">
+          <div class="col-sm-12 d-flex" style="justify-content: space-between; align-items:center; margin-bottom:20px;">
             <!-- <a href="">+</a> -->
             <a class="icon_top" href="<?= base_url() ?>/users/dashboard/1">
               <img src="<?= base_url() ?>/assets/img/XMLID_223_.png">
             </a>
             <div>
-              <h5 class="text-white OpenSansSemiBold" style="font-size: 15px;">Transaction</h5>
+              <h5 class="text-white OpenSansSemiBold" style="font-size: 15px; margin-bottom: 0px;"><?= $lang['transaction'] ?></h5>
             </div>
-      
+            <div></div>
+
           </div>
           <!-- /.col-->
           <?php foreach ($wallet as $row) { ?>
@@ -177,7 +178,18 @@
             </div>
           <?php } ?>
 
-
+          <div class="theEmptyBox">
+            <div class="theEmpty">
+              <h3>
+                <?= $lang['notransaction'] ?>
+              </h3>
+              <div class="theTButton">
+                <a href="">
+                  <?= $lang['maketransaction'] ?>
+                </a>
+              </div>
+            </div>
+          </div>
 
 
           <!-- /.col-->
@@ -187,4 +199,3 @@
 
         <!-- /.row-->
       </div>
-

@@ -364,4 +364,39 @@
   justify-content: center;
 }
 
+.theEmptyBox {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theEmptyBox .theEmpty {
+  width: 80%;
+  border: 1px dashed #fff;
+  border-radius: 17px;
+  padding: 1rem 2rem;
+}
+.theEmptyBox .theEmpty h3 {
+  font-family: "OpenSans-Semibold";
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.theEmptyBox .theEmpty .theTButton {
+  font-family: "OpenSans-Semibold";
+  font-size: 13px;
+  text-align: center;
+  padding: 0.375rem 0.75rem;
+  margin: auto;
+  background-color: #5f05c7;
+  width: 80%;
+  border-radius: 5px;
+}
+.theEmptyBox .theEmpty .theTButton a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=new.css.map */

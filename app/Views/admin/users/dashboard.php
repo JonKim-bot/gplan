@@ -58,7 +58,8 @@
 
   .c-carousel .c-carouselimg img {
     width: 100%;
-    object-fit: cover;
+    height: 400px;
+    object-fit: contain;
   }
 </style>
 <!-- <div class="c-subheader px-3">
