@@ -151,10 +151,10 @@ html, body {
             <div class="indicator">
                 <span></span>
             </div>
-            <p class="content">
-                <span class="text-white">
+            <p class="content text-white">
                 Level (<?= $row['level'] ?>)
                 <br>
+                <span class="<?= $row['status'] == 'Success' ? 'text-success' : 'text-danger' ?>">
                 <?= $row['status'] ?></span>
             </p>
             <div class="time">
