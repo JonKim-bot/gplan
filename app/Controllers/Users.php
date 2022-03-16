@@ -1060,18 +1060,22 @@ class Users extends BaseController
 
             'family.user_id' => $user_id
         ];
+        $user = $this->get_users_info($user_id);
         $family_id = $this->FamilyModel->getWhereRaw($where)[0]['family_id'];
         $level = $this->FamilyModel->user_family($family_id);
         $family_tree = $this->FamilyModel->user_family_tree($family_id);
         $level_arr = [];
+
         for ($x = 1; $x <= $level ; $x++) {
 
-            $family_level = $this->check_if_reached_level($x,$family_tree);
-            $data = [
-                'level' => $x,
-                'status' => $family_level
-            ];
-            array_push($level_arr,$data);
+            if($x < $user['type_id'] + 8){
+                $family_level = $this->check_if_reached_level($x,$family_tree);
+                $data = [
+                    'level' => $x,
+                    'status' => $family_level
+                ];
+                array_push($level_arr,$data);
+            }
         }
         $this->pageData['level_arr'] = $level_arr;
 
@@ -1120,6 +1124,7 @@ class Users extends BaseController
         
         $tree = $users_1;
         
+
 
         $ulli = $this->createListLi($tree);
         
