@@ -26,6 +26,7 @@
 
     <link rel="stylesheet" href="<?= base_url(
                                         'assets/plugins/select2/select2.css'
+
                                     ) ?>">
 
 
@@ -465,9 +466,9 @@ QR Code
                 </ul>
 
                 </header>
+
             <?php } ?>
             <?php if (session()->get('login_data')['type_id'] == '1') { ?>
-                =======
                 <!-- <div class="dropdown-divider"></div> -->
                 <a class="dropdown-item" href="<?= base_url() ?>/access/logout">
                     <i class="cil-account-logout c-icon mfe-2"></i>
@@ -475,14 +476,13 @@ QR Code
                 </a>
             </div>
             </li>
-            <li class="c-header-nav-item px-2 c-d-legacy-none"></li>
+            <!-- <li class="c-header-nav-item px-2 c-d-legacy-none"></li> -->
             </ul>
 
             </header>
         <?php } ?>
 
         <?php if (session()->get('login_data')['type_id'] == '1') { ?>
-            >>>>>>> 9aedf1aca3cad68ca3fac627c2d29fe35f2ac9d0
 
             <div class="c-body">
             <?php } else { ?>
