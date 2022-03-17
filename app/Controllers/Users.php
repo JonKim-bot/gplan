@@ -316,7 +316,7 @@ class Users extends BaseController
                     $link_family_id = $user_in_family[0]['link_family_id'];
                     $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
                 }
-                
+
             }
             $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']]);
             if(!empty($upline_name)){
@@ -774,6 +774,7 @@ class Users extends BaseController
 
 
 
+
                 $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
             }
            
@@ -914,6 +915,7 @@ class Users extends BaseController
 
         // }
         $this->pageData['users'] = $users;
+
 
 
         $this->pageData['modified_by'] = $this->get_modified_by($users['modified_by']);
@@ -1142,8 +1144,9 @@ class Users extends BaseController
 
     }
     function check_if_reached_level($level,$family){
-        $family_level = isset($family[$level + 1]) ? count($family[$level + 1]) : -1;
+        $family_level = isset($family[$level ]) ? count($family[$level]) : -1;
         $level_max = $this->return_level_max($level);
+        
         if($family_level >= $level_max){
 
             return 'Success';
@@ -1195,6 +1198,7 @@ class Users extends BaseController
 
             if($x <= $user['type_id'] + 8){
                 $family_level = $this->check_if_reached_level($x,$family_tree);
+               
                 $data = [
                     'level' => $x,
                     'status' => $family_level
