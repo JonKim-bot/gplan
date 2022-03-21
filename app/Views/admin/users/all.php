@@ -34,7 +34,7 @@
                     <form method="GET" id="filter_form">
                         <div class="row">
 
-                            <div class="form-group col-sm-12 col-md-3">
+                            <!-- <div class="form-group col-sm-12 col-md-3">
                                 <label for="" class="c-label">User Type</label>
                                 <select class="form-control filter" name="is_verified">
                                     <option value="99">All</option>
@@ -42,7 +42,7 @@
                                     <option value="0"  <?= isset($_GET['is_verified']) && $_GET['is_verified'] == 0 ? 'selected' : ''  ?>>Not Verified</option>
 
                                 </select>
-                            </div>
+                            </div> -->
 
                         </div>
                     </form>

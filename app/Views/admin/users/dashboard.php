@@ -244,10 +244,12 @@
                 </div>
                 <div class="text-white" style="padding:50px; border-bottom-left-radius: 20px;border-bottom-right-radius: 20px; background:linear-gradient(to right top, #2e8dab, #1980a7, #0972a2, #0e649b, #1d5592, #22528f, #274f8d, #2b4c8a, #29538e, #295b92, #2b6295, #2f6998)!important;">
                   <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 text-center">
                       <p style="font-size: 16px; line-height:1; margin:0;">
                         <?= $lang['invite_more'] ?>
                       </p>
+                      <button class="btn btn-primary mt-2" onclick="myFunction()">Copy link</button>
+
                     </div>
                     <!-- <div class="col-6">
                       <h1 style="margin: 0;">
@@ -356,6 +358,7 @@
                     </div>
                   </div>
                 </div>
+
 
               <?php } else if($users['is_paid'] == 1 && $users['receipt'] == "") { ?>
                 <div class="card-group" style="margin-top: 20px;">
@@ -601,3 +604,15 @@
         </script>
 
       <?php } ?>
+
+      <script>
+        function myFunction() {
+        /* Get the text field */
+              let referal_link  = "<?= base_url() ?>/main/welcome/<?= $family_id ?>/<?= $users_id ?>";
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(referal_link);
+
+            /* Alert the copied text */
+            alert("Copied the link: " + referal_link);
+        }
+      </script>
