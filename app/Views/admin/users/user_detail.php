@@ -157,7 +157,7 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <h5 class="modal-title" id="modalAddLabel">Edit</h5>
+              <h5 class="modal-title" id="modalAddLabel">Edit Detail</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -174,6 +174,7 @@
                     <div class="form-group">
                         <label for="">Contact Number</label>
                         <input type="text" class="form-control" name="contact" value="<?=  $users['contact'] ?>" placeholder="Contact Number" required>
+                        
                     </div>
                     <div class="form-group">
                         <label for="">Email</label>
