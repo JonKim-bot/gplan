@@ -184,6 +184,82 @@ class Users extends BaseController
     }
     // public function generate_image
 
+    
+    public function verified_member()
+    {
+        
+        $where = [
+
+            'users.is_verified' => 1,
+        ];
+        $is_verified =
+        ($_GET and isset($_GET['is_verified']))
+            ? $_GET['is_verified']
+            : 99;
+
+        $where['users.contact !='] = '';
+
+        if($is_verified != 99){
+
+            $where['users.is_verified'] = $is_verified;
+        }        
+        $users = $this->UsersModel->getWhere($where);
+        $users_count = 0;
+        if(!empty($users)){
+            $users_count = count($users);
+        }
+
+        $this->pageData['users_count'] = $users_count;
+        // dd($users);
+
+        $field = $this->UsersModel->get_field([
+            'created_by',
+            'modified_by',
+            'deleted',
+        ]);
+        $this->pageData['table'] = $this->generate_table(
+            $field,
+            $users,
+            'users',
+            'banner'
+        );
+
+
+        foreach($users as $key => $row){
+            $family_name = '';
+            // dd($key);
+            $upline_name = '';
+
+            if($row['self_family_id'] > 0){
+                $where = [
+
+                    'family.family_id' => $row['self_family_id']
+                ];
+                $user_in_family = $this->FamilyModel->getWhere($where);
+    
+                if(!empty($user_in_family)){
+                    $link_family_id = $user_in_family[0]['link_family_id'];
+                    $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
+                }
+            }
+            $upline_name = $this->UsersModel->getWhere(['users.users_id' => $row['reference_id']]);
+            if(!empty($upline_name)){
+                $upline_name = $upline_name[0]['name'];
+            }else{
+                $upline_name = '';
+            }
+
+            $users[$key]['upline_name'] = $upline_name;
+
+            $users[$key]['family_name'] = $family_name;
+
+        }
+        $this->pageData['users'] = $users;
+        echo view('admin/header', $this->pageData);
+        echo view('admin/users/all');
+        echo view('admin/footer');
+    }
+
     public function unpaid_user()
     {
         
@@ -348,7 +424,8 @@ class Users extends BaseController
     public function index()
     {
 
-        
+        $where['users.is_verified'] = 0;
+
         $is_verified =
         ($_GET and isset($_GET['is_verified']))
             ? $_GET['is_verified']
@@ -471,7 +548,10 @@ class Users extends BaseController
             if (!$error) {
                 $data = [
                     'is_paid' => 1,
+                    'paid_date' => date('Y-m-d H:i:s')
                 ];
+
+
                 $data = $this->upload_image_with_data($data, 'receipt');
                 $users_id = $this->UsersModel->updateWhere($where,$data);
                 alert('Receipt submitted');
@@ -529,6 +609,7 @@ class Users extends BaseController
                     'reference_id' => $this->find_user_id_by_family_id($input['family_id']),
                     // 'nric' => $input['nric'],
                     'family_id' => $input['family_id'],
+
                     // 'ssm_name' => $input['ssm_name'],
                     // 'ssm_number' => $input['ssm_number'],
                     'salt' => $hash['salt'],
@@ -608,7 +689,7 @@ class Users extends BaseController
         }else{
             $is_paid = 1;
         }
-        $this->UsersModel->updateWhere($where,['is_paid' => $is_paid]);
+        $this->UsersModel->updateWhere($where,['is_paid' => $is_paid ,'paid_date' => date('Y-m-d H:i:s')]);
 
 
         if(isset($_SERVER['HTTP_REFERER'])){
@@ -1030,8 +1111,9 @@ class Users extends BaseController
                 $data = [
                     'name' => $input['name'],
                     'email' => $input['email'],
-                    'username' => $input['contact'],
+                    'username' => $input['username'],
                     'contact' => $input['contact'],
+
                     // 'nric_name' => $input['nric_name'],
                     // 'nric' => $input['nric'],
                 ];
@@ -1147,6 +1229,7 @@ class Users extends BaseController
         $family_level = isset($family[$level ]) ? count($family[$level]) : -1;
         $level_max = $this->return_level_max($level);
         
+
         if($family_level >= $level_max){
 
             return 'Success';
@@ -1195,6 +1278,7 @@ class Users extends BaseController
         $level_arr = [];
 
         for ($x = 1; $x <= $level ; $x++) {
+
 
             if($x <= $user['type_id'] + 8){
                 $family_level = $this->check_if_reached_level($x,$family_tree);

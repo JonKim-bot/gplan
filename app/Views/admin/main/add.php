@@ -31,7 +31,7 @@
                         <i class="cil-phone c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="text" require name="contact">
+                <input class="form-control" type="number" require name="contact">
             </div>
 
             <p class="formLabel">Email</p>
@@ -41,7 +41,7 @@
                         <i class="cib-gmail c-icon"></i>
                     </span>
                 </div>
-                <input class="form-control" type="text" require name="email">
+                <input class="form-control" type="email" require name="email">
             </div>
 
             <div class="text-center text-white register_personal">

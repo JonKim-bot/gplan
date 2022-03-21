@@ -42,7 +42,7 @@
 
                                 <div class="form-group">
                                     <label for="">User Name</label>
-                                    <input type="text" class="form-control" value="<?= $users['username'] ?>"  placeholder="User Name"  readonly>
+                                    <input type="text" class="form-control" value="<?= $users['username'] ?>" name="username"  placeholder="User Name"  >
                                 </div>
 
                     <div class="form-group">
@@ -79,11 +79,11 @@
                     
 
                                 <div class="form-group">
-                                    <label for="">Password</label>
+                                    <label for="">Password (leave this field blank if not changing password)</label>
                                     <input type="password" class="form-control" name="password" placeholder="Password" >
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Confirm Password</label>
+                                    <label for="">Confirm Password (leave this field blank if not changing password)</label>
                                     <input type="password" class="form-control" name="password2" placeholder="Confirm Password" >
                                 </div>
                 

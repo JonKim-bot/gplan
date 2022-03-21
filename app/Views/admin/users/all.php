@@ -64,10 +64,12 @@
 
                                                 <th data-filter="email">Family Tree</th>
                                                 <th data-filter="email">Direct Tree</th>
-
-
+                                                
+                                                
                                                 <th>Verify Status</th>
-                                                <th></th>
+                                                <th>Paid Status</th>
+                                                <th data-filter="email">Created Date </th>
+                                                <th data-filter="email">Paid Date</th>
 
                                                 <th></th>
                                             </tr>
@@ -122,6 +124,8 @@
                                                         <td>Paid</td>
                                                     <?php } ?>
                                           
+                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['created_date'] ?></a></td>
+                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['paid_date'] ?></a></td>
 
                                                     <td><a href="<?= base_url() ?>/users/delete/<?= $row['users_id'] ?>" class="btn btn-danger delete-button"><i class="fa fa-trash"></i> Delete</a></td>
                                                 </tr>

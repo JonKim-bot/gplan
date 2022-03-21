@@ -326,7 +326,7 @@
                   </div>
                 <?php } ?>
               </div>
-              <?php if ($users['receipt'] == "") { ?>
+              <?php if ($users['receipt'] == "" && $users['is_paid'] == 0) { ?>
 
                 <div class="card-group text-center" style="margin-top: 20px;">
                   <div class="card">
@@ -357,7 +357,22 @@
                   </div>
                 </div>
 
-              <?php } else { ?>
+              <?php } else if($users['is_paid'] == 1 && $users['receipt'] == "") { ?>
+                <div class="card-group" style="margin-top: 20px;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h1>Receipt</h1>
+                      <p class="text-muted">Your payment already made</p>
+                      <div class="text-center">
+                        <!-- <img style="width:100%" src="<?= base_url() .  $users['receipt'] ?>" alt=""> -->
+                      </div>
+                      <br>
+
+                    </div>
+                  </div>
+                </div>
+
+              <?php }else{ ?>
                 <div class="card-group" style="margin-top: 20px;">
                   <div class="card">
                     <div class="card-body">
@@ -370,8 +385,7 @@
 
                     </div>
                   </div>
-                </div>
-
+                </div
               <?php } ?>
 
 
@@ -407,6 +421,7 @@
 
                     </div>
                     <div class="btn-group">
+
                       <!-- <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <svg class="c-icon">
                             <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
@@ -580,7 +595,7 @@
       <script src="<?= base_url() ?>/assets/js/bjs.js"></script>
 
 
-      <?php if ($users['receipt'] == "") { ?>
+      <?php if ($users['receipt'] == "" && $users['is_paid'] == 0) { ?>
         <script>
           $('#status_modal').modal('show');
         </script>

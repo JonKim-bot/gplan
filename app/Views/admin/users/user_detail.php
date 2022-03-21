@@ -130,7 +130,7 @@
                 <div class="col-12">
                 <hr>
                 </div>
-                <div class="col-6">
+                <!-- <div class="col-6">
                   <p>Proof of receipt</p>
                 </div>
                 <div class="col-6">
@@ -138,7 +138,7 @@
                 <div class="col-12">
                 <div class="col-12">
                   <img src="<?= base_url()  . $users['receipt']?>" witdh="100%" alt="">
-                </div>
+                </div> -->
                 
               </div>
               <div class="col-12 text-center">
@@ -165,7 +165,7 @@
             <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url()?>/users/edit/<?=$users["users_id"]?>">
               <div class="modal-body">
  
-
+                  <input type="hidden" value="<?= $users['username'] ?>" name="username">
                   <div class="form-group">
                         <label for="">Name</label>
                         <input type="text" class="form-control" value="<?=  $users['name'] ?>" name="name" placeholder="Name" required>

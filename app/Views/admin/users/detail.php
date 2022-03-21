@@ -149,6 +149,7 @@
                                                                     $users[
                                                                         'is_verified'
                                                                     ] == 0
+                                                                    
                                                                 ) { ?>
     
                                                                     <a  class="btn btn-danger text-white">Not Verified</a>
@@ -256,6 +257,18 @@
                                                                     ] ?></td>
                                                                 </tr>
 
+                                                                <tr>
+                                                                    <th scope="row">Register Date</th>
+                                                                    <td><?= $users[
+                                                                        'created_date'
+                                                                    ] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Paid Date </th>
+                                                                    <td><?= $users[
+                                                                        'paid_date'
+                                                                    ] ?></td>
+                                                                </tr>
                                                                 <tr>
                                                                     <th scope="row">Contact</th>
                                                                     <td><?= $users[

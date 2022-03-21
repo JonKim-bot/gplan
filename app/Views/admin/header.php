@@ -114,6 +114,16 @@
 
                     </a>
                 </li>
+                <li class="c-sidebar-nav-item ">
+                        <a class="c-sidebar-nav-link <?= $uri->getSegment(1) == 'Users'
+                                                            ? 'c-active'
+                                                            : null ?>" href="<?= base_url('Users/verified_member') ?>">
+                            <i class="cil-people c-sidebar-nav-icon"></i>
+                            Verified Member
+                            <span class="badge badge-pill badge-warning"></span>
+
+                    </a>
+                </li>
                 
                 <li class="c-sidebar-nav-item ">
                     <a class="c-sidebar-nav-link <?= $uri->getSegment(2) == 'paid_user'
