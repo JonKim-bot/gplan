@@ -1407,8 +1407,6 @@ class Users extends BaseController
             $user_id = session()->get('login_id');
         }
 
-
-
         $users = $this->UsersModel->getWhere(['users.users_id' => $user_id]);
         $where = [
             'family.family_id' => $users[0]['self_family_id']
@@ -1427,6 +1425,7 @@ class Users extends BaseController
                 $user_upline['balance'] = $this->WalletModel->get_balance($user_upline['users_id']);
             }
         }
+
 
         for($i = 0; $i < count($users); $i++){
             $users[$i]['family'] = $this->FamilyModel->getTree($users[$i]['users_id']);

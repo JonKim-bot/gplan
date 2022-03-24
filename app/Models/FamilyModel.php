@@ -152,6 +152,7 @@ class FamilyModel extends BaseModel
         return $new_family_id;
     }
 
+
     public function get_total_downline($family_id){
         $total_count = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $family_id")->getResultArray()[0]['total'];
         if($total_count != NULL){
@@ -160,6 +161,58 @@ class FamilyModel extends BaseModel
             return 0;
         }
     }
+    function return_level_max($level){
+        if($level == 1){
+            return 2;
+        }
+        if($level == 2){
+            return 4;
+        }
+        if($level == 3){
+            return 8;
+        }
+
+        if($level == 4){
+            return 16;
+        }
+
+        if($level == 5){
+            return 32;
+        }
+
+        if($level == 6){
+            return 64;
+        }
+        if($level == 7){
+            return 128;
+        }
+        if($level == 8){
+            return 256;
+        }
+        if($level == 9){
+            return 512;
+        }
+        if($level == 10){
+            return 1028;
+        }
+        if($level == 11){
+            return 2048;
+        }
+        if($level == 12){
+            return 4096;
+        }
+        if($level == 13){
+            return 8192;
+        }
+        if($level == 14){
+            return 16384;
+        }
+        if($level == 15){
+            return 32768;
+        }
+
+    }
+
     public function find_empty_slot($family_id){
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
@@ -171,7 +224,20 @@ class FamilyModel extends BaseModel
 
 
         foreach($result as $index => $row){ // result index = level;
-            if($index != 0 && count($row) < $index * 2){  // count($result[$index]) < $index * 2 then mean level no full 
+
+            
+            // echo "<pre>";
+            // print_r("index");
+            // print_r($index);
+            // print_r("row");
+            // print_r($row);
+            // print_r("count");
+            
+            // print_r($result[$index]);
+            // print_r("result index");
+            // if($index != 0 && count($row) < $index * 2){  // count($result[$index]) < $index * 2 then mean level no full 
+
+            if($index != 0 && count($row) <  count($result[$index - 1]) * 2){  // count($result[$index]) < $index * 2 then mean level no full 
                 foreach($result[$index - 1] as $link){
                  
                     $find_slot = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $link HAVING total < 2")->getResultArray();
@@ -188,10 +254,10 @@ class FamilyModel extends BaseModel
                         // echo "<pre>";
                         // print_r($find_slot);
                         $slot_family_id = $link;
-                        break 2;
+                        break;
                     }
                 }
-                // break;
+                break;
             }
         }
         // dd($slot_family_id);
