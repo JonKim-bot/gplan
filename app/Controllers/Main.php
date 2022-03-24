@@ -73,6 +73,7 @@ class Main extends BaseController
         echo view('admin/users/all');
         echo view('admin/footer');
     }
+    
 
     public function add($family_id,$uid)
 

@@ -415,8 +415,13 @@ class Users extends BaseController
 
     public function verify_all_user(){
 
-        $users = $this->UsersModel->getAllRaw();
+
+        $where = [
+            'users.is_verified' => 0
+        ];
+        $users = $this->UsersModel->getWhere($where);
         foreach($users as $row){
+            
             $this->verify_user_func($row['users_id']);
         }
 
@@ -438,6 +443,7 @@ class Users extends BaseController
 
             $where['users.is_verified'] = $is_verified;
         }        
+        // dd($where);
         $users = $this->UsersModel->getWhere($where);
         $users_count = 0;
         if(!empty($users)){
@@ -496,12 +502,16 @@ class Users extends BaseController
 
         }
         $this->pageData['users'] = $users;
+
         echo view('admin/header', $this->pageData);
         echo view('admin/users/all');
         echo view('admin/footer');
     }
 
 
+    public function in_com($family_id){
+        $this->FamilyModel->insert_extra_commission($family_id);
+    }
     public function user_with_no_downline()
 
     {
@@ -1396,6 +1406,18 @@ class Users extends BaseController
         $this->pageData['family_level_user'] = $family_level_user;
         echo view('admin/users/users_list', $this->pageData);
 
+    }
+
+    public function process_user(){
+        $where = [
+            'users.is_verified' => 0
+        ];
+        $users = $this->UsersModel->getWhere($where);
+        foreach($users as $row){
+            echo "row" . $row['users_id'];
+            $this->verify_user($row['users_id']);
+        }
+        die('end');
     }
 
 
