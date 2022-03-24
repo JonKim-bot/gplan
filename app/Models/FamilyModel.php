@@ -154,8 +154,8 @@ class FamilyModel extends BaseModel
 
     public function get_total_downline($family_id){
         $total_count = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $family_id")->getResultArray()[0]['total'];
-        if($total != NULL){
-            return $total;
+        if($total_count != NULL){
+            return $total_count;
         }else{
             return 0;
         }
@@ -195,6 +195,7 @@ class FamilyModel extends BaseModel
             }
         }
         // dd($slot_family_id);
+
         // double check if this slot is available
         $slots = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $slot_family_id")->getResultArray();
         if($slots[0]['total'] == 2){            
@@ -626,7 +627,7 @@ class FamilyModel extends BaseModel
             $users[$key]['balance'] = $this->WalletModel->get_balance($row['user_id']);
             // $users[$key]['balance'] = $this->WalletModel->get_balance($row['user_id']);
             // //included own sales
-            $users[$key]['total_downline'] = $this->FamilyModel->get_total_downline($users[$key]['self_family_id']);
+            $users[$key]['total_downline'] = $this->get_total_downline($this->user_family_id($row['user_id']));
 
             $sql = "SELECT family.*,users.username,users.users_id FROM family 
             INNER JOIN users
@@ -641,7 +642,7 @@ class FamilyModel extends BaseModel
                 // $child[$ckey]['total_received_point'] = $this->PointModel->get_total_received_point($crow['user_id']);
                 // $child[$ckey]['group_sales'] = $this->getGroupTotalSales($crow['user_id']);
                 $child[$ckey]['balance'] = $this->WalletModel->get_balance($crow['user_id']);
-                $child[$ckey]['total_downline'] = $this->FamilyModel->get_total_downline($crow['self_family_id']);
+                $child[$ckey]['total_downline'] = $this->get_total_downline($this->user_family_id($crow['user_id']));
 
                 $sql = "SELECT family.*,users.username,users.users_id FROM family 
                 INNER JOIN users
@@ -653,7 +654,7 @@ class FamilyModel extends BaseModel
                 foreach ($gchild as $gkey => $grow) {
 
                     // $child[$ckey]['total_downline'] = $this->FamilyModel->get_total_downline($crow['self_family_id']);
-                    $gchild[$gkey]['total_downline'] = $this->FamilyModel->get_total_downline($grow['self_family_id']);
+                    $gchild[$gkey]['total_downline'] = $this->get_total_downline($this->user_family_id($grow['user_id']));
 
                     $gchild[$gkey]['balance'] = $this->WalletModel->get_balance($grow['user_id']);
                     // $gchild[$gkey]['total_received_point'] = $this->PointModel->get_total_received_point($grow['user_id']);
