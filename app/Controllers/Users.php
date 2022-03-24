@@ -948,7 +948,9 @@ class Users extends BaseController
         $this->pageData['users_downline'] = $users_downline;
         echo view('admin/header', $this->pageData);
 
+
         echo view('admin/users/my_group');
+
         echo view('admin/footer');
     }
 
@@ -1243,6 +1245,7 @@ class Users extends BaseController
 
     function reset_user($user_id){
         $where = [
+
             'users.users_id' => $user_id
         ];
 
@@ -1261,6 +1264,7 @@ class Users extends BaseController
 
     function family_tree($user_id = 1)
     {
+        $user_id = 42;
 
         if (session()->get('login_data')['type_id'] == '1') { 
 
@@ -1355,6 +1359,8 @@ class Users extends BaseController
 
     function get_user_level(){
         
+        $user_id = 42;
+
         if (session()->get('login_data')['type_id'] == '1') { 
 
             $user_id = session()->get('login_id');
@@ -1428,9 +1434,9 @@ class Users extends BaseController
         $this->pageData['user_upline'] = $user_upline;
 
         $this->pageData['users'] = $users;
-
+        // dd($users);
         echo view('admin/header', $this->pageData);
-        echo view('admin/users/tree');
+        echo view('admin/users/tree', $this->pageData);
         // echo view('admin/footer');
 
         

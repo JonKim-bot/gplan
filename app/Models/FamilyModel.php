@@ -155,18 +155,37 @@ class FamilyModel extends BaseModel
     public function find_empty_slot($family_id){
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
+        // dd($result);
+        // echo "<pre>";
+        // print_r($result);
+
         $slot_family_id = $family_id;
+
         foreach($result as $index => $row){ // result index = level;
             if($index != 0 && count($row) < $index * 2){  // count($result[$index]) < $index * 2 then mean level no full 
                 foreach($result[$index - 1] as $link){
+                 
                     $find_slot = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $link HAVING total < 2")->getResultArray();
+                    // $find_slot = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $link HAVING total < 2")->getResultArray();
+
                     if(!empty($find_slot)){
+
+
+                        // echo "<pre>";
+                        // print_r("i link");
+                        // print_r($link);
+
+
+                        // echo "<pre>";
+                        // print_r($find_slot);
                         $slot_family_id = $link;
                         break;
                     }
                 }
+                break;
             }
         }
+        // dd($slot_family_id);
         // double check if this slot is available
         $slots = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $slot_family_id")->getResultArray();
         if($slots[0]['total'] == 2){            

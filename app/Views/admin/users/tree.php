@@ -19,6 +19,7 @@
   color:blue;
 }
 </style>
+
 <?php   if (session()->get('login_data')['type_id'] == '1') { ?>
 
 <div class="col-sm-12 d-flex" style="justify-content: space-between;margin-bottom:20px;margin-top:20px;">
