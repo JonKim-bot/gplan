@@ -335,30 +335,30 @@
 <!--                                                                
                                                               
 
-                                                                <tr>
-                                                                    <th scope="row">Remarks</th>
-                                                                    <td>
+    
+    
+    -->
+    <tr>
+        <th scope="row">Remarks</th>
+        <td>
 
-                                                                        <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url(
-                                                                            '/users/add_remarks/' .
-                                                                                '/' .
-                                                                                $users[
-                                                                                    'users_id'
-                                                                                ]
-                                                                        ) ?>">
-                                                                            <textarea name="remarks" id="" cols="30" rows="10" class="form-control"><?= $users[
-                                                                                'remarks'
-                                                                            ] ?></textarea>
-                                                                            <div class="form-group">
+            <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url(
+                '/users/add_remarks/' .
+                    '/' .
+                    $users[
+                        'users_id'
+                    ]
+            ) ?>">
+                <textarea name="remarks" id="" cols="30" rows="10" class="form-control"><?= $users[
+                    'remarks'
+                ] ?></textarea>
+                <div class="form-group">
 
-                                                                                <button class="btn btn-primary float-right" type="submit"> Save</button>
-                                                                            </div>
-                                                                        </form>
-                                                                    </td>
-                                                                </tr>
-
-
-                                                                -->
+                    <button class="btn btn-primary float-right" type="submit"> Save</button>
+                </div>
+            </form>
+        </td>
+    </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
