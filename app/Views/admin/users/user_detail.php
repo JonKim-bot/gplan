@@ -130,6 +130,16 @@
                 <div class="col-12">
                 <hr>
                 </div>
+                <div class="col-6">
+                    <p>Address</p>
+                </div>
+                <div class="col-6">
+                    <p class="bold"><?= $users['delivery_address'] ?></p>
+                </div>
+
+                <div class="col-12">
+                <hr>
+                </div>
                 <!-- <div class="col-6">
                   <p>Proof of receipt</p>
                 </div>
@@ -180,6 +190,11 @@
                         <label for="">Email</label>
                         <input type="email" class="form-control" name="email" value="<?=  $users['email'] ?>" placeholder="Email" required>
                     </div>
+                    <div class="form-group">
+                        <label for="">Delivery Address</label>
+                        <input type="text" class="form-control" name="delivery_address" value="<?=  $users['delivery_address'] ?>" placeholder="Delivery Address" required>
+                    </div>
+
                   </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-primary"><?= $lang['save'] ?></button>

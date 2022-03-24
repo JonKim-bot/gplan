@@ -1107,6 +1107,7 @@ class Users extends BaseController
             }
 
 
+
        
             if (!$error) {
                 $input['contact'] = $this->format_contact($input['contact']);
@@ -1116,6 +1117,7 @@ class Users extends BaseController
                     'email' => $input['email'],
                     'username' => $input['username'],
                     'contact' => $input['contact'],
+                    'delivery_address' => $input['delivery_address'],
 
                     // 'nric_name' => $input['nric_name'],
                     // 'nric' => $input['nric'],
@@ -1414,11 +1416,13 @@ class Users extends BaseController
         ];
         $user_in_family = $this->FamilyModel->getWhere($where);
 
+
         $user_upline = [];
         if(!empty($user_in_family)){
             $link_family_id = $user_in_family[0]['link_family_id'];
             $user_upline = $this->FamilyModel->get_upline_infomation_tree($link_family_id);
             if(!empty($user_upline)){
+                $user_upline['total_downline'] = $this->FamilyModel->get_total_downline($user_upline['self_family_id']);
 
                 $user_upline['balance'] = $this->WalletModel->get_balance($user_upline['users_id']);
             }
@@ -1426,7 +1430,7 @@ class Users extends BaseController
 
         for($i = 0; $i < count($users); $i++){
             $users[$i]['family'] = $this->FamilyModel->getTree($users[$i]['users_id']);
-
+            $users[$i]['total_downline'] = $this->FamilyModel->get_total_downline($users[$i]['self_family_id']);
             $users[$i]['balance'] = $this->WalletModel->get_balance($users[$i]['users_id']);
 
 
@@ -1434,7 +1438,8 @@ class Users extends BaseController
         $this->pageData['user_upline'] = $user_upline;
 
         $this->pageData['users'] = $users;
-        // dd($users);
+        dd($users);
+
         echo view('admin/header', $this->pageData);
         echo view('admin/users/tree', $this->pageData);
         // echo view('admin/footer');

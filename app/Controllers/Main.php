@@ -6,6 +6,7 @@
 
 
 
+
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -110,6 +111,8 @@ class Main extends BaseController
                     'username' => $input['username'],
                     'reference_id' => $uid,
                     'contact' => $input['contact'],
+                    'delivery_address' => $input['delivery_address'],
+
                     'password' => $hash['password'],
                     // 'nric_name' => $input['nric_name'],
                     // 'nric' => $input['nric'],

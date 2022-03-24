@@ -43,6 +43,15 @@
                 </div>
                 <input class="form-control" type="email" require name="email">
             </div>
+            <p class="formLabel">Delivery Address</p>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="cib-gmail c-icon"></i>
+                    </span>
+                </div>
+                <input class="form-control" type="text" require name="delivery_address">
+            </div>
 
             <div class="text-center text-white register_personal">
                 <h3>Personal Login Detail</h3>

@@ -152,14 +152,23 @@ class FamilyModel extends BaseModel
         return $new_family_id;
     }
 
+    public function get_total_downline($family_id){
+        $total_count = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $family_id")->getResultArray()[0]['total'];
+        if($total != NULL){
+            return $total;
+        }else{
+            return 0;
+        }
+    }
     public function find_empty_slot($family_id){
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
-        // dd($result);
+    // dd($result);
         // echo "<pre>";
         // print_r($result);
 
         $slot_family_id = $family_id;
+
 
         foreach($result as $index => $row){ // result index = level;
             if($index != 0 && count($row) < $index * 2){  // count($result[$index]) < $index * 2 then mean level no full 
@@ -615,7 +624,10 @@ class FamilyModel extends BaseModel
             // $users[$key]['total_received_point'] = $this->PointModel->get_total_received_point($row['user_id']);
             // $users[$key]['group_sales'] = $this->getGroupTotalSales($row['user_id']);
             $users[$key]['balance'] = $this->WalletModel->get_balance($row['user_id']);
+            // $users[$key]['balance'] = $this->WalletModel->get_balance($row['user_id']);
             // //included own sales
+            $users[$key]['total_downline'] = $this->FamilyModel->get_total_downline($users[$key]['self_family_id']);
+
             $sql = "SELECT family.*,users.username,users.users_id FROM family 
             INNER JOIN users
             ON users.users_id = family.user_id
@@ -629,6 +641,7 @@ class FamilyModel extends BaseModel
                 // $child[$ckey]['total_received_point'] = $this->PointModel->get_total_received_point($crow['user_id']);
                 // $child[$ckey]['group_sales'] = $this->getGroupTotalSales($crow['user_id']);
                 $child[$ckey]['balance'] = $this->WalletModel->get_balance($crow['user_id']);
+                $child[$ckey]['total_downline'] = $this->FamilyModel->get_total_downline($crow['self_family_id']);
 
                 $sql = "SELECT family.*,users.username,users.users_id FROM family 
                 INNER JOIN users
@@ -638,6 +651,9 @@ class FamilyModel extends BaseModel
                 $gchild = $this->db->query($sql)->getResultArray();
 
                 foreach ($gchild as $gkey => $grow) {
+
+                    // $child[$ckey]['total_downline'] = $this->FamilyModel->get_total_downline($crow['self_family_id']);
+                    $gchild[$gkey]['total_downline'] = $this->FamilyModel->get_total_downline($grow['self_family_id']);
 
                     $gchild[$gkey]['balance'] = $this->WalletModel->get_balance($grow['user_id']);
                     // $gchild[$gkey]['total_received_point'] = $this->PointModel->get_total_received_point($grow['user_id']);
