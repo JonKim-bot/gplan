@@ -179,10 +179,10 @@ class FamilyModel extends BaseModel
                         // echo "<pre>";
                         // print_r($find_slot);
                         $slot_family_id = $link;
-                        break;
+                        break 2;
                     }
                 }
-                break;
+                // break;
             }
         }
         // dd($slot_family_id);
