@@ -200,7 +200,10 @@
 
 
 
-
+                                                                <tr>
+                                                        <th>User Address</th>
+                                                        <th><?= $users['delivery_address'] ?></th>
+                                                        </tr>
                                                             <tr>
                                                         <th>Last Edited By</th>
                                                         <th><?= $modified_by ?></th>
