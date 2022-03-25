@@ -577,6 +577,7 @@ class Users extends BaseController
                 $this->page_data['error'] = 'Failed to add user data';
             }
         }
+
         
 
     }
@@ -764,7 +765,9 @@ class Users extends BaseController
 
 
 
-        return redirect()->to($_SERVER['HTTP_REFERER']);
+        return redirect()->to(base_url('users/detail/' . $users_id, 'refresh'));
+
+        // return redirect()->to(base_url() . '/users/detail/' . $users_id , 'refreash');
 
     }
 
@@ -982,6 +985,7 @@ class Users extends BaseController
         ];
 
         $users = $this->UsersModel->getWhere($where)[0];
+
 
         // foreach($users as $key => $row){
         $family_name = '';
