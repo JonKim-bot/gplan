@@ -512,7 +512,7 @@ class Users extends BaseController
 
 
     public function in_com($family_id){
-        $this->FamilyModel->insert_extra_commission($family_id);
+        $this->FamilyModel->insert_commission($family_id);
     }
     public function user_with_no_downline()
 
@@ -772,6 +772,7 @@ class Users extends BaseController
     }
 
     
+
     public function qrcode($users_id)
     {
 
@@ -1461,6 +1462,7 @@ class Users extends BaseController
         if(!empty($user_in_family)){
             $link_family_id = $user_in_family[0]['link_family_id'];
             $user_upline = $this->FamilyModel->get_upline_infomation_tree($link_family_id);
+
             if(!empty($user_upline)){
                 $user_upline['total_downline'] = $this->FamilyModel->get_total_downline($user_upline['self_family_id']);
 

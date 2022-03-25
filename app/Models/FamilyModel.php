@@ -145,6 +145,7 @@ class FamilyModel extends BaseModel
 
             $extra_commission = $this->insert_extra_commission($new_family_id);
 
+
             $total_commision = $commission_normal + $extra_commission;
 
             $where = [
@@ -401,6 +402,8 @@ class FamilyModel extends BaseModel
 
       
             $direct = $this->get_recursive_upline_referal([$user_info]);
+
+
             // $direct_id = $user_info['reference_id'];
             // $direct = $this->db->query("SELECT * FROM users WHERE users_id = $direct_id")->getResultArray();
             
@@ -412,7 +415,7 @@ class FamilyModel extends BaseModel
                 $level_for_user = 1;
                 foreach($result as $key_level => $row_result){
                     if(in_array($family_id,$row_result)){
-                        $level_for_user = $key_level + 1;
+                        $level_for_user = $key_level;
                     }
                 }
                 
@@ -621,10 +624,11 @@ class FamilyModel extends BaseModel
         $upline = $this->recursive_upline($family_id); // find all upline
         //get level of upline here 
         // dd($upline);
-        // dd($upline);
         $commission = 10;
         $total_commision_given = 0;
 
+        $com_greater_than_10 = 0;
+        $com_under_10 = 0;
         
         foreach($upline as $row){
             $type_id = $this->get_upline_info($row);
@@ -633,13 +637,16 @@ class FamilyModel extends BaseModel
             $result = $this->recursive_users([[$row]]);
             
             $level_for_user = 1;
+            // if($row == 2096){
             foreach($result as $key_level => $row_result){
+                // dd($result);
                 if(in_array($family_id,$row_result)){
-                    $level_for_user = $key_level + 1;
+                    $level_for_user = $key_level;
                 }
             }
-            
-            
+            // }
+
+        
 
             if($level_for_user > 10){ 
                 $commission = 30;
@@ -753,20 +760,50 @@ class FamilyModel extends BaseModel
             // }
 
         
-    
+            // if($full == false){
+
+            //     if($level_for_user <= 10){
+            //         $com_under_10 = (float)$commission +  (float)$com_under_10;
+            //         // dd($com_under_10);
+            //         echo "<pre>com";
+            //         print_r($com_under_10);
+            //         echo "<pre>level for user";
+            //         print_r($level_for_user);
+
+            //         echo "<pre>upline family id ";
+            //         print_r($row);
+            //     }
+            //     if($level_for_user > 10){
+            //         $com_greater_than_10 =  (float)$commission +  (float)$com_greater_than_10;
+            //         echo "<pre>com_greater_than_10";
+            //         print_r($com_greater_than_10);
+            //         echo "<pre>level for user";
+            //         print_r($level_for_user);
+            //     }
+
+        
+            //     // dd($result);
+            // }
+            
             if($full == false){
                 $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];
+
                 $user_id = $user['user_id'];
                 $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
 
-                if(empty($existed)){
+                // if(empty($existed)){
                     $total_commision_given = $total_commision_given + $commission;
                     $remarks = 'Reward for ' . $this->UsersModel->get_user_name($user_id) . ' With amount of ' . $commission ;
                     $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
-                }
+                // }
 
             }
         }
+        // dd($upline);
+
+
+        // print_r($com_greater_than_10);
+
         return $total_commision_given;
     }
 
