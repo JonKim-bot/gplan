@@ -511,7 +511,7 @@ class Users extends BaseController
 
 
     public function in_com($family_id){
-        $this->FamilyModel->insert_commission($family_id);
+        $this->FamilyModel->insert_extra_commission($family_id);
     }
     public function user_with_no_downline()
 

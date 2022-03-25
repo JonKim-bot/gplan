@@ -379,14 +379,20 @@ class FamilyModel extends BaseModel
             $full = false;
             $result = $this->recursive_users([[$row]]);
   
-            $user_id = $row;
-            $user_info = $this->get_upline_infomation($user_id);
-            $direct_id = $user_info['reference_id'];
-            $direct = $this->db->query("SELECT * FROM users WHERE users_id = $direct_id")->getResultArray();
+            $user_id = $this->get_user_id_from_family_id($row);
+
+            // dd($user_id);
+            
+            $user_info = $this->get_users_info($user_id);
+
+      
+            $direct = $this->get_recursive_upline_referal([$user_info]);
+            // $direct_id = $user_info['reference_id'];
+            // $direct = $this->db->query("SELECT * FROM users WHERE users_id = $direct_id")->getResultArray();
             
             if(!empty($direct)){
-                $direct = $direct[0];
-                $direct_level = $direct['type_id'] + 8;
+                // $direct = $direct[0];
+                // $direct_level = $direct['type_id'] + 8;
 
                         
                 $level_for_user = 1;
@@ -396,16 +402,78 @@ class FamilyModel extends BaseModel
                     }
                 }
                 
-                
+
 
                 // if($row == 3){
 
 
-                if($level_for_user > $type_id + 8){
-                    $extra_commission = $level_for_user >= 11 ? 30 : 10;
-                    $remarks = 'Reward for ' . $direct['username'] . ' With amount of extra ' . $extra_commission ;
-                    $this->WalletModel->wallet_in($direct['users_id'],$extra_commission,$remarks,$family_id,0,0,$row);
-                }
+                    
+                // if($row == 26){
+                //     print_r("level_for_user");
+
+                //     print_r($level_for_user);
+                //     print_r("level id");
+
+                //     print_r(($type_id + 8));
+
+                //     echo "<pre>";
+                //     print_r($result);
+
+                // }
+
+                
+                // if($user_id == 18){
+                    // print_r("level_for_user");
+
+                    // print_r($level_for_user);
+                    // print_r("level id");
+
+
+                    // print_r(($type_id + 8));
+
+                    // echo "<pre>";
+                    // print_r($result);
+        
+                    // dd($direct);
+                    if($level_for_user > $type_id + 8){
+                        $extra_commission = $level_for_user >= 11 ? 30 : 10;
+                        foreach($direct as $row){
+                            if($row['users_id'] != $user_id){
+
+                                // $direct_level = $row['type_id'] + 8;
+                                // echo "<pre>";
+                                // print_r("direct");
+    
+                                // print_r($row);
+    
+    
+                                // print_r("direct_level");
+    
+                                // print_r($direct_level);
+    
+                                // print_r("level_for_user");
+    
+                                // print_r($level_for_user);
+                                if($direct_level >= $level_for_user){
+    
+                                    //can get 
+                                    $remarks = 'Extra Commision From Direct Sponsor '.$user_info['username'].' - Reward for ' . $row['username'] . ' With amount of extra ' . $extra_commission ;
+                                    // dd($remarks);
+                                    $this->WalletModel->wallet_in($row['users_id'],$extra_commission,$remarks,$family_id,0,0,$user_id);
+                                    break;
+                                }
+                            }
+                        }
+                        
+    
+                    }
+                //   
+                // }    
+
+                
+
+
+                
                 // }
                 
 
@@ -518,9 +586,14 @@ class FamilyModel extends BaseModel
             //     }
 
             // }
+
         }
     }
 
+    public function get_user_id_from_family_id($family_id){
+        $user = $this->db->query("SELECT user_id FROM family WHERE family_id = $family_id")->getResultArray()[0];
+        return $user['user_id'];
+    }
 
     
     public function insert_commission($family_id){
@@ -549,6 +622,7 @@ class FamilyModel extends BaseModel
             }
             
             
+
             if($level_for_user > 10){ 
                 $commission = 30;
             }
@@ -560,9 +634,31 @@ class FamilyModel extends BaseModel
 
             // if($row == 3){
 
+           
+
+
+
             if($level_for_user > $type_id + 8){ 
                 $full = true;
             }
+
+            
+            // if($row == 26){
+            //     print_r("level_for_user");
+
+            //     print_r($level_for_user);
+            //     print_r("level id");
+
+            //     print_r(($type_id + 8));
+
+            //     echo "<pre>";
+            //     print_r($result);
+            //     dd($full);
+
+            // }
+
+
+        
                 // dd($commission);
                 // dd($full);
             // }
@@ -643,12 +739,12 @@ class FamilyModel extends BaseModel
             if($full == false){
                 $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];
                 $user_id = $user['user_id'];
-                // $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
+                $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
 
-                // if(empty($existed)){
+                if(empty($existed)){
                     $remarks = 'Reward for ' . $this->UsersModel->get_user_name($user_id) . ' With amount of ' . $commission ;
                     $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
-                // }
+                }
 
             }
         }
@@ -657,6 +753,8 @@ class FamilyModel extends BaseModel
     
     public function get_recursive_upline_referal($upline, $child = [],$level = 0 ,$level_to_reach = 0 )
     {
+        $this->UsersModel = new UsersModel();
+
         // $this->debug($upline);
         $got_child = false;
 
@@ -674,14 +772,14 @@ class FamilyModel extends BaseModel
         foreach ($parent as $row) {
 
             $where = [
-                'customer.customer_id' => $row['referal_id'],
+                'users.users_id' => $row['reference_id'],
             ];
-            $customers = $this->getWhereDownlineCount($where);
+            $customers = $this->UsersModel->getWhere($where);
 
             if (!empty($customers)) {
                 $got_child = true;
                 foreach ($customers as $customer) {
-                    $customer['level'] = $level;
+                    // $customer['level'] = $level;
                     array_push($upline, $customer);
                     array_push($child, $customer);
 
@@ -814,6 +912,7 @@ class FamilyModel extends BaseModel
         return $users;
 
     }
+
 
 }
 ?>
