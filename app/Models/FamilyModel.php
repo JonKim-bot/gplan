@@ -138,13 +138,25 @@ class FamilyModel extends BaseModel
         $existed = $this->db->query("SELECT * FROM family WHERE user_id = $new_member")->getResultArray();
         if(empty($existed)){
             $slot_family_id = $this->find_empty_slot($family_id);
+            // dd($slot_family_id);
             $new_family_id = $this->insertNew(['link_family_id' => $slot_family_id, 'user_id' => $new_member]);
-            // $this->db->insert('family', );
-            // $new_family_id = $this->db->insertID();
 
-            $this->insert_commission($new_family_id);
+            $commission_normal = $this->insert_commission($new_family_id);
 
-            $this->insert_extra_commission($new_family_id);
+            $extra_commission = $this->insert_extra_commission($new_family_id);
+
+            $total_commision = $commission_normal + $extra_commission;
+
+            $where = [
+                "family.family_id" => $new_family_id
+            ];
+            $data = [
+                "extra_commission" => $extra_commission,
+                "total_commision" => $total_commision,
+                "commission_normal" => $commission_normal,
+
+            ];
+            $this->updateWhere($where,$data);
 
         }
         $this->user_family($family_id);
@@ -371,6 +383,7 @@ class FamilyModel extends BaseModel
         $this->UsersModel = new UsersModel();
 
         $upline = $this->recursive_upline($family_id); // find all upline
+        $total_commision_given = 0;
         //get level of upline here 
         foreach($upline as $row){
             $type_id = $this->get_upline_info($row);
@@ -384,6 +397,7 @@ class FamilyModel extends BaseModel
             // dd($user_id);
             
             $user_info = $this->get_users_info($user_id);
+
 
       
             $direct = $this->get_recursive_upline_referal([$user_info]);
@@ -440,7 +454,7 @@ class FamilyModel extends BaseModel
                         foreach($direct as $row){
                             if($row['users_id'] != $user_id){
 
-                                // $direct_level = $row['type_id'] + 8;
+                                $direct_level = $row['type_id'] + 8;
                                 // echo "<pre>";
                                 // print_r("direct");
     
@@ -456,6 +470,8 @@ class FamilyModel extends BaseModel
                                 // print_r($level_for_user);
                                 if($direct_level >= $level_for_user){
     
+                                    $total_commision_given = $total_commision_given + $extra_commission;
+
                                     //can get 
                                     $remarks = 'Extra Commision From Direct Sponsor '.$user_info['username'].' - Reward for ' . $row['username'] . ' With amount of extra ' . $extra_commission ;
                                     // dd($remarks);
@@ -588,6 +604,7 @@ class FamilyModel extends BaseModel
             // }
 
         }
+        return $total_commision_given;
     }
 
     public function get_user_id_from_family_id($family_id){
@@ -606,6 +623,7 @@ class FamilyModel extends BaseModel
         // dd($upline);
         // dd($upline);
         $commission = 10;
+        $total_commision_given = 0;
 
         
         foreach($upline as $row){
@@ -742,12 +760,14 @@ class FamilyModel extends BaseModel
                 $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
 
                 if(empty($existed)){
+                    $total_commision_given = $total_commision_given + $commission;
                     $remarks = 'Reward for ' . $this->UsersModel->get_user_name($user_id) . ' With amount of ' . $commission ;
                     $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
                 }
 
             }
         }
+        return $total_commision_given;
     }
 
     
@@ -838,7 +858,7 @@ class FamilyModel extends BaseModel
         // die($this->builder->getCompiledSelect(false));
 
         // $users = $this->builder->get()->getResultArray();
-        $sql = "SELECT family.*,users.username,users.users_id FROM family 
+        $sql = "SELECT family.*,users.username,users.users_id,users.type_id FROM family 
         INNER JOIN users
         ON users.users_id = family.user_id
         WHERE family.link_family_id = ".$this->user_family_id($user_id)."
@@ -853,7 +873,7 @@ class FamilyModel extends BaseModel
             // //included own sales
             $users[$key]['total_downline'] = $this->get_total_downline($this->user_family_id($row['user_id']));
 
-            $sql = "SELECT family.*,users.username,users.users_id FROM family 
+            $sql = "SELECT family.*,users.username,users.users_id,users.type_id FROM family 
             INNER JOIN users
             ON users.users_id = family.user_id
             WHERE family.link_family_id = ".$this->user_family_id($row['users_id'])."
@@ -868,7 +888,7 @@ class FamilyModel extends BaseModel
                 $child[$ckey]['balance'] = $this->WalletModel->get_balance($crow['user_id']);
                 $child[$ckey]['total_downline'] = $this->get_total_downline($this->user_family_id($crow['user_id']));
 
-                $sql = "SELECT family.*,users.username,users.users_id FROM family 
+                $sql = "SELECT family.*,users.username,users.users_id,users.type_id FROM family 
                 INNER JOIN users
                 ON users.users_id = family.user_id
                 WHERE family.link_family_id = ".$this->user_family_id($crow['users_id'])."
@@ -884,7 +904,7 @@ class FamilyModel extends BaseModel
                     // $gchild[$gkey]['total_received_point'] = $this->PointModel->get_total_received_point($grow['user_id']);
                     // $gchild[$gkey]['group_sales'] = $this->getGroupTotalSales($grow['user_id']);
                     // $gchild[$gkey]['downline_count'] = $this->recursive_get_downline_count($grow['user_id']);
-                    $sql = "SELECT family.*,users.username,users.users_id FROM family 
+                    $sql = "SELECT family.*,users.username,users.users_id,users.type_id FROM family 
                     INNER JOIN users
                     ON users.users_id = family.user_id
                     WHERE family.link_family_id = ".$this->user_family_id($grow['users_id'])."
@@ -910,6 +930,7 @@ class FamilyModel extends BaseModel
 
 
         return $users;
+
 
     }
 

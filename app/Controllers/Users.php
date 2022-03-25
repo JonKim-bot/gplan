@@ -416,6 +416,7 @@ class Users extends BaseController
     public function verify_all_user(){
 
 
+
         $where = [
             'users.is_verified' => 0
         ];
@@ -1450,6 +1451,7 @@ class Users extends BaseController
         }
 
 
+        // dd($user_upline);
         for($i = 0; $i < count($users); $i++){
             $users[$i]['family'] = $this->FamilyModel->getTree($users[$i]['users_id']);
             $users[$i]['total_downline'] = $this->FamilyModel->get_total_downline($users[$i]['self_family_id']);
