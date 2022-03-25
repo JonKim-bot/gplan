@@ -505,12 +505,13 @@ class Users extends BaseController
 
         echo view('admin/header', $this->pageData);
         echo view('admin/users/all');
+
         echo view('admin/footer');
     }
 
 
     public function in_com($family_id){
-        $this->FamilyModel->insert_extra_commission($family_id);
+        $this->FamilyModel->insert_commission($family_id);
     }
     public function user_with_no_downline()
 

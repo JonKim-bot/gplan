@@ -217,8 +217,8 @@ class FamilyModel extends BaseModel
         $families = array([$family_id]);
         $result = $this->recursive_users($families);
     // dd($result);
-        echo "<pre>";
-        print_r($result);
+        // echo "<pre>";
+        // print_r($result);
 
         $slot_family_id = $family_id;
 
@@ -260,7 +260,6 @@ class FamilyModel extends BaseModel
                 break;
             }
         }
-        // dd($slot_family_id);
 
         // double check if this slot is available
         $slots = $this->db->query("SELECT COUNT(*) as total FROM family WHERE link_family_id = $slot_family_id")->getResultArray();
@@ -268,6 +267,8 @@ class FamilyModel extends BaseModel
             $max_key = max(array_keys($result));
             $slot_family_id = $result[$max_key][0]; // set the last row first family_id
         }
+
+
         return $slot_family_id;
     }
 
@@ -396,7 +397,7 @@ class FamilyModel extends BaseModel
                 }
                 
                 
-                
+
                 // if($row == 3){
 
 
@@ -474,6 +475,7 @@ class FamilyModel extends BaseModel
                 // if($type_id== 5){
     
                 //     //level 13 full 
+
                 //     if(isset($result[14])){
                 //         if(isset($result[$direct_level ]) && count($result[$direct_level ]) < ($direct_level * 2)){
                                    
@@ -528,7 +530,7 @@ class FamilyModel extends BaseModel
 
         $upline = $this->recursive_upline($family_id); // find all upline
         //get level of upline here 
-
+        // dd($upline);
         // dd($upline);
         $commission = 10;
 
@@ -641,12 +643,12 @@ class FamilyModel extends BaseModel
             if($full == false){
                 $user = $this->db->query("SELECT * FROM family WHERE family_id = $row")->getResultArray()[0];
                 $user_id = $user['user_id'];
-                $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
-                if(empty($existed)){
+                // $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
+
+                // if(empty($existed)){
                     $remarks = 'Reward for ' . $this->UsersModel->get_user_name($user_id) . ' With amount of ' . $commission ;
                     $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
-                    // $this->db->insert('family_commission', ['user_id' => $user_id, 'commission' => $commission, 'family_id' => $family_id]);
-                }
+                // }
 
             }
         }
