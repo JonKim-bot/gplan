@@ -209,6 +209,8 @@
                                                         <th><?= $modified_by ?></th>
                                                         </tr>
 
+                                                     
+
                                                             <tr>
                                                         <th>Family Tree</th>
 
@@ -359,6 +361,26 @@
             </form>
         </td>
     </tr>
+
+    <tr>
+                                                        <th>- PAID OUT -</th>
+                                                        <th>- PAID OUT -</th>
+                                                        </tr>
+    <tr>
+                                                        <th>Commission normal</th>
+                                                        <th><?= $users['commission_normal'] ?></th>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <th>Extra commission</th>
+                                                            <th><?= $users['extra_commission'] ?></th>
+                                                        </tr>
+                                                        <tr>
+                                                        <th>Total commision</th>
+                                                        <th><?= $users['total_commision'] ?></th>
+                                                        </tr>
+
+
                                                             </tbody>
                                                         </table>
                                                     </div>

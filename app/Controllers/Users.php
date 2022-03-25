@@ -519,6 +519,7 @@ class Users extends BaseController
     {
 
         
+
         $users = $this->UsersModel->get_user_with_no_downline();
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
@@ -986,13 +987,22 @@ class Users extends BaseController
         $family_name = '';
 
         $upline_name = '';
-         if($users['self_family_id'] > 0){
+
+        $total_commision = 0;
+        $extra_commission = 0;
+        $commission_normal = 0;
+
+        if($users['self_family_id'] > 0){
             $where = [
                 'family.family_id' => $users['self_family_id']
             ];
             $user_in_family = $this->FamilyModel->getWhere($where);
 
             if(!empty($user_in_family)){
+                $commission_normal = $user_in_family[0]['commission_normal'];
+                $extra_commission = $user_in_family[0]['extra_commission'];
+                $total_commision = $user_in_family[0]['total_commision'];
+
                 $link_family_id = $user_in_family[0]['link_family_id'];
                 
                 $family_name = $this->FamilyModel->get_upline_infomation($link_family_id)['username'];
@@ -1008,6 +1018,10 @@ class Users extends BaseController
 
         $users['family_name'] = $family_name;
         $users['upline_name'] = $upline_name;
+
+        $users['extra_commission'] = $extra_commission;
+        $users['commission_normal'] = $commission_normal;
+        $users['total_commision'] = $total_commision;
 
         // }
         $this->pageData['users'] = $users;
