@@ -1,13 +1,5 @@
 <?php
 
-
-
-
-
-
-
-
-
 namespace App\Core;
 
 use CodeIgniter\Model;
@@ -16,13 +8,11 @@ class BaseModel extends Model
 {
     protected $tableName;
 
-
     protected $primaryKey = 0;
 
     protected $helpers = ['url', 'form', 'infector', 'session'];
 
     public function __construct()
-
     {
         parent::__construct();
 
@@ -41,7 +31,7 @@ class BaseModel extends Model
         // $this->UsersModel = new UsersModel();
     }
 
-    // public function 
+    // public function
     /**
      * Guess the table name by the model name
      */
@@ -143,8 +133,6 @@ class BaseModel extends Model
         return $query->getResultArray();
     }
 
-
-
     public function getAll($limit = '', $page = 1, $filter = [])
     {
         // $this->builder = $this->db->table($this->tableName);
@@ -195,7 +183,10 @@ class BaseModel extends Model
             // intval($limit);
             // $this->db->limit($limit, $offset);
         }
-        $this->builder->orderBy($this->tableName . '.' . $this->primaryKey,'DESC');
+        $this->builder->orderBy(
+            $this->tableName . '.' . $this->primaryKey,
+            'DESC'
+        );
 
         $query = $this->builder->get();
         return $query->getResultArray();
@@ -248,7 +239,7 @@ class BaseModel extends Model
             return $fields_arr;
         }
     }
-    
+
     public function unset_array_filter($filter, $orgininal)
     {
         foreach ($filter as $key => $row) {
@@ -332,7 +323,6 @@ class BaseModel extends Model
                     '<label for="form_' .
                     $row->name .
                     '">' .
-                    
                     $label .
                     '</label>';
                 $html .=
@@ -373,7 +363,6 @@ class BaseModel extends Model
                     '" name="' .
                     $row->name .
                     '" required>';
-                    
             } elseif ($row->type == 'date') {
                 $html .=
                     '<label for="form_' .
@@ -387,7 +376,6 @@ class BaseModel extends Model
                     '" placeholder="' .
                     $label .
                     '" name="' .
-                    
                     $row->name .
                     '" required>';
             } elseif (
@@ -400,7 +388,6 @@ class BaseModel extends Model
                 ) {
                     if (substr($row->name, 0, -3) == 'parent') {
                         $fields = $this->db->getFieldNames($this->tableName);
-                        
                     } else {
                         $fields = $this->db->getFieldNames(
                             substr($row->name, 0, -3)
@@ -470,7 +457,6 @@ class BaseModel extends Model
                                     substr($row->name, 0, -3) . '.duplicate_of',
                                     0
                                 );
-                                
                             }
                         }
 
@@ -646,7 +632,6 @@ class BaseModel extends Model
                     '" name="' .
                     $row->name .
                     '" required>';
-
             }
             $html .= '<div class="help-block with-errors"></div>';
             $html .= '</div>';
@@ -1098,14 +1083,12 @@ class BaseModel extends Model
 
         return $this->unset_array($input_fields);
     }
-    
 
-    public function processSql($sql){
-        
+    public function processSql($sql)
+    {
         $result = $this->db->query($sql)->getResultArray();
 
         return $result;
-
     }
 
     public function getLike($like, $limit = '', $page = 1, $filter = [])
@@ -1136,8 +1119,12 @@ class BaseModel extends Model
         $query = $this->builder->get();
         return $query->getResultArray();
     }
-    public function getWhereDeleted($where, $limit = '', $page = 1, $filter = [])
-    {
+    public function getWhereDeleted(
+        $where,
+        $limit = '',
+        $page = 1,
+        $filter = []
+    ) {
         $this->builder->select('*');
         // $this->builder->where($this->tableName . '.deleted', 1);
         $this->builder->where($where);
@@ -1169,7 +1156,6 @@ class BaseModel extends Model
         $query = $this->builder->get();
 
         return $query->getResultArray();
-
     }
 
     public function getWhereRaw($where, $limit = '', $page = 1, $filter = [])
@@ -1201,6 +1187,10 @@ class BaseModel extends Model
         // if(!empty($where['customer_id'])){
         //     die($this->builder->getCompiledSelect(false));
         // }
+        $this->builder->orderBy(
+            $this->tableName . '.' . $this->primaryKey,
+            'ASC'
+        );
 
         $query = $this->builder->get();
 
@@ -1237,7 +1227,10 @@ class BaseModel extends Model
         //     die($this->builder->getCompiledSelect(false));
         // }
 
-        $this->builder->orderBy($this->tableName . '.' . $this->primaryKey,'DESC');
+        $this->builder->orderBy(
+            $this->tableName . '.' . $this->primaryKey,
+            'DESC'
+        );
 
         $query = $this->builder->get();
 
@@ -1318,17 +1311,16 @@ class BaseModel extends Model
         return $query->getResultArray();
     }
 
-
     public function insertNew($data)
     {
         $db = db_connect('default');
         $this->builder = $this->db->table($this->tableName);
         $this->builder->insert($data);
-        $db_id =  $db->insertID();
+        $db_id = $db->insertID();
         // dd($db_id);
 
         // $this->insert_log('create', $db->insertID());
-        
+
         return $db_id;
     }
 
@@ -1377,14 +1369,17 @@ class BaseModel extends Model
         $this->builder->delete();
     }
 
-    public function get_modified_by($record){
-        foreach($record as $key=> $row){
-            $where = [ 
-                'admin.admin_id' => $row['modified_by']
+    public function get_modified_by($record)
+    {
+        foreach ($record as $key => $row) {
+            $where = [
+                'admin.admin_id' => $row['modified_by'],
             ];
-            $record[$key]['modified_by'] = $this->AdminModel->getWhere($where)[0]['username'];
+            $record[$key]['modified_by'] = $this->AdminModel->getWhere(
+                $where
+            )[0]['username'];
         }
-        
+
         return $record;
     }
     public function login($username, $password)
@@ -1400,7 +1395,7 @@ class BaseModel extends Model
         $this->builder->where(
             "password = SHA2(CONCAT(salt,'" . $password . "'),512)"
         );
-        $this->builder->where($this->tableName.'.deleted',0);
+        $this->builder->where($this->tableName . '.deleted', 0);
 
         $query = $this->builder->get();
         return $query->getResultArray();
@@ -1463,7 +1458,7 @@ class BaseModel extends Model
         $this->insertNew($data);
     }
 
-    // public function 
+    // public function
     public function getCount($filter)
     {
         $temp_builder = $this->builder;
@@ -1505,7 +1500,6 @@ class BaseModel extends Model
                 $pagination .=
                     '<a class="page-link previos" href=' .
                     strtok($_SERVER['REQUEST_URI'], '?') .
-
                     '?page=' .
                     ($page - 1) .
                     '  data-page="' .
@@ -1592,7 +1586,6 @@ class BaseModel extends Model
     }
 
     function checkSlug($where)
-    
     {
         $this->builder->select('*');
         $this->builder->from($this->tableName);
@@ -1657,11 +1650,10 @@ class BaseModel extends Model
             $existed = false;
             foreach ($fields as $row) {
                 if ($row->name == 'title') {
-
                     $existed = true;
                 }
             }
-            
+
             if ($existed) {
                 $sql = "
                 ALTER TABLE `$table` CHANGE `title` `name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;

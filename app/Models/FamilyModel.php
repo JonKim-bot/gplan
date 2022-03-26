@@ -394,6 +394,8 @@ class FamilyModel extends BaseModel
             $result = $this->recursive_users([[$row]]);
   
             $user_id = $this->get_user_id_from_family_id($row);
+            echo "<pre><br>";
+            print_r($user_id);
 
             // dd($user_id);
             
@@ -607,6 +609,8 @@ class FamilyModel extends BaseModel
             // }
 
         }
+        echo " total com";
+        print_r($total_commision_given);
         return $total_commision_given;
     }
 
@@ -791,11 +795,11 @@ class FamilyModel extends BaseModel
                 $user_id = $user['user_id'];
                 $existed = $this->db->query("SELECT * FROM wallet WHERE users_id = $user_id AND family_id = $family_id")->getResultArray();
 
-                // if(empty($existed)){
+                if(empty($existed)){
                     $total_commision_given = $total_commision_given + $commission;
                     $remarks = 'Reward for ' . $this->UsersModel->get_user_name($user_id) . ' With amount of ' . $commission ;
                     $this->WalletModel->wallet_in($user_id,$commission,$remarks,$family_id);
-                // }
+                }
 
             }
         }
@@ -861,10 +865,14 @@ class FamilyModel extends BaseModel
         if($family['link_family_id'] != 0){
             $link_family_id = $family['link_family_id'];
             array_push($upline, $link_family_id);
-            $up_family = $this->db->query("SELECT * FROM family WHERE family_id = $link_family_id")->getResultArray()[0];
-            if($up_family['link_family_id'] != 0){
-
-                return $this->recursive_upline($link_family_id, $upline);
+            $up_family = $this->db->query("SELECT * FROM family WHERE family_id = $link_family_id")->getResultArray();
+            if(empty($up_family)){
+                dd("SELECT * FROM family WHERE family_id = $link_family_id");
+            }else{
+                $up_family = $up_family[0];
+                if($up_family['link_family_id'] != 0){
+                    return $this->recursive_upline($link_family_id, $upline);
+                }
             }
         }
         return $upline;

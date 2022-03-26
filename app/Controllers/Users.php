@@ -420,9 +420,9 @@ class Users extends BaseController
         $where = [
             'users.is_verified' => 0
         ];
-        $users = $this->UsersModel->getWhere($where);
+        $users = $this->UsersModel->getWhereRaw($where);
+        // dd($users);
         foreach($users as $row){
-            
             $this->verify_user_func($row['users_id']);
         }
 
@@ -512,7 +512,7 @@ class Users extends BaseController
 
 
     public function in_com($family_id){
-        $this->FamilyModel->insert_commission($family_id);
+        $this->FamilyModel->insert_extra_commission($family_id);
     }
     public function user_with_no_downline()
 
@@ -536,6 +536,7 @@ class Users extends BaseController
         $family = $this->FamilyModel->getWhere($where)[0];
         return $family['user_id'];
         
+
     }
 
     public function submit_receipt()
