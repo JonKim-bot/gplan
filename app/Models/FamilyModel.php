@@ -867,7 +867,7 @@ class FamilyModel extends BaseModel
             array_push($upline, $link_family_id);
             $up_family = $this->db->query("SELECT * FROM family WHERE family_id = $link_family_id")->getResultArray();
             if(empty($up_family)){
-                dd("SELECT * FROM family WHERE family_id = $link_family_id");
+                // dd("SELECT * FROM family WHERE family_id = $link_family_id");
             }else{
                 $up_family = $up_family[0];
                 if($up_family['link_family_id'] != 0){
