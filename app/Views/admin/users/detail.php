@@ -367,16 +367,16 @@
                                                         <th>- PAID OUT -</th>
                                                         </tr>
     <tr>
-                                                        <th>Commission normal</th>
+                                                        <th>Normal Paidout</th>
                                                         <th><?= $users['commission_normal'] ?></th>
                                                         </tr>
                                                         
                                                         <tr>
-                                                            <th>Extra commission</th>
+                                                            <th>Level overriding</th>
                                                             <th><?= $users['extra_commission'] ?></th>
                                                         </tr>
                                                         <tr>
-                                                        <th>Total commision</th>
+                                                        <th>Total Paid Out</th>
                                                         <th><?= $users['total_commision'] ?></th>
                                                         </tr>
 

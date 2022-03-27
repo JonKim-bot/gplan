@@ -191,6 +191,7 @@ class Users extends BaseController
         $where = [
 
             'users.is_verified' => 1,
+    
         ];
         $is_verified =
         ($_GET and isset($_GET['is_verified']))
@@ -444,6 +445,7 @@ class Users extends BaseController
 
             $where['users.is_verified'] = $is_verified;
         }        
+
         // dd($where);
         $users = $this->UsersModel->getWhere($where);
         $users_count = 0;
@@ -1101,7 +1103,11 @@ class Users extends BaseController
             'users.users_id' => $users_id,
         ];
         $this->pageData['users'] = $this->UsersModel->getWhere($where)[0];
-
+        $where_2 = [
+            'users.users_id' => $this->pageData['users']['reference_id']
+        ];
+        $user_direct = $this->UsersModel->getWhere($where_2);
+        // dd($this->pageData['users']);
         if ($_POST) {
 
             $error = false;
@@ -1109,11 +1115,31 @@ class Users extends BaseController
        
             if (!$error) {
 
-                $data = [
-                    'type_id' => $input['type_id'],
-                ];
-                $this->UsersModel->updateWhere($where, $data);
-                return redirect()->to($_SERVER['HTTP_REFERER']);
+                if(!empty($user_direct)){
+                    $user_direct = $user_direct[0];
+                    if($input['type_id'] > $user_direct['type_id']){
+                        alert('User level cannot bigger than the teacher level');
+                        locationhref($_SERVER['HTTP_REFERER']);
+
+                    }else{
+                        $data = [
+                            'type_id' => $input['type_id'],
+                        ];
+                        $this->UsersModel->updateWhere($where, $data);
+        
+                        locationhref($_SERVER['HTTP_REFERER']);
+                    }
+                }else{
+                    $data = [
+                        'type_id' => $input['type_id'],
+                    ];
+                    $this->UsersModel->updateWhere($where, $data);
+    
+                    locationhref($_SERVER['HTTP_REFERER']);
+                }
+
+
+                // return redirect()->to($_SERVER['HTTP_REFERER']);
             }
         }
 
