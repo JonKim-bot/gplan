@@ -151,6 +151,8 @@ class Users extends BaseController
             die(json_encode([
 
                 'status' => false,
+
+
                 'message' => 'Balance not enought'
             ]));
         }else{
@@ -439,6 +441,18 @@ class Users extends BaseController
             ? $_GET['is_verified']
             : 99;
 
+        $dateFrom =
+    
+
+        ($_GET and isset($_GET['dateFrom']))
+            ? $_GET['dateFrom']
+
+            : date('Y-m-d');
+        $dateTo =
+            ($_GET and isset($_GET['dateTo']))
+                ? $_GET['dateTo']
+                : date('Y-m-d');
+
         $where['users.contact !='] = '';
 
         if($is_verified != 99){
@@ -446,23 +460,48 @@ class Users extends BaseController
             $where['users.is_verified'] = $is_verified;
         }        
 
+
+     
+        $where = [
+            'DATE(users.created_date) >=' => $dateFrom,
+            'DATE(users.created_date) <=' => $dateTo,
+        ];
+    
+
         // dd($where);
         $users = $this->UsersModel->getWhere($where);
         $users_count = 0;
         if(!empty($users)){
             $users_count = count($users);
-
-
         }
+
+        $total = $users_count * 500;
+
+        $this->pageData['total'] = $total;
 
         $this->pageData['users_count'] = $users_count;
         // dd($users);
 
+        $where = [
+            'DATE(wallet.created_date) >=' => $dateFrom,
+            'DATE(wallet.created_date) <=' => $dateTo,
+            'wallet.wallet_in <=' => 31,  
+        ];
+
+        $users_wallet = $this->WalletModel->get_transaction('',1,[],$where);
+        $users_wallet = array_sum(array_column($users_wallet,'transaction'));
+        // dd($users_wallet);
         $field = $this->UsersModel->get_field([
             'created_by',
             'modified_by',
             'deleted',
         ]);
+
+        $this->pageData['dateFrom'] = $dateFrom;
+        $this->pageData['dateTo'] = $dateTo;
+        $this->pageData['users_wallet'] = $users_wallet;
+
+
         $this->pageData['table'] = $this->generate_table(
             $field,
             $users,
@@ -729,6 +768,7 @@ class Users extends BaseController
 
 
 
+
         if($users['is_verified'] == 0){
             $is_verified = 1;
             $remarks = "Profit 500 from users " . $users['name'] . ' joining' ;
@@ -765,6 +805,7 @@ class Users extends BaseController
             $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
             $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
         }
+
 
 
 
@@ -984,6 +1025,9 @@ class Users extends BaseController
             $users_id = session()->get('login_id');
         }
         // dd($users_id);
+
+     
+
         $where = [
             'users.users_id' => $users_id,
         ];

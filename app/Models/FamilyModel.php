@@ -938,6 +938,11 @@ class FamilyModel extends BaseModel
                 ON users.users_id = family.user_id
                 WHERE family.link_family_id = ".$this->user_family_id($crow['users_id'])."
                 AND family.deleted = 0";
+
+
+                // dd($sql);
+                
+
                 $gchild = $this->db->query($sql)->getResultArray();
 
                 foreach ($gchild as $gkey => $grow) {

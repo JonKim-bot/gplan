@@ -33,22 +33,34 @@
 
                     <form method="GET" id="filter_form">
                         <div class="row">
+                            <div class="form-group col-sm-12 col-md-3">
+                                <label for="" class="c-label">Date From</label>
+                                <br>
+                                <input type="date" class="form-control filter" name="dateFrom" 
+                                value="<?=  ($_GET and
+                            isset($_GET['dateFrom']))
+                                ? $_GET['dateFrom']
 
-                            <!-- <div class="form-group col-sm-12 col-md-3">
-                                <label for="" class="c-label">User Type</label>
-                                <select class="form-control filter" name="is_verified">
-                                    <option value="99">All</option>
-                                    <option value="1"  <?= isset($_GET['is_verified']) && $_GET['is_verified'] == 1 ? 'selected' : ''  ?>>Verified</option>
-                                    <option value="0"  <?= isset($_GET['is_verified']) && $_GET['is_verified'] == 0 ? 'selected' : ''  ?>>Not Verified</option>
-
-                                </select>
-                            </div> -->
+                                : date('Y-m-d') ?>"
+                                >
+                            </div>
+                            <div class="form-group col-sm-12 col-md-3">
+                                <label for="" class="c-label">Date To</label>
+                                <br>
+                                <input type="date" class="form-control filter" name="dateTo" value="<?= $dateTo ?>">
+                            </div>
 
                         </div>
                     </form>
                         <div class="row">
                             <div class="col-sm-12">
                                 <p>Total Users : <?= $users_count ?></p>
+
+                                <p>Total Collection : RM <?= $total ?></p>
+
+
+                                <p>Total PaidOut : RM <?= $users_wallet ?></p>
+
 
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered no-footer datatable" id="users_list_table" data-method="get" data-url="<?= base_url("users") ?>" style="border-collapse: collapse !important">
@@ -59,8 +71,8 @@
                                                 <th data-filter="usersname">User Name</th>
                                                 <th data-filter="usersname">Contact</th>
                                                 <th data-filter="email">Email</th>
-                                                <th data-filter="email">Family Name</th>
-                                                <th data-filter="email">Teacher Name</th>
+                                                <!-- <th data-filter="email">Family Name</th>
+                                                <th data-filter="email">Teacher Name</th> -->
 
                                                 <th data-filter="email">Family Tree</th>
                                                 <th data-filter="email">Direct Tree</th>
@@ -88,8 +100,8 @@
 
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['contact'] ?></a></td>
                                                     <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['email'] ?></a></td>
-                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['family_name'] ?></a></td>
-                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['upline_name'] ?></a></td>
+                                                    <!-- <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['family_name'] ?></a></td>
+                                                    <td><a href="<?= base_url() ?>/users/detail/<?= $row['users_id'] ?>"><?= $row['upline_name'] ?></a></td> -->
 
                                                     <td>
                                                     <?php if($row['is_verified'] == 0){ ?>
