@@ -199,6 +199,17 @@ class Users extends BaseController
         ($_GET and isset($_GET['is_verified']))
             ? $_GET['is_verified']
             : 99;
+        $dateFrom =
+
+
+        ($_GET and isset($_GET['dateFrom']))
+            ? $_GET['dateFrom']
+
+            : date('Y-m-d');
+        $dateTo =
+            ($_GET and isset($_GET['dateTo']))
+                ? $_GET['dateTo']
+                : date('Y-m-d');
 
         $where['users.contact !='] = '';
 
@@ -206,6 +217,11 @@ class Users extends BaseController
 
             $where['users.is_verified'] = $is_verified;
         }        
+    
+             
+        $where['DATE(users.created_date) >='] = $dateFrom;
+        $where['DATE(users.created_date) <='] = $dateTo;
+
         $users = $this->UsersModel->getWhere($where);
         $users_count = 0;
         if(!empty($users)){
@@ -258,6 +274,25 @@ class Users extends BaseController
             $users[$key]['family_name'] = $family_name;
 
         }
+        $where = [
+            'DATE(wallet.created_date) >=' => $dateFrom,
+            'DATE(wallet.created_date) <=' => $dateTo,
+            'wallet.wallet_in <=' => 31,  
+        ];
+
+        
+        $total = $users_count * 500;
+
+        $this->pageData['total'] = $total;
+
+        $this->pageData['users_count'] = $users_count;
+
+        $users_wallet = $this->WalletModel->get_transaction('',1,[],$where);
+        $users_wallet = array_sum(array_column($users_wallet,'transaction'));
+        $this->pageData['dateFrom'] = $dateFrom;
+        $this->pageData['dateTo'] = $dateTo;
+        $this->pageData['users_wallet'] = $users_wallet;
+
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
         echo view('admin/users/all');
@@ -276,7 +311,22 @@ class Users extends BaseController
             ? $_GET['is_verified']
             : 99;
 
+        $dateFrom =
+
+
+        ($_GET and isset($_GET['dateFrom']))
+            ? $_GET['dateFrom']
+
+            : date('Y-m-d');
+        $dateTo =
+            ($_GET and isset($_GET['dateTo']))
+                ? $_GET['dateTo']
+                : date('Y-m-d');
+
         $where['users.contact !='] = '';
+        $where['DATE(users.created_date) >='] = $dateFrom;
+        $where['DATE(users.created_date) <='] = $dateTo;
+    
 
         if($is_verified != 99){
 
@@ -333,6 +383,27 @@ class Users extends BaseController
             $users[$key]['family_name'] = $family_name;
 
         }
+
+        $where = [
+            'DATE(wallet.created_date) >=' => $dateFrom,
+            'DATE(wallet.created_date) <=' => $dateTo,
+            'wallet.wallet_in <=' => 31,  
+        ];
+
+        $total = $users_count * 500;
+
+        $this->pageData['total'] = $total;
+
+        $this->pageData['users_count'] = $users_count;
+        
+        $users_wallet = $this->WalletModel->get_transaction('',1,[],$where);
+        $users_wallet = array_sum(array_column($users_wallet,'transaction'));
+        $this->pageData['dateFrom'] = $dateFrom;
+        $this->pageData['dateTo'] = $dateTo;
+        $this->pageData['users_wallet'] = $users_wallet;
+
+
+
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
         echo view('admin/users/all');
@@ -352,12 +423,29 @@ class Users extends BaseController
             ? $_GET['is_verified']
             : 99;
 
+        $dateFrom =
+
+
+        ($_GET and isset($_GET['dateFrom']))
+            ? $_GET['dateFrom']
+
+            : date('Y-m-d');
+        $dateTo =
+            ($_GET and isset($_GET['dateTo']))
+                ? $_GET['dateTo']
+                : date('Y-m-d');
         $where['users.contact !='] = '';
 
         if($is_verified != 99){
 
             $where['users.is_verified'] = $is_verified;
         }        
+
+     
+        $where['DATE(users.created_date) >='] = $dateFrom;
+        $where['DATE(users.created_date) <='] = $dateTo;
+    
+
         $users = $this->UsersModel->getWhere($where);
         $users_count = 0;
         if(!empty($users)){
@@ -410,6 +498,26 @@ class Users extends BaseController
             $users[$key]['family_name'] = $family_name;
 
         }
+
+               $where = [
+            'DATE(wallet.created_date) >=' => $dateFrom,
+            'DATE(wallet.created_date) <=' => $dateTo,
+            'wallet.wallet_in <=' => 31,  
+        ];
+          
+        $total = $users_count * 500;
+
+        $this->pageData['total'] = $total;
+
+        $this->pageData['users_count'] = $users_count;
+        
+        $users_wallet = $this->WalletModel->get_transaction('',1,[],$where);
+        $users_wallet = array_sum(array_column($users_wallet,'transaction'));
+        $this->pageData['dateFrom'] = $dateFrom;
+        $this->pageData['dateTo'] = $dateTo;
+        $this->pageData['users_wallet'] = $users_wallet;
+
+
         $this->pageData['users'] = $users;
         echo view('admin/header', $this->pageData);
         echo view('admin/users/all');
@@ -459,14 +567,9 @@ class Users extends BaseController
 
             $where['users.is_verified'] = $is_verified;
         }        
-
-
      
-        $where = [
-            'DATE(users.created_date) >=' => $dateFrom,
-            'DATE(users.created_date) <=' => $dateTo,
-        ];
-    
+        $where['DATE(users.created_date) >='] = $dateFrom;
+        $where['DATE(users.created_date) <='] = $dateTo;
 
         // dd($where);
         $users = $this->UsersModel->getWhere($where);
@@ -482,6 +585,13 @@ class Users extends BaseController
         $this->pageData['users_count'] = $users_count;
         // dd($users);
 
+        // dd($users_wallet);
+        $field = $this->UsersModel->get_field([
+            'created_by',
+            'modified_by',
+            'deleted',
+        ]);
+        
         $where = [
             'DATE(wallet.created_date) >=' => $dateFrom,
             'DATE(wallet.created_date) <=' => $dateTo,
@@ -490,13 +600,6 @@ class Users extends BaseController
 
         $users_wallet = $this->WalletModel->get_transaction('',1,[],$where);
         $users_wallet = array_sum(array_column($users_wallet,'transaction'));
-        // dd($users_wallet);
-        $field = $this->UsersModel->get_field([
-            'created_by',
-            'modified_by',
-            'deleted',
-        ]);
-
         $this->pageData['dateFrom'] = $dateFrom;
         $this->pageData['dateTo'] = $dateTo;
         $this->pageData['users_wallet'] = $users_wallet;
@@ -805,6 +908,7 @@ class Users extends BaseController
             $this->UsersModel->updateWhere(['users.users_id' => $users_id],['self_family_id' => $family_id]);
             $this->UsersModel->updateWhere($where,['is_verified' => $is_verified]);
         }
+
 
 
 
