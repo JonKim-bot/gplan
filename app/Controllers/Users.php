@@ -1154,6 +1154,7 @@ class Users extends BaseController
             ];
             $user_in_family = $this->FamilyModel->getWhere($where);
 
+
             if(!empty($user_in_family)){
                 $commission_normal = $user_in_family[0]['commission_normal'];
                 $extra_commission = $user_in_family[0]['extra_commission'];
@@ -1493,7 +1494,7 @@ class Users extends BaseController
         for ($x = 1; $x <= $level ; $x++) {
 
 
-            if($x <= $user['type_id'] + 8){
+            if($x <= $user['type_id'] + 7){
                 $family_level = $this->check_if_reached_level($x,$family_tree);
                
                 $data = [

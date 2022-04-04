@@ -233,6 +233,7 @@ class FamilyModel extends BaseModel
         // echo "<pre>";
         // print_r($result);
 
+
         $slot_family_id = $family_id;
 
 
@@ -364,8 +365,8 @@ class FamilyModel extends BaseModel
             $upline_info = $this->db->query("SELECT * FROM users WHERE users_id = $user_reference_id")->getResultArray()[0];
 
 
-            $level_user = $users['type_id'] + 8;
-            $level_upline = $users['type_id'] + 8;
+            $level_user = $users['type_id'] + 7;
+            $level_upline = $users['type_id'] + 7;
 
             $total_commision = 10;
 
@@ -411,7 +412,7 @@ class FamilyModel extends BaseModel
             
             if(!empty($direct)){
                 // $direct = $direct[0];
-                // $direct_level = $direct['type_id'] + 8;
+                // $direct_level = $direct['type_id'] + 7;
 
                         
                 $level_for_user = 1;
@@ -433,7 +434,7 @@ class FamilyModel extends BaseModel
                 //     print_r($level_for_user);
                 //     print_r("level id");
 
-                //     print_r(($type_id + 8));
+                //     print_r(($type_id + 7));
 
                 //     echo "<pre>";
                 //     print_r($result);
@@ -448,18 +449,19 @@ class FamilyModel extends BaseModel
                     // print_r("level id");
 
 
-                    // print_r(($type_id + 8));
+                    // print_r(($type_id + 7));
 
                     // echo "<pre>";
                     // print_r($result);
         
                     // dd($direct);
-                    if($level_for_user > $type_id + 8){
-                        $extra_commission = $level_for_user >= 11 ? 30 : 10;
+                    if($level_for_user > $type_id + 7){
+                        $extra_commission = 20;
+                        // $extra_commission = $level_for_user >= 11 ? 30 : 10;
                         foreach($direct as $row){
                             if($row['users_id'] != $user_id){
 
-                                $direct_level = $row['type_id'] + 8;
+                                $direct_level = $row['type_id'] + 7;
                                 // echo "<pre>";
                                 // print_r("direct");
     
@@ -628,7 +630,7 @@ class FamilyModel extends BaseModel
         $upline = $this->recursive_upline($family_id); // find all upline
         //get level of upline here 
         // dd($upline);
-        $commission = 10;
+        $commission = 20;
         $total_commision_given = 0;
 
         $com_greater_than_10 = 0;
@@ -652,9 +654,9 @@ class FamilyModel extends BaseModel
 
         
 
-            if($level_for_user > 10){ 
-                $commission = 30;
-            }
+            // if($level_for_user > 10){ 
+            //     $commission = 30;
+            // }
 
             // if(isset($result[11]) && count($result[11]) == $this->return_level_max(11)){ 
             //     $commission = 30;
@@ -667,7 +669,7 @@ class FamilyModel extends BaseModel
 
 
 
-            if($level_for_user > $type_id + 8){ 
+            if($level_for_user > $type_id + 7){ 
                 $full = true;
             }
 
@@ -678,7 +680,7 @@ class FamilyModel extends BaseModel
             //     print_r($level_for_user);
             //     print_r("level id");
 
-            //     print_r(($type_id + 8));
+            //     print_r(($type_id + 7));
 
             //     echo "<pre>";
             //     print_r($result);

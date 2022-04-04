@@ -179,15 +179,14 @@
                                                                         <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url('/Users/edit_type/' . "/" . $users['users_id']); ?>">
                                                                             <select name="type_id" class="form-control select2" id="">
 
-                                                                                <option value="0" <?= $users['type_id'] == 0 ? 'selected' : '' ?>>Level 8 User</option>
-                                                                                <option value="1" <?= $users['type_id'] == 1 ? 'selected' : '' ?>>Level 9 User</option>
-                                                                                <option value="2" <?= $users['type_id'] == 2 ? 'selected' : '' ?>>Level 10 User</option>
-                                                                                
-                                                                                <option value="3" <?= $users['type_id'] == 3 ? 'selected' : '' ?>>Level 11 User</option>
-                                                                                <option value="4" <?= $users['type_id'] == 4 ? 'selected' : '' ?>>Level 12 User</option>
-                                                                                <option value="5" <?= $users['type_id'] == 5 ? 'selected' : '' ?>>Level 13 User</option>
-                                                                                <option value="6" <?= $users['type_id'] == 6 ? 'selected' : '' ?>>Level 14 User</option>
-                                                                                <option value="7" <?= $users['type_id'] == 7 ? 'selected' : '' ?>>Level 15 User</option>
+                                                                                <option value="0" <?= $users['type_id'] == 0 ? 'selected' : '' ?>>Level 7 User</option>
+                                                                                <option value="1" <?= $users['type_id'] == 1 ? 'selected' : '' ?>>Level 8 User</option>
+                                                                                <option value="2" <?= $users['type_id'] == 2 ? 'selected' : '' ?>>Level 9 User</option>
+                                                                                <option value="3" <?= $users['type_id'] == 3 ? 'selected' : '' ?>>Level 10 User</option>
+                                                                                <option value="4" <?= $users['type_id'] == 4 ? 'selected' : '' ?>>Level 11 User</option>
+                                                                                <option value="5" <?= $users['type_id'] == 5 ? 'selected' : '' ?>>Level 12 User</option>
+                                                                                <!-- <option value="6" <?= $users['type_id'] == 6 ? 'selected' : '' ?>>Level 14 User</option> -->
+                                                                                <!-- <option value="7" <?= $users['type_id'] == 7 ? 'selected' : '' ?>>Level 15 User</option> -->
 
                                                                             </select>
                                                                             <div class="form-group">
