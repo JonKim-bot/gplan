@@ -524,20 +524,20 @@ class Users extends BaseController
         echo view('admin/footer');
     }
 
-    public function verify_all_user(){
+    // public function verify_all_user(){
 
 
 
-        $where = [
-            'users.is_verified' => 0
-        ];
-        $users = $this->UsersModel->getWhereRaw($where);
-        // dd($users);
-        foreach($users as $row){
-            $this->verify_user_func($row['users_id']);
-        }
+    //     $where = [
+    //         'users.is_verified' => 0
+    //     ];
+    //     $users = $this->UsersModel->getWhereRaw($where);
+    //     // dd($users);
+    //     foreach($users as $row){
+    //         $this->verify_user_func($row['users_id']);
+    //     }
 
-    }
+    // }
 
     public function index()
     {
