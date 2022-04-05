@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controllers;
 
 use App\Core\BaseController;
@@ -488,7 +487,6 @@ class API extends BaseController
             foreach ($car as $key => $row) {
                 $where_image = [
                     'car_id' => $row['car_id'],
-                    
                 ];
                 $image = $this->CarImageModel->getImageWhere($where_image);
                 $car[$key]['image'] = $image;
@@ -761,7 +759,6 @@ class API extends BaseController
 
     // public function insert_inspection_dummy_data_entry(){
 
-
     //     $data = [
     //         [ 1, 19 ],
     //         [ 2, 4 ],
@@ -966,7 +963,7 @@ class API extends BaseController
                     4
                 );
                 $text =
-                    'Dear Gplan Customer, your OTP for registration is ' .
+                    'Dear Nsjrw Customer, your OTP for registration is ' .
                     $otp .
                     '. Use this OTP to validate your registration.';
 
@@ -1916,7 +1913,6 @@ class API extends BaseController
 
         return true;
     }
-
 
     function check_auction_entry($auction_id, $users_id)
     {
@@ -3264,7 +3260,7 @@ class API extends BaseController
                     4
                 );
                 $text =
-                    'Dear Gplan Customer, your OTP for forgot password is ' .
+                    'Dear Nsjrw Customer, your OTP for forgot password is ' .
                     $otp .
                     '. Use this OTP to reset your password.';
 

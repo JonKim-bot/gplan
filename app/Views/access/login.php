@@ -1,8 +1,9 @@
     <div class="col-md-12 ">
+
         <!-- <img src="https://carlink.my/static/media/Logo%203D%20Png.8b5ebdda.png" style="margin-bottom:20px" width="100%" alt=""> -->
 
         <div class="loginHeader_div">
-            <h1>Gplan</h1>
+            <h1>Nsjrw</h1>
             <hr>
         </div>
         <form method="POST" action="<?= base_url() ?>/access/login">
@@ -47,7 +48,7 @@
                 <div class="card-body">
 
                     <div class="" style="display:flex;">
-                        <h5 class="text-muted">Gplan Admin Panel</h5>
+                        <h5 class="text-muted">Nsjrw Admin Panel</h5>
                         <ul class="c-header-nav mfs-auto rm-flex">
                             <li class="c-header-nav-item c-d-legacy-none">
                                 <button class="c-class-toggler c-header-nav-btn" type="button" id="header-tooltip" data-target="body" data-class="c-dark-theme" data-toggle="c-tooltip" data-placement="bottom" title="" data-original-title="Toggle Light/Dark Mode" aria-describedby="tooltip615585">

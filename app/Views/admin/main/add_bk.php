@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=Gplanice-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Gplan Admin Panel</title>
+        <title>Nsjrw Admin Panel</title>
         <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0/css/all.min.css">
         <!-- Main styles for this application-->
         <link href="<?= base_url(
@@ -63,11 +63,13 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url() . "/main/add/" . $family_id; ?>">
+                            <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url() .
+                                '/main/add/' .
+                                $family_id ?>">
                                 
                                 <?php if (isset($error)) { ?>
                                     <div class="alert-message" role="alert">
-                                        <?= $error; ?>
+                                        <?= $error ?>
                                     </div>
                                 <?php } ?>
                                 <div class="form-group">

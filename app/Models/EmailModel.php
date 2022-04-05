@@ -26,7 +26,7 @@ class EmailModel extends BaseModel
         $this->pageData['user'] = $users;
 
         $view = view('admin/email/email_reset', $this->pageData);
-        $email->setFrom('noreply@idomoos.com', 'Gplan');
+        $email->setFrom('noreply@idomoos.com', 'Nsjrw');
         $email->setTo($users['email']);
 
         $email->setSubject('Reset email');

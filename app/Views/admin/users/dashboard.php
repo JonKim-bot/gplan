@@ -20,6 +20,7 @@
   }
 
   .c-QR {
+    
     width: 60%;
     margin: 0 auto;
     padding: 20px 0;

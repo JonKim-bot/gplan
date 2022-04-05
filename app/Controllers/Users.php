@@ -529,6 +529,7 @@ class Users extends BaseController
 
 
     //     $where = [
+
     //         'users.is_verified' => 0
     //     ];
     //     $users = $this->UsersModel->getWhereRaw($where);
@@ -757,7 +758,10 @@ class Users extends BaseController
             if (!$error) {
                 $hash = $this->hash($input['password']);
                 $input['contact'] = $this->format_contact($input['contact']);
-
+                $reference_id = 0;
+                if($input['family_id'] != 0){
+                    $reference_id =  $this->find_user_id_by_family_id($input['family_id']);
+                }
                 $data = [
                     'name' => $input['name'],
                     'email' => $input['email'],
@@ -766,7 +770,7 @@ class Users extends BaseController
                     'contact' => $input['contact'],
                     'password' => $hash['password'],
                     // 'nric_name' => $input['nric_name'],
-                    'reference_id' => $this->find_user_id_by_family_id($input['family_id']),
+                    'reference_id' => $reference_id,
                     // 'nric' => $input['nric'],
                     'family_id' => $input['family_id'],
 

@@ -7,7 +7,7 @@
             <div class="card-body">
                 
                 <div class="" style="display:flex;">
-                    <h5 class="text-muted">Gplan User Panel</h5>
+                    <h5 class="text-muted">Nsjrw User Panel</h5>
                     <ul class="c-header-nav mfs-auto rm-flex">
                         <li class="c-header-nav-item c-d-legacy-none">
                             <button class="c-class-toggler c-header-nav-btn" type="button" id="header-tooltip" data-target="body" data-class="c-dark-theme" data-toggle="c-tooltip" data-placement="bottom" title="" data-original-title="Toggle Light/Dark Mode" aria-describedby="tooltip615585">
@@ -24,7 +24,7 @@
                             <?= $error ?>						
                         </div>
                     <?php } ?>
-                    <!-- <p class="text-muted">Gplan Admin Panel</p> -->
+                    <!-- <p class="text-muted">Nsjrw Admin Panel</p> -->
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">

@@ -9,24 +9,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=Gplanice-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Gplan Admin Panel</title>
+    <title>Nsjrw Admin Panel</title>
     <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0/css/all.min.css">
     <!-- Main styles for this application-->
-    <link href="<?= base_url(
-                    'assets/css/core/style.css'
-                ) ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/core/style.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/core/custom.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/new.css') ?>" rel="stylesheet">
     <link href="<?= base_url(
-                    'assets/plugins/chartjs/css/chartjs.css'
-                ) ?>" rel="stylesheet">
+        'assets/plugins/chartjs/css/chartjs.css'
+    ) ?>" rel="stylesheet">
     <!-- <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datatable/css/dataTables.bootstrap4.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <script src="https://kit.fontawesome.com/3d15aa1b08.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?= base_url(
-                                        'assets/plugins/select2/select2.css'
-                                    ) ?>">
+        'assets/plugins/select2/select2.css'
+    ) ?>">
 
 </head>
 <style>
@@ -63,7 +61,7 @@
     <div class="c-app ">
         <div class=" col-md-12 main_div">
             <div class="register_div">
-                <h1>Gplan</h1>
+                <h1>Nsjrw</h1>
                 <hr>
                 <h3>Register & Get Your<br> Welcome Gift Set</h3>
             </div>
@@ -76,7 +74,9 @@
             </div>
 
 
-            <!-- <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url() . "/main/add/" . $family_id; ?>">
+            <!-- <form role="form" method="POST" enctype="multipart/form-data" action="<?= base_url() .
+                '/main/add/' .
+                $family_id ?>">
 
                     <div class="card-group">
                         
@@ -84,7 +84,7 @@
                             
                      <?php if (isset($error)) { ?>
                                      <div class="alert-message" role="alert">
-                                         <?= $error; ?>
+                                         <?= $error ?>
                                      </div>
                                  <?php } ?>
 
